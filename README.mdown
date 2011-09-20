@@ -1,0 +1,9 @@
+﻿This is a survey paper about RTS AI techniques
+==============================================
+
+## To compile ##
+make
+
+## Contents ##
+It intends to be quite exhaustive about documented AI techniques used in 
+StarCraft AI competitions.
