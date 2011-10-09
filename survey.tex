@@ -1,6 +1,6 @@
 \documentclass[journal]{IEEEtran}
 
-\usepackage{cite}
+\usepackage{cite,color,graphicx}
 
 % *** GRAPHICS RELATED PACKAGES ***
 %
@@ -122,70 +122,37 @@ RTS AI. TODO (test \cite{WeberCig10})
 
 \section{Challenges, why is it hard to do a good RTS AI?}
 
+{\color{red} Here we can use Buro's 2003 paper as a starting point. Much has changed since, so we should update, and put his predictions in perspective}
+
 \section{AI Techniques review}
 \subsection{Overview}
 \subsection{Case study 1: EISBot}
 \subsection{Case study 2: NOVA}
 \subsection{Case study 3: BroodwarBotQ}
 
-%\begin{figure}[!t]
-%\centering
-%\includegraphics[width=4cm]{myfigure}
-% where an .eps filename suffix will be assumed under latex, 
-% and a .pdf suffix will be assumed for pdflatex; or what has been declared
-% via \DeclareGraphicsExtensions.
-%\caption{Simulation Results}
-%\label{fig_sim}
-%\end{figure}
+\section{AI Architectures for RTS AI}\label{sec:architecture}
 
-% Note that IEEE typically puts floats only at the top, even when this
-% results in a large percentage of a column being occupied by floats.
+{\color{red}[SANTI: This section is WIP, so, don't read it yet :)]}
 
-% An example of a double column floating figure using two subfigures.
-% (The subfig.sty package must be loaded for this to work.)
-% The subfigure \label commands are set within each subfloat command, the
-% \label for the overall figure must come after \caption.
-% \hfil must be used as a separator to get equal spacing.
-% The subfigure.sty package works much the same way, except \subfigure is
-% used instead of \subfloat.
-%
-%\begin{figure*}[!t]
-%\centerline{\subfloat[Case I]\includegraphics[width=2.5in]{subfigcase1}%
-%\label{fig_first_case}}
-%\hfil
-%\subfloat[Case II]{\includegraphics[width=2.5in]{subfigcase2}%
-%\label{fig_second_case}}}
-%\caption{Simulation results}
-%\label{fig_sim}
-%\end{figure*}
-%
-% Note that often IEEE papers with subfigures do not employ subfigure
-% captions (using the optional argument to \subfloat), but instead will
-% reference/describe all of them (a), (b), etc., within the main caption.
+Playing an RTS game involves dealing with all the problems described above. A few approaches, like CAT \cite{aha2005cat}, Darmok \cite{ontanon2010darmok} or XXX \cite{some-rl-system} ({\color{red}Which was that system by Stuart Russell that played Warcraft?}) try to deal with the problem in a monolithic manner, by using a single AI technique. This resembles approaches to solve other games, such as Chess or Go, where a single game-tree search approach is enough to play the game at human level. However, none of those systems aims at achieving near human performance. In order to achieve human-level performance, RTS AI designers use a lot of domain knowledge in order to divide the task of playing the game into a collection of sub-problems, which can be dealt-with using individual AI techniques (as discussed in the previous section). Thus, an integration architecture is required to put together all of those techniques into a single coherent system, which is the focus of this section.
 
-% An example of a floating table. Note that, for IEEE style tables, the 
-% \caption command should come BEFORE the table. Table text will default to
-% \footnotesize as IEEE normally uses this smaller font for tables.
-% The \label must come after \caption as always.
-%
-%\begin{table}[!t]
-%% increase table row spacing, adjust to taste
-%\renewcommand{\arraystretch}{1.3}
-% if using array.sty, it might be a good idea to tweak the value of
-% \extrarowheight as needed to properly center the text within the cells
-%\caption{An Example of a Table}
-%\label{table_example}
-%\centering
-%% Some packages, such as MDW tools, offer better commands for making tables
-%% than the plain LaTeX2e tabular which is used here.
-%\begin{tabular}{|c||c|}
-%\hline
-%One & Two\\
-%\hline
-%Three & Four\\
-%\hline
-%\end{tabular}
-%\end{table}
+...
+
+\begin{figure}[ta]
+%    \centering
+    \includegraphics[width=\columnwidth]{figures/figure-bot-architectures.pdf}
+    \caption{General architecture of 5 Starcraft AI bots. {\color{red} (This figure is unreadable as of now, but we'll figure out a way to better present this info)}}
+    \label{fig:bot-architecture}
+\end{figure}
+
+{\color{red} Present some representative examples (Figure \ref{fig:bot-architecture}), which have slightly different architectures. I could mention THANATOS as something different using learning, and Darmok as a monolithic architecture that aims at learning how to play the game, without hoping to play at human level.}
+
+{\color{red} Then, draw some general conclusions: 
+\begin{itemize}
+\item two types of aggregation, hierarchical, and decentralized (bidding?). Hierarchical is multiscale, with actions at different levels of abstraction.
+\item high level strategy is hard-coded (unlike in games like Chess or Go): different expressivity of the high-level strategy of the different systems, compare them. It's like a very high level programming language for RTS bots.
+\end{itemize}}
+
 
 \section{Discussion, what is left to do / open challenges}
 
