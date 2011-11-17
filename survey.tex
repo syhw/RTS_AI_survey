@@ -96,11 +96,16 @@ GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this %
 \maketitle
 
 \begin{abstract}
-TODO
+TODO: Idea of the paper is: ``one-stop guide on what is the
+state of the art in Starcraft AI''. It should help people participating in the competition focus
+their efforts, and also should help people implementing AI for RTS games in
+general (e.g. industry).  In Gabriel's words ``RTS AI problems, Solutions, State-of-the-art, conclude on what's "solved" (since Buro 2004) and what's not.'' 
+
+For example, if someone wants to implement a bot, and wonders "how should I do scouting", our paper should provide a summary of the existing techniques, and pointers to know more. 
 \end{abstract}
 
 \begin{IEEEkeywords}
-review, RTS, StarCraft, machine learning, planning, TODO ...
+review, RTS, games, StarCraft, machine learning, planning, TODO ...
 
 \end{IEEEkeywords}
 
@@ -114,33 +119,150 @@ review, RTS, StarCraft, machine learning, planning, TODO ...
 % creates the second title. It will be ignored for other modes.
 \IEEEpeerreviewmaketitle
 
-\section{Introduction}
-\IEEEPARstart{S}{tarcraft} AI competitions have caused many AI techniques to be
+\section{Introduction}\label{sec:intro}
+\IEEEPARstart{S}{ince} Michael Buro's call for research in RTS games \cite{Buro03rts}, many researchers have answered the call. Specially, AI competitions like the Starcraft one have caused many AI techniques to be
 applied to RTS AI. We will list and classify these approaches, explain their 
 power and their downsides and conclude on what is left to achieve human-level 
-RTS AI. TODO (test \cite{WeberCig10})
+RTS AI.
 
-\section{Challenges, why is it hard to do a good RTS AI?}
+{\color{blue}
+Motivate the paper, and provide an outline.
 
-{\color{red} Here we can use Buro's 2003 paper as a starting point. Much has changed since, so we should update, and put his predictions in perspective}
+Some arguments to use in the motivation could be that games are a good application to motivate novel AI research (as has been happening throughout the history of AI), and that techniques and algorithms developed for RTS games, in addition to be useful and relevant to the game industry, have broader application to other areas.
 
-\section{AI Techniques review}
+Reiterate that the goal of this paper is to provide a one-stop guide on what is the
+state of the art in Starcraft AI
+}
 
-\subsection{Overview}
-\subsection{Case study 1: EISBot}
-\subsection{Case study 2: NOVA}
-\subsection{Case study 3: BroodwarBotQ}
+\section{Real-Time Strategy Games}\label{sec:rts}
 
-\section{AI Architectures for RTS AI}\label{sec:architecture}
+\subsection{Starcraft}\label{subsec:starcraft}
 
-Playing an RTS game involves dealing with all the problems described above. A few approaches, like CAT \cite{aha2005cat}, Darmok \cite{ontanon2010darmok} or ALisp \cite{marthi2005wargus} try to deal with the problem in a monolithic manner, by using a single AI technique. This resembles approaches to solve other games, such as Chess or Go, where a single game-tree search approach is enough to play the game at human level. However, none of those systems aims at achieving near human performance. In order to achieve human-level performance, RTS AI designers use a lot of domain knowledge in order to divide the task of playing the game into a collection of sub-problems, which can be dealt-with using individual AI techniques (as discussed in the previous section). Thus, an integration architecture is required to put together all of those techniques into a single coherent system, which is the focus of this section.
+{\color{blue}
+Introduce the game plus screenshot. Not too lengthy
+}
 
-\begin{figure}[ta]
-%    \centering
-    \includegraphics[width=\columnwidth]{figures/figure-bot-architectures.pdf}
-    \caption{General architecture of 5 Starcraft AI bots. {\color{red} (This figure is unreadable as of now, but we'll figure out a way to better present this info)}}
+\subsection{Complexity of RTS Game AI}\label{subsec:complexity}
+
+{\color{blue}
+Here discuss the complexity of RTS games in general, but focusing on Starcraft. The most important thing of this section is to demonstrate that RTS games are complex, and this is the motivation for requiring all the challenges and research presented afterwards.
+}
+
+\subsection{Challenges in RTS Game AI}\label{subsec:challenges}
+
+{\color{blue}
+Many years have passed since Buro's call for research (8!!). he identified 6 challenges:
+\begin{itemize}
+\item Resource management
+\item Decision making under uncertainty
+\item Spatial and temporal reasoning
+\item Collaboration
+\item Opponent modeling, Learning
+\item Adversarial real-time planning
+\end{itemize}
+
+There has been a lot of work in many, but others have been untouched (e.g. Collaboration). Additionally, other challenges that are not in the list appeared, and have been worked on, like: how to exploit the existing domain knowledge (strategies, build-orders, replays, etc.), or how to design an architecture that integrates all the modules required for an agent to play an RTS games. This section should provide an updated view of challenges, and set the ground for the rest of the paper. The remainder of the paper should be structured around the challenges that we list here.
+
+I think that a good list could be something like this (I'm open to all kind of criticism here :)):
+
+\begin{itemize}
+\item Task Decomposition (or ``Architecture'')
+\item Integration of Domain Knowledge
+\item Reasoning with Uncertainty (including information gathering)
+\item Opponent Modeling and Adaptation
+\item Group and Individual Control (``micro'')
+\item Planning and Resource Allocation (``macro'')
+\end{itemize}
+
+I've now listed them as challenges, but maybe we can list them as questions. In each of the subsequent sections, we should use the bots in the competitions (BBQ, EISBot, Nova, UAlbertaBot, etc.) to illustrate the state-of-the-art. Eventually, we could refer to other work though if need be. We could also compare with what is being used in industry, and use the real AI of Starcraft as an example (Bob Fitch's talk in AIIDE provides enough material for that).
+}
+
+\section{Challenge 1: Task Decomposition}\label{sec:architecture}
+
+{\color{blue}
+Here we should say that complex RTS games require multi-scale reasoning \cite{WeberCig10}, and thus complex architectures that integrate many AI modules have been devised. Discuss how different researchers have divided up the task of playing Starcraft into a collection of subtasks and integrated them (see the end of this paper for a preliminary write-up on this)
+}
+
+
+\section{Challenge 2: Integration of Domain Knowledge}\label{sec:domainknowledge}
+
+{\color{blue}
+All bots attempt at integrating human domain knowledge in a way or another, be it in the form of build-orders, heuristics, strategies, or by automatically learning from human replays. This has been shown to be key to good performance in bots (for now, as Dave was saying: ``Starcraft AI is like Chess was in the 60s''). 
+
+Talk about learning, scripting, and other techniques to incorporate such knowledge.
+}
+
+\section{Challenge 3: Reasoning with Uncertainty}\label{sec:uncertainty}
+
+{\color{blue}
+I think there are two important aspects of uncertainty in RTS games.
+
+First is trying to model uncertainty and try to reduce it (information gathering, and representation of knowledge), this includes scouting, and maintaining good estimates of locations and number of units of the enemy, etc.
+
+Second is actually using the uncertain information. Taking decisions like army strength estimation (like to attack or retreat).
+}
+
+\section{Challenge 4: Opponent modeling and Adaptation}\label{sec:adaptation}
+
+{\color{blue}
+What has been done in modeling the strategy of the opponent and adapt accordingly? which bots do adapt themselves to what they learn from the opponent and how?
+}
+
+{\color{red} I'm a bit worried that Challenge 3 and 4 will overlap significantly, since a large source of uncertainty is the opponent, so, part of opponent modeling has a lot to do with uncertainty. What do you think?}
+
+\section{Challenge 5: Group and Individual Control}\label{sec:micro}
+
+{\color{blue}
+One of the big areas where we have seen a lot of research is in micro-management, where participants in the competitions have used reinforcement-learning (Overmind), potential-fields (BTHAI, Nova, and others), or many other techniques for coordinating both individual unit and group behavior.
+}
+
+\section{Challenge 6: Planning and Resource Allocation}\label{sec:planning}
+
+{\color{blue}
+This section is intended to refer to all those techniques concerning ``macro'', since resource allocation and planning is considered together in most state-of-the-art bots (do you agree?). Here we can talk about things like build-order-optimization, resource allocation to different aspects of the game (army, research, etc.)
+}
+
+
+
+\section{Empirical Comparison of RTS Bots}\label{sec:experiments}
+
+{\color{blue}
+What are the similarities and differences of the current bots in the competition? which techniques are widespread, and which are experimental? which features decide over winning? Which features would have a high impact if we work on them?
+}
+
+{\color{red} Given that we have Ben, Mike (Preuss), Dave and possibly Michael (Buro) on board, we could include results from the competitions. But, given that this is not a standard ``competition paper'', maybe you guys want to reserve that data to put together a separate paper. It's your call, since it's your data :)}
+	
+\section{Discussion and Outlook}\label{sec:conclusions}
+	
+{\color{blue}	
+what is solved, what is not, what needs more work, which challenges have not even addressed. This section should go back to the list of challenges from Section \ref{subsec:challenges} and discuss them in the light of what has been said afterwards. I think this is a VERY IMPORTANT section, since it should provide our vision on the field.
+
+For example, notice that a big challenge missing from the above sections is {\em Spatial and Temporal Reasoning}. While I think (and I'm sure you'll agree) that this should be a huge topic in RTS game AI, I haven't seen much of this beyond potential fields. Because of this (as Michael Buro mentioned), many bots fall prey of easy tricks due to lack of common sense reasoning.
+
+It should also present an outlook of what is to come and what is needed.
+}
+
+
+\section*{Acknowledgments} {\color{blue} This research is partially funded by projects ... and ... }
+
+
+\appendix
+
+\section*{This is the old task-division section}
+
+{\color{red}
+I've included here the section we had for not losing it :)
+}
+
+
+Playing an RTS game involves dealing with all the problems described above. A few approaches, like CAT \cite{LTW}, Darmok \cite{OntanonMSR10} or ALisp \cite{Marthi05} try to deal with the problem in a monolithic manner, by using a single AI technique. This resembles approaches to solve other games, such as Chess or Go, where a single game-tree search approach is enough to play the game at human level. However, none of those systems aims at achieving near human performance. In order to achieve human-level performance, RTS AI designers use a lot of domain knowledge in order to divide the task of playing the game into a collection of sub-problems, which can be dealt-with using individual AI techniques (as discussed in the previous section). Thus, an integration architecture is required to put together all of those techniques into a single coherent system, which is the focus of this section.
+
+\begin{figure*}[ta]
+    \centering
+    \includegraphics[width=\textwidth]{figures/figure-bot-architectures-wide.pdf}
+    \caption{General architecture of 5 Starcraft AI bots.}
     \label{fig:bot-architecture}
-\end{figure}
+\end{figure*}
 
 Figure \ref{fig:bot-architecture} shows some representative examples of the integration architectures used by different bots in the AIIDE 2011 Starcraft AI competition \cite{???}. Each box represents an individual module with a clearly defined task (only modules with a black background can send actions directly to Starcraft). Dashed arrows represent data flow, and solid arrows represent control (when a module can command another module to perform some task). For example, we can see how SPAR is divided in two sets of modules: {\em situation analysis} and {\em decision making}, the first with three modules dedicated to analyze the current situation of the game, and the later with 4 modules dedicated to exploit that information to decide what to do. We can see how the decision making aspect of SPAR is organized hierarchically, with the higher-level module ({\em strategic decision}) issuing commands to the next module ({\em tactical decision}), which sends commands to the next module ({\em action implementation}), and so on. Only the lower-level modules can send actions directly to Starcraft. 
 
@@ -174,24 +296,15 @@ One interesting aspect of the five bots described above is that, while all of th
 
 In conclusion, we can see that there are two basic tools that can be used in an integration architecture: abstraction and divide-and-conquer, which are widely used by the existing Starcraft bots. However, several open questions remain:
 
-{\color{red}
+{\color{blue}
 \begin{itemize}
-\item What is the best task decomposition for RTS games?
-\item Resource coordination in a divide-and-conquer approaches.
-\item Reactive high-level strategies that do not depend on scripting.
-\item ...
+\item Strengths and weaknesses?
+\item Resource coordination in a divide-and-conquer approaches?
+\item High-level strategies that do not depend on scripting? (not here, this should be discussed in Section \ref{sec:planning})
 \end{itemize}
 }
 
-\section{Discussion, what is left to do / open challenges}
 
-\section{Conclusion}
-
-
-
-
-
-\section*{Acknowledgment}
 
 % Can use something like this to put references on a page
 % by themselves when using endfloat and the captionsoff option.
