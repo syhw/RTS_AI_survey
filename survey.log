@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.8.24)  18 NOV 2011 00:01
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.8.24)  24 NOV 2011 18:29
 entering extended mode
 \write18 enabled.
  %&-line parsing enabled.
@@ -312,15 +312,15 @@ File: figures/figure-bot-architectures-wide.pdf Graphic file (type pdf)
 
 <use figures/figure-bot-architectures-wide.pdf>
 
-LaTeX Warning: Citation `???' on page 2 undefined on input line 267.
+LaTeX Warning: Citation `???' on page 2 undefined on input line 271.
 
 [2]
-Underfull \hbox (badness 3108) in paragraph at lines 285--286
+Underfull \hbox (badness 3108) in paragraph at lines 289--290
 []\OT1/ptm/m/n/10 BBQ: uses ab-strac-tion for micro-management, and
  []
 
 [3 <./figures/figure-bot-architectures-wide.pdf>]
-Underfull \hbox (badness 3108) in paragraph at lines 302--303
+Underfull \hbox (badness 3108) in paragraph at lines 306--307
 []\OT1/ptm/m/n/10 Resource co-or-di-na-tion in a divide-and-conquer ap-
  []
 
@@ -335,10 +335,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2965 strings out of 493876
- 41863 string characters out of 1150568
- 104976 words of memory out of 3000000
- 6213 multiletter control sequences out of 10000+50000
+ 2966 strings out of 493876
+ 41876 string characters out of 1150568
+ 104985 words of memory out of 3000000
+ 6214 multiletter control sequences out of 10000+50000
  40716 words of font info for 70 fonts, out of 3000000 for 5000
  717 hyphenation exceptions out of 8191
  27i,10n,34p,1141b,315s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -348,7 +348,7 @@ exlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy7.pfb></usr/local/texlive/200
 st/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2008/texmf-dist/fonts/
 type1/urw/times/utmr8a.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/
 times/utmri8a.pfb>
-Output written on survey.pdf (4 pages, 322361 bytes).
+Output written on survey.pdf (4 pages, 322295 bytes).
 PDF statistics:
  499 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
