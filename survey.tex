@@ -193,6 +193,14 @@ All bots attempt at integrating human domain knowledge in a way or another, be i
 Talk about learning, scripting, and other techniques to incorporate such knowledge.
 }
 
+When talking about learning in RTS games, with regard to a particular match against an opponent, one has to differentiate between:
+\begin{itemize}
+\item prior learning: done before the match, like when a bot learns what is likely to happen on a given match-up and map from replays, or when a bot optimizes its micro-management parameters through simulated annealing or genetic evolution.
+\item in-match learning: done between the different games of match, ``the opponent rushed me last game so I will play this one safe''.
+\item in-game learning: done between the different actions of the game, ``I tried to attack here and it was a failure, let us try somewhere else''.
+\end{itemize}
+All these learning can be supervised (labeled replays, scripted situations) or unsupervised (unlabeled data, exploratory situations). The last two kinds of situations for learning are more inclined towards reinforcement learning because the AI has to deal with the exploration-exploitation duality.
+
 \section{Challenge 3: Reasoning with Uncertainty}\label{sec:uncertainty}
 
 {\color{blue}
@@ -202,6 +210,13 @@ First is trying to model uncertainty and try to reduce it (information gathering
 
 Second is actually using the uncertain information. Taking decisions like army strength estimation (like to attack or retreat).
 }
+
+There are two main kinds of uncertainty, existing for two different reasons, in RTS games. First, there is the incompleteness of information, due to the fog of war, which leads to some kind of ``extensional'' 
+%``extensive'' 
+uncertainty, that can be lowered by good scouting, and knowledge representation and reasoning (to infer what is possible given what has been seen). Also, there is the fact that we will never be able to read the opponent's mind, the ``intentional'' 
+%or ``intensive'' 
+uncertainty that we can't really be sure to scratch off, even with the best scouting possible. For intentional uncertainty, the AI, as the human, can only build a sensible model of what the opponent is likely to do, to think, or to think knowing what we think he thinks. Both these kinds of uncertainty can be studied through probabilities, but $P(Hidden | Seen)$ can be \textit{directly} linked to data only for extensional uncertainty. %now for the clumsy part:
+One could argue that the extensional data is the only thing that matters because it is the only thing that has an influence on the game, but in reality, for very highly skilled players, discovering the intensions of the enemy is the key to winning. It allows for a compact understanding of the game state and development, while also giving additional information about the future. Whereas a player is doing action A to follow it up by action B or C depends on its intension, while the information about action A is visible and information about B or C is hidden, only intension allows for a choice.
 
 \section{Challenge 4: Opponent modeling and Adaptation}\label{sec:adaptation}
 
