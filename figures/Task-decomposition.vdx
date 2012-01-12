@@ -35,7 +35,7 @@
 </PageSheet>
 <Shapes><Shape ID="1" Type="Shape" Name="Rectangle Fill:Magnesium.1"><XForm><Angle>-0</Angle>
 <PinX>5.625</PinX>
-<PinY>9.166667</PinY>
+<PinY>9.291667</PinY>
 <Width>1.25</Width>
 <Height>3</Height>
 <LocPinX>0.625</LocPinX>
@@ -97,7 +97,7 @@
 
 <Shape ID="2" Type="Shape" Name="Rectangle Fill:Magnesium.2"><XForm><Angle>-0</Angle>
 <PinX>9.125</PinX>
-<PinY>9.166667</PinY>
+<PinY>9.291667</PinY>
 <Width>1.25</Width>
 <Height>3</Height>
 <LocPinX>0.625</LocPinX>
@@ -158,8 +158,8 @@
 </Shape>
 
 <Shape ID="3" Type="Shape" Name="Rectangle Fill:Magnesium.3"><XForm><Angle>-0</Angle>
-<PinX>6.75</PinX>
-<PinY>4.576389</PinY>
+<PinX>16</PinX>
+<PinY>11.82639</PinY>
 <Width>4.5</Width>
 <Height>5.375</Height>
 <LocPinX>2.25</LocPinX>
@@ -220,8 +220,8 @@
 </Shape>
 
 <Shape ID="4" Type="Shape" Name="Rectangle Fill:Soapstone.4"><XForm><Angle>-0</Angle>
-<PinX>6.75</PinX>
-<PinY>5.013889</PinY>
+<PinX>16</PinX>
+<PinY>12.26389</PinY>
 <Width>4.25</Width>
 <Height>2</Height>
 <LocPinX>2.125</LocPinX>
@@ -282,8 +282,8 @@
 </Shape>
 
 <Shape ID="5" Type="Shape" Name="Rectangle Fill:Soapstone.5"><XForm><Angle>-0</Angle>
-<PinX>6.75</PinX>
-<PinY>2.513889</PinY>
+<PinX>16</PinX>
+<PinY>9.763889</PinY>
 <Width>4.25</Width>
 <Height>1</Height>
 <LocPinX>2.125</LocPinX>
@@ -344,8 +344,8 @@
 </Shape>
 
 <Shape ID="6" Type="Shape" Name="Rectangle Fill:Soapstone.6"><XForm><Angle>-0</Angle>
-<PinX>6.75</PinX>
-<PinY>6.513889</PinY>
+<PinX>16</PinX>
+<PinY>13.76389</PinY>
 <Width>4.25</Width>
 <Height>0.75</Height>
 <LocPinX>2.125</LocPinX>
@@ -593,7 +593,7 @@
 
 <Shape ID="10" Type="Shape" Name="Rectangle Fill:Chalk.10"><XForm><Angle>-0</Angle>
 <PinX>5.625</PinX>
-<PinY>10.04167</PinY>
+<PinY>10.16667</PinY>
 <Width>1</Width>
 <Height>0.5</Height>
 <LocPinX>0.5</LocPinX>
@@ -655,7 +655,7 @@
 
 <Shape ID="11" Type="Shape" Name="Rectangle Fill:Obsidian.11"><XForm><Angle>-0</Angle>
 <PinX>5.625</PinX>
-<PinY>9.041667</PinY>
+<PinY>9.166667</PinY>
 <Width>1</Width>
 <Height>0.5</Height>
 <LocPinX>0.5</LocPinX>
@@ -717,7 +717,7 @@
 
 <Shape ID="12" Type="Shape" Name="Rectangle Fill:Obsidian.12"><XForm><Angle>-0</Angle>
 <PinX>5.625</PinX>
-<PinY>8.041667</PinY>
+<PinY>8.166667</PinY>
 <Width>1</Width>
 <Height>0.5</Height>
 <LocPinX>0.5</LocPinX>
@@ -779,7 +779,7 @@
 
 <Shape ID="13" Type="Shape" Name="Rectangle Fill:Chalk.13"><XForm><Angle>-0</Angle>
 <PinX>7.375</PinX>
-<PinY>9.041667</PinY>
+<PinY>9.166667</PinY>
 <Width>1.25</Width>
 <Height>0.75</Height>
 <LocPinX>0.625</LocPinX>
@@ -834,7 +834,7 @@
 </Shape>
 <Shape ID="14" Type="Shape" Name="Object No Fill No Fill.14"><XForm><Angle>-0</Angle>
 <PinX>7.395833</PinX>
-<PinY>8.972222</PinY>
+<PinY>9.097222</PinY>
 <Width>1.152778</Width>
 <Height>0.7222222</Height>
 <LocPinX>0.5763889</LocPinX>
@@ -879,7 +879,7 @@ Manager
 
 <Shape ID="15" Type="Shape" Name="Rectangle Fill:Obsidian.15"><XForm><Angle>-0</Angle>
 <PinX>9.125</PinX>
-<PinY>9.916667</PinY>
+<PinY>10.04167</PinY>
 <Width>1</Width>
 <Height>0.5</Height>
 <LocPinX>0.5</LocPinX>
@@ -941,7 +941,7 @@ Manager
 
 <Shape ID="16" Type="Shape" Name="Rectangle Fill:Obsidian.16"><XForm><Angle>-0</Angle>
 <PinX>9.125</PinX>
-<PinY>9.291667</PinY>
+<PinY>9.416667</PinY>
 <Width>1</Width>
 <Height>0.5</Height>
 <LocPinX>0.5</LocPinX>
@@ -1003,7 +1003,7 @@ Manager
 
 <Shape ID="17" Type="Shape" Name="Rectangle Fill:Obsidian.17"><XForm><Angle>-0</Angle>
 <PinX>9.125</PinX>
-<PinY>8.666667</PinY>
+<PinY>8.791667</PinY>
 <Width>1</Width>
 <Height>0.5</Height>
 <LocPinX>0.5</LocPinX>
@@ -1065,7 +1065,7 @@ Manager
 
 <Shape ID="18" Type="Shape" Name="Rectangle Fill:Obsidian.18"><XForm><Angle>-0</Angle>
 <PinX>9.125</PinX>
-<PinY>8.041667</PinY>
+<PinY>8.166667</PinY>
 <Width>1</Width>
 <Height>0.5</Height>
 <LocPinX>0.5</LocPinX>
@@ -1127,7 +1127,7 @@ Manager
 
 <Shape ID="19" Type="Shape" Name="Rectangle Fill:Chalk.19"><XForm><Angle>-0</Angle>
 <PinX>7.375</PinX>
-<PinY>10.41667</PinY>
+<PinY>10.54167</PinY>
 <Width>1</Width>
 <Height>0.5</Height>
 <LocPinX>0.5</LocPinX>
@@ -1189,16 +1189,16 @@ Manager
 
 <Shape ID="20" Type="Shape" Name="Graphic.20"><XForm><Angle>-0</Angle>
 <PinX>5.631945</PinX>
-<PinY>9.541667</PinY>
+<PinY>9.666667</PinY>
 <Width>0.01388889</Width>
 <Height>0.4861111</Height>
 <LocPinX>0.006944444</LocPinX>
 <LocPinY>0.2430556</LocPinY>
 </XForm>
 <XForm1D><BeginX>5.625</BeginX>
-<BeginY>9.784722</BeginY>
+<BeginY>9.909722</BeginY>
 <EndX>5.625</EndX>
-<EndY>9.298611</EndY>
+<EndY>9.423611</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
 <ConLineJumpStyle>0</ConLineJumpStyle>
@@ -1248,16 +1248,16 @@ Manager
 
 <Shape ID="21" Type="Shape" Name="Graphic.21"><XForm><Angle>-0</Angle>
 <PinX>5.631945</PinX>
-<PinY>8.541667</PinY>
+<PinY>8.666667</PinY>
 <Width>0.01388889</Width>
 <Height>0.4861111</Height>
 <LocPinX>0.006944444</LocPinX>
 <LocPinY>0.2430556</LocPinY>
 </XForm>
 <XForm1D><BeginX>5.625</BeginX>
-<BeginY>8.784722</BeginY>
+<BeginY>8.909722</BeginY>
 <EndX>5.625</EndX>
-<EndY>8.298611</EndY>
+<EndY>8.423611</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
 <ConLineJumpStyle>0</ConLineJumpStyle>
@@ -1307,16 +1307,16 @@ Manager
 
 <Shape ID="22" Type="Shape" Name="Graphic.22"><XForm><Angle>-0</Angle>
 <PinX>8.253472</PinX>
-<PinY>9.034722</PinY>
+<PinY>9.159722</PinY>
 <Width>0.4930556</Width>
 <Height>0.01388889</Height>
 <LocPinX>0.2465278</LocPinX>
 <LocPinY>0.006944444</LocPinY>
 </XForm>
 <XForm1D><BeginX>8.5</BeginX>
-<BeginY>9.041667</BeginY>
+<BeginY>9.166667</BeginY>
 <EndX>8.006945</EndX>
-<EndY>9.041667</EndY>
+<EndY>9.166667</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
 <ConLineJumpStyle>0</ConLineJumpStyle>
@@ -1368,16 +1368,16 @@ Manager
 
 <Shape ID="23" Type="Shape" Name="Graphic.23"><XForm><Angle>-0</Angle>
 <PinX>7.381945</PinX>
-<PinY>9.791667</PinY>
+<PinY>9.916667</PinY>
 <Width>0.01388889</Width>
 <Height>0.7361111</Height>
 <LocPinX>0.006944444</LocPinX>
 <LocPinY>0.3680556</LocPinY>
 </XForm>
 <XForm1D><BeginX>7.375</BeginX>
-<BeginY>10.15972</BeginY>
+<BeginY>10.28472</BeginY>
 <EndX>7.375</EndX>
-<EndY>9.423611</EndY>
+<EndY>9.548611</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
 <ConLineJumpStyle>0</ConLineJumpStyle>
@@ -1429,16 +1429,16 @@ Manager
 
 <Shape ID="24" Type="Shape" Name="Graphic.24"><XForm><Angle>-0</Angle>
 <PinX>6.496528</PinX>
-<PinY>9.034722</PinY>
+<PinY>9.159722</PinY>
 <Width>0.4930556</Width>
 <Height>0.01388889</Height>
 <LocPinX>0.2465278</LocPinX>
 <LocPinY>0.006944444</LocPinY>
 </XForm>
 <XForm1D><BeginX>6.743055</BeginX>
-<BeginY>9.041667</BeginY>
+<BeginY>9.166667</BeginY>
 <EndX>6.25</EndX>
-<EndY>9.041667</EndY>
+<EndY>9.166667</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
 <ConLineJumpStyle>0</ConLineJumpStyle>
@@ -2392,7 +2392,7 @@ Filter</Text>
 
 <Shape ID="40" Type="Shape" Name="Rectangle Fill:Magnesium.40"><XForm><Angle>-0</Angle>
 <PinX>0.875</PinX>
-<PinY>9.263889</PinY>
+<PinY>9.388889</PinY>
 <Width>1.25</Width>
 <Height>3.25</Height>
 <LocPinX>0.625</LocPinX>
@@ -2455,7 +2455,7 @@ Analysis</Text>
 
 <Shape ID="41" Type="Shape" Name="Rectangle Fill:Magnesium.41"><XForm><Angle>-0</Angle>
 <PinX>2.875</PinX>
-<PinY>9.263889</PinY>
+<PinY>9.388889</PinY>
 <Width>1.5</Width>
 <Height>3.25</Height>
 <LocPinX>0.75</LocPinX>
@@ -2517,7 +2517,7 @@ Analysis</Text>
 
 <Shape ID="42" Type="Shape" Name="Rectangle Fill:Chalk.42"><XForm><Angle>-0</Angle>
 <PinX>0.875</PinX>
-<PinY>10.01389</PinY>
+<PinY>10.13889</PinY>
 <Width>1</Width>
 <Height>0.5</Height>
 <LocPinX>0.5</LocPinX>
@@ -2580,7 +2580,7 @@ Evaluation</Text>
 
 <Shape ID="43" Type="Shape" Name="Rectangle Fill:Chalk.43"><XForm><Angle>-0</Angle>
 <PinX>0.875</PinX>
-<PinY>9.013889</PinY>
+<PinY>9.138889</PinY>
 <Width>1</Width>
 <Height>0.5</Height>
 <LocPinX>0.5</LocPinX>
@@ -2635,7 +2635,7 @@ Evaluation</Text>
 </Shape>
 <Shape ID="44" Type="Shape" Name="Object No Fill No Fill.44"><XForm><Angle>-0</Angle>
 <PinX>0.9444444</PinX>
-<PinY>8.944445</PinY>
+<PinY>9.069445</PinY>
 <Width>1.027778</Width>
 <Height>0.5277778</Height>
 <LocPinX>0.5138889</LocPinX>
@@ -2679,7 +2679,7 @@ Recognition</Text>
 
 <Shape ID="45" Type="Shape" Name="Rectangle Fill:Chalk.45"><XForm><Angle>-0</Angle>
 <PinX>0.875</PinX>
-<PinY>8.013889</PinY>
+<PinY>8.138889</PinY>
 <Width>1</Width>
 <Height>0.5</Height>
 <LocPinX>0.5</LocPinX>
@@ -2741,16 +2741,16 @@ Recognition</Text>
 
 <Shape ID="46" Type="Shape" Name="Graphic.46"><XForm><Angle>-0</Angle>
 <PinX>0.8819444</PinX>
-<PinY>8.513889</PinY>
+<PinY>8.638889</PinY>
 <Width>0.01388889</Width>
 <Height>0.4861111</Height>
 <LocPinX>0.006944444</LocPinX>
 <LocPinY>0.2430556</LocPinY>
 </XForm>
 <XForm1D><BeginX>0.875</BeginX>
-<BeginY>8.270833</BeginY>
+<BeginY>8.395833</BeginY>
 <EndX>0.875</EndX>
-<EndY>8.756945</EndY>
+<EndY>8.881945</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
 <ConLineJumpStyle>0</ConLineJumpStyle>
@@ -2800,16 +2800,16 @@ Recognition</Text>
 
 <Shape ID="47" Type="Shape" Name="Graphic.47"><XForm><Angle>-0</Angle>
 <PinX>0.8819444</PinX>
-<PinY>9.513889</PinY>
+<PinY>9.638889</PinY>
 <Width>0.01388889</Width>
 <Height>0.4861111</Height>
 <LocPinX>0.006944444</LocPinX>
 <LocPinY>0.2430556</LocPinY>
 </XForm>
 <XForm1D><BeginX>0.875</BeginX>
-<BeginY>9.270833</BeginY>
+<BeginY>9.395833</BeginY>
 <EndX>0.875</EndX>
-<EndY>9.756945</EndY>
+<EndY>9.881945</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
 <ConLineJumpStyle>0</ConLineJumpStyle>
@@ -2859,7 +2859,7 @@ Recognition</Text>
 
 <Shape ID="48" Type="Shape" Name="Rectangle Fill:Chalk.48"><XForm><Angle>-0</Angle>
 <PinX>2.875</PinX>
-<PinY>10.26389</PinY>
+<PinY>10.38889</PinY>
 <Width>1</Width>
 <Height>0.5</Height>
 <LocPinX>0.5</LocPinX>
@@ -2922,7 +2922,7 @@ Decision</Text>
 
 <Shape ID="49" Type="Shape" Name="Rectangle Fill:Chalk.49"><XForm><Angle>-0</Angle>
 <PinX>2.875</PinX>
-<PinY>9.513889</PinY>
+<PinY>9.638889</PinY>
 <Width>1</Width>
 <Height>0.5</Height>
 <LocPinX>0.5</LocPinX>
@@ -2985,7 +2985,7 @@ Decision</Text>
 
 <Shape ID="50" Type="Shape" Name="Rectangle Fill:Obsidian.50"><XForm><Angle>-0</Angle>
 <PinX>2.875</PinX>
-<PinY>8.763889</PinY>
+<PinY>8.888889</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -3040,7 +3040,7 @@ Decision</Text>
 </Shape>
 <Shape ID="51" Type="Shape" Name="Object No Fill No Fill.51"><XForm><Angle>-0</Angle>
 <PinX>2.951389</PinX>
-<PinY>8.694445</PinY>
+<PinY>8.819445</PinY>
 <Width>1.291667</Width>
 <Height>0.5277778</Height>
 <LocPinX>0.6458333</LocPinX>
@@ -3084,7 +3084,7 @@ Implementation</Text>
 
 <Shape ID="52" Type="Shape" Name="Rectangle Fill:Obsidian.52"><XForm><Angle>-0</Angle>
 <PinX>2.875</PinX>
-<PinY>8.013889</PinY>
+<PinY>8.138889</PinY>
 <Width>1</Width>
 <Height>0.5</Height>
 <LocPinX>0.5</LocPinX>
@@ -3146,16 +3146,16 @@ Implementation</Text>
 
 <Shape ID="53" Type="Shape" Name="Graphic.53"><XForm><Angle>-0</Angle>
 <PinX>2.881944</PinX>
-<PinY>9.888889</PinY>
+<PinY>10.01389</PinY>
 <Width>0.01388889</Width>
 <Height>0.2361111</Height>
 <LocPinX>0.006944444</LocPinX>
 <LocPinY>0.1180556</LocPinY>
 </XForm>
 <XForm1D><BeginX>2.875</BeginX>
-<BeginY>10.00694</BeginY>
+<BeginY>10.13194</BeginY>
 <EndX>2.875</EndX>
-<EndY>9.770833</EndY>
+<EndY>9.895833</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
 <ConLineJumpStyle>0</ConLineJumpStyle>
@@ -3205,16 +3205,16 @@ Implementation</Text>
 
 <Shape ID="54" Type="Shape" Name="Graphic.54"><XForm><Angle>-0</Angle>
 <PinX>2.881944</PinX>
-<PinY>9.138889</PinY>
+<PinY>9.263889</PinY>
 <Width>0.01388889</Width>
 <Height>0.2361111</Height>
 <LocPinX>0.006944444</LocPinX>
 <LocPinY>0.1180556</LocPinY>
 </XForm>
 <XForm1D><BeginX>2.875</BeginX>
-<BeginY>9.256945</BeginY>
+<BeginY>9.381945</BeginY>
 <EndX>2.875</EndX>
-<EndY>9.020833</EndY>
+<EndY>9.145833</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
 <ConLineJumpStyle>0</ConLineJumpStyle>
@@ -3264,16 +3264,16 @@ Implementation</Text>
 
 <Shape ID="55" Type="Shape" Name="Graphic.55"><XForm><Angle>-0</Angle>
 <PinX>2.881944</PinX>
-<PinY>8.388889</PinY>
+<PinY>8.513889</PinY>
 <Width>0.01388889</Width>
 <Height>0.2361111</Height>
 <LocPinX>0.006944444</LocPinX>
 <LocPinY>0.1180556</LocPinY>
 </XForm>
 <XForm1D><BeginX>2.875</BeginX>
-<BeginY>8.506945</BeginY>
+<BeginY>8.631945</BeginY>
 <EndX>2.875</EndX>
-<EndY>8.270833</EndY>
+<EndY>8.395833</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
 <ConLineJumpStyle>0</ConLineJumpStyle>
@@ -3323,16 +3323,16 @@ Implementation</Text>
 
 <Shape ID="56" Type="Shape" Name="Graphic.56"><XForm><Angle>-0</Angle>
 <PinX>1.8125</PinX>
-<PinY>9.256939</PinY>
+<PinY>9.381945</PinY>
 <Width>0.6111111</Width>
 <Height>0.01388889</Height>
 <LocPinX>0.3055556</LocPinX>
 <LocPinY>0.006944444</LocPinY>
 </XForm>
 <XForm1D><BeginX>1.506944</BeginX>
-<BeginY>9.263883</BeginY>
+<BeginY>9.388889</BeginY>
 <EndX>2.118056</EndX>
-<EndY>9.263877</EndY>
+<EndY>9.388889</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
 <ConLineJumpStyle>0</ConLineJumpStyle>
@@ -3348,7 +3348,7 @@ Implementation</Text>
 </TextXForm>
 <Misc><ObjType>2</ObjType>
 </Misc>
-<Line><LinePattern>1</LinePattern>
+<Line><LinePattern>9</LinePattern>
 <LineWeight>0.01388889</LineWeight>
 <LineColor>#000000</LineColor>
 <LineColorTrans>0</LineColorTrans>
@@ -3373,7 +3373,7 @@ Implementation</Text>
 <Y F="Height*1.000000">0.01388889</Y>
 </MoveTo>
 <LineTo IX="2"><X F="Width*1.000000">0.6111111</X>
-<Y F="Height*0.999603">0.01388338</Y>
+<Y F="Height*1.000000">0.01388889</Y>
 </LineTo>
 </Geom>
 <LayerMem><LayerMember>0</LayerMember>
@@ -3565,8 +3565,8 @@ Implementation</Text>
 </Shape>
 
 <Shape ID="60" Type="Shape" Name="Rectangle Fill:Magnesium.60"><XForm><Angle>-0</Angle>
-<PinX>2.4375</PinX>
-<PinY>4.701389</PinY>
+<PinX>11.8125</PinX>
+<PinY>11.95139</PinY>
 <Width>2.875</Width>
 <Height>3.625</Height>
 <LocPinX>1.4375</LocPinX>
@@ -3628,8 +3628,8 @@ Analysis</Text>
 </Shape>
 
 <Shape ID="61" Type="Shape" Name="Rectangle Fill:Chalk.61"><XForm><Angle>-0</Angle>
-<PinX>1.75</PinX>
-<PinY>4.513889</PinY>
+<PinX>11.125</PinX>
+<PinY>11.76389</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -3691,8 +3691,8 @@ Tracker</Text>
 </Shape>
 
 <Shape ID="62" Type="Shape" Name="Rectangle Fill:Chalk.62"><XForm><Angle>-0</Angle>
-<PinX>3.125</PinX>
-<PinY>5.138889</PinY>
+<PinX>12.5</PinX>
+<PinY>12.38889</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -3754,8 +3754,8 @@ Tracker</Text>
 </Shape>
 
 <Shape ID="63" Type="Shape" Name="Rectangle Fill:Chalk.63"><XForm><Angle>-0</Angle>
-<PinX>1.75</PinX>
-<PinY>5.763889</PinY>
+<PinX>11.125</PinX>
+<PinY>13.01389</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -3817,8 +3817,8 @@ Analysis</Text>
 </Shape>
 
 <Shape ID="64" Type="Shape" Name="Rectangle Fill:Chalk.64"><XForm><Angle>-0</Angle>
-<PinX>1.75</PinX>
-<PinY>5.138889</PinY>
+<PinX>11.125</PinX>
+<PinY>12.38889</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -3880,8 +3880,8 @@ Tracker</Text>
 </Shape>
 
 <Shape ID="65" Type="Shape" Name="Rectangle Fill:Chalk.65"><XForm><Angle>-0</Angle>
-<PinX>3.125</PinX>
-<PinY>5.763889</PinY>
+<PinX>12.5</PinX>
+<PinY>13.01389</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -3943,8 +3943,8 @@ Tracker</Text>
 </Shape>
 
 <Shape ID="66" Type="Shape" Name="Rectangle Fill:Chalk.66"><XForm><Angle>-0</Angle>
-<PinX>1.75</PinX>
-<PinY>3.888889</PinY>
+<PinX>11.125</PinX>
+<PinY>11.13889</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -4006,8 +4006,8 @@ Tracker</Text>
 </Shape>
 
 <Shape ID="67" Type="Shape" Name="Rectangle Fill:Chalk.67"><XForm><Angle>-0</Angle>
-<PinX>3.125</PinX>
-<PinY>3.888889</PinY>
+<PinX>12.5</PinX>
+<PinY>11.13889</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -4069,8 +4069,8 @@ Information</Text>
 </Shape>
 
 <Shape ID="68" Type="Shape" Name="Rectangle Fill:Chalk.68"><XForm><Angle>-0</Angle>
-<PinX>1.75</PinX>
-<PinY>3.263889</PinY>
+<PinX>11.125</PinX>
+<PinY>10.51389</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -4132,8 +4132,8 @@ Tracker</Text>
 </Shape>
 
 <Shape ID="69" Type="Shape" Name="Rectangle Fill:Chalk.69"><XForm><Angle>-0</Angle>
-<PinX>3.125</PinX>
-<PinY>3.263889</PinY>
+<PinX>12.5</PinX>
+<PinY>10.51389</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -4195,8 +4195,8 @@ Tracker</Text>
 </Shape>
 
 <Shape ID="70" Type="Shape" Name="Rectangle Fill:Chalk.70"><XForm><Angle>-0</Angle>
-<PinX>3.139472</PinX>
-<PinY>4.513889</PinY>
+<PinX>12.51447</PinX>
+<PinY>11.76389</PinY>
 <Width>1.278944</Width>
 <Height>0.5</Height>
 <LocPinX>0.6394722</LocPinX>
@@ -4258,8 +4258,8 @@ Detection</Text>
 </Shape>
 
 <Shape ID="71" Type="Shape" Name="Rectangle Fill:Obsidian.71"><XForm><Angle>-0</Angle>
-<PinX>5.375</PinX>
-<PinY>2.638889</PinY>
+<PinX>14.625</PinX>
+<PinY>9.888889</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -4320,8 +4320,8 @@ Detection</Text>
 </Shape>
 
 <Shape ID="72" Type="Shape" Name="Rectangle Fill:Chalk.72"><XForm><Angle>-0</Angle>
-<PinX>5.375</PinX>
-<PinY>5.013889</PinY>
+<PinX>14.625</PinX>
+<PinY>12.26389</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -4383,8 +4383,8 @@ Manager</Text>
 </Shape>
 
 <Shape ID="73" Type="Shape" Name="Rectangle Fill:Chalk.73"><XForm><Angle>-0</Angle>
-<PinX>5.375</PinX>
-<PinY>5.638889</PinY>
+<PinX>14.625</PinX>
+<PinY>12.88889</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -4446,8 +4446,8 @@ Manager</Text>
 </Shape>
 
 <Shape ID="74" Type="Shape" Name="Rectangle Fill:Chalk.74"><XForm><Angle>-0</Angle>
-<PinX>8.125</PinX>
-<PinY>4.388889</PinY>
+<PinX>17.375</PinX>
+<PinY>11.63889</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -4509,8 +4509,8 @@ Manager</Text>
 </Shape>
 
 <Shape ID="75" Type="Shape" Name="Rectangle Fill:Chalk.75"><XForm><Angle>-0</Angle>
-<PinX>8.125</PinX>
-<PinY>2.513889</PinY>
+<PinX>17.375</PinX>
+<PinY>9.763889</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -4572,8 +4572,8 @@ Placer</Text>
 </Shape>
 
 <Shape ID="76" Type="Shape" Name="Rectangle Fill:Chalk.76"><XForm><Angle>-0</Angle>
-<PinX>6.75</PinX>
-<PinY>5.638889</PinY>
+<PinX>16</PinX>
+<PinY>12.88889</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -4635,8 +4635,8 @@ Manager</Text>
 </Shape>
 
 <Shape ID="77" Type="Shape" Name="Rectangle Fill:Chalk.77"><XForm><Angle>-0</Angle>
-<PinX>6.75</PinX>
-<PinY>5.013889</PinY>
+<PinX>16</PinX>
+<PinY>12.26389</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -4698,8 +4698,8 @@ Manager</Text>
 </Shape>
 
 <Shape ID="78" Type="Shape" Name="Rectangle Fill:Chalk.78"><XForm><Angle>-0</Angle>
-<PinX>8.125</PinX>
-<PinY>5.638889</PinY>
+<PinX>17.375</PinX>
+<PinY>12.88889</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -4761,8 +4761,8 @@ Manager</Text>
 </Shape>
 
 <Shape ID="79" Type="Shape" Name="Rectangle Fill:Chalk.79"><XForm><Angle>-0</Angle>
-<PinX>8.125</PinX>
-<PinY>5.013889</PinY>
+<PinX>17.375</PinX>
+<PinY>12.26389</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -4824,8 +4824,8 @@ Manager</Text>
 </Shape>
 
 <Shape ID="80" Type="Shape" Name="Rectangle Fill:Chalk.80"><XForm><Angle>-0</Angle>
-<PinX>6.777778</PinX>
-<PinY>3.513889</PinY>
+<PinX>16.02778</PinX>
+<PinY>10.76389</PinY>
 <Width>1.305556</Width>
 <Height>0.5</Height>
 <LocPinX>0.6527778</LocPinX>
@@ -4887,8 +4887,8 @@ Manager</Text>
 </Shape>
 
 <Shape ID="81" Type="Shape" Name="Rectangle Fill:Chalk.81"><XForm><Angle>-0</Angle>
-<PinX>6.75</PinX>
-<PinY>6.513889</PinY>
+<PinX>16</PinX>
+<PinY>13.76389</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -4950,17 +4950,17 @@ Manager</Text>
 </Shape>
 
 <Shape ID="82" Type="Shape" Name="Graphic.82"><XForm><Angle>-0</Angle>
-<PinX>6.756945</PinX>
-<PinY>6.138889</PinY>
+<PinX>16.00694</PinX>
+<PinY>13.38889</PinY>
 <Width>0.01388889</Width>
 <Height>0.2361111</Height>
 <LocPinX>0.006944444</LocPinX>
 <LocPinY>0.1180556</LocPinY>
 </XForm>
-<XForm1D><BeginX>6.75</BeginX>
-<BeginY>6.256945</BeginY>
-<EndX>6.75</EndX>
-<EndY>6.020833</EndY>
+<XForm1D><BeginX>16</BeginX>
+<BeginY>13.50694</BeginY>
+<EndX>16</EndX>
+<EndY>13.27083</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
 <ConLineJumpStyle>0</ConLineJumpStyle>
@@ -5009,17 +5009,17 @@ Manager</Text>
 </Shape>
 
 <Shape ID="83" Type="Shape" Name="Graphic.83"><XForm><Angle>-0</Angle>
-<PinX>6.775589</PinX>
-<PinY>3.888889</PinY>
+<PinX>16.0256</PinX>
+<PinY>11.13889</PinY>
 <Width>0.01388889</Width>
-<Height>0.2361128</Height>
+<Height>0.2361137</Height>
 <LocPinX>0.006944444</LocPinX>
-<LocPinY>0.1180564</LocPinY>
+<LocPinY>0.1180568</LocPinY>
 </XForm>
-<XForm1D><BeginX>6.768645</BeginX>
-<BeginY>4.006945</BeginY>
-<EndX>6.773017</EndX>
-<EndY>3.770833</EndY>
+<XForm1D><BeginX>16.01865</BeginX>
+<BeginY>11.25695</BeginY>
+<EndX>16.02303</EndX>
+<EndY>11.02083</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
 <ConLineJumpStyle>0</ConLineJumpStyle>
@@ -5029,7 +5029,7 @@ Manager</Text>
 <TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
 <TxtPinY F="Height*0.000000">0</TxtPinY>
 <TxtWidth F="Width*1.000000">0.01388889</TxtWidth>
-<TxtHeight F="Height*1.000000">0.2361128</TxtHeight>
+<TxtHeight F="Height*1.000000">0.2361137</TxtHeight>
 <TxtLocPinX>0</TxtLocPinX>
 <TxtLocPinY>0</TxtLocPinY>
 </TextXForm>
@@ -5057,9 +5057,9 @@ Manager</Text>
 <Geom IX="0"><NoFill>1</NoFill>
 <NoLine>0</NoLine>
 <MoveTo IX="1"><X F="Width*0.000000">0</X>
-<Y F="Height*1.000000">0.2361128</Y>
+<Y F="Height*1.000000">0.2361137</Y>
 </MoveTo>
-<LineTo IX="2"><X F="Width*0.314789">0.004372067</X>
+<LineTo IX="2"><X F="Width*0.314941">0.004374186</X>
 <Y F="Height*0.000000">0</Y>
 </LineTo>
 </Geom>
@@ -5068,17 +5068,17 @@ Manager</Text>
 </Shape>
 
 <Shape ID="84" Type="Shape" Name="Graphic.84"><XForm><Angle>-0</Angle>
-<PinX>6.771027</PinX>
-<PinY>3.138889</PinY>
+<PinX>16.02102</PinX>
+<PinY>10.38889</PinY>
 <Width>0.01388889</Width>
 <Height>0.2361162</Height>
 <LocPinX>0.006944444</LocPinX>
 <LocPinY>0.1180581</LocPinY>
 </XForm>
-<XForm1D><BeginX>6.770641</BeginX>
-<BeginY>3.256947</BeginY>
-<EndX>6.764082</EndX>
-<EndY>3.020831</EndY>
+<XForm1D><BeginX>16.02064</BeginX>
+<BeginY>10.50695</BeginY>
+<EndX>16.01408</EndX>
+<EndY>10.27083</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
 <ConLineJumpStyle>0</ConLineJumpStyle>
@@ -5115,7 +5115,7 @@ Manager</Text>
 </Fill>
 <Geom IX="0"><NoFill>1</NoFill>
 <NoLine>0</NoLine>
-<MoveTo IX="1"><X F="Width*0.472229">0.006558736</X>
+<MoveTo IX="1"><X F="Width*0.472412">0.006561279</X>
 <Y F="Height*1.000000">0.2361162</Y>
 </MoveTo>
 <LineTo IX="2"><X F="Width*0.000000">0</X>
@@ -5127,17 +5127,17 @@ Manager</Text>
 </Shape>
 
 <Shape ID="85" Type="Shape" Name="Graphic.85"><XForm><Angle>-0</Angle>
-<PinX>6.8125</PinX>
-<PinY>2.506944</PinY>
+<PinX>16.0625</PinX>
+<PinY>9.756945</PinY>
 <Width>1.361111</Width>
 <Height>0.01388889</Height>
 <LocPinX>0.6805556</LocPinX>
 <LocPinY>0.006944444</LocPinY>
 </XForm>
-<XForm1D><BeginX>6.131945</BeginX>
-<BeginY>2.513889</BeginY>
-<EndX>7.493055</EndX>
-<EndY>2.513889</EndY>
+<XForm1D><BeginX>15.38194</BeginX>
+<BeginY>9.763889</BeginY>
+<EndX>16.74306</EndX>
+<EndY>9.763889</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
 <ConLineJumpStyle>0</ConLineJumpStyle>
@@ -5186,8 +5186,8 @@ Manager</Text>
 </Shape>
 
 <Shape ID="86" Type="Shape" Name="Rectangle Fill:Obsidian.86"><XForm><Angle>-0</Angle>
-<PinX>5.5</PinX>
-<PinY>2.513889</PinY>
+<PinX>14.75</PinX>
+<PinY>9.763889</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -5248,8 +5248,8 @@ Manager</Text>
 </Shape>
 
 <Shape ID="87" Type="Shape" Name="Rectangle Fill:Obsidian.87"><XForm><Angle>-0</Angle>
-<PinX>5.625</PinX>
-<PinY>2.388889</PinY>
+<PinX>14.875</PinX>
+<PinY>9.638889</PinY>
 <Width>1.25</Width>
 <Height>0.5</Height>
 <LocPinX>0.625</LocPinX>
@@ -5310,17 +5310,17 @@ Manager</Text>
 </Shape>
 
 <Shape ID="88" Type="Shape" Name="Graphic.88"><XForm><Angle>-0</Angle>
-<PinX>4.184028</PinX>
-<PinY>4.569445</PinY>
-<Width>0.6180556</Width>
+<PinX>13.49653</PinX>
+<PinY>11.81944</PinY>
+<Width>0.4930556</Width>
 <Height>0.01388889</Height>
-<LocPinX>0.3090278</LocPinX>
+<LocPinX>0.2465278</LocPinX>
 <LocPinY>0.006944444</LocPinY>
 </XForm>
-<XForm1D><BeginX>3.875</BeginX>
-<BeginY>4.576389</BeginY>
-<EndX>4.493055</EndX>
-<EndY>4.576389</EndY>
+<XForm1D><BeginX>13.25</BeginX>
+<BeginY>11.82639</BeginY>
+<EndX>13.74306</EndX>
+<EndY>11.82639</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
 <ConLineJumpStyle>0</ConLineJumpStyle>
@@ -5329,14 +5329,14 @@ Manager</Text>
 </Layout>
 <TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
 <TxtPinY F="Height*0.000000">0</TxtPinY>
-<TxtWidth F="Width*1.000000">0.6180556</TxtWidth>
+<TxtWidth F="Width*1.000000">0.4930556</TxtWidth>
 <TxtHeight F="Height*1.000000">0.01388889</TxtHeight>
 <TxtLocPinX>0</TxtLocPinX>
 <TxtLocPinY>0</TxtLocPinY>
 </TextXForm>
 <Misc><ObjType>2</ObjType>
 </Misc>
-<Line><LinePattern>1</LinePattern>
+<Line><LinePattern>9</LinePattern>
 <LineWeight>0.01388889</LineWeight>
 <LineColor>#000000</LineColor>
 <LineColorTrans>0</LineColorTrans>
@@ -5360,7 +5360,7 @@ Manager</Text>
 <MoveTo IX="1"><X F="Width*0.000000">0</X>
 <Y F="Height*1.000000">0.01388889</Y>
 </MoveTo>
-<LineTo IX="2"><X F="Width*1.000000">0.6180556</X>
+<LineTo IX="2"><X F="Width*1.000000">0.4930556</X>
 <Y F="Height*1.000000">0.01388889</Y>
 </LineTo>
 </Geom>
@@ -6650,7 +6650,7 @@ Manager</Text>
 
 <Shape ID="110" Type="Shape" Name="Rectangle No Fill No Fill.110"><XForm><Angle>-0</Angle>
 <PinX>5.256945</PinX>
-<PinY>10.88889</PinY>
+<PinY>11.01389</PinY>
 <Width>0.4444444</Width>
 <Height>0.1944444</Height>
 <LocPinX>0.2222222</LocPinX>
@@ -6712,7 +6712,7 @@ Manager</Text>
 
 <Shape ID="111" Type="Shape" Name="Rectangle No Fill No Fill.111"><XForm><Angle>-0</Angle>
 <PinX>0.5208333</PinX>
-<PinY>11.11111</PinY>
+<PinY>11.23611</PinY>
 <Width>0.5</Width>
 <Height>0.1944444</Height>
 <LocPinX>0.25</LocPinX>
@@ -6897,8 +6897,8 @@ Manager</Text>
 </Shape>
 
 <Shape ID="114" Type="Shape" Name="Rectangle No Fill No Fill.114"><XForm><Angle>-0</Angle>
-<PinX>1.256944</PinX>
-<PinY>6.916667</PinY>
+<PinX>10.63194</PinX>
+<PinY>14.16667</PinY>
 <Width>0.5138889</Width>
 <Height>0.1944444</Height>
 <LocPinX>0.2569444</LocPinX>
@@ -7519,16 +7519,16 @@ Manager</Text>
 
 <Shape ID="123" Type="Shape" Name="Rectangle Fill:Honeydew.123"><XForm><Angle>-0</Angle>
 <PinX>15.6875</PinX>
-<PinY>1.888889</PinY>
+<PinY>2.388889</PinY>
 <Width>5.875</Width>
-<Height>3.25</Height>
+<Height>3.5</Height>
 <LocPinX>2.9375</LocPinX>
-<LocPinY>1.625</LocPinY>
+<LocPinY>1.75</LocPinY>
 </XForm>
 <TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
-<TxtPinY F="Height*0.021368">0.06944445</TxtPinY>
+<TxtPinY F="Height*0.019841">0.06944445</TxtPinY>
 <TxtWidth F="Width*1.000000">5.875</TxtWidth>
-<TxtHeight F="Height*0.957265">3.111111</TxtHeight>
+<TxtHeight F="Height*0.960317">3.361111</TxtHeight>
 <TxtLocPinX>0</TxtLocPinX>
 <TxtLocPinY>0</TxtLocPinY>
 </TextXForm>
@@ -7554,10 +7554,10 @@ Manager</Text>
 <Geom IX="0"><NoFill>0</NoFill>
 <NoLine>0</NoLine>
 <MoveTo IX="1"><X F="Width*0.000000">0</X>
-<Y F="Height*1.000000">3.25</Y>
+<Y F="Height*1.000000">3.5</Y>
 </MoveTo>
 <LineTo IX="2"><X F="Width*1.000000">5.875</X>
-<Y F="Height*1.000000">3.25</Y>
+<Y F="Height*1.000000">3.5</Y>
 </LineTo>
 <LineTo IX="3"><X F="Width*1.000000">5.875</X>
 <Y F="Height*0.000000">0</Y>
@@ -7566,7 +7566,7 @@ Manager</Text>
 <Y F="Height*0.000000">0</Y>
 </LineTo>
 <LineTo IX="5"><X F="Width*0.000000">0</X>
-<Y F="Height*1.000000">3.25</Y>
+<Y F="Height*1.000000">3.5</Y>
 </LineTo>
 </Geom>
 <LayerMem><LayerMember>0</LayerMember>
@@ -7585,6 +7585,8 @@ Manager</Text>
      - SPAR doesn&apos;t have this problem, since it has a hierarchical organization, and there are no completing modules for units or shared resources (resources are arbitrated at the highest strategic level)
      - SKYNET is like SPAR, resource allocation for different tasks is predefined in the build order.
      - BTHAI does not arbitrate, it uses a first-come first-serve rule
+     - UAlbertaBot uses a search technique to optimize the order in which buildings and units are produced.
+
 </Text>
 </Shape>
 
@@ -8856,16 +8858,16 @@ Manager
 </Shape>
 
 <Shape ID="145" Type="Shape" Name="Graphic.145"><XForm><Angle>-0</Angle>
-<PinX>1.796876</PinX>
+<PinX>1.796875</PinX>
 <PinY>13.02222</PinY>
-<Width>0.8939939</Width>
+<Width>0.893995</Width>
 <Height>0.4767973</Height>
-<LocPinX>0.446997</LocPinX>
+<LocPinX>0.4469975</LocPinX>
 <LocPinY>0.2383987</LocPinY>
 </XForm>
 <XForm1D><BeginX>2.243873</BeginX>
 <BeginY>12.78382</BeginY>
-<EndX>1.349879</EndX>
+<EndX>1.349877</EndX>
 <EndY>13.26062</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
@@ -8875,7 +8877,7 @@ Manager
 </Layout>
 <TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
 <TxtPinY F="Height*0.000000">0</TxtPinY>
-<TxtWidth F="Width*1.000000">0.8939939</TxtWidth>
+<TxtWidth F="Width*1.000000">0.893995</TxtWidth>
 <TxtHeight F="Height*1.000000">0.4767973</TxtHeight>
 <TxtLocPinX>0</TxtLocPinX>
 <TxtLocPinY>0</TxtLocPinY>
@@ -8905,10 +8907,10 @@ Manager
 </Fill>
 <Geom IX="0"><NoFill>1</NoFill>
 <NoLine>0</NoLine>
-<MoveTo IX="1"><X F="Width*1.000000">0.8939938</X>
+<MoveTo IX="1"><X F="Width*1.000000">0.893995</X>
 <Y F="Height*0.000000">0</Y>
 </MoveTo>
-<LineTo IX="2"><X F="Width*-0.000000">-1.059638e-07</X>
+<LineTo IX="2"><X F="Width*0.000000">0</X>
 <Y F="Height*1.000000">0.4767973</Y>
 </LineTo>
 </Geom>
@@ -8978,16 +8980,16 @@ Manager
 </Shape>
 
 <Shape ID="147" Type="Shape" Name="Graphic.147"><XForm><Angle>-0</Angle>
-<PinX>1.796876</PinX>
+<PinX>1.796875</PinX>
 <PinY>12.00556</PinY>
-<Width>0.8939939</Width>
+<Width>0.893995</Width>
 <Height>0.4767973</Height>
-<LocPinX>0.446997</LocPinX>
+<LocPinX>0.4469975</LocPinX>
 <LocPinY>0.2383987</LocPinY>
 </XForm>
 <XForm1D><BeginX>2.243873</BeginX>
 <BeginY>12.24395</BeginY>
-<EndX>1.349879</EndX>
+<EndX>1.349877</EndX>
 <EndY>11.76716</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
@@ -8997,7 +8999,7 @@ Manager
 </Layout>
 <TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
 <TxtPinY F="Height*0.000000">0</TxtPinY>
-<TxtWidth F="Width*1.000000">0.8939939</TxtWidth>
+<TxtWidth F="Width*1.000000">0.893995</TxtWidth>
 <TxtHeight F="Height*1.000000">0.4767973</TxtHeight>
 <TxtLocPinX>0</TxtLocPinX>
 <TxtLocPinY>0</TxtLocPinY>
@@ -9027,10 +9029,10 @@ Manager
 </Fill>
 <Geom IX="0"><NoFill>1</NoFill>
 <NoLine>0</NoLine>
-<MoveTo IX="1"><X F="Width*1.000000">0.8939938</X>
+<MoveTo IX="1"><X F="Width*1.000000">0.893995</X>
 <Y F="Height*1.000000">0.4767973</Y>
 </MoveTo>
-<LineTo IX="2"><X F="Width*-0.000000">-1.059638e-07</X>
+<LineTo IX="2"><X F="Width*0.000000">0</X>
 <Y F="Height*0.000000">0</Y>
 </LineTo>
 </Geom>
@@ -9097,7 +9099,7 @@ Manager
 <VerticalAlign>0</VerticalAlign>
 <DefaultTabStop>0.3888889</DefaultTabStop>
 </TextBlock>
-<Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>THANATOS</Text>
+<Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>-</Text>
 </Shape>
 
 <Shape ID="149" Type="Shape" Name="Rectangle Fill:Chalk.149"><XForm><Angle>-0</Angle>
@@ -9350,16 +9352,16 @@ Manager
 
 <Shape ID="153" Type="Shape" Name="Graphic.153"><XForm><Angle>-0</Angle>
 <PinX>1.75</PinX>
-<PinY>1.826391</PinY>
+<PinY>1.826389</PinY>
 <Width>0.9872754</Width>
-<Height>0.4319331</Height>
+<Height>0.4319322</Height>
 <LocPinX>0.4936377</LocPinX>
-<LocPinY>0.2159665</LocPinY>
+<LocPinY>0.2159661</LocPinY>
 </XForm>
 <XForm1D><BeginX>1.256362</BeginX>
-<BeginY>1.610424</BeginY>
+<BeginY>1.610423</BeginY>
 <EndX>2.243638</EndX>
-<EndY>2.042357</EndY>
+<EndY>2.042355</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
 <ConLineJumpStyle>0</ConLineJumpStyle>
@@ -9369,7 +9371,7 @@ Manager
 <TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
 <TxtPinY F="Height*0.000000">0</TxtPinY>
 <TxtWidth F="Width*1.000000">0.9872754</TxtWidth>
-<TxtHeight F="Height*1.000000">0.4319331</TxtHeight>
+<TxtHeight F="Height*1.000000">0.4319322</TxtHeight>
 <TxtLocPinX>0</TxtLocPinX>
 <TxtLocPinY>0</TxtLocPinY>
 </TextXForm>
@@ -9397,10 +9399,10 @@ Manager
 <Geom IX="0"><NoFill>1</NoFill>
 <NoLine>0</NoLine>
 <MoveTo IX="1"><X F="Width*0.000000">0</X>
-<Y F="Height*-0.000002">-8.477105e-07</Y>
+<Y F="Height*0.000000">0</Y>
 </MoveTo>
 <LineTo IX="2"><X F="Width*1.000000">0.9872754</X>
-<Y F="Height*0.999998">0.4319322</Y>
+<Y F="Height*1.000000">0.4319322</Y>
 </LineTo>
 </Geom>
 <LayerMem><LayerMember>0</LayerMember>
@@ -9409,16 +9411,16 @@ Manager
 
 <Shape ID="154" Type="Shape" Name="Graphic.154"><XForm><Angle>-0</Angle>
 <PinX>3.75</PinX>
-<PinY>1.82636</PinY>
-<Width>0.9872754</Width>
-<Height>0.4319619</Height>
-<LocPinX>0.4936377</LocPinX>
-<LocPinY>0.2159809</LocPinY>
+<PinY>1.826389</PinY>
+<Width>0.9872757</Width>
+<Height>0.4319322</Height>
+<LocPinX>0.4936378</LocPinX>
+<LocPinY>0.2159661</LocPinY>
 </XForm>
 <XForm1D><BeginX>3.256362</BeginX>
-<BeginY>2.042341</BeginY>
+<BeginY>2.042355</BeginY>
 <EndX>4.243638</EndX>
-<EndY>1.610379</EndY>
+<EndY>1.610423</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
 <ConLineJumpStyle>0</ConLineJumpStyle>
@@ -9427,8 +9429,8 @@ Manager
 </Layout>
 <TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
 <TxtPinY F="Height*0.000000">0</TxtPinY>
-<TxtWidth F="Width*1.000000">0.9872754</TxtWidth>
-<TxtHeight F="Height*1.000000">0.4319619</TxtHeight>
+<TxtWidth F="Width*1.000000">0.9872757</TxtWidth>
+<TxtHeight F="Height*1.000000">0.4319322</TxtHeight>
 <TxtLocPinX>0</TxtLocPinX>
 <TxtLocPinY>0</TxtLocPinY>
 </TextXForm>
@@ -9455,10 +9457,10 @@ Manager
 </Fill>
 <Geom IX="0"><NoFill>1</NoFill>
 <NoLine>0</NoLine>
-<MoveTo IX="1"><X F="Width*-0.000000">-2.119276e-07</X>
-<Y F="Height*1.000000">0.4319619</Y>
+<MoveTo IX="1"><X F="Width*0.000000">2.119276e-07</X>
+<Y F="Height*1.000000">0.4319322</Y>
 </MoveTo>
-<LineTo IX="2"><X F="Width*1.000000">0.9872752</X>
+<LineTo IX="2"><X F="Width*1.000000">0.9872758</X>
 <Y F="Height*0.000000">0</Y>
 </LineTo>
 </Geom>
@@ -10371,7 +10373,7 @@ Filter</Text>
 <PinY>6.611111</PinY>
 <Width>1.329132</Width>
 <Height>1.240523</Height>
-<LocPinX>0.6645658</LocPinX>
+<LocPinX>0.6645659</LocPinX>
 <LocPinY>0.6202613</LocPinY>
 </XForm>
 <XForm1D><BeginX>2.477066</BeginX>
@@ -10419,7 +10421,7 @@ Filter</Text>
 <MoveTo IX="1"><X F="Width*1.000000">1.329132</X>
 <Y F="Height*1.000000">1.240523</Y>
 </MoveTo>
-<LineTo IX="2"><X F="Width*0.000000">1.059638e-07</X>
+<LineTo IX="2"><X F="Width*-0.000000">-1.059638e-07</X>
 <Y F="Height*0.000000">0</Y>
 </LineTo>
 </Geom>
@@ -10490,14 +10492,14 @@ Filter</Text>
 
 <Shape ID="172" Type="Shape" Name="Graphic.172"><XForm><Angle>-0</Angle>
 <PinX>3.6875</PinX>
-<PinY>6.173612</PinY>
+<PinY>6.173611</PinY>
 <Width>0.8624141</Width>
 <Height>0.4024607</Height>
 <LocPinX>0.431207</LocPinX>
 <LocPinY>0.2012304</LocPinY>
 </XForm>
 <XForm1D><BeginX>4.118707</BeginX>
-<BeginY>5.972382</BeginY>
+<BeginY>5.972381</BeginY>
 <EndX>3.256293</EndX>
 <EndY>6.374842</EndY>
 </XForm1D>
@@ -12124,7 +12126,7 @@ Implementation</Text>
 </TextXForm>
 <Misc><ObjType>2</ObjType>
 </Misc>
-<Line><LinePattern>1</LinePattern>
+<Line><LinePattern>9</LinePattern>
 <LineWeight>0.01388889</LineWeight>
 <LineColor>#000000</LineColor>
 <LineColorTrans>0</LineColorTrans>
@@ -13992,7 +13994,7 @@ Manager</Text>
 <LocPinX>0.006944444</LocPinX>
 <LocPinY>0.1180568</LocPinY>
 </XForm>
-<XForm1D><BeginX>16.26866</BeginX>
+<XForm1D><BeginX>16.26865</BeginX>
 <BeginY>10.88195</BeginY>
 <EndX>16.27303</EndX>
 <EndY>10.64583</EndY>
@@ -14044,16 +14046,16 @@ Manager</Text>
 </Shape>
 
 <Shape ID="229" Type="Shape" Name="Graphic.229"><XForm><Angle>-0</Angle>
-<PinX>16.27101</PinX>
+<PinX>16.27102</PinX>
 <PinY>10.01389</PinY>
 <Width>0.01388889</Width>
 <Height>0.2361162</Height>
 <LocPinX>0.006944444</LocPinX>
 <LocPinY>0.1180581</LocPinY>
 </XForm>
-<XForm1D><BeginX>16.27063</BeginX>
+<XForm1D><BeginX>16.27064</BeginX>
 <BeginY>10.13195</BeginY>
-<EndX>16.26406</EndX>
+<EndX>16.26408</EndX>
 <EndY>9.895831</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
@@ -14091,7 +14093,7 @@ Manager</Text>
 </Fill>
 <Geom IX="0"><NoFill>1</NoFill>
 <NoLine>0</NoLine>
-<MoveTo IX="1"><X F="Width*0.472900">0.006568061</X>
+<MoveTo IX="1"><X F="Width*0.472412">0.006561279</X>
 <Y F="Height*1.000000">0.2361162</Y>
 </MoveTo>
 <LineTo IX="2"><X F="Width*0.000000">0</X>
@@ -14287,16 +14289,16 @@ Manager</Text>
 
 <Shape ID="233" Type="Shape" Name="Graphic.233"><XForm><Angle>-0</Angle>
 <PinX>13.6875</PinX>
-<PinY>11.52565</PinY>
+<PinY>11.52566</PinY>
 <Width>0.6111171</Width>
-<Height>0.01771842</Height>
+<Height>0.01771376</Height>
 <LocPinX>0.3055585</LocPinX>
-<LocPinY>0.008859211</LocPinY>
+<LocPinY>0.00885688</LocPinY>
 </XForm>
 <XForm1D><BeginX>13.38194</BeginX>
-<BeginY>11.53451</BeginY>
+<BeginY>11.53452</BeginY>
 <EndX>13.99306</EndX>
-<EndY>11.51679</EndY>
+<EndY>11.51681</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
 <ConLineJumpStyle>0</ConLineJumpStyle>
@@ -14306,13 +14308,13 @@ Manager</Text>
 <TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
 <TxtPinY F="Height*0.000000">0</TxtPinY>
 <TxtWidth F="Width*1.000000">0.6111171</TxtWidth>
-<TxtHeight F="Height*1.000000">0.01771842</TxtHeight>
+<TxtHeight F="Height*1.000000">0.01771376</TxtHeight>
 <TxtLocPinX>0</TxtLocPinX>
 <TxtLocPinY>0</TxtLocPinY>
 </TextXForm>
 <Misc><ObjType>2</ObjType>
 </Misc>
-<Line><LinePattern>1</LinePattern>
+<Line><LinePattern>9</LinePattern>
 <LineWeight>0.01388889</LineWeight>
 <LineColor>#000000</LineColor>
 <LineColorTrans>0</LineColorTrans>
@@ -14334,7 +14336,7 @@ Manager</Text>
 <Geom IX="0"><NoFill>1</NoFill>
 <NoLine>0</NoLine>
 <MoveTo IX="1"><X F="Width*0.000000">0</X>
-<Y F="Height*1.000000">0.01771842</Y>
+<Y F="Height*1.000000">0.01771376</Y>
 </MoveTo>
 <LineTo IX="2"><X F="Width*1.000000">0.6111171</X>
 <Y F="Height*0.000000">0</Y>
@@ -15693,17 +15695,17 @@ Manager</Text>
 </Shape>
 
 <Shape ID="256" Type="Shape" Name="Graphic.256"><XForm><Angle>-0</Angle>
-<PinX>8.125074</PinX>
-<PinY>3.01389</PinY>
-<Width>0.1188032</Width>
+<PinX>8.125002</PinX>
+<PinY>3.013889</PinY>
+<Width>0.1187888</Width>
 <Height>0.2375776</Height>
-<LocPinX>0.05940162</LocPinX>
+<LocPinX>0.05939441</LocPinX>
 <LocPinY>0.1187888</LocPinY>
 </XForm>
-<XForm1D><BeginX>8.065673</BeginX>
-<BeginY>3.132679</BeginY>
-<EndX>8.184476</EndX>
-<EndY>2.895101</EndY>
+<XForm1D><BeginX>8.065608</BeginX>
+<BeginY>3.132678</BeginY>
+<EndX>8.184397</EndX>
+<EndY>2.8951</EndY>
 </XForm1D>
 <Layout><ConLineJumpCode>4</ConLineJumpCode>
 <ConLineJumpStyle>0</ConLineJumpStyle>
@@ -15712,7 +15714,7 @@ Manager</Text>
 </Layout>
 <TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
 <TxtPinY F="Height*0.000000">0</TxtPinY>
-<TxtWidth F="Width*1.000000">0.1188032</TxtWidth>
+<TxtWidth F="Width*1.000000">0.1187888</TxtWidth>
 <TxtHeight F="Height*1.000000">0.2375776</TxtHeight>
 <TxtLocPinX>0</TxtLocPinX>
 <TxtLocPinY>0</TxtLocPinY>
@@ -15743,7 +15745,7 @@ Manager</Text>
 <MoveTo IX="1"><X F="Width*0.000000">0</X>
 <Y F="Height*1.000000">0.2375776</Y>
 </MoveTo>
-<LineTo IX="2"><X F="Width*1.000000">0.1188032</X>
+<LineTo IX="2"><X F="Width*1.000000">0.1187888</X>
 <Y F="Height*0.000000">0</Y>
 </LineTo>
 </Geom>
@@ -15952,7 +15954,1765 @@ The most interesting thing of this bot is the micro control of squads using pote
 </Page>
 
 
-<Page ID="2" NameU="Canvas 3"><PageSheet><RulerGrid><XGridSpacing>0.1111111</XGridSpacing>
+<Page ID="2" NameU="Canvas 5"><PageSheet><RulerGrid><XGridSpacing>0.1111111</XGridSpacing>
+<YGridSpacing>0.1111111</YGridSpacing>
+</RulerGrid>
+<PageProps><PageScale>1</PageScale>
+<DrawingScale>1</DrawingScale>
+<PageWidth>22.38889</PageWidth>
+<PageHeight>14.88889</PageHeight>
+<DrawingSizeType>3</DrawingSizeType>
+<ShdwOffsetX>0</ShdwOffsetX>
+<ShdwOffsetY>-0.05555556</ShdwOffsetY>
+</PageProps>
+<Layer IX="0"><Name>Layer 1</Name>
+<Visible>1</Visible>
+<Print>1</Print>
+<Lock>0</Lock>
+</Layer>
+</PageSheet>
+<Shapes><Shape ID="259" Type="Shape" Name="Rectangle Fill:Mercury.259"><XForm><Angle>-0</Angle>
+<PinX>3</PinX>
+<PinY>12.57639</PinY>
+<Width>5.5</Width>
+<Height>4.125</Height>
+<LocPinX>2.75</LocPinX>
+<LocPinY>2.0625</LocPinY>
+</XForm>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.016835">0.06944445</TxtPinY>
+<TxtWidth F="Width*1.000000">5.5</TxtWidth>
+<TxtHeight F="Height*0.966330">3.986111</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>1</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+</Line>
+<Fill><FillPattern>1</FillPattern>
+<FillForegnd>#E6E6E6</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>0</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>0</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">4.125</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*1.000000">5.5</X>
+<Y F="Height*1.000000">4.125</Y>
+</LineTo>
+<LineTo IX="3"><X F="Width*1.000000">5.5</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="4"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="5"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">4.125</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+<TextBlock><LeftMargin>0.06944445</LeftMargin>
+<RightMargin>0.06944445</RightMargin>
+<VerticalAlign>0</VerticalAlign>
+<DefaultTabStop>0.3888889</DefaultTabStop>
+</TextBlock>
+<Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>UAlbertaBot</Text>
+</Shape>
+
+<Shape ID="260" Type="Shape" Name="Rectangle Fill:Magnesium.260"><XForm><Angle>-0</Angle>
+<PinX>1.1875</PinX>
+<PinY>12.51389</PinY>
+<Width>1.625</Width>
+<Height>3.75</Height>
+<LocPinX>0.8125</LocPinX>
+<LocPinY>1.875</LocPinY>
+</XForm>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.018519">0.06944445</TxtPinY>
+<TxtWidth F="Width*1.000000">1.625</TxtWidth>
+<TxtHeight F="Height*0.962963">3.611111</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>1</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+</Line>
+<Fill><FillPattern>1</FillPattern>
+<FillForegnd>#B3B3B3</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>0</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>0</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">3.75</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*1.000000">1.625</X>
+<Y F="Height*1.000000">3.75</Y>
+</LineTo>
+<LineTo IX="3"><X F="Width*1.000000">1.625</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="4"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="5"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">3.75</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+<TextBlock><LeftMargin>0.06944445</LeftMargin>
+<RightMargin>0.06944445</RightMargin>
+<VerticalAlign>0</VerticalAlign>
+<DefaultTabStop>0.3888889</DefaultTabStop>
+</TextBlock>
+<Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Macro</Text>
+</Shape>
+
+<Shape ID="261" Type="Shape" Name="Rectangle Fill:Magnesium.261"><XForm><Angle>-0</Angle>
+<PinX>4.9375</PinX>
+<PinY>12.51389</PinY>
+<Width>1.375</Width>
+<Height>3.75</Height>
+<LocPinX>0.6875</LocPinX>
+<LocPinY>1.875</LocPinY>
+</XForm>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.018519">0.06944445</TxtPinY>
+<TxtWidth F="Width*1.000000">1.375</TxtWidth>
+<TxtHeight F="Height*0.962963">3.611111</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>1</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+</Line>
+<Fill><FillPattern>1</FillPattern>
+<FillForegnd>#B3B3B3</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>0</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>0</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">3.75</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*1.000000">1.375</X>
+<Y F="Height*1.000000">3.75</Y>
+</LineTo>
+<LineTo IX="3"><X F="Width*1.000000">1.375</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="4"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="5"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">3.75</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+<TextBlock><LeftMargin>0.06944445</LeftMargin>
+<RightMargin>0.06944445</RightMargin>
+<VerticalAlign>0</VerticalAlign>
+<DefaultTabStop>0.3888889</DefaultTabStop>
+</TextBlock>
+<Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Macro</Text>
+</Shape>
+
+<Shape ID="262" Type="Shape" Name="Rectangle Fill:Chalk.262"><XForm><Angle>-0</Angle>
+<PinX>4.9375</PinX>
+<PinY>12.88889</PinY>
+<Width>1.125</Width>
+<Height>0.5</Height>
+<LocPinX>0.5625</LocPinX>
+<LocPinY>0.25</LocPinY>
+</XForm>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.138889">0.06944445</TxtPinY>
+<TxtWidth F="Width*1.000000">1.125</TxtWidth>
+<TxtHeight F="Height*0.722222">0.3611111</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>1</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+</Line>
+<Fill><FillPattern>1</FillPattern>
+<FillForegnd>#FFFFFF</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>1</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>0</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*1.000000">1.125</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+<LineTo IX="3"><X F="Width*1.000000">1.125</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="4"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="5"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+<TextBlock><LeftMargin>0.06944445</LeftMargin>
+<RightMargin>0.06944445</RightMargin>
+<VerticalAlign>1</VerticalAlign>
+<DefaultTabStop>0.3888889</DefaultTabStop>
+</TextBlock>
+<Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Production
+Manager</Text>
+</Shape>
+
+<Shape ID="263" Type="Shape" Name="Rectangle Fill:Chalk.263"><XForm><Angle>-0</Angle>
+<PinX>4.9375</PinX>
+<PinY>13.76389</PinY>
+<Width>1.125</Width>
+<Height>0.5</Height>
+<LocPinX>0.5625</LocPinX>
+<LocPinY>0.25</LocPinY>
+</XForm>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.138889">0.06944445</TxtPinY>
+<TxtWidth F="Width*1.000000">1.125</TxtWidth>
+<TxtHeight F="Height*0.722222">0.3611111</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>1</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+</Line>
+<Fill><FillPattern>1</FillPattern>
+<FillForegnd>#FFFFFF</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>1</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>0</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*1.000000">1.125</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+<LineTo IX="3"><X F="Width*1.000000">1.125</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="4"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="5"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+<TextBlock><LeftMargin>0.06944445</LeftMargin>
+<RightMargin>0.06944445</RightMargin>
+<VerticalAlign>1</VerticalAlign>
+<DefaultTabStop>0.3888889</DefaultTabStop>
+</TextBlock>
+<Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Worker
+Manager</Text>
+</Shape>
+
+<Shape ID="264" Type="Shape" Name="Rectangle Fill:Chalk.264"><XForm><Angle>-0</Angle>
+<PinX>1.1875</PinX>
+<PinY>12.88889</PinY>
+<Width>1.125</Width>
+<Height>0.5</Height>
+<LocPinX>0.5625</LocPinX>
+<LocPinY>0.25</LocPinY>
+</XForm>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.138889">0.06944445</TxtPinY>
+<TxtWidth F="Width*1.000000">1.125</TxtWidth>
+<TxtHeight F="Height*0.722222">0.3611111</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>1</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+</Line>
+<Fill><FillPattern>1</FillPattern>
+<FillForegnd>#FFFFFF</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>1</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>0</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*1.000000">1.125</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+<LineTo IX="3"><X F="Width*1.000000">1.125</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="4"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="5"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+<TextBlock><LeftMargin>0.06944445</LeftMargin>
+<RightMargin>0.06944445</RightMargin>
+<VerticalAlign>1</VerticalAlign>
+<DefaultTabStop>0.3888889</DefaultTabStop>
+</TextBlock>
+<Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Combat
+Manager</Text>
+</Shape>
+
+<Shape ID="265" Type="Shape" Name="Rectangle Fill:Chalk.265"><XForm><Angle>-0</Angle>
+<PinX>4.9375</PinX>
+<PinY>12.01389</PinY>
+<Width>1.125</Width>
+<Height>0.5</Height>
+<LocPinX>0.5625</LocPinX>
+<LocPinY>0.25</LocPinY>
+</XForm>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.138889">0.06944445</TxtPinY>
+<TxtWidth F="Width*1.000000">1.125</TxtWidth>
+<TxtHeight F="Height*0.722222">0.3611111</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>1</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+</Line>
+<Fill><FillPattern>1</FillPattern>
+<FillForegnd>#FFFFFF</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>1</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>0</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*1.000000">1.125</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+<LineTo IX="3"><X F="Width*1.000000">1.125</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="4"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="5"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+<TextBlock><LeftMargin>0.06944445</LeftMargin>
+<RightMargin>0.06944445</RightMargin>
+<VerticalAlign>1</VerticalAlign>
+<DefaultTabStop>0.3888889</DefaultTabStop>
+</TextBlock>
+<Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Building
+Manager</Text>
+</Shape>
+
+<Shape ID="266" Type="Shape" Name="Rectangle Fill:Chalk.266"><XForm><Angle>-0</Angle>
+<PinX>4.9375</PinX>
+<PinY>11.13889</PinY>
+<Width>1.125</Width>
+<Height>0.5</Height>
+<LocPinX>0.5625</LocPinX>
+<LocPinY>0.25</LocPinY>
+</XForm>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.138889">0.06944445</TxtPinY>
+<TxtWidth F="Width*1.000000">1.125</TxtWidth>
+<TxtHeight F="Height*0.722222">0.3611111</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>1</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+</Line>
+<Fill><FillPattern>1</FillPattern>
+<FillForegnd>#FFFFFF</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>1</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>0</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*1.000000">1.125</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+<LineTo IX="3"><X F="Width*1.000000">1.125</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="4"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="5"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+<TextBlock><LeftMargin>0.06944445</LeftMargin>
+<RightMargin>0.06944445</RightMargin>
+<VerticalAlign>1</VerticalAlign>
+<DefaultTabStop>0.3888889</DefaultTabStop>
+</TextBlock>
+<Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Building
+Placer</Text>
+</Shape>
+
+<Shape ID="267" Type="Shape" Name="Rectangle Fill:Chalk.267"><XForm><Angle>-0</Angle>
+<PinX>1.0625</PinX>
+<PinY>11.26389</PinY>
+<Width>1.125</Width>
+<Height>0.5</Height>
+<LocPinX>0.5625</LocPinX>
+<LocPinY>0.25</LocPinY>
+</XForm>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.138889">0.06944445</TxtPinY>
+<TxtWidth F="Width*1.000000">1.125</TxtWidth>
+<TxtHeight F="Height*0.722222">0.3611111</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>1</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+</Line>
+<Fill><FillPattern>1</FillPattern>
+<FillForegnd>#FFFFFF</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>1</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>0</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*1.000000">1.125</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+<LineTo IX="3"><X F="Width*1.000000">1.125</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="4"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="5"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+<TextBlock><LeftMargin>0.06944445</LeftMargin>
+<RightMargin>0.06944445</RightMargin>
+<VerticalAlign>1</VerticalAlign>
+<DefaultTabStop>0.3888889</DefaultTabStop>
+</TextBlock>
+<Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Micro
+Manager</Text>
+</Shape>
+
+<Shape ID="268" Type="Shape" Name="Rectangle Fill:Chalk.268"><XForm><Angle>-0</Angle>
+<PinX>1.1875</PinX>
+<PinY>13.76389</PinY>
+<Width>1.125</Width>
+<Height>0.5</Height>
+<LocPinX>0.5625</LocPinX>
+<LocPinY>0.25</LocPinY>
+</XForm>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.138889">0.06944445</TxtPinY>
+<TxtWidth F="Width*1.000000">1.125</TxtWidth>
+<TxtHeight F="Height*0.722222">0.3611111</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>1</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+</Line>
+<Fill><FillPattern>1</FillPattern>
+<FillForegnd>#FFFFFF</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>1</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>0</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*1.000000">1.125</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+<LineTo IX="3"><X F="Width*1.000000">1.125</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="4"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="5"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+<TextBlock><LeftMargin>0.06944445</LeftMargin>
+<RightMargin>0.06944445</RightMargin>
+<VerticalAlign>1</VerticalAlign>
+<DefaultTabStop>0.3888889</DefaultTabStop>
+</TextBlock>
+<Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Scout
+Manager</Text>
+</Shape>
+
+<Shape ID="269" Type="Shape" Name="Rectangle Fill:Chalk.269"><XForm><Angle>-0</Angle>
+<PinX>1.1875</PinX>
+<PinY>11.13889</PinY>
+<Width>1.125</Width>
+<Height>0.5</Height>
+<LocPinX>0.5625</LocPinX>
+<LocPinY>0.25</LocPinY>
+</XForm>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.138889">0.06944445</TxtPinY>
+<TxtWidth F="Width*1.000000">1.125</TxtWidth>
+<TxtHeight F="Height*0.722222">0.3611111</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>1</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+</Line>
+<Fill><FillPattern>1</FillPattern>
+<FillForegnd>#FFFFFF</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>1</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>0</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*1.000000">1.125</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+<LineTo IX="3"><X F="Width*1.000000">1.125</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="4"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="5"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+<TextBlock><LeftMargin>0.06944445</LeftMargin>
+<RightMargin>0.06944445</RightMargin>
+<VerticalAlign>1</VerticalAlign>
+<DefaultTabStop>0.3888889</DefaultTabStop>
+</TextBlock>
+<Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Micro
+Manager</Text>
+</Shape>
+
+<Shape ID="270" Type="Shape" Name="Rectangle Fill:Chalk.270"><XForm><Angle>-0</Angle>
+<PinX>1.3125</PinX>
+<PinY>11.01389</PinY>
+<Width>1.125</Width>
+<Height>0.5</Height>
+<LocPinX>0.5625</LocPinX>
+<LocPinY>0.25</LocPinY>
+</XForm>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.138889">0.06944445</TxtPinY>
+<TxtWidth F="Width*1.000000">1.125</TxtWidth>
+<TxtHeight F="Height*0.722222">0.3611111</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>1</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+</Line>
+<Fill><FillPattern>1</FillPattern>
+<FillForegnd>#FFFFFF</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>1</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>0</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*1.000000">1.125</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+<LineTo IX="3"><X F="Width*1.000000">1.125</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="4"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="5"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+<TextBlock><LeftMargin>0.06944445</LeftMargin>
+<RightMargin>0.06944445</RightMargin>
+<VerticalAlign>1</VerticalAlign>
+<DefaultTabStop>0.3888889</DefaultTabStop>
+</TextBlock>
+<Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Micro
+Manager</Text>
+</Shape>
+
+<Shape ID="271" Type="Shape" Name="Graphic.271"><XForm><Angle>-0</Angle>
+<PinX>4.944445</PinX>
+<PinY>12.45139</PinY>
+<Width>0.01388889</Width>
+<Height>0.3611111</Height>
+<LocPinX>0.006944444</LocPinX>
+<LocPinY>0.1805556</LocPinY>
+</XForm>
+<XForm1D><BeginX>4.9375</BeginX>
+<BeginY>12.63194</BeginY>
+<EndX>4.9375</EndX>
+<EndY>12.27083</EndY>
+</XForm1D>
+<Layout><ConLineJumpCode>4</ConLineJumpCode>
+<ConLineJumpStyle>0</ConLineJumpStyle>
+<ShapeRouteStyle>0</ShapeRouteStyle>
+<ConLineRouteExt>2</ConLineRouteExt>
+</Layout>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.000000">0</TxtPinY>
+<TxtWidth F="Width*1.000000">0.01388889</TxtWidth>
+<TxtHeight F="Height*1.000000">0.3611111</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>2</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+<EndArrow>4</EndArrow>
+<EndArrowSize>2</EndArrowSize>
+</Line>
+<Fill><FillPattern>0</FillPattern>
+<FillForegnd>0</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>0</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>1</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.3611111</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+</Shape>
+
+<Shape ID="272" Type="Shape" Name="Graphic.272"><XForm><Angle>-0</Angle>
+<PinX>4.944445</PinX>
+<PinY>11.57639</PinY>
+<Width>0.01388889</Width>
+<Height>0.3611111</Height>
+<LocPinX>0.006944444</LocPinX>
+<LocPinY>0.1805556</LocPinY>
+</XForm>
+<XForm1D><BeginX>4.9375</BeginX>
+<BeginY>11.75694</BeginY>
+<EndX>4.9375</EndX>
+<EndY>11.39583</EndY>
+</XForm1D>
+<Layout><ConLineJumpCode>4</ConLineJumpCode>
+<ConLineJumpStyle>0</ConLineJumpStyle>
+<ShapeRouteStyle>0</ShapeRouteStyle>
+<ConLineRouteExt>2</ConLineRouteExt>
+</Layout>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.000000">0</TxtPinY>
+<TxtWidth F="Width*1.000000">0.01388889</TxtWidth>
+<TxtHeight F="Height*1.000000">0.3611111</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>2</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+<BeginArrow>4</BeginArrow>
+<BeginArrowSize>2</BeginArrowSize>
+<EndArrow>4</EndArrow>
+<EndArrowSize>2</EndArrowSize>
+</Line>
+<Fill><FillPattern>0</FillPattern>
+<FillForegnd>0</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>0</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>1</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.3611111</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+</Shape>
+
+<Shape ID="273" Type="Shape" Name="Rectangle Fill:Chalk.273"><XForm><Angle>-0</Angle>
+<PinX>1.1875</PinX>
+<PinY>12.01389</PinY>
+<Width>1.125</Width>
+<Height>0.5</Height>
+<LocPinX>0.5625</LocPinX>
+<LocPinY>0.25</LocPinY>
+</XForm>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.138889">0.06944445</TxtPinY>
+<TxtWidth F="Width*1.000000">1.125</TxtWidth>
+<TxtHeight F="Height*0.722222">0.3611111</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>1</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+</Line>
+<Fill><FillPattern>1</FillPattern>
+<FillForegnd>#FFFFFF</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>1</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>0</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*1.000000">1.125</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+<LineTo IX="3"><X F="Width*1.000000">1.125</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="4"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="5"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+<TextBlock><LeftMargin>0.06944445</LeftMargin>
+<RightMargin>0.06944445</RightMargin>
+<VerticalAlign>1</VerticalAlign>
+<DefaultTabStop>0.3888889</DefaultTabStop>
+</TextBlock>
+<Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Squad</Text>
+</Shape>
+
+<Shape ID="274" Type="Shape" Name="Graphic.274"><XForm><Angle>-0</Angle>
+<PinX>1.194444</PinX>
+<PinY>12.45139</PinY>
+<Width>0.01388889</Width>
+<Height>0.3611111</Height>
+<LocPinX>0.006944444</LocPinX>
+<LocPinY>0.1805556</LocPinY>
+</XForm>
+<XForm1D><BeginX>1.1875</BeginX>
+<BeginY>12.63194</BeginY>
+<EndX>1.1875</EndX>
+<EndY>12.27083</EndY>
+</XForm1D>
+<Layout><ConLineJumpCode>4</ConLineJumpCode>
+<ConLineJumpStyle>0</ConLineJumpStyle>
+<ShapeRouteStyle>0</ShapeRouteStyle>
+<ConLineRouteExt>2</ConLineRouteExt>
+</Layout>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.000000">0</TxtPinY>
+<TxtWidth F="Width*1.000000">0.01388889</TxtWidth>
+<TxtHeight F="Height*1.000000">0.3611111</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>2</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+<EndArrow>4</EndArrow>
+<EndArrowSize>2</EndArrowSize>
+</Line>
+<Fill><FillPattern>0</FillPattern>
+<FillForegnd>0</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>0</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>1</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.3611111</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+</Shape>
+
+<Shape ID="275" Type="Shape" Name="Graphic.275"><XForm><Angle>-0</Angle>
+<PinX>1.194444</PinX>
+<PinY>11.63542</PinY>
+<Width>0.01388889</Width>
+<Height>0.2430556</Height>
+<LocPinX>0.006944444</LocPinX>
+<LocPinY>0.1215278</LocPinY>
+</XForm>
+<XForm1D><BeginX>1.1875</BeginX>
+<BeginY>11.75694</BeginY>
+<EndX>1.1875</EndX>
+<EndY>11.51389</EndY>
+</XForm1D>
+<Layout><ConLineJumpCode>4</ConLineJumpCode>
+<ConLineJumpStyle>0</ConLineJumpStyle>
+<ShapeRouteStyle>0</ShapeRouteStyle>
+<ConLineRouteExt>2</ConLineRouteExt>
+</Layout>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.000000">0</TxtPinY>
+<TxtWidth F="Width*1.000000">0.01388889</TxtWidth>
+<TxtHeight F="Height*1.000000">0.2430556</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>2</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+<EndArrow>4</EndArrow>
+<EndArrowSize>2</EndArrowSize>
+</Line>
+<Fill><FillPattern>0</FillPattern>
+<FillForegnd>0</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>0</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>1</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.2430556</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+</Shape>
+
+<Shape ID="276" Type="Shape" Name="Rectangle Fill:Chalk.276"><XForm><Angle>-0</Angle>
+<PinX>3.0625</PinX>
+<PinY>13.38889</PinY>
+<Width>1.125</Width>
+<Height>0.5</Height>
+<LocPinX>0.5625</LocPinX>
+<LocPinY>0.25</LocPinY>
+</XForm>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.138889">0.06944445</TxtPinY>
+<TxtWidth F="Width*1.000000">1.125</TxtWidth>
+<TxtHeight F="Height*0.722222">0.3611111</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>1</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+</Line>
+<Fill><FillPattern>1</FillPattern>
+<FillForegnd>#FFFFFF</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>1</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>0</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*1.000000">1.125</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+<LineTo IX="3"><X F="Width*1.000000">1.125</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="4"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="5"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+<TextBlock><LeftMargin>0.06944445</LeftMargin>
+<RightMargin>0.06944445</RightMargin>
+<VerticalAlign>1</VerticalAlign>
+<DefaultTabStop>0.3888889</DefaultTabStop>
+</TextBlock>
+<Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Game
+Commander</Text>
+</Shape>
+
+<Shape ID="277" Type="Shape" Name="Graphic.277"><XForm><Angle>-0</Angle>
+<PinX>3.940972</PinX>
+<PinY>13.38194</PinY>
+<Width>0.6180556</Width>
+<Height>0.01388889</Height>
+<LocPinX>0.3090278</LocPinX>
+<LocPinY>0.006944444</LocPinY>
+</XForm>
+<XForm1D><BeginX>3.631944</BeginX>
+<BeginY>13.38889</BeginY>
+<EndX>4.25</EndX>
+<EndY>13.38889</EndY>
+</XForm1D>
+<Layout><ConLineJumpCode>4</ConLineJumpCode>
+<ConLineJumpStyle>0</ConLineJumpStyle>
+<ShapeRouteStyle>0</ShapeRouteStyle>
+<ConLineRouteExt>2</ConLineRouteExt>
+</Layout>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.000000">0</TxtPinY>
+<TxtWidth F="Width*1.000000">0.6180556</TxtWidth>
+<TxtHeight F="Height*1.000000">0.01388889</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>2</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+<EndArrow>4</EndArrow>
+<EndArrowSize>2</EndArrowSize>
+</Line>
+<Fill><FillPattern>0</FillPattern>
+<FillForegnd>0</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>0</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>1</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.01388889</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*1.000000">0.6180556</X>
+<Y F="Height*1.000000">0.01388889</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+</Shape>
+
+<Shape ID="278" Type="Shape" Name="Graphic.278"><XForm><Angle>-0</Angle>
+<PinX>2.246528</PinX>
+<PinY>13.38194</PinY>
+<Width>0.4930556</Width>
+<Height>0.01388889</Height>
+<LocPinX>0.2465278</LocPinX>
+<LocPinY>0.006944444</LocPinY>
+</XForm>
+<XForm1D><BeginX>2.493056</BeginX>
+<BeginY>13.38889</BeginY>
+<EndX>2</EndX>
+<EndY>13.38889</EndY>
+</XForm1D>
+<Layout><ConLineJumpCode>4</ConLineJumpCode>
+<ConLineJumpStyle>0</ConLineJumpStyle>
+<ShapeRouteStyle>0</ShapeRouteStyle>
+<ConLineRouteExt>2</ConLineRouteExt>
+</Layout>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.000000">0</TxtPinY>
+<TxtWidth F="Width*1.000000">0.4930556</TxtWidth>
+<TxtHeight F="Height*1.000000">0.01388889</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>2</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+<EndArrow>4</EndArrow>
+<EndArrowSize>2</EndArrowSize>
+</Line>
+<Fill><FillPattern>0</FillPattern>
+<FillForegnd>0</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>0</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>1</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*1.000000">0.4930556</X>
+<Y F="Height*1.000000">0.01388889</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.01388889</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+</Shape>
+
+<Shape ID="279" Type="Shape" Name="Rectangle Fill:Chalk.279"><XForm><Angle>-0</Angle>
+<PinX>3.0625</PinX>
+<PinY>12.38889</PinY>
+<Width>1.125</Width>
+<Height>0.5</Height>
+<LocPinX>0.5625</LocPinX>
+<LocPinY>0.25</LocPinY>
+</XForm>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.138889">0.06944445</TxtPinY>
+<TxtWidth F="Width*1.000000">1.125</TxtWidth>
+<TxtHeight F="Height*0.722222">0.3611111</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>1</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+</Line>
+<Fill><FillPattern>1</FillPattern>
+<FillForegnd>#FFFFFF</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>1</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>0</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*1.000000">1.125</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+<LineTo IX="3"><X F="Width*1.000000">1.125</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="4"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="5"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+<TextBlock><LeftMargin>0.06944445</LeftMargin>
+<RightMargin>0.06944445</RightMargin>
+<VerticalAlign>1</VerticalAlign>
+<DefaultTabStop>0.3888889</DefaultTabStop>
+</TextBlock>
+<Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Strategy
+Manager</Text>
+</Shape>
+
+<Shape ID="280" Type="Shape" Name="Rectangle Fill:Chalk.280"><XForm><Angle>-0</Angle>
+<PinX>3.0625</PinX>
+<PinY>11.38889</PinY>
+<Width>1.125</Width>
+<Height>0.5</Height>
+<LocPinX>0.5625</LocPinX>
+<LocPinY>0.25</LocPinY>
+</XForm>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.138889">0.06944445</TxtPinY>
+<TxtWidth F="Width*1.000000">1.125</TxtWidth>
+<TxtHeight F="Height*0.722222">0.3611111</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>1</ObjType>
+</Misc>
+<Line><LinePattern>1</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+</Line>
+<Fill><FillPattern>1</FillPattern>
+<FillForegnd>#FFFFFF</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>1</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>0</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*1.000000">1.125</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+<LineTo IX="3"><X F="Width*1.000000">1.125</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="4"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="5"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.5</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+<TextBlock><LeftMargin>0.06944445</LeftMargin>
+<RightMargin>0.06944445</RightMargin>
+<VerticalAlign>1</VerticalAlign>
+<DefaultTabStop>0.3888889</DefaultTabStop>
+</TextBlock>
+<Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Information
+Manager</Text>
+</Shape>
+
+<Shape ID="281" Type="Shape" Name="Graphic.281"><XForm><Angle>-0</Angle>
+<PinX>3.940972</PinX>
+<PinY>12.38194</PinY>
+<Width>0.6180556</Width>
+<Height>0.01388889</Height>
+<LocPinX>0.3090278</LocPinX>
+<LocPinY>0.006944444</LocPinY>
+</XForm>
+<XForm1D><BeginX>4.25</BeginX>
+<BeginY>12.38889</BeginY>
+<EndX>3.631944</EndX>
+<EndY>12.38889</EndY>
+</XForm1D>
+<Layout><ConLineJumpCode>4</ConLineJumpCode>
+<ConLineJumpStyle>0</ConLineJumpStyle>
+<ShapeRouteStyle>0</ShapeRouteStyle>
+<ConLineRouteExt>2</ConLineRouteExt>
+</Layout>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.000000">0</TxtPinY>
+<TxtWidth F="Width*1.000000">0.6180556</TxtWidth>
+<TxtHeight F="Height*1.000000">0.01388889</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>2</ObjType>
+</Misc>
+<Line><LinePattern>9</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+<BeginArrow>4</BeginArrow>
+<BeginArrowSize>2</BeginArrowSize>
+</Line>
+<Fill><FillPattern>0</FillPattern>
+<FillForegnd>0</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>0</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>1</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*1.000000">0.6180556</X>
+<Y F="Height*1.000000">0.01388889</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.01388889</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+</Shape>
+
+<Shape ID="282" Type="Shape" Name="Graphic.282"><XForm><Angle>-0</Angle>
+<PinX>2.246528</PinX>
+<PinY>12.38194</PinY>
+<Width>0.4930556</Width>
+<Height>0.01388889</Height>
+<LocPinX>0.2465278</LocPinX>
+<LocPinY>0.006944444</LocPinY>
+</XForm>
+<XForm1D><BeginX>2</BeginX>
+<BeginY>12.38889</BeginY>
+<EndX>2.493056</EndX>
+<EndY>12.38889</EndY>
+</XForm1D>
+<Layout><ConLineJumpCode>4</ConLineJumpCode>
+<ConLineJumpStyle>0</ConLineJumpStyle>
+<ShapeRouteStyle>0</ShapeRouteStyle>
+<ConLineRouteExt>2</ConLineRouteExt>
+</Layout>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.000000">0</TxtPinY>
+<TxtWidth F="Width*1.000000">0.4930556</TxtWidth>
+<TxtHeight F="Height*1.000000">0.01388889</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>2</ObjType>
+</Misc>
+<Line><LinePattern>9</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+<BeginArrow>4</BeginArrow>
+<BeginArrowSize>2</BeginArrowSize>
+</Line>
+<Fill><FillPattern>0</FillPattern>
+<FillForegnd>0</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>0</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>1</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.01388889</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*1.000000">0.4930556</X>
+<Y F="Height*1.000000">0.01388889</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+</Shape>
+
+<Shape ID="283" Type="Shape" Name="Graphic.283"><XForm><Angle>-0</Angle>
+<PinX>3.069444</PinX>
+<PinY>12.88889</PinY>
+<Width>0.01388889</Width>
+<Height>0.4861111</Height>
+<LocPinX>0.006944444</LocPinX>
+<LocPinY>0.2430556</LocPinY>
+</XForm>
+<XForm1D><BeginX>3.0625</BeginX>
+<BeginY>13.13194</BeginY>
+<EndX>3.0625</EndX>
+<EndY>12.64583</EndY>
+</XForm1D>
+<Layout><ConLineJumpCode>4</ConLineJumpCode>
+<ConLineJumpStyle>0</ConLineJumpStyle>
+<ShapeRouteStyle>0</ShapeRouteStyle>
+<ConLineRouteExt>2</ConLineRouteExt>
+</Layout>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.000000">0</TxtPinY>
+<TxtWidth F="Width*1.000000">0.01388889</TxtWidth>
+<TxtHeight F="Height*1.000000">0.4861111</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>2</ObjType>
+</Misc>
+<Line><LinePattern>9</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+<BeginArrow>4</BeginArrow>
+<BeginArrowSize>2</BeginArrowSize>
+</Line>
+<Fill><FillPattern>0</FillPattern>
+<FillForegnd>0</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>0</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>1</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.4861111</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+</Shape>
+
+<Shape ID="284" Type="Shape" Name="Graphic.284"><XForm><Angle>-0</Angle>
+<PinX>3.940972</PinX>
+<PinY>11.38194</PinY>
+<Width>0.6180556</Width>
+<Height>0.01388889</Height>
+<LocPinX>0.3090278</LocPinX>
+<LocPinY>0.006944444</LocPinY>
+</XForm>
+<XForm1D><BeginX>4.25</BeginX>
+<BeginY>11.38889</BeginY>
+<EndX>3.631944</EndX>
+<EndY>11.38889</EndY>
+</XForm1D>
+<Layout><ConLineJumpCode>4</ConLineJumpCode>
+<ConLineJumpStyle>0</ConLineJumpStyle>
+<ShapeRouteStyle>0</ShapeRouteStyle>
+<ConLineRouteExt>2</ConLineRouteExt>
+</Layout>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.000000">0</TxtPinY>
+<TxtWidth F="Width*1.000000">0.6180556</TxtWidth>
+<TxtHeight F="Height*1.000000">0.01388889</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>2</ObjType>
+</Misc>
+<Line><LinePattern>9</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+<BeginArrow>4</BeginArrow>
+<BeginArrowSize>2</BeginArrowSize>
+</Line>
+<Fill><FillPattern>0</FillPattern>
+<FillForegnd>0</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>0</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>1</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*1.000000">0.6180556</X>
+<Y F="Height*1.000000">0.01388889</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.01388889</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+</Shape>
+
+<Shape ID="285" Type="Shape" Name="Graphic.285"><XForm><Angle>-0</Angle>
+<PinX>2.246528</PinX>
+<PinY>11.38194</PinY>
+<Width>0.4930556</Width>
+<Height>0.01388889</Height>
+<LocPinX>0.2465278</LocPinX>
+<LocPinY>0.006944444</LocPinY>
+</XForm>
+<XForm1D><BeginX>2</BeginX>
+<BeginY>11.38889</BeginY>
+<EndX>2.493056</EndX>
+<EndY>11.38889</EndY>
+</XForm1D>
+<Layout><ConLineJumpCode>4</ConLineJumpCode>
+<ConLineJumpStyle>0</ConLineJumpStyle>
+<ShapeRouteStyle>0</ShapeRouteStyle>
+<ConLineRouteExt>2</ConLineRouteExt>
+</Layout>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.000000">0</TxtPinY>
+<TxtWidth F="Width*1.000000">0.4930556</TxtWidth>
+<TxtHeight F="Height*1.000000">0.01388889</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>2</ObjType>
+</Misc>
+<Line><LinePattern>9</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+<BeginArrow>4</BeginArrow>
+<BeginArrowSize>2</BeginArrowSize>
+</Line>
+<Fill><FillPattern>0</FillPattern>
+<FillForegnd>0</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>0</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>1</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">0.01388889</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*1.000000">0.4930556</X>
+<Y F="Height*1.000000">0.01388889</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+</Shape>
+
+<Shape ID="286" Type="Shape" Name="Rectangle No Fill No Fill.286"><XForm><Angle>-0</Angle>
+<PinX>3.0625</PinX>
+<PinY>9</PinY>
+<Width>5.375</Width>
+<Height>2.527778</Height>
+<LocPinX>2.6875</LocPinX>
+<LocPinY>1.263889</LocPinY>
+</XForm>
+<TextXForm><TxtPinX F="Width*0.000000">0</TxtPinX>
+<TxtPinY F="Height*0.000000">0</TxtPinY>
+<TxtWidth F="Width*1.000000">5.375</TxtWidth>
+<TxtHeight F="Height*1.000000">2.527778</TxtHeight>
+<TxtLocPinX>0</TxtLocPinX>
+<TxtLocPinY>0</TxtLocPinY>
+</TextXForm>
+<Misc><ObjType>1</ObjType>
+</Misc>
+<Line><LinePattern>0</LinePattern>
+<LineWeight>0.01388889</LineWeight>
+<LineColor>#000000</LineColor>
+<LineColorTrans>0</LineColorTrans>
+<Rounding>0</Rounding>
+<LineCap>0</LineCap>
+</Line>
+<Fill><FillPattern>0</FillPattern>
+<FillForegnd>#FFFFFF</FillForegnd>
+<FillForegndTrans>0</FillForegndTrans>
+<ShdwPattern>0</ShdwPattern>
+<ShdwForegnd>#000000</ShdwForegnd>
+<ShdwForegndTrans>0.25</ShdwForegndTrans>
+<ShapeShdwType>1</ShapeShdwType>
+<ShapeShdwOffsetX>0</ShapeShdwOffsetX>
+<ShapeShdwOffsetY>-0.05555556</ShapeShdwOffsetY>
+</Fill>
+<Geom IX="0"><NoFill>0</NoFill>
+<NoLine>0</NoLine>
+<MoveTo IX="1"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">2.527778</Y>
+</MoveTo>
+<LineTo IX="2"><X F="Width*1.000000">5.375</X>
+<Y F="Height*1.000000">2.527778</Y>
+</LineTo>
+<LineTo IX="3"><X F="Width*1.000000">5.375</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="4"><X F="Width*0.000000">0</X>
+<Y F="Height*0.000000">0</Y>
+</LineTo>
+<LineTo IX="5"><X F="Width*0.000000">0</X>
+<Y F="Height*1.000000">2.527778</Y>
+</LineTo>
+</Geom>
+<LayerMem><LayerMember>0</LayerMember>
+</LayerMem>
+<TextBlock><LeftMargin>0</LeftMargin>
+<RightMargin>0</RightMargin>
+<VerticalAlign>1</VerticalAlign>
+<DefaultTabStop>0.3888889</DefaultTabStop>
+</TextBlock>
+<Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>0</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>A &quot;Game Commander&quot; module coordinates the whole bot, as it determines, for example, which units can the Combat Manager or the Scout Manager control.
+
+As Nova and BBQ, the modules are divided in two group: micro, macro and information. The &quot;Strategy Manager&quot;, however, is a multi-purpose module that contains strategic decision procedures that are used by several other modules.
+
+The most salient feature of this bot is the way the Production Manager works. It uses a search algorithm to optimize the build order according to its needs, rather than using a hard-coded built order, or a set of reactive rules, like most other bots do.</Text>
+</Shape>
+
+</Shapes>
+<Connects><Connect FromPart="9" ToCell="PinX" ToPart="3" FromSheet="271" ToSheet="262"/>
+<Connect FromPart="12" ToCell="PinX" ToPart="3" FromSheet="271" ToSheet="265"/>
+<Connect FromPart="9" ToCell="PinX" ToPart="3" FromSheet="272" ToSheet="265"/>
+<Connect FromPart="12" ToCell="PinX" ToPart="3" FromSheet="272" ToSheet="266"/>
+<Connect FromPart="9" ToCell="PinX" ToPart="3" FromSheet="274" ToSheet="264"/>
+<Connect FromPart="12" ToCell="PinX" ToPart="3" FromSheet="274" ToSheet="273"/>
+<Connect FromPart="9" ToCell="PinX" ToPart="3" FromSheet="275" ToSheet="273"/>
+<Connect FromPart="9" ToCell="PinX" ToPart="3" FromSheet="277" ToSheet="276"/>
+<Connect FromPart="9" ToCell="PinX" ToPart="3" FromSheet="278" ToSheet="276"/>
+<Connect FromPart="12" ToCell="PinX" ToPart="3" FromSheet="281" ToSheet="279"/>
+<Connect FromPart="12" ToCell="PinX" ToPart="3" FromSheet="282" ToSheet="279"/>
+<Connect FromPart="9" ToCell="PinX" ToPart="3" FromSheet="283" ToSheet="276"/>
+<Connect FromPart="12" ToCell="PinX" ToPart="3" FromSheet="283" ToSheet="279"/>
+<Connect FromPart="12" ToCell="PinX" ToPart="3" FromSheet="284" ToSheet="280"/>
+<Connect FromPart="12" ToCell="PinX" ToPart="3" FromSheet="285" ToSheet="280"/>
+</Connects>
+</Page>
+
+
+<Page ID="3" NameU="Canvas 3"><PageSheet><RulerGrid><XGridSpacing>0.1111111</XGridSpacing>
 <YGridSpacing>0.1111111</YGridSpacing>
 </RulerGrid>
 <PageProps><PageScale>1</PageScale>
@@ -15969,7 +17729,7 @@ The most interesting thing of this bot is the micro control of squads using pote
 <Lock>0</Lock>
 </Layer>
 </PageSheet>
-<Shapes><Shape ID="259" Type="Shape" Name="Rectangle Fill:Mercury.259"><XForm><Angle>-0</Angle>
+<Shapes><Shape ID="287" Type="Shape" Name="Rectangle Fill:Mercury.287"><XForm><Angle>-0</Angle>
 <PinX>5.375</PinX>
 <PinY>10.88889</PinY>
 <Width>5.75</Width>
@@ -16025,7 +17785,7 @@ The most interesting thing of this bot is the micro control of squads using pote
 </LayerMem>
 </Shape>
 
-<Shape ID="260" Type="Shape" Name="Rectangle Fill:Mercury.260"><XForm><Angle>-0</Angle>
+<Shape ID="288" Type="Shape" Name="Rectangle Fill:Mercury.288"><XForm><Angle>-0</Angle>
 <PinX>5.375</PinX>
 <PinY>8.138889</PinY>
 <Width>5.75</Width>
@@ -16081,7 +17841,7 @@ The most interesting thing of this bot is the micro control of squads using pote
 </LayerMem>
 </Shape>
 
-<Shape ID="261" Type="Shape" Name="Rectangle Fill:Mercury.261"><XForm><Angle>-0</Angle>
+<Shape ID="289" Type="Shape" Name="Rectangle Fill:Mercury.289"><XForm><Angle>-0</Angle>
 <PinX>10.125</PinX>
 <PinY>9.826389</PinY>
 <Width>3.5</Width>
@@ -16137,7 +17897,7 @@ The most interesting thing of this bot is the micro control of squads using pote
 </LayerMem>
 </Shape>
 
-<Shape ID="262" Type="Shape" Name="Rectangle Fill:Chalk.262"><XForm><Angle>-0</Angle>
+<Shape ID="290" Type="Shape" Name="Rectangle Fill:Chalk.290"><XForm><Angle>-0</Angle>
 <PinX>3.125</PinX>
 <PinY>7.513889</PinY>
 <Width>1</Width>
@@ -16200,7 +17960,7 @@ The most interesting thing of this bot is the micro control of squads using pote
 Control</Text>
 </Shape>
 
-<Shape ID="263" Type="Shape" Name="Rectangle Fill:Chalk.263"><XForm><Angle>-0</Angle>
+<Shape ID="291" Type="Shape" Name="Rectangle Fill:Chalk.291"><XForm><Angle>-0</Angle>
 <PinX>3.125</PinX>
 <PinY>8.138889</PinY>
 <Width>1</Width>
@@ -16263,7 +18023,7 @@ Control</Text>
 Control</Text>
 </Shape>
 
-<Shape ID="264" Type="Shape" Name="Rectangle Fill:Chalk.264"><XForm><Angle>-0</Angle>
+<Shape ID="292" Type="Shape" Name="Rectangle Fill:Chalk.292"><XForm><Angle>-0</Angle>
 <PinX>3.125</PinX>
 <PinY>8.763889</PinY>
 <Width>1</Width>
@@ -16326,7 +18086,7 @@ Control</Text>
 Control</Text>
 </Shape>
 
-<Shape ID="265" Type="Shape" Name="Rectangle Fill:Chalk.265"><XForm><Angle>-0</Angle>
+<Shape ID="293" Type="Shape" Name="Rectangle Fill:Chalk.293"><XForm><Angle>-0</Angle>
 <PinX>4.25</PinX>
 <PinY>9.638889</PinY>
 <Width>1</Width>
@@ -16389,7 +18149,7 @@ Control</Text>
 Gathering</Text>
 </Shape>
 
-<Shape ID="266" Type="Shape" Name="Rectangle Fill:Chalk.266"><XForm><Angle>-0</Angle>
+<Shape ID="294" Type="Shape" Name="Rectangle Fill:Chalk.294"><XForm><Angle>-0</Angle>
 <PinX>5.375</PinX>
 <PinY>10.26389</PinY>
 <Width>1</Width>
@@ -16452,7 +18212,7 @@ Gathering</Text>
 Training</Text>
 </Shape>
 
-<Shape ID="267" Type="Shape" Name="Rectangle Fill:Chalk.267"><XForm><Angle>-0</Angle>
+<Shape ID="295" Type="Shape" Name="Rectangle Fill:Chalk.295"><XForm><Angle>-0</Angle>
 <PinX>5.375</PinX>
 <PinY>12.13889</PinY>
 <Width>1</Width>
@@ -16507,7 +18267,7 @@ Training</Text>
 <LayerMem><LayerMember>0</LayerMember>
 </LayerMem>
 </Shape>
-<Shape ID="268" Type="Shape" Name="Object No Fill No Fill.268"><XForm><Angle>-0</Angle>
+<Shape ID="296" Type="Shape" Name="Object No Fill No Fill.296"><XForm><Angle>-0</Angle>
 <PinX>5.451389</PinX>
 <PinY>12.06944</PinY>
 <Width>1.069444</Width>
@@ -16551,7 +18311,7 @@ Training</Text>
 Composition</Text>
 </Shape>
 
-<Shape ID="269" Type="Shape" Name="Rectangle Fill:Chalk.269"><XForm><Angle>-0</Angle>
+<Shape ID="297" Type="Shape" Name="Rectangle Fill:Chalk.297"><XForm><Angle>-0</Angle>
 <PinX>6.5</PinX>
 <PinY>9.638889</PinY>
 <Width>1</Width>
@@ -16606,7 +18366,7 @@ Composition</Text>
 <LayerMem><LayerMember>0</LayerMember>
 </LayerMem>
 </Shape>
-<Shape ID="270" Type="Shape" Name="Object No Fill No Fill.270"><XForm><Angle>-0</Angle>
+<Shape ID="298" Type="Shape" Name="Object No Fill No Fill.298"><XForm><Angle>-0</Angle>
 <PinX>6.534722</PinX>
 <PinY>9.569445</PinY>
 <Width>0.9305556</Width>
@@ -16650,7 +18410,7 @@ Composition</Text>
 Placement</Text>
 </Shape>
 
-<Shape ID="271" Type="Shape" Name="Rectangle Fill:Chalk.271"><XForm><Angle>-0</Angle>
+<Shape ID="299" Type="Shape" Name="Rectangle Fill:Chalk.299"><XForm><Angle>-0</Angle>
 <PinX>6.5</PinX>
 <PinY>10.26389</PinY>
 <Width>1</Width>
@@ -16705,7 +18465,7 @@ Placement</Text>
 <LayerMem><LayerMember>0</LayerMember>
 </LayerMem>
 </Shape>
-<Shape ID="272" Type="Shape" Name="Object No Fill No Fill.272"><XForm><Angle>-0</Angle>
+<Shape ID="300" Type="Shape" Name="Object No Fill No Fill.300"><XForm><Angle>-0</Angle>
 <PinX>6.569445</PinX>
 <PinY>10.19444</PinY>
 <Width>1.083333</Width>
@@ -16749,7 +18509,7 @@ Placement</Text>
 Construction</Text>
 </Shape>
 
-<Shape ID="273" Type="Shape" Name="Rectangle Fill:Chalk.273"><XForm><Angle>-0</Angle>
+<Shape ID="301" Type="Shape" Name="Rectangle Fill:Chalk.301"><XForm><Angle>-0</Angle>
 <PinX>6.5</PinX>
 <PinY>10.88889</PinY>
 <Width>1</Width>
@@ -16804,7 +18564,7 @@ Construction</Text>
 <LayerMem><LayerMember>0</LayerMember>
 </LayerMem>
 </Shape>
-<Shape ID="274" Type="Shape" Name="Object No Fill No Fill.274"><XForm><Angle>-0</Angle>
+<Shape ID="302" Type="Shape" Name="Object No Fill No Fill.302"><XForm><Angle>-0</Angle>
 <PinX>6.534722</PinX>
 <PinY>10.81944</PinY>
 <Width>0.9305556</Width>
@@ -16847,7 +18607,7 @@ Construction</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Expansion</Text>
 </Shape>
 
-<Shape ID="275" Type="Shape" Name="Rectangle Fill:Chalk.275"><XForm><Angle>-0</Angle>
+<Shape ID="303" Type="Shape" Name="Rectangle Fill:Chalk.303"><XForm><Angle>-0</Angle>
 <PinX>6.5</PinX>
 <PinY>11.51389</PinY>
 <Width>3.25</Width>
@@ -16902,7 +18662,7 @@ Construction</Text>
 <LayerMem><LayerMember>0</LayerMember>
 </LayerMem>
 </Shape>
-<Shape ID="276" Type="Shape" Name="Object No Fill No Fill.276"><XForm><Angle>-0</Angle>
+<Shape ID="304" Type="Shape" Name="Object No Fill No Fill.304"><XForm><Angle>-0</Angle>
 <PinX>5.756945</PinX>
 <PinY>11.44444</PinY>
 <Width>1.625</Width>
@@ -16945,7 +18705,7 @@ Construction</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Resource Allocation</Text>
 </Shape>
 
-<Shape ID="277" Type="Shape" Name="Rectangle Fill:Chalk.277"><XForm><Angle>-0</Angle>
+<Shape ID="305" Type="Shape" Name="Rectangle Fill:Chalk.305"><XForm><Angle>-0</Angle>
 <PinX>7.625</PinX>
 <PinY>10.88889</PinY>
 <Width>1</Width>
@@ -17000,7 +18760,7 @@ Construction</Text>
 <LayerMem><LayerMember>0</LayerMember>
 </LayerMem>
 </Shape>
-<Shape ID="278" Type="Shape" Name="Object No Fill No Fill.278"><XForm><Angle>-0</Angle>
+<Shape ID="306" Type="Shape" Name="Object No Fill No Fill.306"><XForm><Angle>-0</Angle>
 <PinX>7.631945</PinX>
 <PinY>10.81944</PinY>
 <Width>0.875</Width>
@@ -17043,7 +18803,7 @@ Construction</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Upgrades</Text>
 </Shape>
 
-<Shape ID="279" Type="Shape" Name="Rectangle Fill:Chalk.279"><XForm><Angle>-0</Angle>
+<Shape ID="307" Type="Shape" Name="Rectangle Fill:Chalk.307"><XForm><Angle>-0</Angle>
 <PinX>6.5</PinX>
 <PinY>12.13889</PinY>
 <Width>1</Width>
@@ -17098,7 +18858,7 @@ Construction</Text>
 <LayerMem><LayerMember>0</LayerMember>
 </LayerMem>
 </Shape>
-<Shape ID="280" Type="Shape" Name="Object No Fill No Fill.280"><XForm><Angle>-0</Angle>
+<Shape ID="308" Type="Shape" Name="Object No Fill No Fill.308"><XForm><Angle>-0</Angle>
 <PinX>6.548611</PinX>
 <PinY>12.06944</PinY>
 <Width>0.9583333</Width>
@@ -17141,7 +18901,7 @@ Construction</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Build order</Text>
 </Shape>
 
-<Shape ID="281" Type="Shape" Name="Rectangle Fill:Chalk.281"><XForm><Angle>-0</Angle>
+<Shape ID="309" Type="Shape" Name="Rectangle Fill:Chalk.309"><XForm><Angle>-0</Angle>
 <PinX>9</PinX>
 <PinY>9.638889</PinY>
 <Width>1</Width>
@@ -17196,7 +18956,7 @@ Construction</Text>
 <LayerMem><LayerMember>0</LayerMember>
 </LayerMem>
 </Shape>
-<Shape ID="282" Type="Shape" Name="Object No Fill No Fill.282"><XForm><Angle>-0</Angle>
+<Shape ID="310" Type="Shape" Name="Object No Fill No Fill.310"><XForm><Angle>-0</Angle>
 <PinX>8.965278</PinX>
 <PinY>9.569445</PinY>
 <Width>0.7916667</Width>
@@ -17239,7 +18999,7 @@ Construction</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Scouting</Text>
 </Shape>
 
-<Shape ID="283" Type="Shape" Name="Rectangle Fill:Chalk.283"><XForm><Angle>-0</Angle>
+<Shape ID="311" Type="Shape" Name="Rectangle Fill:Chalk.311"><XForm><Angle>-0</Angle>
 <PinX>10.125</PinX>
 <PinY>10.88889</PinY>
 <Width>1</Width>
@@ -17294,7 +19054,7 @@ Construction</Text>
 <LayerMem><LayerMember>0</LayerMember>
 </LayerMem>
 </Shape>
-<Shape ID="284" Type="Shape" Name="Object No Fill No Fill.284"><XForm><Angle>-0</Angle>
+<Shape ID="312" Type="Shape" Name="Object No Fill No Fill.312"><XForm><Angle>-0</Angle>
 <PinX>10.13194</PinX>
 <PinY>10.81944</PinY>
 <Width>0.875</Width>
@@ -17338,7 +19098,7 @@ Construction</Text>
 Modeling</Text>
 </Shape>
 
-<Shape ID="285" Type="Shape" Name="Rectangle Fill:Chalk.285"><XForm><Angle>-0</Angle>
+<Shape ID="313" Type="Shape" Name="Rectangle Fill:Chalk.313"><XForm><Angle>-0</Angle>
 <PinX>11.25</PinX>
 <PinY>10.88889</PinY>
 <Width>1</Width>
@@ -17393,7 +19153,7 @@ Modeling</Text>
 <LayerMem><LayerMember>0</LayerMember>
 </LayerMem>
 </Shape>
-<Shape ID="286" Type="Shape" Name="Object No Fill No Fill.286"><XForm><Angle>-0</Angle>
+<Shape ID="314" Type="Shape" Name="Object No Fill No Fill.314"><XForm><Angle>-0</Angle>
 <PinX>11.20139</PinX>
 <PinY>10.81944</PinY>
 <Width>0.7638889</Width>
@@ -17437,7 +19197,7 @@ Modeling</Text>
 Analysis</Text>
 </Shape>
 
-<Shape ID="287" Type="Shape" Name="Graphic.287"><XForm><Angle F="ATAN2(EndY-BeginY,EndX-BeginX)">-4.712389</Angle>
+<Shape ID="315" Type="Shape" Name="Graphic.315"><XForm><Angle F="ATAN2(EndY-BeginY,EndX-BeginX)">-4.712389</Angle>
 <PinX F="(BeginX+EndX)/2">1.833333</PinX>
 <PinY F="(BeginY+EndY)/2">11.88889</PinY>
 <Width F="SQRT((EndX-BeginX)^2+(EndY-BeginY)^2)">0.7777778</Width>
@@ -17510,7 +19270,7 @@ Analysis</Text>
 </LayerMem>
 </Shape>
 
-<Shape ID="288" Type="Shape" Name="Rectangle No Fill No Fill.288"><XForm><Angle>-0</Angle>
+<Shape ID="316" Type="Shape" Name="Rectangle No Fill No Fill.316"><XForm><Angle>-0</Angle>
 <PinX>1.777778</PinX>
 <PinY>12.41667</PinY>
 <Width>0.9444444</Width>
@@ -17572,7 +19332,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Higher Level</Text>
 </Shape>
 
-<Shape ID="289" Type="Shape" Name="Rectangle No Fill No Fill.289"><XForm><Angle>-0</Angle>
+<Shape ID="317" Type="Shape" Name="Rectangle No Fill No Fill.317"><XForm><Angle>-0</Angle>
 <PinX>1.777778</PinX>
 <PinY>7.291667</PinY>
 <Width>0.9027778</Width>
@@ -17634,7 +19394,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Lower Level</Text>
 </Shape>
 
-<Shape ID="290" Type="Shape" Name="Graphic.290"><XForm><Angle F="ATAN2(EndY-BeginY,EndX-BeginX)">-1.570796</Angle>
+<Shape ID="318" Type="Shape" Name="Graphic.318"><XForm><Angle F="ATAN2(EndY-BeginY,EndX-BeginX)">-1.570796</Angle>
 <PinX F="(BeginX+EndX)/2">1.833333</PinX>
 <PinY F="(BeginY+EndY)/2">7.888889</PinY>
 <Width F="SQRT((EndX-BeginX)^2+(EndY-BeginY)^2)">0.75</Width>
@@ -17707,7 +19467,7 @@ Analysis</Text>
 </LayerMem>
 </Shape>
 
-<Shape ID="291" Type="Shape" Name="Rectangle No Fill No Fill.291"><XForm><Angle>-0</Angle>
+<Shape ID="319" Type="Shape" Name="Rectangle No Fill No Fill.319"><XForm><Angle>-0</Angle>
 <PinX>4.236111</PinX>
 <PinY>12.66667</PinY>
 <Width>0.5555556</Width>
@@ -17769,7 +19529,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Income</Text>
 </Shape>
 
-<Shape ID="292" Type="Shape" Name="Rectangle No Fill No Fill.292"><XForm><Angle>-0</Angle>
+<Shape ID="320" Type="Shape" Name="Rectangle No Fill No Fill.320"><XForm><Angle>-0</Angle>
 <PinX>3.097222</PinX>
 <PinY>12.66667</PinY>
 <Width>0.4722222</Width>
@@ -17831,7 +19591,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Attack</Text>
 </Shape>
 
-<Shape ID="293" Type="Shape" Name="Rectangle No Fill No Fill.293"><XForm><Angle>-0</Angle>
+<Shape ID="321" Type="Shape" Name="Rectangle No Fill No Fill.321"><XForm><Angle>-0</Angle>
 <PinX>5.402778</PinX>
 <PinY>12.66667</PinY>
 <Width>0.8055556</Width>
@@ -17893,7 +19653,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Production</Text>
 </Shape>
 
-<Shape ID="294" Type="Shape" Name="Rectangle No Fill No Fill.294"><XForm><Angle>-0</Angle>
+<Shape ID="322" Type="Shape" Name="Rectangle No Fill No Fill.322"><XForm><Angle>-0</Angle>
 <PinX>6.527778</PinX>
 <PinY>12.66667</PinY>
 <Width>0.9444444</Width>
@@ -17955,7 +19715,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Construction</Text>
 </Shape>
 
-<Shape ID="295" Type="Shape" Name="Rectangle No Fill No Fill.295"><XForm><Angle>-0</Angle>
+<Shape ID="323" Type="Shape" Name="Rectangle No Fill No Fill.323"><XForm><Angle>-0</Angle>
 <PinX>7.652778</PinX>
 <PinY>12.66667</PinY>
 <Width>0.8194444</Width>
@@ -18017,7 +19777,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Reseearch</Text>
 </Shape>
 
-<Shape ID="296" Type="Shape" Name="Rectangle No Fill No Fill.296"><XForm><Angle>-0</Angle>
+<Shape ID="324" Type="Shape" Name="Rectangle No Fill No Fill.324"><XForm><Angle>-0</Angle>
 <PinX>8.909722</PinX>
 <PinY>12.66667</PinY>
 <Width>0.4861111</Width>
@@ -18079,7 +19839,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Recon</Text>
 </Shape>
 
-<Shape ID="297" Type="Shape" Name="Rectangle No Fill No Fill.297"><XForm><Angle>-0</Angle>
+<Shape ID="325" Type="Shape" Name="Rectangle No Fill No Fill.325"><XForm><Angle>-0</Angle>
 <PinX>10.69444</PinX>
 <PinY>12.66667</PinY>
 <Width>1.638889</Width>
@@ -18141,7 +19901,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Situational Awareness</Text>
 </Shape>
 
-<Shape ID="298" Type="Shape" Name="Rectangle No Fill No Fill.298"><XForm><Angle>-0</Angle>
+<Shape ID="326" Type="Shape" Name="Rectangle No Fill No Fill.326"><XForm><Angle>-0</Angle>
 <PinX>2.9375</PinX>
 <PinY>12.29167</PinY>
 <Width>0.625</Width>
@@ -18203,7 +19963,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>MACRO</Text>
 </Shape>
 
-<Shape ID="299" Type="Shape" Name="Rectangle No Fill No Fill.299"><XForm><Angle>-0</Angle>
+<Shape ID="327" Type="Shape" Name="Rectangle No Fill No Fill.327"><XForm><Angle>-0</Angle>
 <PinX>7.8125</PinX>
 <PinY>7.291667</PinY>
 <Width>0.5555556</Width>
@@ -18265,7 +20025,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>MICRO</Text>
 </Shape>
 
-<Shape ID="300" Type="Shape" Name="Rectangle No Fill No Fill.300"><XForm><Angle>-0</Angle>
+<Shape ID="328" Type="Shape" Name="Rectangle No Fill No Fill.328"><XForm><Angle>-0</Angle>
 <PinX>11.14583</PinX>
 <PinY>7.291667</PinY>
 <Width>1.208333</Width>
@@ -18327,7 +20087,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>INTELLIGENCE</Text>
 </Shape>
 
-<Shape ID="301" Type="Shape" Name="Rectangle No Fill No Fill.301"><XForm><Angle>-0</Angle>
+<Shape ID="329" Type="Shape" Name="Rectangle No Fill No Fill.329"><XForm><Angle>-0</Angle>
 <PinX>5.625</PinX>
 <PinY>13.43056</PinY>
 <Width>6.25</Width>
@@ -18394,7 +20154,7 @@ Analysis</Text>
 </Page>
 
 
-<Page ID="3" NameU="Canvas 1"><PageSheet><RulerGrid><XGridSpacing>0.1111111</XGridSpacing>
+<Page ID="4" NameU="Canvas 1"><PageSheet><RulerGrid><XGridSpacing>0.1111111</XGridSpacing>
 <YGridSpacing>0.1111111</YGridSpacing>
 </RulerGrid>
 <PageProps><PageScale>1</PageScale>
@@ -18411,7 +20171,7 @@ Analysis</Text>
 <Lock>0</Lock>
 </Layer>
 </PageSheet>
-<Shapes><Shape ID="302" Type="Shape" Name="Rectangle Fill:Steel.302"><XForm><Angle>-0</Angle>
+<Shapes><Shape ID="330" Type="Shape" Name="Rectangle Fill:Steel.330"><XForm><Angle>-0</Angle>
 <PinX>8.9375</PinX>
 <PinY>6.638889</PinY>
 <Width>16.625</Width>
@@ -18473,7 +20233,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>#FFFFFF</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>0</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Intelligence</Text>
 </Shape>
 
-<Shape ID="303" Type="Shape" Name="Rectangle Fill:Gabbro.303"><XForm><Angle>-0</Angle>
+<Shape ID="331" Type="Shape" Name="Rectangle Fill:Gabbro.331"><XForm><Angle>-0</Angle>
 <PinX>8.9375</PinX>
 <PinY>13.88889</PinY>
 <Width>16.625</Width>
@@ -18535,7 +20295,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>#FFFFFF</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>0</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Game</Text>
 </Shape>
 
-<Shape ID="304" Type="Shape" Name="Rectangle Fill:Steel.304"><XForm><Angle>-0</Angle>
+<Shape ID="332" Type="Shape" Name="Rectangle Fill:Steel.332"><XForm><Angle>-0</Angle>
 <PinX>8.9375</PinX>
 <PinY>3.701389</PinY>
 <Width>16.625</Width>
@@ -18597,7 +20357,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>#FFFFFF</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>0</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Notes</Text>
 </Shape>
 
-<Shape ID="305" Type="Shape" Name="Rectangle Fill:Gabbro.305"><XForm><Angle>-0</Angle>
+<Shape ID="333" Type="Shape" Name="Rectangle Fill:Gabbro.333"><XForm><Angle>-0</Angle>
 <PinX>8.9375</PinX>
 <PinY>5.326389</PinY>
 <Width>16.625</Width>
@@ -18659,7 +20419,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>#FFFFFF</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>0</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Integration</Text>
 </Shape>
 
-<Shape ID="306" Type="Shape" Name="Rectangle Fill:Gabbro.306"><XForm><Angle>-0</Angle>
+<Shape ID="334" Type="Shape" Name="Rectangle Fill:Gabbro.334"><XForm><Angle>-0</Angle>
 <PinX>8.9375</PinX>
 <PinY>9.451389</PinY>
 <Width>16.625</Width>
@@ -18721,7 +20481,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>#FFFFFF</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>0</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Macro</Text>
 </Shape>
 
-<Shape ID="307" Type="Shape" Name="Rectangle Fill:Steel.307"><XForm><Angle>-0</Angle>
+<Shape ID="335" Type="Shape" Name="Rectangle Fill:Steel.335"><XForm><Angle>-0</Angle>
 <PinX>8.9375</PinX>
 <PinY>12.51389</PinY>
 <Width>16.625</Width>
@@ -18783,7 +20543,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>#FFFFFF</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>0</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Micro</Text>
 </Shape>
 
-<Shape ID="308" Type="Shape" Name="Rectangle Fill:Aluminum.308"><XForm><Angle>-0</Angle>
+<Shape ID="336" Type="Shape" Name="Rectangle Fill:Aluminum.336"><XForm><Angle>-0</Angle>
 <PinX>2.9375</PinX>
 <PinY>8.513889</PinY>
 <Width>2.375</Width>
@@ -18845,7 +20605,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Subtasks</Text>
 </Shape>
 
-<Shape ID="309" Type="Shape" Name="Rectangle Fill:Cayenne.309"><XForm><Angle>-0</Angle>
+<Shape ID="337" Type="Shape" Name="Rectangle Fill:Cayenne.337"><XForm><Angle>-0</Angle>
 <PinX>7.9375</PinX>
 <PinY>8.513887</PinY>
 <Width>2.375</Width>
@@ -18907,7 +20667,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>#FFFFFF</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Thanatos</Text>
 </Shape>
 
-<Shape ID="310" Type="Shape" Name="Rectangle Fill:Cayenne.310"><XForm><Angle>-0</Angle>
+<Shape ID="338" Type="Shape" Name="Rectangle Fill:Cayenne.338"><XForm><Angle>-0</Angle>
 <PinX>5.4375</PinX>
 <PinY>8.513887</PinY>
 <Width>2.375</Width>
@@ -18969,7 +20729,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>#FFFFFF</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Nova</Text>
 </Shape>
 
-<Shape ID="311" Type="Shape" Name="Rectangle Fill:Chalk.311"><XForm><Angle>-0</Angle>
+<Shape ID="339" Type="Shape" Name="Rectangle Fill:Chalk.339"><XForm><Angle>-0</Angle>
 <PinX>2.9375</PinX>
 <PinY>7.076389</PinY>
 <Width>2.125</Width>
@@ -19031,7 +20791,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Scouting</Text>
 </Shape>
 
-<Shape ID="312" Type="Shape" Name="Rectangle Fill:Chalk.312"><XForm><Angle>-0</Angle>
+<Shape ID="340" Type="Shape" Name="Rectangle Fill:Chalk.340"><XForm><Angle>-0</Angle>
 <PinX>2.9375</PinX>
 <PinY>6.576389</PinY>
 <Width>2.125</Width>
@@ -19093,7 +20853,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Opponent Modeling</Text>
 </Shape>
 
-<Shape ID="313" Type="Shape" Name="Rectangle Fill:Chalk.313"><XForm><Angle>-0</Angle>
+<Shape ID="341" Type="Shape" Name="Rectangle Fill:Chalk.341"><XForm><Angle>-0</Angle>
 <PinX>2.9375</PinX>
 <PinY>11.13889</PinY>
 <Width>2.125</Width>
@@ -19155,7 +20915,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Resource Gathering</Text>
 </Shape>
 
-<Shape ID="314" Type="Shape" Name="Rectangle Fill:Chalk.314"><XForm><Angle>-0</Angle>
+<Shape ID="342" Type="Shape" Name="Rectangle Fill:Chalk.342"><XForm><Angle>-0</Angle>
 <PinX>2.9375</PinX>
 <PinY>10.76389</PinY>
 <Width>2.125</Width>
@@ -19217,7 +20977,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Repair</Text>
 </Shape>
 
-<Shape ID="315" Type="Shape" Name="Rectangle Fill:Chalk.315"><XForm><Angle>-0</Angle>
+<Shape ID="343" Type="Shape" Name="Rectangle Fill:Chalk.343"><XForm><Angle>-0</Angle>
 <PinX>2.9375</PinX>
 <PinY>10.38889</PinY>
 <Width>2.125</Width>
@@ -19279,7 +21039,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Building Placement</Text>
 </Shape>
 
-<Shape ID="316" Type="Shape" Name="Rectangle Fill:Chalk.316"><XForm><Angle>-0</Angle>
+<Shape ID="344" Type="Shape" Name="Rectangle Fill:Chalk.344"><XForm><Angle>-0</Angle>
 <PinX>2.9375</PinX>
 <PinY>10.01389</PinY>
 <Width>2.125</Width>
@@ -19341,7 +21101,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Resource Spending</Text>
 </Shape>
 
-<Shape ID="317" Type="Shape" Name="Rectangle Fill:Chalk.317"><XForm><Angle>-0</Angle>
+<Shape ID="345" Type="Shape" Name="Rectangle Fill:Chalk.345"><XForm><Angle>-0</Angle>
 <PinX>2.9375</PinX>
 <PinY>9.263889</PinY>
 <Width>2.125</Width>
@@ -19403,7 +21163,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Build Order</Text>
 </Shape>
 
-<Shape ID="318" Type="Shape" Name="Rectangle Fill:Chalk.318"><XForm><Angle>-0</Angle>
+<Shape ID="346" Type="Shape" Name="Rectangle Fill:Chalk.346"><XForm><Angle>-0</Angle>
 <PinX>2.9375</PinX>
 <PinY>8.888889</PinY>
 <Width>2.125</Width>
@@ -19465,7 +21225,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Which units to train?</Text>
 </Shape>
 
-<Shape ID="319" Type="Shape" Name="Rectangle Fill:Chalk.319"><XForm><Angle>-0</Angle>
+<Shape ID="347" Type="Shape" Name="Rectangle Fill:Chalk.347"><XForm><Angle>-0</Angle>
 <PinX>2.9375</PinX>
 <PinY>8.513889</PinY>
 <Width>2.125</Width>
@@ -19527,7 +21287,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>What to research?</Text>
 </Shape>
 
-<Shape ID="320" Type="Shape" Name="Rectangle Fill:Chalk.320"><XForm><Angle>-0</Angle>
+<Shape ID="348" Type="Shape" Name="Rectangle Fill:Chalk.348"><XForm><Angle>-0</Angle>
 <PinX>2.9375</PinX>
 <PinY>13.26389</PinY>
 <Width>2.125</Width>
@@ -19589,7 +21349,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Individual Unit Control</Text>
 </Shape>
 
-<Shape ID="321" Type="Shape" Name="Rectangle Fill:Chalk.321"><XForm><Angle>-0</Angle>
+<Shape ID="349" Type="Shape" Name="Rectangle Fill:Chalk.349"><XForm><Angle>-0</Angle>
 <PinX>2.9375</PinX>
 <PinY>12.88889</PinY>
 <Width>2.125</Width>
@@ -19651,7 +21411,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Group Formation</Text>
 </Shape>
 
-<Shape ID="322" Type="Shape" Name="Rectangle Fill:Chalk.322"><XForm><Angle>-0</Angle>
+<Shape ID="350" Type="Shape" Name="Rectangle Fill:Chalk.350"><XForm><Angle>-0</Angle>
 <PinX>2.9375</PinX>
 <PinY>12.51389</PinY>
 <Width>2.125</Width>
@@ -19713,7 +21473,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Overall Unit Control</Text>
 </Shape>
 
-<Shape ID="323" Type="Shape" Name="Rectangle Fill:Chalk.323"><XForm><Angle>-0</Angle>
+<Shape ID="351" Type="Shape" Name="Rectangle Fill:Chalk.351"><XForm><Angle>-0</Angle>
 <PinX>5.4375</PinX>
 <PinY>13.26389</PinY>
 <Width>2.125</Width>
@@ -19775,7 +21535,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Combat Agent</Text>
 </Shape>
 
-<Shape ID="324" Type="Shape" Name="Rectangle Fill:Chalk.324"><XForm><Angle>-0</Angle>
+<Shape ID="352" Type="Shape" Name="Rectangle Fill:Chalk.352"><XForm><Angle>-0</Angle>
 <PinX>5.4375</PinX>
 <PinY>12.88889</PinY>
 <Width>2.125</Width>
@@ -19837,7 +21597,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Squad Agent</Text>
 </Shape>
 
-<Shape ID="325" Type="Shape" Name="Rectangle Fill:Chalk.325"><XForm><Angle>-0</Angle>
+<Shape ID="353" Type="Shape" Name="Rectangle Fill:Chalk.353"><XForm><Angle>-0</Angle>
 <PinX>5.4375</PinX>
 <PinY>12.51389</PinY>
 <Width>2.125</Width>
@@ -19899,7 +21659,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Squad Manager</Text>
 </Shape>
 
-<Shape ID="326" Type="Shape" Name="Rectangle Fill:Chalk.326"><XForm><Angle>-0</Angle>
+<Shape ID="354" Type="Shape" Name="Rectangle Fill:Chalk.354"><XForm><Angle>-0</Angle>
 <PinX>5.4375</PinX>
 <PinY>6.826389</PinY>
 <Width>2.125</Width>
@@ -19961,7 +21721,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Information Manager</Text>
 </Shape>
 
-<Shape ID="327" Type="Shape" Name="Rectangle Fill:Chalk.327"><XForm><Angle>-0</Angle>
+<Shape ID="355" Type="Shape" Name="Rectangle Fill:Chalk.355"><XForm><Angle>-0</Angle>
 <PinX>5.4375</PinX>
 <PinY>10.95139</PinY>
 <Width>2.125</Width>
@@ -20023,7 +21783,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Worker Manager</Text>
 </Shape>
 
-<Shape ID="328" Type="Shape" Name="Rectangle Fill:Chalk.328"><XForm><Angle>-0</Angle>
+<Shape ID="356" Type="Shape" Name="Rectangle Fill:Chalk.356"><XForm><Angle>-0</Angle>
 <PinX>5.4375</PinX>
 <PinY>10.38889</PinY>
 <Width>2.125</Width>
@@ -20085,7 +21845,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Build Manager</Text>
 </Shape>
 
-<Shape ID="329" Type="Shape" Name="Rectangle Fill:Chalk.329"><XForm><Angle>-0</Angle>
+<Shape ID="357" Type="Shape" Name="Rectangle Fill:Chalk.357"><XForm><Angle>-0</Angle>
 <PinX>5.4375</PinX>
 <PinY>10.01389</PinY>
 <Width>2.125</Width>
@@ -20147,7 +21907,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Production Manager</Text>
 </Shape>
 
-<Shape ID="330" Type="Shape" Name="Rectangle Fill:Chalk.330"><XForm><Angle>-0</Angle>
+<Shape ID="358" Type="Shape" Name="Rectangle Fill:Chalk.358"><XForm><Angle>-0</Angle>
 <PinX>5.4375</PinX>
 <PinY>9.638889</PinY>
 <Width>2.125</Width>
@@ -20209,7 +21969,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Planner Manager</Text>
 </Shape>
 
-<Shape ID="331" Type="Shape" Name="Rectangle Fill:Chalk.331"><XForm><Angle>-0</Angle>
+<Shape ID="359" Type="Shape" Name="Rectangle Fill:Chalk.359"><XForm><Angle>-0</Angle>
 <PinX>5.4375</PinX>
 <PinY>8.701389</PinY>
 <Width>2.125</Width>
@@ -20271,7 +22031,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Strategy Manager</Text>
 </Shape>
 
-<Shape ID="332" Type="Shape" Name="Rectangle Fill:Chalk.332"><XForm><Angle>-0</Angle>
+<Shape ID="360" Type="Shape" Name="Rectangle Fill:Chalk.360"><XForm><Angle>-0</Angle>
 <PinX>2.9375</PinX>
 <PinY>9.638889</PinY>
 <Width>2.125</Width>
@@ -20333,7 +22093,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Assign Tasks to Buildings</Text>
 </Shape>
 
-<Shape ID="333" Type="Shape" Name="Rectangle Fill:Chalk.333"><XForm><Angle>-0</Angle>
+<Shape ID="361" Type="Shape" Name="Rectangle Fill:Chalk.361"><XForm><Angle>-0</Angle>
 <PinX>5.4375</PinX>
 <PinY>13.88889</PinY>
 <Width>2.125</Width>
@@ -20395,7 +22155,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Starcraft</Text>
 </Shape>
 
-<Shape ID="334" Type="Shape" Name="Rectangle Fill:Chalk.334"><XForm><Angle>-0</Angle>
+<Shape ID="362" Type="Shape" Name="Rectangle Fill:Chalk.362"><XForm><Angle>-0</Angle>
 <PinX>7.9375</PinX>
 <PinY>9.263889</PinY>
 <Width>2.125</Width>
@@ -20457,7 +22217,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Structure Expert</Text>
 </Shape>
 
-<Shape ID="335" Type="Shape" Name="Rectangle Fill:Chalk.335"><XForm><Angle>-0</Angle>
+<Shape ID="363" Type="Shape" Name="Rectangle Fill:Chalk.363"><XForm><Angle>-0</Angle>
 <PinX>7.9375</PinX>
 <PinY>8.888889</PinY>
 <Width>2.125</Width>
@@ -20519,7 +22279,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Units Expert</Text>
 </Shape>
 
-<Shape ID="336" Type="Shape" Name="Rectangle Fill:Chalk.336"><XForm><Angle>-0</Angle>
+<Shape ID="364" Type="Shape" Name="Rectangle Fill:Chalk.364"><XForm><Angle>-0</Angle>
 <PinX>7.9375</PinX>
 <PinY>8.513889</PinY>
 <Width>2.125</Width>
@@ -20581,7 +22341,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Upgrade Expert</Text>
 </Shape>
 
-<Shape ID="337" Type="Shape" Name="Rectangle Fill:Chalk.337"><XForm><Angle>-0</Angle>
+<Shape ID="365" Type="Shape" Name="Rectangle Fill:Chalk.365"><XForm><Angle>-0</Angle>
 <PinX>7.9375</PinX>
 <PinY>10.01389</PinY>
 <Width>2.125</Width>
@@ -20643,7 +22403,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Arbitrer Expert</Text>
 </Shape>
 
-<Shape ID="338" Type="Shape" Name="Rectangle Fill:Chalk.338"><XForm><Angle>-0</Angle>
+<Shape ID="366" Type="Shape" Name="Rectangle Fill:Chalk.366"><XForm><Angle>-0</Angle>
 <PinX>7.9375</PinX>
 <PinY>13.88889</PinY>
 <Width>2.125</Width>
@@ -20705,7 +22465,7 @@ Analysis</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Stratagus</Text>
 </Shape>
 
-<Shape ID="339" Type="Shape" Name="Rectangle Fill:Chalk.339"><XForm><Angle>-0</Angle>
+<Shape ID="367" Type="Shape" Name="Rectangle Fill:Chalk.367"><XForm><Angle>-0</Angle>
 <PinX>5.4375</PinX>
 <PinY>5.326389</PinY>
 <Width>2.125</Width>
@@ -20768,7 +22528,7 @@ Analysis</Text>
 Hierarchical for Micro</Text>
 </Shape>
 
-<Shape ID="340" Type="Shape" Name="Rectangle Fill:Chalk.340"><XForm><Angle>-0</Angle>
+<Shape ID="368" Type="Shape" Name="Rectangle Fill:Chalk.368"><XForm><Angle>-0</Angle>
 <PinX>7.9375</PinX>
 <PinY>3.701389</PinY>
 <Width>2.125</Width>
@@ -20832,7 +22592,7 @@ Hierarchical for Micro</Text>
 State representation is the list of executed actions by the agent itself. Thus, no reactivity, nor oponent modeling.</Text>
 </Shape>
 
-<Shape ID="341" Type="Shape" Name="Rectangle Fill:Chalk.341"><XForm><Angle>-0</Angle>
+<Shape ID="369" Type="Shape" Name="Rectangle Fill:Chalk.369"><XForm><Angle>-0</Angle>
 <PinX>7.9375</PinX>
 <PinY>5.326389</PinY>
 <Width>2.125</Width>
@@ -20894,7 +22654,7 @@ State representation is the list of executed actions by the agent itself. Thus, 
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Arbitrer learns (Q-learning) which Expert to use each time</Text>
 </Shape>
 
-<Shape ID="342" Type="Shape" Name="Rectangle Fill:Cayenne.342"><XForm><Angle>-0</Angle>
+<Shape ID="370" Type="Shape" Name="Rectangle Fill:Cayenne.370"><XForm><Angle>-0</Angle>
 <PinX>10.4375</PinX>
 <PinY>8.513887</PinY>
 <Width>2.375</Width>
@@ -20956,7 +22716,7 @@ State representation is the list of executed actions by the agent itself. Thus, 
 <Char IX="0"><Font>0</Font><Color>#FFFFFF</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>BTHAI</Text>
 </Shape>
 
-<Shape ID="343" Type="Shape" Name="Rectangle Fill:Chalk.343"><XForm><Angle>-0</Angle>
+<Shape ID="371" Type="Shape" Name="Rectangle Fill:Chalk.371"><XForm><Angle>-0</Angle>
 <PinX>10.4375</PinX>
 <PinY>13.88889</PinY>
 <Width>2.125</Width>
@@ -21018,7 +22778,7 @@ State representation is the list of executed actions by the agent itself. Thus, 
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Starcraft</Text>
 </Shape>
 
-<Shape ID="344" Type="Shape" Name="Rectangle Fill:Chalk.344"><XForm><Angle>-0</Angle>
+<Shape ID="372" Type="Shape" Name="Rectangle Fill:Chalk.372"><XForm><Angle>-0</Angle>
 <PinX>10.4375</PinX>
 <PinY>7.076389</PinY>
 <Width>2.125</Width>
@@ -21080,7 +22840,7 @@ State representation is the list of executed actions by the agent itself. Thus, 
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Exploration Manager</Text>
 </Shape>
 
-<Shape ID="345" Type="Shape" Name="Rectangle Fill:Chalk.345"><XForm><Angle>-0</Angle>
+<Shape ID="373" Type="Shape" Name="Rectangle Fill:Chalk.373"><XForm><Angle>-0</Angle>
 <PinX>10.4375</PinX>
 <PinY>12.51389</PinY>
 <Width>2.125</Width>
@@ -21142,7 +22902,7 @@ State representation is the list of executed actions by the agent itself. Thus, 
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Commander</Text>
 </Shape>
 
-<Shape ID="346" Type="Shape" Name="Rectangle Fill:Chalk.346"><XForm><Angle>-0</Angle>
+<Shape ID="374" Type="Shape" Name="Rectangle Fill:Chalk.374"><XForm><Angle>-0</Angle>
 <PinX>10.4375</PinX>
 <PinY>13.26389</PinY>
 <Width>2.125</Width>
@@ -21204,7 +22964,7 @@ State representation is the list of executed actions by the agent itself. Thus, 
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Unit Agent(s)</Text>
 </Shape>
 
-<Shape ID="347" Type="Shape" Name="Rectangle Fill:Chalk.347"><XForm><Angle>-0</Angle>
+<Shape ID="375" Type="Shape" Name="Rectangle Fill:Chalk.375"><XForm><Angle>-0</Angle>
 <PinX>10.4375</PinX>
 <PinY>9.263889</PinY>
 <Width>2.125</Width>
@@ -21266,7 +23026,7 @@ State representation is the list of executed actions by the agent itself. Thus, 
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>BuildPlanner</Text>
 </Shape>
 
-<Shape ID="348" Type="Shape" Name="Rectangle Fill:Chalk.348"><XForm><Angle>-0</Angle>
+<Shape ID="376" Type="Shape" Name="Rectangle Fill:Chalk.376"><XForm><Angle>-0</Angle>
 <PinX>10.4375</PinX>
 <PinY>10.76389</PinY>
 <Width>2.125</Width>
@@ -21328,7 +23088,7 @@ State representation is the list of executed actions by the agent itself. Thus, 
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>WorkerAgent</Text>
 </Shape>
 
-<Shape ID="349" Type="Shape" Name="Rectangle Fill:Chalk.349"><XForm><Angle>-0</Angle>
+<Shape ID="377" Type="Shape" Name="Rectangle Fill:Chalk.377"><XForm><Angle>-0</Angle>
 <PinX>10.4375</PinX>
 <PinY>6.576389</PinY>
 <Width>2.125</Width>
@@ -21390,7 +23150,7 @@ State representation is the list of executed actions by the agent itself. Thus, 
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>PFManager</Text>
 </Shape>
 
-<Shape ID="350" Type="Shape" Name="Rectangle Fill:Chalk.350"><XForm><Angle>-0</Angle>
+<Shape ID="378" Type="Shape" Name="Rectangle Fill:Chalk.378"><XForm><Angle>-0</Angle>
 <PinX>10.4375</PinX>
 <PinY>5.326389</PinY>
 <Width>2.125</Width>
@@ -21452,7 +23212,7 @@ State representation is the list of executed actions by the agent itself. Thus, 
 <Char IX="0"><Font>0</Font><Color>#FFFFFF</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>?</Text>
 </Shape>
 
-<Shape ID="351" Type="Shape" Name="Rectangle Fill:Chalk.351"><XForm><Angle>-0</Angle>
+<Shape ID="379" Type="Shape" Name="Rectangle Fill:Chalk.379"><XForm><Angle>-0</Angle>
 <PinX>10.4375</PinX>
 <PinY>9.638889</PinY>
 <Width>2.125</Width>
@@ -21514,7 +23274,7 @@ State representation is the list of executed actions by the agent itself. Thus, 
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>StructureAgent</Text>
 </Shape>
 
-<Shape ID="352" Type="Shape" Name="Rectangle Fill:Chalk.352"><XForm><Angle>-0</Angle>
+<Shape ID="380" Type="Shape" Name="Rectangle Fill:Chalk.380"><XForm><Angle>-0</Angle>
 <PinX>10.4375</PinX>
 <PinY>8.888889</PinY>
 <Width>2.125</Width>
@@ -21576,7 +23336,7 @@ State representation is the list of executed actions by the agent itself. Thus, 
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Commander</Text>
 </Shape>
 
-<Shape ID="353" Type="Shape" Name="Rectangle Fill:Chalk.353"><XForm><Angle>-0</Angle>
+<Shape ID="381" Type="Shape" Name="Rectangle Fill:Chalk.381"><XForm><Angle>-0</Angle>
 <PinX>10.4375</PinX>
 <PinY>8.513889</PinY>
 <Width>2.125</Width>
@@ -21638,7 +23398,7 @@ State representation is the list of executed actions by the agent itself. Thus, 
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>UpgradeManager</Text>
 </Shape>
 
-<Shape ID="354" Type="Shape" Name="Rectangle Fill:Chalk.354"><XForm><Angle>-0</Angle>
+<Shape ID="382" Type="Shape" Name="Rectangle Fill:Chalk.382"><XForm><Angle>-0</Angle>
 <PinX>2.9375</PinX>
 <PinY>6.138889</PinY>
 <Width>2.125</Width>
@@ -21700,7 +23460,7 @@ State representation is the list of executed actions by the agent itself. Thus, 
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Terrain Analysis</Text>
 </Shape>
 
-<Shape ID="355" Type="Shape" Name="Rectangle Fill:Magnesium.355"><XForm><Angle>-0</Angle>
+<Shape ID="383" Type="Shape" Name="Rectangle Fill:Magnesium.383"><XForm><Angle>-0</Angle>
 <PinX>5.4375</PinX>
 <PinY>6.138889</PinY>
 <Width>2.125</Width>
@@ -21762,7 +23522,7 @@ State representation is the list of executed actions by the agent itself. Thus, 
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>BWTA</Text>
 </Shape>
 
-<Shape ID="356" Type="Shape" Name="Rectangle Fill:Chalk.356"><XForm><Angle>-0</Angle>
+<Shape ID="384" Type="Shape" Name="Rectangle Fill:Chalk.384"><XForm><Angle>-0</Angle>
 <PinX>10.4375</PinX>
 <PinY>3.701389</PinY>
 <Width>2.125</Width>
@@ -21826,7 +23586,7 @@ State representation is the list of executed actions by the agent itself. Thus, 
 Most interesting aspect is the use of potential fields for unit control</Text>
 </Shape>
 
-<Shape ID="357" Type="Shape" Name="Rectangle Fill:Cayenne.357"><XForm><Angle>-0</Angle>
+<Shape ID="385" Type="Shape" Name="Rectangle Fill:Cayenne.385"><XForm><Angle>-0</Angle>
 <PinX>12.9375</PinX>
 <PinY>8.513887</PinY>
 <Width>2.375</Width>
@@ -21888,7 +23648,7 @@ Most interesting aspect is the use of potential fields for unit control</Text>
 <Char IX="0"><Font>0</Font><Color>#FFFFFF</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>BroodwarBotQ</Text>
 </Shape>
 
-<Shape ID="358" Type="Shape" Name="Rectangle Fill:Chalk.358"><XForm><Angle>-0</Angle>
+<Shape ID="386" Type="Shape" Name="Rectangle Fill:Chalk.386"><XForm><Angle>-0</Angle>
 <PinX>12.9375</PinX>
 <PinY>13.26389</PinY>
 <Width>2.125</Width>
@@ -21950,7 +23710,7 @@ Most interesting aspect is the use of potential fields for unit control</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>BayesianUnit</Text>
 </Shape>
 
-<Shape ID="359" Type="Shape" Name="Rectangle Fill:Chalk.359"><XForm><Angle>-0</Angle>
+<Shape ID="387" Type="Shape" Name="Rectangle Fill:Chalk.387"><XForm><Angle>-0</Angle>
 <PinX>12.9375</PinX>
 <PinY>12.88889</PinY>
 <Width>2.125</Width>
@@ -22012,7 +23772,7 @@ Most interesting aspect is the use of potential fields for unit control</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>UnitsGroup</Text>
 </Shape>
 
-<Shape ID="360" Type="Shape" Name="Rectangle Fill:Chalk.360"><XForm><Angle>-0</Angle>
+<Shape ID="388" Type="Shape" Name="Rectangle Fill:Chalk.388"><XForm><Angle>-0</Angle>
 <PinX>12.9375</PinX>
 <PinY>12.51389</PinY>
 <Width>2.125</Width>
@@ -22074,7 +23834,7 @@ Most interesting aspect is the use of potential fields for unit control</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>GoalManager</Text>
 </Shape>
 
-<Shape ID="361" Type="Shape" Name="Rectangle Fill:Chalk.361"><XForm><Angle>-0</Angle>
+<Shape ID="389" Type="Shape" Name="Rectangle Fill:Chalk.389"><XForm><Angle>-0</Angle>
 <PinX>12.9375</PinX>
 <PinY>6.826389</PinY>
 <Width>2.125</Width>
@@ -22136,7 +23896,7 @@ Most interesting aspect is the use of potential fields for unit control</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Intelligence</Text>
 </Shape>
 
-<Shape ID="362" Type="Shape" Name="Rectangle Fill:Chalk.362"><XForm><Angle>-0</Angle>
+<Shape ID="390" Type="Shape" Name="Rectangle Fill:Chalk.390"><XForm><Angle>-0</Angle>
 <PinX>12.9375</PinX>
 <PinY>10.95139</PinY>
 <Width>2.125</Width>
@@ -22198,7 +23958,7 @@ Most interesting aspect is the use of potential fields for unit control</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>WorkerManager</Text>
 </Shape>
 
-<Shape ID="363" Type="Shape" Name="Rectangle Fill:Chalk.363"><XForm><Angle>-0</Angle>
+<Shape ID="391" Type="Shape" Name="Rectangle Fill:Chalk.391"><XForm><Angle>-0</Angle>
 <PinX>12.9375</PinX>
 <PinY>10.38889</PinY>
 <Width>2.125</Width>
@@ -22260,7 +24020,7 @@ Most interesting aspect is the use of potential fields for unit control</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>BuildingPlacer</Text>
 </Shape>
 
-<Shape ID="364" Type="Shape" Name="Rectangle Fill:Chalk.364"><XForm><Angle>-0</Angle>
+<Shape ID="392" Type="Shape" Name="Rectangle Fill:Chalk.392"><XForm><Angle>-0</Angle>
 <PinX>12.9375</PinX>
 <PinY>10.01389</PinY>
 <Width>2.125</Width>
@@ -22322,7 +24082,7 @@ Most interesting aspect is the use of potential fields for unit control</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1527778</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>ProductionM+ConstructionM</Text>
 </Shape>
 
-<Shape ID="365" Type="Shape" Name="Rectangle Fill:Chalk.365"><XForm><Angle>-0</Angle>
+<Shape ID="393" Type="Shape" Name="Rectangle Fill:Chalk.393"><XForm><Angle>-0</Angle>
 <PinX>12.9375</PinX>
 <PinY>9.638889</PinY>
 <Width>2.125</Width>
@@ -22384,7 +24144,7 @@ Most interesting aspect is the use of potential fields for unit control</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>ProductionManager</Text>
 </Shape>
 
-<Shape ID="366" Type="Shape" Name="Rectangle Fill:Chalk.366"><XForm><Angle>-0</Angle>
+<Shape ID="394" Type="Shape" Name="Rectangle Fill:Chalk.394"><XForm><Angle>-0</Angle>
 <PinX>12.9375</PinX>
 <PinY>9.263889</PinY>
 <Width>2.125</Width>
@@ -22446,7 +24206,7 @@ Most interesting aspect is the use of potential fields for unit control</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Standard (Rules)</Text>
 </Shape>
 
-<Shape ID="367" Type="Shape" Name="Rectangle Fill:Chalk.367"><XForm><Angle>-0</Angle>
+<Shape ID="395" Type="Shape" Name="Rectangle Fill:Chalk.395"><XForm><Angle>-0</Angle>
 <PinX>12.9375</PinX>
 <PinY>13.88889</PinY>
 <Width>2.125</Width>
@@ -22508,7 +24268,7 @@ Most interesting aspect is the use of potential fields for unit control</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Starcraft</Text>
 </Shape>
 
-<Shape ID="368" Type="Shape" Name="Rectangle Fill:Chalk.368"><XForm><Angle>-0</Angle>
+<Shape ID="396" Type="Shape" Name="Rectangle Fill:Chalk.396"><XForm><Angle>-0</Angle>
 <PinX>12.9375</PinX>
 <PinY>5.326389</PinY>
 <Width>2.125</Width>
@@ -22571,7 +24331,7 @@ Most interesting aspect is the use of potential fields for unit control</Text>
 Hierarchical for Micro</Text>
 </Shape>
 
-<Shape ID="369" Type="Shape" Name="Rectangle Fill:Magnesium.369"><XForm><Angle>-0</Angle>
+<Shape ID="397" Type="Shape" Name="Rectangle Fill:Magnesium.397"><XForm><Angle>-0</Angle>
 <PinX>12.9375</PinX>
 <PinY>6.138889</PinY>
 <Width>2.125</Width>
@@ -22633,7 +24393,7 @@ Hierarchical for Micro</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>BWTA+heuristics</Text>
 </Shape>
 
-<Shape ID="370" Type="Shape" Name="Rectangle Fill:Chalk.370"><XForm><Angle>-0</Angle>
+<Shape ID="398" Type="Shape" Name="Rectangle Fill:Chalk.398"><XForm><Angle>-0</Angle>
 <PinX>12.9375</PinX>
 <PinY>8.701389</PinY>
 <Width>2.125</Width>
@@ -22695,7 +24455,7 @@ Hierarchical for Micro</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Rules + Intelligence (adaptive through ML)</Text>
 </Shape>
 
-<Shape ID="371" Type="Shape" Name="Rectangle Fill:Cayenne.371"><XForm><Angle>-0</Angle>
+<Shape ID="399" Type="Shape" Name="Rectangle Fill:Cayenne.399"><XForm><Angle>-0</Angle>
 <PinX>15.6875</PinX>
 <PinY>8.513889</PinY>
 <Width>2.875</Width>
@@ -22757,7 +24517,7 @@ Hierarchical for Micro</Text>
 <Char IX="0"><Font>0</Font><Color>#FFFFFF</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>SPAR</Text>
 </Shape>
 
-<Shape ID="372" Type="Shape" Name="Rectangle Fill:Chalk.372"><XForm><Angle>-0</Angle>
+<Shape ID="400" Type="Shape" Name="Rectangle Fill:Chalk.400"><XForm><Angle>-0</Angle>
 <PinX>15.6875</PinX>
 <PinY>13.26389</PinY>
 <Width>2.625</Width>
@@ -22819,7 +24579,7 @@ Hierarchical for Micro</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Reactions</Text>
 </Shape>
 
-<Shape ID="373" Type="Shape" Name="Rectangle Fill:Chalk.373"><XForm><Angle>-0</Angle>
+<Shape ID="401" Type="Shape" Name="Rectangle Fill:Chalk.401"><XForm><Angle>-0</Angle>
 <PinX>15.6875</PinX>
 <PinY>12.88889</PinY>
 <Width>2.625</Width>
@@ -22881,7 +24641,7 @@ Hierarchical for Micro</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Actions Implementation</Text>
 </Shape>
 
-<Shape ID="374" Type="Shape" Name="Rectangle Fill:Chalk.374"><XForm><Angle>-0</Angle>
+<Shape ID="402" Type="Shape" Name="Rectangle Fill:Chalk.402"><XForm><Angle>-0</Angle>
 <PinX>15.6875</PinX>
 <PinY>12.51389</PinY>
 <Width>2.625</Width>
@@ -22943,7 +24703,7 @@ Hierarchical for Micro</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Tactical Decisions</Text>
 </Shape>
 
-<Shape ID="375" Type="Shape" Name="Rectangle Fill:Chalk.375"><XForm><Angle>-0</Angle>
+<Shape ID="403" Type="Shape" Name="Rectangle Fill:Chalk.403"><XForm><Angle>-0</Angle>
 <PinX>15.6875</PinX>
 <PinY>7.076388</PinY>
 <Width>2.625</Width>
@@ -22998,7 +24758,7 @@ Hierarchical for Micro</Text>
 <LayerMem><LayerMember>0</LayerMember>
 </LayerMem>
 </Shape>
-<Shape ID="376" Type="Shape" Name="Object No Fill No Fill.376"><XForm><Angle>-0</Angle>
+<Shape ID="404" Type="Shape" Name="Object No Fill No Fill.404"><XForm><Angle>-0</Angle>
 <PinX>15.75694</PinX>
 <PinY>7.076388</PinY>
 <Width>2.680556</Width>
@@ -23042,7 +24802,7 @@ Hierarchical for Micro</Text>
 Actions Implementation (low level)</Text>
 </Shape>
 
-<Shape ID="377" Type="Shape" Name="Rectangle Fill:Chalk.377"><XForm><Angle>-0</Angle>
+<Shape ID="405" Type="Shape" Name="Rectangle Fill:Chalk.405"><XForm><Angle>-0</Angle>
 <PinX>15.6875</PinX>
 <PinY>10.95139</PinY>
 <Width>2.625</Width>
@@ -23097,7 +24857,7 @@ Actions Implementation (low level)</Text>
 <LayerMem><LayerMember>0</LayerMember>
 </LayerMem>
 </Shape>
-<Shape ID="378" Type="Shape" Name="Object No Fill No Fill.378"><XForm><Angle>-0</Angle>
+<Shape ID="406" Type="Shape" Name="Object No Fill No Fill.406"><XForm><Angle>-0</Angle>
 <PinX>15.75694</PinX>
 <PinY>10.95139</PinY>
 <Width>2.680556</Width>
@@ -23141,7 +24901,7 @@ Actions Implementation (low level)</Text>
 Actions Implementation (low level)</Text>
 </Shape>
 
-<Shape ID="379" Type="Shape" Name="Rectangle Fill:Chalk.379"><XForm><Angle>-0</Angle>
+<Shape ID="407" Type="Shape" Name="Rectangle Fill:Chalk.407"><XForm><Angle>-0</Angle>
 <PinX>15.6875</PinX>
 <PinY>10.38889</PinY>
 <Width>2.625</Width>
@@ -23203,7 +24963,7 @@ Actions Implementation (low level)</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Actions Implementation</Text>
 </Shape>
 
-<Shape ID="380" Type="Shape" Name="Rectangle Fill:Chalk.380"><XForm><Angle>-0</Angle>
+<Shape ID="408" Type="Shape" Name="Rectangle Fill:Chalk.408"><XForm><Angle>-0</Angle>
 <PinX>15.6875</PinX>
 <PinY>10.01389</PinY>
 <Width>2.625</Width>
@@ -23265,7 +25025,7 @@ Actions Implementation (low level)</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Strategy Decisions</Text>
 </Shape>
 
-<Shape ID="381" Type="Shape" Name="Rectangle Fill:Chalk.381"><XForm><Angle>-0</Angle>
+<Shape ID="409" Type="Shape" Name="Rectangle Fill:Chalk.409"><XForm><Angle>-0</Angle>
 <PinX>15.6875</PinX>
 <PinY>9.638889</PinY>
 <Width>2.625</Width>
@@ -23327,7 +25087,7 @@ Actions Implementation (low level)</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Tactical Decisions</Text>
 </Shape>
 
-<Shape ID="382" Type="Shape" Name="Rectangle Fill:Chalk.382"><XForm><Angle>-0</Angle>
+<Shape ID="410" Type="Shape" Name="Rectangle Fill:Chalk.410"><XForm><Angle>-0</Angle>
 <PinX>15.6875</PinX>
 <PinY>8.888888</PinY>
 <Width>2.625</Width>
@@ -23389,7 +25149,7 @@ Actions Implementation (low level)</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Strategy Decisions</Text>
 </Shape>
 
-<Shape ID="383" Type="Shape" Name="Rectangle Fill:Chalk.383"><XForm><Angle>-0</Angle>
+<Shape ID="411" Type="Shape" Name="Rectangle Fill:Chalk.411"><XForm><Angle>-0</Angle>
 <PinX>15.6875</PinX>
 <PinY>13.88889</PinY>
 <Width>2.625</Width>
@@ -23451,7 +25211,7 @@ Actions Implementation (low level)</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Starcraft</Text>
 </Shape>
 
-<Shape ID="384" Type="Shape" Name="Rectangle Fill:Chalk.384"><XForm><Angle>-0</Angle>
+<Shape ID="412" Type="Shape" Name="Rectangle Fill:Chalk.412"><XForm><Angle>-0</Angle>
 <PinX>15.6875</PinX>
 <PinY>5.326389</PinY>
 <Width>2.625</Width>
@@ -23513,7 +25273,7 @@ Actions Implementation (low level)</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Hierarchical</Text>
 </Shape>
 
-<Shape ID="385" Type="Shape" Name="Rectangle Fill:Magnesium.385"><XForm><Angle>-0</Angle>
+<Shape ID="413" Type="Shape" Name="Rectangle Fill:Magnesium.413"><XForm><Angle>-0</Angle>
 <PinX>15.6875</PinX>
 <PinY>6.138889</PinY>
 <Width>2.625</Width>
@@ -23575,7 +25335,7 @@ Actions Implementation (low level)</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>BWTA</Text>
 </Shape>
 
-<Shape ID="386" Type="Shape" Name="Rectangle Fill:Chalk.386"><XForm><Angle>-0</Angle>
+<Shape ID="414" Type="Shape" Name="Rectangle Fill:Chalk.414"><XForm><Angle>-0</Angle>
 <PinX>15.6875</PinX>
 <PinY>6.576389</PinY>
 <Width>2.625</Width>
@@ -23638,7 +25398,7 @@ Actions Implementation (low level)</Text>
 Threat Evaluation</Text>
 </Shape>
 
-<Shape ID="387" Type="Shape" Name="Rectangle Fill:Chalk.387"><XForm><Angle>-0</Angle>
+<Shape ID="415" Type="Shape" Name="Rectangle Fill:Chalk.415"><XForm><Angle>-0</Angle>
 <PinX>15.6875</PinX>
 <PinY>3.701389</PinY>
 <Width>2.625</Width>
@@ -23700,7 +25460,7 @@ Threat Evaluation</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>0</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>SPAR is completely different from NOVA, BBQ or BTHAI. It&apos;s organized hierarchically, rather than as a blackboard distributed system. Higher modules generate &quot;abstract actions&quot;, that the lower level modules implement.</Text>
 </Shape>
 
-<Shape ID="388" Type="Shape" Name="Rectangle Fill:Chalk.388"><XForm><Angle>-0</Angle>
+<Shape ID="416" Type="Shape" Name="Rectangle Fill:Chalk.416"><XForm><Angle>-0</Angle>
 <PinX>2.9375</PinX>
 <PinY>12.13889</PinY>
 <Width>2.125</Width>
@@ -23762,7 +25522,7 @@ Threat Evaluation</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Target Selection</Text>
 </Shape>
 
-<Shape ID="389" Type="Shape" Name="Rectangle Fill:Chalk.389"><XForm><Angle>-0</Angle>
+<Shape ID="417" Type="Shape" Name="Rectangle Fill:Chalk.417"><XForm><Angle>-0</Angle>
 <PinX>2.9375</PinX>
 <PinY>11.76389</PinY>
 <Width>2.125</Width>
@@ -23824,7 +25584,7 @@ Threat Evaluation</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Target Reactive Selection</Text>
 </Shape>
 
-<Shape ID="390" Type="Shape" Name="Rectangle Fill:Chalk.390"><XForm><Angle>-0</Angle>
+<Shape ID="418" Type="Shape" Name="Rectangle Fill:Chalk.418"><XForm><Angle>-0</Angle>
 <PinX>2.9375</PinX>
 <PinY>7.763889</PinY>
 <Width>2.125</Width>
@@ -23886,7 +25646,7 @@ Threat Evaluation</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Popiulation Control</Text>
 </Shape>
 
-<Shape ID="391" Type="Shape" Name="Rectangle Fill:Chalk.391"><XForm><Angle>-0</Angle>
+<Shape ID="419" Type="Shape" Name="Rectangle Fill:Chalk.419"><XForm><Angle>-0</Angle>
 <PinX>2.9375</PinX>
 <PinY>8.138889</PinY>
 <Width>2.125</Width>
@@ -23948,7 +25708,7 @@ Threat Evaluation</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Expansion</Text>
 </Shape>
 
-<Shape ID="392" Type="Shape" Name="Rectangle Fill:Chalk.392"><XForm><Angle>-0</Angle>
+<Shape ID="420" Type="Shape" Name="Rectangle Fill:Chalk.420"><XForm><Angle>-0</Angle>
 <PinX>5.4375</PinX>
 <PinY>12.13889</PinY>
 <Width>2.125</Width>
@@ -24010,7 +25770,7 @@ Threat Evaluation</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Squad Manager</Text>
 </Shape>
 
-<Shape ID="393" Type="Shape" Name="Rectangle Fill:Chalk.393"><XForm><Angle>-0</Angle>
+<Shape ID="421" Type="Shape" Name="Rectangle Fill:Chalk.421"><XForm><Angle>-0</Angle>
 <PinX>5.4375</PinX>
 <PinY>11.76389</PinY>
 <Width>2.125</Width>
@@ -24072,7 +25832,7 @@ Threat Evaluation</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Squad Agent</Text>
 </Shape>
 
-<Shape ID="394" Type="Shape" Name="Rectangle Fill:Chalk.394"><XForm><Angle>-0</Angle>
+<Shape ID="422" Type="Shape" Name="Rectangle Fill:Chalk.422"><XForm><Angle>-0</Angle>
 <PinX>10.4375</PinX>
 <PinY>12.13889</PinY>
 <Width>2.125</Width>
@@ -24134,7 +25894,7 @@ Threat Evaluation</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Commander</Text>
 </Shape>
 
-<Shape ID="395" Type="Shape" Name="Rectangle Fill:Cantaloupe.395"><XForm><Angle>-0</Angle>
+<Shape ID="423" Type="Shape" Name="Rectangle Fill:Cantaloupe.423"><XForm><Angle>-0</Angle>
 <PinX>10.4375</PinX>
 <PinY>11.76389</PinY>
 <Width>2.125</Width>
@@ -24196,7 +25956,7 @@ Threat Evaluation</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>???</Text>
 </Shape>
 
-<Shape ID="396" Type="Shape" Name="Rectangle Fill:Cantaloupe.396"><XForm><Angle>-0</Angle>
+<Shape ID="424" Type="Shape" Name="Rectangle Fill:Cantaloupe.424"><XForm><Angle>-0</Angle>
 <PinX>12.9375</PinX>
 <PinY>12.13889</PinY>
 <Width>2.125</Width>
@@ -24258,7 +26018,7 @@ Threat Evaluation</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>???</Text>
 </Shape>
 
-<Shape ID="397" Type="Shape" Name="Rectangle Fill:Cantaloupe.397"><XForm><Angle>-0</Angle>
+<Shape ID="425" Type="Shape" Name="Rectangle Fill:Cantaloupe.425"><XForm><Angle>-0</Angle>
 <PinX>12.9375</PinX>
 <PinY>11.76389</PinY>
 <Width>2.125</Width>
@@ -24320,7 +26080,7 @@ Threat Evaluation</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>???</Text>
 </Shape>
 
-<Shape ID="398" Type="Shape" Name="Rectangle Fill:Chalk.398"><XForm><Angle>-0</Angle>
+<Shape ID="426" Type="Shape" Name="Rectangle Fill:Chalk.426"><XForm><Angle>-0</Angle>
 <PinX>15.6875</PinX>
 <PinY>12.13889</PinY>
 <Width>2.625</Width>
@@ -24382,7 +26142,7 @@ Threat Evaluation</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Tactical Decisions</Text>
 </Shape>
 
-<Shape ID="399" Type="Shape" Name="Rectangle Fill:Chalk.399"><XForm><Angle>-0</Angle>
+<Shape ID="427" Type="Shape" Name="Rectangle Fill:Chalk.427"><XForm><Angle>-0</Angle>
 <PinX>15.6875</PinX>
 <PinY>11.76389</PinY>
 <Width>2.625</Width>
@@ -24444,7 +26204,7 @@ Threat Evaluation</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Reactions</Text>
 </Shape>
 
-<Shape ID="400" Type="Shape" Name="Rectangle Fill:Chalk.400"><XForm><Angle>-0</Angle>
+<Shape ID="428" Type="Shape" Name="Rectangle Fill:Chalk.428"><XForm><Angle>-0</Angle>
 <PinX>5.4375</PinX>
 <PinY>7.763889</PinY>
 <Width>2.125</Width>
@@ -24506,7 +26266,7 @@ Threat Evaluation</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Build Manager</Text>
 </Shape>
 
-<Shape ID="401" Type="Shape" Name="Rectangle Fill:Chalk.401"><XForm><Angle>-0</Angle>
+<Shape ID="429" Type="Shape" Name="Rectangle Fill:Chalk.429"><XForm><Angle>-0</Angle>
 <PinX>10.4375</PinX>
 <PinY>8.138889</PinY>
 <Width>2.125</Width>
@@ -24568,7 +26328,7 @@ Threat Evaluation</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>BuildPlanner</Text>
 </Shape>
 
-<Shape ID="402" Type="Shape" Name="Rectangle Fill:Cantaloupe.402"><XForm><Angle>-0</Angle>
+<Shape ID="430" Type="Shape" Name="Rectangle Fill:Cantaloupe.430"><XForm><Angle>-0</Angle>
 <PinX>12.9375</PinX>
 <PinY>8.138889</PinY>
 <Width>2.125</Width>
@@ -24630,7 +26390,7 @@ Threat Evaluation</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>???</Text>
 </Shape>
 
-<Shape ID="403" Type="Shape" Name="Rectangle Fill:Cantaloupe.403"><XForm><Angle>-0</Angle>
+<Shape ID="431" Type="Shape" Name="Rectangle Fill:Cantaloupe.431"><XForm><Angle>-0</Angle>
 <PinX>12.9375</PinX>
 <PinY>7.763889</PinY>
 <Width>2.125</Width>
@@ -24692,7 +26452,7 @@ Threat Evaluation</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>???</Text>
 </Shape>
 
-<Shape ID="404" Type="Shape" Name="Rectangle Fill:Chalk.404"><XForm><Angle>-0</Angle>
+<Shape ID="432" Type="Shape" Name="Rectangle Fill:Chalk.432"><XForm><Angle>-0</Angle>
 <PinX>15.6875</PinX>
 <PinY>8.138889</PinY>
 <Width>2.625</Width>
@@ -24754,7 +26514,7 @@ Threat Evaluation</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Tactical Decisions</Text>
 </Shape>
 
-<Shape ID="405" Type="Shape" Name="Rectangle Fill:Chalk.405"><XForm><Angle>-0</Angle>
+<Shape ID="433" Type="Shape" Name="Rectangle Fill:Chalk.433"><XForm><Angle>-0</Angle>
 <PinX>15.6875</PinX>
 <PinY>7.763889</PinY>
 <Width>2.625</Width>
@@ -24816,7 +26576,7 @@ Threat Evaluation</Text>
 <Char IX="0"><Font>0</Font><Color>0</Color><Style>0</Style><Size>0.1666667</Size><ColorTrans>0</ColorTrans></Char><Para IX="0"><IndFirst>0</IndFirst><IndLeft>0</IndLeft><IndRight>-0</IndRight><SpLine>-1.2</SpLine><SpBefore>0</SpBefore><HorzAlign>1</HorzAlign></Para><Text><cp IX="0"/><pp IX="0"/>Strategy Decisions</Text>
 </Shape>
 
-<Shape ID="406" Type="Shape" Name="Rectangle Fill:Magnesium.406"><XForm><Angle>-0</Angle>
+<Shape ID="434" Type="Shape" Name="Rectangle Fill:Magnesium.434"><XForm><Angle>-0</Angle>
 <PinX>10.4375</PinX>
 <PinY>6.138889</PinY>
 <Width>2.125</Width>
@@ -24884,7 +26644,7 @@ Threat Evaluation</Text>
 
 
 </Pages>
-<Windows><Window ViewCenterY="10.55556" ViewScale="1" ViewCenterX="7.3125" Page="0" WindowState="1207959568" WindowType="Drawing" ID="0" ContainerType="Page"><ShowRulers>1</ShowRulers>
+<Windows><Window ViewCenterY="4.326389" ViewScale="1" ViewCenterX="17.11111" Page="1" WindowState="134217744" WindowType="Drawing" ID="0" ContainerType="Page"><ShowRulers>1</ShowRulers>
 <ShowGrid>1</ShowGrid>
 <ShowPageBreaks>1</ShowPageBreaks>
 <ShowConnectionPoints>0</ShowConnectionPoints>
