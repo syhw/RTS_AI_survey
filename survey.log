@@ -1,8 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.9.26)  12 DEC 2011 11:43
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  18 FEB 2012 14:26
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**survey
+**survey.tex
 (./survey.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
@@ -344,63 +345,61 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 156.
+(Font)              <7> on input line 152.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 156.
+(Font)              <5> on input line 152.
 
 [1{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-[2]
-<figures/figure-bot-architectures-wide.pdf, id=17, 1341.01pt x 549.05125pt>
+<figures/figure-bot-architectures-wide.pdf, id=11, 1341.01pt x 549.05125pt>
 File: figures/figure-bot-architectures-wide.pdf Graphic file (type pdf)
 
 <use figures/figure-bot-architectures-wide.pdf>
 Package pdftex.def Info: figures/figure-bot-architectures-wide.pdf used on inpu
-t line 281.
+t line 270.
 (pdftex.def)             Requested size: 516.0pt x 211.2639pt.
 
 
-LaTeX Warning: Citation `???' on page 3 undefined on input line 286.
+LaTeX Warning: Citation `???' on page 2 undefined on input line 275.
 
-
-Underfull \hbox (badness 3108) in paragraph at lines 304--305
+[2]
+Underfull \hbox (badness 3108) in paragraph at lines 293--294
 []\OT1/ptm/m/n/10 BBQ: uses ab-strac-tion for micro-management, and
  []
 
-[3]
-Underfull \hbox (badness 3108) in paragraph at lines 321--322
+[3 <./figures/figure-bot-architectures-wide.pdf>]
+Underfull \hbox (badness 3108) in paragraph at lines 310--311
 []\OT1/ptm/m/n/10 Resource co-or-di-na-tion in a divide-and-conquer ap-
  []
 
-(./survey.bbl) <jim.jpg, id=21, 200.75pt x 200.75pt>
+
+LaTeX Warning: Reference `sec:planning' on page 4 undefined on input line 311.
+
+(./survey.bbl) <jim.jpg, id=484, 200.75pt x 200.75pt>
 File: jim.jpg Graphic file (type jpg)
  <use jim.jpg>
-Package pdftex.def Info: jim.jpg used on input line 343.
+Package pdftex.def Info: jim.jpg used on input line 332.
 (pdftex.def)             Requested size: 56.9055pt x 56.90495pt.
 File: jim.jpg Graphic file (type jpg)
 
 <use jim.jpg>
-Package pdftex.def Info: jim.jpg used on input line 343.
+Package pdftex.def Info: jim.jpg used on input line 332.
 (pdftex.def)             Requested size: 56.9055pt x 56.90495pt.
- [4 <./figures/figure-bot-architectures-wide.pdf> <./jim.jpg>]
-(./survey.aux)
+ [4 <./jim.jpg>] (./survey.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 3504 strings out of 493633
- 51076 string characters out of 3143377
- 121092 words of memory out of 3000000
- 6742 multiletter control sequences out of 15000+200000
+ 3501 strings out of 493633
+ 51014 string characters out of 3143378
+ 121050 words of memory out of 3000000
+ 6739 multiletter control sequences out of 15000+200000
  40716 words of font info for 70 fonts, out of 3000000 for 9000
  834 hyphenation exceptions out of 8191
- 38i,10n,37p,1137b,315s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,10n,37p,1141b,315s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
@@ -410,7 +409,7 @@ ve/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive
 f-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2011/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
 urw/times/utmri8a.pfb>
-Output written on survey.pdf (4 pages, 336293 bytes).
+Output written on survey.pdf (4 pages, 334235 bytes).
 PDF statistics:
  515 PDF objects out of 1000 (max. 8388607)
  271 compressed objects within 3 object streams
