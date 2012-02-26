@@ -99,7 +99,7 @@ GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this %
 TODO: Idea of the paper is: ``one-stop guide on what is the
 state of the art in Starcraft AI''. It should help people participating in the competition focus
 their efforts, and also should help people implementing AI for RTS games in
-general (e.g. industry).  In Gabriel's words ``RTS AI problems, Solutions, State-of-the-art, conclude on what's "solved" since (Buro 2004) and what's not.'' 
+general (e.g. industry).  In Gabriel's words ``RTS AI problems, Solutions, State-of-the-art, conclude on what's "solved" since \cite{Buro03rts} and what's not.'' 
 
 For example, if someone wants to implement a bot, and wonders "how should I do scouting", our paper should provide a summary of the existing techniques, and pointers to know more. 
 \end{abstract}
@@ -166,7 +166,7 @@ There has been a lot of work in many, but others have been untouched (e.g. Colla
 \item Opponent Modeling and Adaptation
 \item Group and Individual Control (``micro'')
 \item Planning and Resource Allocation (``macro'')
-\item Spatial reasoning
+\item Spatial reasoning (``tactics'')
 \end{itemize}
 
 Maybe the list above goes better in Section \ref{sec:questions}?
@@ -179,6 +179,9 @@ Maybe the list above goes better in Section \ref{sec:questions}?
 Include here the literature review of existing work on RTS Game AI. We could also compare with what is being used in industry, and use the real AI of Starcraft as an example (Bob Fitch's talk in AIIDE provides enough material for that). I have included here as subsections the two blurbs of text we had for integration of domain knowledge and reasoning with uncertainty, since I guess they correspond here.
 }
 
+\subsection{Micro-management}
+
+Some interesting uses of reinforcement learning (RL) \cite{Sutton} to RTS research are in the domain of \textit{micro-management} (group and individual units control): \cite{Marthi05} employs concurrent hierarchical Q-learning (units Q-functions are combined at the group level) RL to efficiently control units in a ``one robot with multiple effectors'' fashion. \cite{Madeira06} advocates the use of prior domain knowledge to allow faster RL learning and applied their work on a turn-based strategy game. In real game setups, the actions spaces to explore is gigantic, it requires to use the structure of the game in a partial program (or a partial Markov decision process) and a shape function (or a heuristic) \cite{Marthi05}. There are other was to learn parameters of an underlying model, for instance \cite{GA} used evolutionary learning techniques, but face the same problem of dimensionality. The difficulty to work with multi-scale goals and plans is handled directly by case-based reasoning (CBR), which has been adapted for micro-management with continuous action models \cite{Molineaux08}, an integrated RL/CBR algorithm using continous models, or with hybrid CBR/RL transfer learning \cite{CBR-RL}. Reactive planning (for behavior languages) \cite{WeberCig10}, a decompositional planning similar to hierarchical task networks \cite{HTNPlanning}, allows for plans to be changed at different granularity levels and so for multi-scale (hierarchical) goals integration.
 
 %\subsection{Integration of Domain Knowledge}\label{subsec:domainknowledge}
 
