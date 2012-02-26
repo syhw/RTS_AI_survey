@@ -1,13 +1,12 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  18 FEB 2012 14:26
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.2.21)  26 FEB 2012 23:03
 entering extended mode
- \write18 enabled.
- file:line:error style messages enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
-**survey.tex
+**survey
 (./survey.tex
-LaTeX2e <2009/09/24>
-Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
-rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2011-07-01, ngerman-x-2011-07-01, afrikaans, ancientgreek, ibycus, arabi
 c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
 h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
 h, french, galician, german, ngerman, swissgerman, monogreek, greek, hungarian,
@@ -353,53 +352,123 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 ]
-<figures/figure-bot-architectures-wide.pdf, id=11, 1341.01pt x 549.05125pt>
+
+LaTeX Warning: Citation `HsiehS08' on page 2 undefined on input line 190.
+
+
+LaTeX Warning: Citation `SchaddBS07' on page 2 undefined on input line 190.
+
+
+LaTeX Warning: Citation `OBRecog' on page 2 undefined on input line 190.
+
+
+LaTeX Warning: Citation `CBR_Planning' on page 2 undefined on input line 190.
+
+
+LaTeX Warning: Citation `OntanonCBR' on page 2 undefined on input line 190.
+
+
+LaTeX Warning: Citation `Ramirez' on page 2 undefined on input line 190.
+
+
+LaTeX Warning: Citation `BMPR' on page 2 undefined on input line 190.
+
+
+LaTeX Warning: Citation `BayesianRecog' on page 2 undefined on input line 190.
+
+
+LaTeX Warning: Citation `CBR_Planning' on page 2 undefined on input line 192.
+
+
+LaTeX Warning: Citation `OntanonCBR' on page 2 undefined on input line 192.
+
+
+LaTeX Warning: Citation `PlanRetrieval' on page 2 undefined on input line 192.
+
+
+LaTeX Warning: Citation `HsiehS08' on page 2 undefined on input line 192.
+
+
+LaTeX Warning: Citation `SchaddBS07' on page 2 undefined on input line 194.
+
+
+LaTeX Warning: Citation `OBRecog' on page 2 undefined on input line 194.
+
+
+LaTeX Warning: Citation `PHATT' on page 2 undefined on input line 194.
+
+
+LaTeX Warning: Citation `WeberCig09' on page 2 undefined on input line 195.
+
+
+LaTeX Warning: Citation `HMMstrat_RTS_AIIDE11' on page 2 undefined on input lin
+e 195.
+
+
+LaTeX Warning: Citation `SynnaeveOpeningCig11' on page 2 undefined on input lin
+e 195.
+
+
+LaTeX Warning: Citation `WeberCig09' on page 2 undefined on input line 195.
+
+
+LaTeX Warning: Citation `SynnaeveAIIDE11' on page 2 undefined on input line 195
+.
+
+[2]
+<figures/figure-bot-architectures-wide.pdf, id=17, 1341.01pt x 549.05125pt>
 File: figures/figure-bot-architectures-wide.pdf Graphic file (type pdf)
 
 <use figures/figure-bot-architectures-wide.pdf>
 Package pdftex.def Info: figures/figure-bot-architectures-wide.pdf used on inpu
-t line 270.
+t line 284.
 (pdftex.def)             Requested size: 516.0pt x 211.2639pt.
 
 
-LaTeX Warning: Citation `???' on page 2 undefined on input line 275.
+LaTeX Warning: Citation `???' on page 3 undefined on input line 289.
 
-[2]
-Underfull \hbox (badness 3108) in paragraph at lines 293--294
+[3]
+Underfull \hbox (badness 3108) in paragraph at lines 307--308
 []\OT1/ptm/m/n/10 BBQ: uses ab-strac-tion for micro-management, and
  []
 
-[3 <./figures/figure-bot-architectures-wide.pdf>]
-Underfull \hbox (badness 3108) in paragraph at lines 310--311
+[4 <./figures/figure-bot-architectures-wide.pdf>]
+Underfull \hbox (badness 3108) in paragraph at lines 324--325
 []\OT1/ptm/m/n/10 Resource co-or-di-na-tion in a divide-and-conquer ap-
  []
 
 
-LaTeX Warning: Reference `sec:planning' on page 4 undefined on input line 311.
+LaTeX Warning: Reference `sec:planning' on page 5 undefined on input line 325.
 
-(./survey.bbl) <jim.jpg, id=484, 200.75pt x 200.75pt>
+(./survey.bbl
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¼ in font ptmr7t!
+) <jim.jpg, id=487, 200.75pt x 200.75pt>
 File: jim.jpg Graphic file (type jpg)
  <use jim.jpg>
-Package pdftex.def Info: jim.jpg used on input line 332.
+Package pdftex.def Info: jim.jpg used on input line 346.
 (pdftex.def)             Requested size: 56.9055pt x 56.90495pt.
 File: jim.jpg Graphic file (type jpg)
 
 <use jim.jpg>
-Package pdftex.def Info: jim.jpg used on input line 332.
+Package pdftex.def Info: jim.jpg used on input line 346.
 (pdftex.def)             Requested size: 56.9055pt x 56.90495pt.
- [4 <./jim.jpg>] (./survey.aux)
+ [5 <./jim.jpg>] (./survey.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 3501 strings out of 493633
- 51014 string characters out of 3143378
- 121050 words of memory out of 3000000
- 6739 multiletter control sequences out of 15000+200000
+ 3531 strings out of 493629
+ 51367 string characters out of 3143323
+ 125091 words of memory out of 3000000
+ 6773 multiletter control sequences out of 15000+200000
  40716 words of font info for 70 fonts, out of 3000000 for 9000
  834 hyphenation exceptions out of 8191
- 38i,10n,37p,1141b,315s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,10n,37p,1503b,315s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
@@ -409,10 +478,10 @@ ve/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive
 f-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2011/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
 urw/times/utmri8a.pfb>
-Output written on survey.pdf (4 pages, 334235 bytes).
+Output written on survey.pdf (5 pages, 344301 bytes).
 PDF statistics:
- 515 PDF objects out of 1000 (max. 8388607)
- 271 compressed objects within 3 object streams
+ 518 PDF objects out of 1000 (max. 8388607)
+ 273 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
