@@ -1,6 +1,7 @@
 \documentclass[journal]{IEEEtran}
 
-\usepackage{cite,color,graphicx}
+\usepackage{cite,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
 
 % *** GRAPHICS RELATED PACKAGES ***
 %
@@ -141,6 +142,15 @@ state of the art in Starcraft AI
 {\color{blue}
 Introduce the game plus screenshot. Not too lengthy.
 }
+{\color{ForestGreen}
+Here it is a brief description, I don't think we need a screenshot.
+}
+Starcraft: Brood War is a popular RTS game released in 1998 by Blizzard Entertainment. Starcraft is set in a science-fiction based world where the player must choose one of the three races: Terran, Protoss or Zerg. The good work done by the people of Blizzard makes this game one of the most extremely well-balanced RTS games ever created.
+\begin{itemize}
+	\item Terrans, human exiled from Earth, provide units that are versatile and flexible giving a balanced option between Protoss and Zergs.
+	\item Protoss units have lengthy and expensive manufacturing process, but they are strong and resistant. These conditions makes players follow a strategy of quality over quantity.
+	\item Zergs, the insectoid race, units are cheap and weak. They can be produced fast, encouraging players to overwhelm their opponents with sheer numbers.
+\end{itemize}
 
 \subsection{Challenges in RTS Game AI}\label{subsec:challenges}
 
@@ -214,6 +224,49 @@ uncertainty that we can't really be sure to scratch off, even with the best scou
 One could argue that the extensional data is the only thing that matters because it is the only thing that has an influence on the game, but in reality, for very highly skilled players, discovering the intentions of the enemy is the key to winning. It allows for a compact understanding of the game state and development, while also giving additional information about the future. Whereas a player is doing action A to follow it up by action B or C depends on its intention, while the information about action A is visible and information about B or C is hidden, only intention allows for a choice.
 }
 
+\subsection{Terrain Analysis}
+{\color{ForestGreen}
+Terrain analysis supplies the AI with chunks of abstract information about the map in order to help in making decisions. Terrain analysis can provide automatic detection of regions, choke points and other areas of interest. This analysis is usually performed off-line, in order to save processing time during gameplay.
+
+The final goal of terrain analysis is having all the useful tactical information of the map. To do this we can use different algorithms, one of the most used, coming from computer vision, being \textit{skeletons by influence zones}, also known as \textit{Voronoi diagrams}\cite{Perkins_2010}. Through this kind of diagrams we will be able to generate a graph with the centroid of the regions and the choke points of each region.
+
+Another common technique is the utilization of an influence map to detect and mark relevant zones of the map as resources location.
+}
+
+\subsection{Pathfinding}
+{\color{ForestGreen}
+The most common pathfinding algorithm is A*, but the big problem of this algorithm is the time and  memory consumption, a show-stopper in a real-time environment.
+
+To solve this the search space needs to be reduced as much as possible. One common technique is reducing the tile map search into a navigation graph map. To do this some polygonal triangulations are calculated and abstracted on a grid-based map and this is the TRA* (Triangulation Reduction A*) algorithm\cite{Demyen_2006}. 
+
+** There are a lot of new pathfinding algorithms. Do we need to review all of them? **
+}
+
+\subsection{Group behavior}
+{\color{ForestGreen}
+Craig Reynols introduced algorithmic steering behaviors to simulate the aggregate motion of swarms using procedural animation\cite{Reynolds_1999}. His model describes how a system of multiple agents , each steering according to simple local rules, can produce the collective movement found in flocks of birds. With this behaviours we are able to simulate intelligent squad movements and do tactical moves to flank the opponent in a RTS game\cite{Danielsiek_2008}, improving the survival of our units.
+
+A good alternative to Flocking is using Reciprocal Velocity Obstacles (RVO)\cite{Berg_2008}, since it is easier to control the behavior and they guarantee to prevent collisions.With this algorithm we can move a large squad crossing another squad and avoid all possible collisions between units. This type of techniques are already applied in commercial RTS games like Starcraft 2 or Supreme Commander 2 with great success.
+
+Another popular technique is Potential Fields. basically, Potential Fields work like a charged particle moving through a magnetic field. The process of tuning and optimizing the parameters of potential field charges can be time reduced applying learning algorithms such as Q-Learning\cite{Liu_2008}. Another common issue we have to deal with when using potential fields is the local optima problem that can stuck the unit away from the goal.
+Some examples of the utilities of potential files in RTS games are avoiding obstacles (navigation), avoiding opponent fire, or staying at maximum shooting distance\cite{Hagelback08}\cite{Hagelback09}.
+}
+
+\subsection{Decision Making}
+{\color{ForestGreen}
+The most common decision making are Decision Trees. Some of the advantages of the decision trees are: simple to understand and interpret acting like a white box where we can explain why a decision is taken, and they are compatible with other decision techniques. For complex decisions we have many algorithms to generate an optimum decision tree like ID3 or C4.5, depends on the problem we will use one or another.
+
+A good alternative are Finite State Machine. The idea behind FSM is to decompose an object's behavior into easily manageable "chunks" or states, such as "attacking an enemy", "gathering resources" or "repairing" and establish the conditions that trigger transitions between them.
+}
+
+\subsection{Opponent modelling}
+{\color{ForestGreen}
+Opponent modelling is the process of keeping track of what the enemy is doing during a game in order to estimate the probability of it using a specific strategy. The key point here is to predict what units the enemy will build, when he will build them, when and where he will attack and so on. This will give us information about what kind of opponent it is allowing us to adapt our strategy and select the best counter.
+
+Science we are dealing with imperfect information, the best solution is to build a Bayesian model which can deal perfectly with the uncertainty. The difficult part is building that model. Some approaches use traces of game logs to analyze the state of the world, but those traces have all the information of the game, so we have to add some noise to emulate the real use of the model in a non-deterministic world.
+
+A Threat Map or Influence Map is a way to store relevant information about the opponent and keep track of the conflict areas or the secure ones. Statical threat maps can be designed where the threat is always "real" or concepts like heat map over time can be applied to make predictions.
+}
 
 
 \section{State of the Art Bots for Starcraft}\label{sec:bot}
