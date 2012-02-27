@@ -100,7 +100,7 @@ GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this %
 TODO: Idea of the paper is: ``one-stop guide on what is the
 state of the art in Starcraft AI''. It should help people participating in the competition focus
 their efforts, and also should help people implementing AI for RTS games in
-general (e.g. industry).  In Gabriel's words ``RTS AI problems, Solutions, State-of-the-art, conclude on what's "solved" since (Buro 2004) and what's not.'' 
+general (e.g. industry).  In Gabriel's words ``RTS AI problems, Solutions, State-of-the-art, conclude on what's "solved" since \cite{Buro03rts} and what's not.'' 
 
 For example, if someone wants to implement a bot, and wonders "how should I do scouting", our paper should provide a summary of the existing techniques, and pointers to know more. 
 \end{abstract}
@@ -173,10 +173,10 @@ There has been a lot of work in many, but others have been untouched (e.g. Colla
 \item Task Decomposition (or ``Architecture'')
 \item Integration of Domain Knowledge
 \item Reasoning with Uncertainty (including information gathering)
-\item Opponent Modeling and Adaptation
-\item Group and Individual Control (``micro'')
+\item Opponent Modeling and Adaptation: opponent modeling is key if we have to adapt our strategy. As different strategies are dominating each others, forming multiple Nash equilibria, the AI has to be able to infer the intend of its opponent.
+\item Group and Individual Control (``micro''): the task of controlling units efficiently (we can not speak of optimality here due to the huge state space, and of the enemy behavior entails numerous Nash equilibria), focusing fire to diminish enemy's firepower and keeping our units alive the longest, casting defensive and offensive spells and abilities.
 \item Planning and Resource Allocation (``macro'')
-\item Spatial reasoning
+\item Spatial reasoning (``tactics'')
 \end{itemize}
 
 Maybe the list above goes better in Section \ref{sec:questions}?
@@ -189,6 +189,20 @@ Maybe the list above goes better in Section \ref{sec:questions}?
 Include here the literature review of existing work on RTS Game AI. We could also compare with what is being used in industry, and use the real AI of Starcraft as an example (Bob Fitch's talk in AIIDE provides enough material for that). I have included here as subsections the two blurbs of text we had for integration of domain knowledge and reasoning with uncertainty, since I guess they correspond here.
 }
 
+\subsection{Micro-management}
+
+Some interesting uses of reinforcement learning (RL) \cite{Sutton} to RTS research are in the domain of \textit{micro-management} (group and individual units control): \cite{Marthi05} employs concurrent hierarchical Q-learning (units Q-functions are combined at the group level) RL to efficiently control units in a ``one robot with multiple effectors'' fashion. \cite{Madeira06} advocates the use of prior domain knowledge to allow faster RL learning and applied their work on a turn-based strategy game. In real game setups, the actions spaces to explore is gigantic, it requires to use the structure of the game in a partial program (or a partial Markov decision process) and a shape function (or a heuristic) \cite{Marthi05}. There are other was to learn parameters of an underlying model, for instance \cite{GA} used evolutionary learning techniques, but face the same problem of dimensionality. The difficulty to work with multi-scale goals and plans is handled directly by case-based reasoning (CBR), which has been adapted for micro-management with continuous action models \cite{Molineaux08}, an integrated RL/CBR algorithm using continous models, or with hybrid CBR/RL transfer learning \cite{CBR-RL}. Reactive planning (for behavior languages) \cite{WeberCig10}, a decompositional planning similar to hierarchical task networks \cite{HTNPlanning}, allows for plans to be changed at different granularity levels and so for multi-scale (hierarchical) goals integration.
+
+Potential fields \cite{Hagelback08,Hagelback09} are a powerful way to specify complex (with the combination of several fields, requiring a parameter-tuning method) behavior policies and are used in modern commercial games and RTS AI are using derivative of it (Supreme Commander flowfield). Self-organizing-maps (SOM) learned with evolutionary algorithms provide some way to learn (realistic) parameters for RTS units behavior \cite{teamCompositionRTS}. Bayesian programming has been applied to inverse fusion of the sensory inputs of the units \cite{SynnaeveMicroCig11}, which subsumes potential fields, allowing for integration of tactical goals directly in micro-management. There are also some cognitive approaches to RTS AI \cite{SORTS}, in which there is a human-like attention model for micro-management.
+
+\subsection{Opponent modeling, strategy prediction}
+
+There are related works in the domains of opponent modeling \cite{HsiehS08,SchaddBS07,OBRecog}. The main methods used to these ends are case-based reasoning (CBR) and planning or plan recognition \cite{LTW,CBR_Planning,OntanonCBR,HTNPlanning,Ramirez}. There are precedent works of Bayesian plan recognition \cite{BMPR}, even in games with Albrecht \textit{et al.} \cite{BayesianRecog} using dynamic Bayesian networks to recognize a user's plan in a multi-player dungeon adventure. 
+
+\cite{LTW} used CBR to perform dynamic plan retrieval extracted from domain knowledge in Wargus (Warcraft II clone). \cite{CBR_Planning} base their real-time case-based planning (CBP) system on a plan dependency graph which is learned from human demonstration. In \cite{OntanonCBR,PlanRetrieval}, they use CBR and expert demonstrations on Wargus. They update their previous CPB approach by using ``situation assessment'' for plan retrieval. They improve the speed of CPB by using a decision tree to select relevant features. Hsieh and Sun \cite{HsiehS08} based their work on \cite{LTW} CBR model and used StarCraft replays to construct states and building sequences. Strategies are choices of building construction order in their model. 
+
+\cite{SchaddBS07} describe opponent modeling through hierarchically structured models of the opponent behaviour and they applied their work to the Spring RTS (Total Annihilation clone). \cite{HTNPlanning} use hierarchical task networks (HTN) to model strategies in a first person shooter with the goal to use HTN planners. \cite{OBRecog} improve the probabilistic hostile agent task tracker (PHATT \cite{PHATT}, a simulated HMM for plan recognition) by encoding strategies as HTN. %\cite{Madeira06} 
+\cite{WeberCig09} proposed ``a data mining approach to strategy prediction'' and performed supervised learning on StarCraft replays. \cite{HMMstrat_RTS_AIIDE11} used HMM to learn the transition probabilities of sequences of constructions and kept the most probables to produce probabilistic behavior models (in StarCraft). \cite{SynnaeveOpeningCig11} continued on \cite{WeberCig09} and used a Bayesian semi-supervised (labeling based on clustering) model to learn from replays and predict openings (early game strategies) from StarCraft replays, while \cite{SynnaeveAIIDE11} presents a whole game Bayesian tech-tree predictor based on unserpervised learning from replays.
 
 %\subsection{Integration of Domain Knowledge}\label{subsec:domainknowledge}
 
