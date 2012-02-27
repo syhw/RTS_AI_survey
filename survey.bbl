@@ -46,4 +46,8 @@ B.~Marthi, S.~Russell, D.~Latham, and C.~Guestrin, ``Concurrent hierarchical
   reinforcement learning,'' in \emph{International Joint Conference of
   Artificial Intelligence, IJCAI}, 2005, pp. 779--785.
 
+\bibitem{url1}
+``\uppercase{AIIDE} starcraft \uppercase{AI} competition,''
+  \url{http://skatgame.net/mburo/sc2011/}, [Online; accessed 27-Febrary-2012].
+
 \end{thebibliography}

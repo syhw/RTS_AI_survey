@@ -272,7 +272,7 @@ Playing an RTS game involves dealing with all the problems described above. A fe
     \label{fig:bot-architecture}
 \end{figure*}
 
-Figure \ref{fig:bot-architecture} shows some representative examples of the integration architectures used by different bots in the AIIDE 2011 Starcraft AI competition \cite{???}. Each box represents an individual module with a clearly defined task (only modules with a black background can send actions directly to Starcraft). Dashed arrows represent data flow, and solid arrows represent control (when a module can command another module to perform some task). For example, we can see how SPAR is divided in two sets of modules: {\em situation analysis} and {\em decision making}, the first with three modules dedicated to analyze the current situation of the game, and the later with 4 modules dedicated to exploit that information to decide what to do. We can see how the decision making aspect of SPAR is organized hierarchically, with the higher-level module ({\em strategic decision}) issuing commands to the next module ({\em tactical decision}), which sends commands to the next module ({\em action implementation}), and so on. Only the lower-level modules can send actions directly to Starcraft. 
+Figure \ref{fig:bot-architecture} shows some representative examples of the integration architectures used by different bots in the AIIDE 2011 Starcraft AI competition \cite{url1}. Each box represents an individual module with a clearly defined task (only modules with a black background can send actions directly to Starcraft). Dashed arrows represent data flow, and solid arrows represent control (when a module can command another module to perform some task). For example, we can see how SPAR is divided in two sets of modules: {\em situation analysis} and {\em decision making}, the first with three modules dedicated to analyze the current situation of the game, and the later with 4 modules dedicated to exploit that information to decide what to do. We can see how the decision making aspect of SPAR is organized hierarchically, with the higher-level module ({\em strategic decision}) issuing commands to the next module ({\em tactical decision}), which sends commands to the next module ({\em action implementation}), and so on. Only the lower-level modules can send actions directly to Starcraft. 
 
 On the other hand, bots such as NOVA or BroodwarBotQ (BBQ) only use a hierarchical organization for {\em micro-management} (controlling the attack units), but use a decentralized organization for the rest of the bot. In Nova and BBQ, there is a collection of modules that control different aspects of the game (workers, production, construction, etc.). These modules can all send actions directly to Starcraft. In Nova those modules coordinate only through writing data in a shared blackboard, and in BBQ they coordinate only when they have to use a shared resource (unit) by means of an arbitrator.
 
@@ -308,7 +308,7 @@ In conclusion, we can see that there are two basic tools that can be used in an 
 \begin{itemize}
 \item Strengths and weaknesses?
 \item Resource coordination in a divide-and-conquer approaches?
-\item High-level strategies that do not depend on scripting? (not here, this should be discussed in Section \ref{sec:planning})
+\item High-level strategies that do not depend on scripting? (not here, this should be discussed in Section) % \ref{sec:planning})
 \end{itemize}
 }
 
