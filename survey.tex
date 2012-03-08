@@ -285,8 +285,57 @@ A Threat Map or Influence Map is a way to store relevant information about the o
 
 \section{State of the Art Bots for Starcraft}\label{sec:bot}
 
-{\color{blue}
-Here, describe the existing top bots for Starcraft. The difference between this section and the previous, is that the previous focuses on existing ideas, techniques, etc. whereas this section focuses on how some of those have been put together to create specific bots that play Starcraft.
+{\color{red} add UAlbertaBot}
+
+Thanks to the recent organization of international game AI competitions focused around the popular StarCraft game (see Section \ref{sec:competition}), several groups have been working on integrating many of the techniques described in the previous section into complete ``bots'', capable of playing complete StarCraft games. In this section we will overview some of the currently available top bots, and focus on the architecture being used to integrate all the techniques being used for the different aspects of the bot.
+
+Playing an RTS game involves dealing with all the problems described above. A few approaches, like CAT \cite{LTW}, Darmok \cite{OntanonMSR10} or ALisp \cite{Marthi05} try to deal with the problem in a monolithic manner, by using a single AI technique. This resembles approaches to solve other games, such as Chess or Go, where a single game-tree search approach is enough to play the game at human level. However, none of those systems aims at achieving near human performance. In order to achieve human-level performance, RTS AI designers use a lot of domain knowledge in order to divide the task of playing the game into a collection of sub-problems, which can be dealt-with using individual AI techniques (as discussed in the previous section). 
+
+\begin{figure*}[ta]
+    \centering
+    \includegraphics[width=\textwidth]{figures/figure-bot-architectures-wide.pdf}
+    \caption{General architecture of 5 Starcraft AI bots.}
+    \label{fig:bot-architecture}
+\end{figure*}
+
+Figure \ref{fig:bot-architecture} shows some representative examples of the integration architectures used by different bots in the AIIDE and CIG 2011 Starcraft AI competitions \cite{url1,url2}: BTHAI \cite{???}, BroodwarQ \cite{???}, SPAR \cite{???}, Nova \cite{???}, and Skynet \cite{???} (see Section \ref{sec:competition} for a comparison of their performance). Each box represents an individual module with a clearly defined task (only modules with a black background can send actions directly to Starcraft). Dashed arrows represent data flow, and solid arrows represent control (when a module can command another module to perform some task). For example, we can see how SPAR is divided in two sets of modules: {\em situation analysis} and {\em decision making}, the first with three modules dedicated to analyze the current situation of the game, and the later with 4 modules dedicated to exploit that information to decide what to do. We can see how the decision making aspect of SPAR is organized hierarchically, with the higher-level module ({\em strategic decision}) issuing commands to the next module ({\em tactical decision}), which sends commands to the next module ({\em action implementation}), and so on. Only the lower-level modules can send actions directly to Starcraft. 
+
+On the other hand, bots such as NOVA or BroodwarBotQ (BBQ) only use a hierarchical organization for {\em micro-management} (controlling the attack units), but use a decentralized organization for the rest of the bot. In Nova and BBQ, there is a collection of modules that control different aspects of the game (workers, production, construction, etc.). These modules can all send actions directly to Starcraft. In Nova those modules coordinate only through writing data in a shared blackboard, and in BBQ they coordinate only when they have to use a shared resource (unit) by means of an arbitrator.
+
+By analyzing the structure of these bots, we can see that there are two main tools that can be used when designing an integration architecture:
+
+\begin{itemize}
+\item {\em Abstraction}: complex tasks can be formulated at different levels of abstraction. For example, playing an RTS game can be seen as issuing individual low-level actions to each of the units in the game, or at a higher level, it can be seen as deploying a specific strategy (e.g. a ``BBS strategy'', or a ``Reaver Drop'' strategy). Some bots, reason at multiple levels of abstraction at the same time, making the task of playing Starcraft simpler. Assuming that each module in the architecture of a bot has a goal and determines some actions to achieve that goal, the actions determined by higher-level modules are considered as the goals of the lower level modules. In this way, each module can focus on reasoning at only one level of abstraction, thus, making the problem easier.
+
+\item {\em Divide-and-conquer}: playing a complex RTS, such as Starcraft, requires performing many conceptually different tasks, such as gathering resources, attacking, placing buildings, etc. Assuming each of these tasks can be performed relatively independently and without interference, we can have one module focusing on each of the tasks independently, thus making the problem easier. 
+\end{itemize}
+
+If we imagine the different tasks to perform in a complex RTS game in a two-dimensional plane, where the vertical axis represents abstraction, and the horizontal axis represents the different aspects of the game (micro-management, resource gathering, etc.), abstraction can be seen as dividing the space with horizontal lines, whereas divide-and-conquer divides the space using vertical lines.
+
+Different bots, use different combinations of these two tools. Looking back at Figure \ref{fig:bot-architecture}, we can see the following use of abstraction and divide-in-conquer in the bots:
+
+\begin{itemize}
+\item BTHAI: uses a two-tier abstraction hierarchy, where a collection of high-level modules command a collection of lower-level agents in charge of each of the units. At the high-level, BTHAI uses divide-and-conquer, having multiple high-level modules issuing commands to the lower-level units.
+\item BBQ: uses abstraction for micro-management, and divide-and-conquer for macro-management and intelligence gathering. To avoid conflicts between modules (since the individual tasks of each of the modules are not completely independent), BBQ uses an arbitrator.
+\item Nova: is similar in design as BBQ, and uses abstraction for micro-management, and divide-and-conquer for macro-management. The differences are that Nova does not have an arbitrator to resolve conflicts, but has a higher-level module ({\em strategy manager}), which posts information to the blackboard that the rest of modules follow (thus, making use of abstraction).
+\item SPAR: only uses abstraction. Its high-level module determines the strategy to use, and the tactical decision module divides it into a collection of {\em abstract actions}, that are executed by the lower-level modules.
+\item Skynet: makes extensive use of both abstraction and divide-and-conquer. Considering the decision making component of Skynet, we can see a high level module that issues commands to a series of tactics modules. The collection of tactic modules queue {\em tasks} (that are analogous to the abstract actions used in SPAR). Each different task has a specific low level module that knows how to execute it. Thus, Skynet uses a 3 layered abstraction hierarchy, and uses divide-and-conquer in all levels except the highest.
+\end{itemize}
+
+Additionally, except for BTHAI, all other agents use divide-and-conquer at a higher-level bot design and divide all the modules into two or three categories: {\em information gathering} and {\em decision}, or {\em information gathering}, {\em micro-management} and {\em macro-management}.
+
+Notice that most bots using divide-and-conquer (except for BBQ), assume that each of the modules can act independently and that their actions can be executed without interference. BBQ is the exception, including an arbitrator that makes sure that modules do not send contradictory orders to the same unit. However, very little bots handle the problem of how to coordinate resource usage amongst modules, for instance BTHAI uses a first-come-first-serve policy for spending resources, the first module that requests resources is the one that gets them. Nova and Skynet are exceptions, and implement some rudimentary prioritization based on the high level strategy.
+
+One interesting aspect of the five bots described above is that, while all of them are reactive at the lower level (unit control), most if not all of them, are scripted at the highest level of abstraction. BTHAI reads build and squad formations from a predefined script, Nova's {\em Strategy Manager} is a predefined finite-state machine, BBQ's construction manager reads the build order from a predefined script, and Skynet's {\em BuildOrder Manager} is basically a predefined script. Such scripts describe the strategy that the bots will use, however, such strategy is always fixed. One could see this pre-scripting as if each bot defined a ``high-level programming language'' to describe Starcraft strategies, and the bots themselves are just interpreters of such strategy. Compared to current approaches for Chess or Go, this scripting seems a rigid and inflexible, but responds to the much higher complexity of the Starcraft game.
+
+In conclusion, we can see that there are two basic tools that can be used in an integration architecture: abstraction and divide-and-conquer, which are widely used by the existing Starcraft bots. However, several open questions remain:
+
+{\color{red}
+This section is missing:
+\begin{itemize}
+\item Strengths and weaknesses?
+\item Which AI techniques do each bot use for each task?
+\end{itemize}
 }
 
 
@@ -377,69 +426,6 @@ Here, whatever experiments we want to include to support which aspects of RTS Ga
 
 
 \section*{Acknowledgments} {\color{blue} This research is partially funded by projects ... and ... }
-
-
-\appendix
-
-\section*{This is the old task-division section}
-
-{\color{red}
-I've included here the section we had for not losing it :)
-}
-
-{\color{blue}
-Here we should say that complex RTS games require multi-scale reasoning \cite{WeberCig10}, and thus complex architectures that integrate many AI modules have been devised. Discuss how different researchers have divided up the task of playing Starcraft into a collection of subtasks and integrated them (see the end of this paper for a preliminary write-up on this)
-}
-
-
-Playing an RTS game involves dealing with all the problems described above. A few approaches, like CAT \cite{LTW}, Darmok \cite{OntanonMSR10} or ALisp \cite{Marthi05} try to deal with the problem in a monolithic manner, by using a single AI technique. This resembles approaches to solve other games, such as Chess or Go, where a single game-tree search approach is enough to play the game at human level. However, none of those systems aims at achieving near human performance. In order to achieve human-level performance, RTS AI designers use a lot of domain knowledge in order to divide the task of playing the game into a collection of sub-problems, which can be dealt-with using individual AI techniques (as discussed in the previous section). Thus, an integration architecture is required to put together all of those techniques into a single coherent system, which is the focus of this section.
-
-\begin{figure*}[ta]
-    \centering
-    \includegraphics[width=\textwidth]{figures/figure-bot-architectures-wide.pdf}
-    \caption{General architecture of 5 Starcraft AI bots.}
-    \label{fig:bot-architecture}
-\end{figure*}
-
-Figure \ref{fig:bot-architecture} shows some representative examples of the integration architectures used by different bots in the AIIDE 2011 Starcraft AI competition \cite{url1}. Each box represents an individual module with a clearly defined task (only modules with a black background can send actions directly to Starcraft). Dashed arrows represent data flow, and solid arrows represent control (when a module can command another module to perform some task). For example, we can see how SPAR is divided in two sets of modules: {\em situation analysis} and {\em decision making}, the first with three modules dedicated to analyze the current situation of the game, and the later with 4 modules dedicated to exploit that information to decide what to do. We can see how the decision making aspect of SPAR is organized hierarchically, with the higher-level module ({\em strategic decision}) issuing commands to the next module ({\em tactical decision}), which sends commands to the next module ({\em action implementation}), and so on. Only the lower-level modules can send actions directly to Starcraft. 
-
-On the other hand, bots such as NOVA or BroodwarBotQ (BBQ) only use a hierarchical organization for {\em micro-management} (controlling the attack units), but use a decentralized organization for the rest of the bot. In Nova and BBQ, there is a collection of modules that control different aspects of the game (workers, production, construction, etc.). These modules can all send actions directly to Starcraft. In Nova those modules coordinate only through writing data in a shared blackboard, and in BBQ they coordinate only when they have to use a shared resource (unit) by means of an arbitrator.
-
-By analyzing the structure of these bots, we can see that there are two main tools that can be used when designing an integration architecture:
-
-\begin{itemize}
-\item {\em Abstraction}: complex tasks can be formulated at different levels of abstraction. For example, playing an RTS game can be seen as issuing individual low-level actions to each of the units in the game, or at a higher level, it can be seen as deploying a specific strategy (e.g. a ``BBS strategy'', or a ``Reaver Drop'' strategy). Some bots, reason at multiple levels of abstraction at the same time, making the task of playing Starcraft simpler. Assuming that each module in the architecture of a bot has a goal and determines some actions to achieve that goal, the actions determined by higher-level modules are considered as the goals of the lower level modules. In this way, each module can focus on reasoning at only one level of abstraction, thus, making the problem easier.
-
-\item {\em Divide-and-conquer}: playing a complex RTS, such as Starcraft, requires performing many conceptually different tasks, such as gathering resources, attacking, placing buildings, etc. Assuming each of these tasks can be performed relatively independently and without interference, we can have one module focusing on each of the tasks independently, thus making the problem easier. 
-\end{itemize}
-
-If we imagine the different tasks to perform in a complex RTS game in a two-dimensional plane, where the vertical axis represents abstraction, and the horizontal axis represents the different aspects of the game (micro-management, resource gathering, etc.), abstraction can be seen as dividing the space with horizontal lines, whereas divide-and-conquer divides the space using vertical lines.
-
-Different bots, use different combinations of these two tools. Looking back at Figure \ref{fig:bot-architecture}, we can see the following use of abstraction and divide-in-conquer in the bots:
-
-\begin{itemize}
-\item BTHAI: uses a two-tier abstraction hierarchy, where a collection of high-level modules command a collection of lower-level agents in charge of each of the units. At the high-level, BTHAI uses divide-and-conquer, having multiple high-level modules issuing commands to the lower-level units.
-\item BBQ: uses abstraction for micro-management, and divide-and-conquer for macro-management and intelligence gathering. To avoid conflicts between modules (since the individual tasks of each of the modules are not completely independent), BBQ uses an arbitrator.
-\item Nova: is similar in design as BBQ, and uses abstraction for micro-management, and divide-and-conquer for macro-management. The differences are that Nova does not have an arbitrator to resolve conflicts, but has a higher-level module ({\em strategy manager}), which posts information to the blackboard that the rest of modules follow (thus, making use of abstraction).
-\item SPAR: only uses abstraction. Its high-level module determines the strategy to use, and the tactical decision module divides it into a collection of {\em abstract actions}, that are executed by the lower-level modules.
-\item Skynet: makes extensive use of both abstraction and divide-and-conquer. Considering the decision making component of Skynet, we can see a high level module that issues commands to a series of tactics modules. The collection of tactic modules queue {\em tasks} (that are analogous to the abstract actions used in SPAR). Each different task has a specific low level module that knows how to execute it. Thus, Skynet uses a 3 layered abstraction hierarchy, and uses divide-and-conquer in all levels except the highest.
-\end{itemize}
-
-Additionally, except for BTHAI, all other agents use divide-and-conquer at a higher-level bot design and divide all the modules into two or three categories: {\em information gathering} and {\em decision}, or {\em information gathering}, {\em micro-management} and {\em macro-management}.
-
-Notice that most bots using divide-and-conquer (except for BBQ), assume that each of the modules can act independently and that their actions can be executed without interference. BBQ is the exception, including an arbitrator that makes sure that modules do not send contradictory orders to the same unit. However, very little bots handle the problem of how to coordinate resource usage amongst modules, for instance BTHAI uses a first-come-first-serve policy for spending resources, the first module that requests resources is the one that gets them. The exceptions are Nova and Skynet implement some rudimentary prioritization based on the high level strategy.
-
-One interesting aspect of the five bots described above is that, while all of them are reactive at the lower level (unit control), most if not all of them, are scripted at the highest level of abstraction. BTHAI reads build and squad formations from a predefined script, Nova's {\em Strategy Manager} is a predefined finite-state machine, BBQ's construction manager reads the build order from a predefined script, and Skynet's {\em BuildOrder Manager} is basically a predefined script. Such scripts describe the strategy that the bots will use, however, such strategy is always fixed. One could see this pre-scripting as if each bot defined a ``high-level programming language'' to describe Starcraft strategies, and the bots themselves are just interpreters of such strategy. Compared to current approaches for Chess or Go, this scripting seems a bit rigid and inflexible, but responds to the much higher complexity of the Starcraft game.
-
-In conclusion, we can see that there are two basic tools that can be used in an integration architecture: abstraction and divide-and-conquer, which are widely used by the existing Starcraft bots. However, several open questions remain:
-
-{\color{blue}
-\begin{itemize}
-\item Strengths and weaknesses?
-\item Resource coordination in a divide-and-conquer approaches?
-\item High-level strategies that do not depend on scripting? (not here, this should be discussed in Section) % \ref{sec:planning})
-\end{itemize}
-}
 
 
 
