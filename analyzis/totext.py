@@ -18,6 +18,7 @@ header = True
 body = False
 names = {}
 files_bots = {}
+files_races = {}
 races = {}
 time_had = {}
 buildings = {'T' : ['Expansion', 'Comsat_Station', 'Nuclear_Silo', 'Supply_Depot', 'Refinery', 'Barracks', 'Academy', 'Factory', 'Starport', 'Control_Tower', 'Science_Facility', 'Covert_Ops', 'Physics_Lab', 'Machine_Shop', 'Engineering_Bay', 'Armory', 'Missile_Turret', 'Bunker'],
@@ -32,47 +33,54 @@ tripling = {'T' : ['Expansion', 'Barracks', 'Factory'],
 quadrupling = {'T' : ['Expansion'],
         'P' : ['Expansion', 'Gateway'],
         'Z' : ['Expansion']}
-units = {'T' : ['SCV', 'Dropship', 'Marine', 'Ghost', 'Vulture', 'Goliath', 'Siege Tank Tank Mode', 'Wraith', 'Science Vessel', 'Battlecruiser', 'Siege Tank Siege Mode', 'Firebat', 'Medic', 'Valkyrie' ], 
-        'P' : ['Probe', 'Shuttle', 'Observer', 'Dragoon', 'Zealot', 'Archon', 'Reaver', 'High Templar', 'Arbiter', 'Carrier', 'Scout', 'Dark Archon', 'Corsair', 'Dark Templar'], 
+units = {'T' : ['SCV', 'Dropship', 'Marine', 'Ghost', 'Vulture', 'Goliath', 'Siege_Tank_Tank_Mode', 'Wraith', 'Science_Vessel', 'Battlecruiser', 'Siege_Tank_Siege_Mode', 'Firebat', 'Medic', 'Valkyrie' ], 
+        'P' : ['Probe', 'Shuttle', 'Observer', 'Dragoon', 'Zealot', 'Archon', 'Reaver', 'High_Templar', 'Arbiter', 'Carrier', 'Scout', 'Dark_Archon', 'Corsair', 'Dark_Templar'], 
         'Z' : ['Drone', 'Overlord', 'Zergling', 'Devourer', 'Guardian', 'Ultralisk', 'Queen', 'Hydralisk', 'Mutalisk', 'Scourge', 'Lurker', 'Defiler']}
 rchupgs = {'T' : ['Spider_Mines', ],
-        'P' : ['Zealot_Speed', 'Psionic_Storm', 'Dragoon_Range'],
-        'Z' : ['Zergling_Speed', 'Hydralisk Speed', 'Hydralisk Range']}
+        'P' : ['Ground_Weapons', 'Zealot_Speed', 'Psionic_Storm', 'Dragoon_Range'],
+        'Z' : ['Zergling_Speed', 'Hydralisk_Speed', 'Hydralisk_Range']}
 
 def write(tb, fo):
     print tb
     for p, t in tb.iteritems():
         for e in buildings[races[p][0]]:
             b = races[p] + '_' + e
-            twr = b + ' ' + str(t.get(b, 0)/24) + '; '
+            twr = b + ' ' + str(t.get(b, -1)/24) + '; '
             fo.write(twr)
             files_bots[names[p]].write(twr)
+            files_races[races[p]].write(twr)
         for e in doubling[races[p][0]]:
             b = races[p] + '_' + e + '2'
-            twr = b + ' ' + str(t.get(b, 0)/24) + '; '
+            twr = b + ' ' + str(t.get(b, -1)/24) + '; '
             fo.write(twr)
             files_bots[names[p]].write(twr)
+            files_races[races[p]].write(twr)
         for e in tripling[races[p][0]]:
             b = races[p] + '_' + e + '3'
-            twr = b + ' ' + str(t.get(b, 0)/24) + '; '
+            twr = b + ' ' + str(t.get(b, -1)/24) + '; '
             fo.write(twr)
             files_bots[names[p]].write(twr)
+            files_races[races[p]].write(twr)
         for e in quadrupling[races[p][0]]:
             b = races[p] + '_' + e + '4'
-            twr = b + ' ' + str(t.get(b, 0)/24) + '; '
+            twr = b + ' ' + str(t.get(b, -1)/24) + '; '
             fo.write(twr)
             files_bots[names[p]].write(twr)
+            files_races[races[p]].write(twr)
         for e in units[races[p][0]]:
             u = races[p] + '_' + e
-            twr = u + ' ' + str(t.get(u, 0)/24) + '; '
+            twr = u + ' ' + str(t.get(u, -1)/24) + '; '
             fo.write(twr)
             files_bots[names[p]].write(twr)
+            files_races[races[p]].write(twr)
         for e in rchupgs[races[p][0]]:
             r = races[p] + '_' + e
-            twr = r + ' ' + str(t.get(r, 0)/24) + '; '
+            twr = r + ' ' + str(t.get(r, -1)/24) + '; '
             fo.write(twr)
             files_bots[names[p]].write(twr)
+            files_races[races[p]].write(twr)
         files_bots[names[p]].write('\n')
+        files_races[races[p]].write('\n')
         fo.write('\n')
 
 for line in f:
@@ -99,6 +107,8 @@ for line in f:
                 races[l[1]] = "Terran"
             elif l[2] == 'Z':
                 races[l[1]] = "Zerg"
+            if not races[l[1]] in files_races:
+                files_races[races[l[1]]] = open(races[l[1]]+'_'+l[2]+".txt", 'w')
     elif body:
         l = line.split(',')
         if "Build" in line or ("Train" in line and "Overlord" in line):
@@ -132,6 +142,8 @@ for line in f:
                 time_had[l[2]][rchupg] = max(24, int(l[0]))
 
 for p, f in files_bots.iteritems():
+    f.close()
+for p, f in files_races.iteritems():
     f.close()
 o.close()
 
