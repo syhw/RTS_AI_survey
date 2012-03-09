@@ -17,6 +17,7 @@ if len(sys.argv) > 1:
 header = True
 body = False
 names = {}
+files_bots = {}
 races = {}
 time_had = {}
 buildings = {'T' : ['Expansion', 'Comsat_Station', 'Nuclear_Silo', 'Supply_Depot', 'Refinery', 'Barracks', 'Academy', 'Factory', 'Starport', 'Control_Tower', 'Science_Facility', 'Covert_Ops', 'Physics_Lab', 'Machine_Shop', 'Engineering_Bay', 'Armory', 'Missile_Turret', 'Bunker'],
@@ -43,22 +44,35 @@ def write(tb, fo):
     for p, t in tb.iteritems():
         for e in buildings[races[p][0]]:
             b = races[p] + '_' + e
-            fo.write(b + ' ' + str(t.get(b, 0)/24) + '; ')
+            twr = b + ' ' + str(t.get(b, 0)/24) + '; '
+            fo.write(twr)
+            files_bots[names[p]].write(twr)
         for e in doubling[races[p][0]]:
             b = races[p] + '_' + e + '2'
-            fo.write(b + ' ' + str(t.get(b, 0)/24) + '; ')
+            twr = b + ' ' + str(t.get(b, 0)/24) + '; '
+            fo.write(twr)
+            files_bots[names[p]].write(twr)
         for e in tripling[races[p][0]]:
             b = races[p] + '_' + e + '3'
-            fo.write(b + ' ' + str(t.get(b, 0)/24) + '; ')
+            twr = b + ' ' + str(t.get(b, 0)/24) + '; '
+            fo.write(twr)
+            files_bots[names[p]].write(twr)
         for e in quadrupling[races[p][0]]:
             b = races[p] + '_' + e + '4'
-            fo.write(b + ' ' + str(t.get(b, 0)/24) + '; ')
+            twr = b + ' ' + str(t.get(b, 0)/24) + '; '
+            fo.write(twr)
+            files_bots[names[p]].write(twr)
         for e in units[races[p][0]]:
             u = races[p] + '_' + e
-            fo.write(u + ' ' + str(t.get(u, 0)/24) + '; ')
+            twr = u + ' ' + str(t.get(u, 0)/24) + '; '
+            fo.write(twr)
+            files_bots[names[p]].write(twr)
         for e in rchupgs[races[p][0]]:
             r = races[p] + '_' + e
-            fo.write(r + ' ' + str(t.get(r, 0)/24) + '; ')
+            twr = r + ' ' + str(t.get(r, 0)/24) + '; '
+            fo.write(twr)
+            files_bots[names[p]].write(twr)
+        files_bots[names[p]].write('\n')
         fo.write('\n')
 
 for line in f:
@@ -76,6 +90,8 @@ for line in f:
         if "Human" in line: # lol
             l = line.split(',')
             names[l[1]] = l[0][1:]
+            if not l[0][1:] in files_bots:
+                files_bots[l[0][1:]] = open(l[0][1:]+".txt", 'w')
             time_had[l[1]] = {}
             if l[2] == 'P':
                 races[l[1]] = "Protoss"
@@ -114,4 +130,8 @@ for line in f:
                 time_had[l[2]][rchupg] = max(24, int(l[0]))
             if not rchupg+'3' in time_had[l[2]]:
                 time_had[l[2]][rchupg] = max(24, int(l[0]))
+
+for p, f in files_bots.iteritems():
+    f.close()
+o.close()
 
