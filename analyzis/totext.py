@@ -23,6 +23,7 @@ if len(sys.argv) > 1:
 
 header = True
 body = False
+loser = ""
 names = {}
 files_bots = {}
 files_races = {}
@@ -49,7 +50,7 @@ rchupgs = {'T' : ['Spider_Mines', ],
 
 def write(tb, fo):
     #print tb
-    for p, t in tb.iteritems():
+    def write_for_one(p, t):
         for e in buildings[races[p][0]]:
             b = races[p] + '_' + e
             twr = b + ' ' + str(t.get(b, -1)/24) + '; '
@@ -103,6 +104,10 @@ def write(tb, fo):
         if do_races:
             files_races[races[p]].write('\n')
         fo.write('\n')
+    if loser != "":
+        write_for_one(loser, tb.pop(loser))
+    for p, t in tb.iteritems():
+        write_for_one(p, t)
 
 for line in f:
     if not header and line[0] == '_':
@@ -112,6 +117,7 @@ for line in f:
         races = {}
         header = True
         body = False
+        loser = ""
         o.write('\n') # separate games
     if header and line[0].isdigit():
         header = False
@@ -167,6 +173,8 @@ for line in f:
                 time_had[l[-5]][rchupg+'2'] = max(24, int(l[0]))
             if not rchupg+'3' in time_had[l[-5]]:
                 time_had[l[-5]][rchupg+'3'] = max(24, int(l[0]))
+        if "Leaving" in line and "quit" in line and loser == "":
+            loser = l[-5]
 
 if do_bots:
     for p, f in files_bots.iteritems():
