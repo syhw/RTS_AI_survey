@@ -8,6 +8,11 @@ import sys
 # counts buildings up to the 4th, counts expansions (not the first town hall)
 # TODO less brute
 
+# usage:
+# python totext.py LMRFILEHERE [--bots] [--races]
+# --bots will also make one .txt file for each bot
+# --races will also make one .txt file for each race
+
 f = sys.stdin
 o = sys.stdout
 do_bots = False
@@ -15,9 +20,9 @@ do_races = False
 if len(sys.argv) > 1:
     f = open(sys.argv[1], 'r')
     o = open(sys.argv[1][:-3]+'txt', 'w')
-    if "-bots" in sys.argv:
+    if "--bots" in sys.argv:
         do_bots = True
-    if "-races" in sys.argv:
+    if "--races" in sys.argv:
         do_races = True
 
 
