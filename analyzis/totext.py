@@ -48,7 +48,7 @@ rchupgs = {'T' : ['Spider_Mines', ],
         'Z' : ['Zergling_Speed', 'Hydralisk_Speed', 'Hydralisk_Range']}
 
 def write(tb, fo):
-    print tb
+    #print tb
     for p, t in tb.iteritems():
         for e in buildings[races[p][0]]:
             b = races[p] + '_' + e
@@ -156,13 +156,17 @@ for line in f:
             rname = l[-1].rstrip('\r\n')
             if '(' in rname:
                 rname = rname.split('(')[1].rstrip(')')
-            rchupg = races[l[-5]] + '_' + rname.replace(' ', '_')
+            rchupg = ""
+            if "Weapons" in rname:
+                rchupg += rname.replace(' ', '_')
+            else:
+                rchupg += races[l[-5]] + '_' + rname.replace(' ', '_')
             if not rchupg in time_had[l[-5]]:
                 time_had[l[-5]][rchupg] = max(24, int(l[0]))
             if not rchupg+'2' in time_had[l[-5]]:
-                time_had[l[-5]][rchupg] = max(24, int(l[0]))
+                time_had[l[-5]][rchupg+'2'] = max(24, int(l[0]))
             if not rchupg+'3' in time_had[l[-5]]:
-                time_had[l[-5]][rchupg] = max(24, int(l[0]))
+                time_had[l[-5]][rchupg+'3'] = max(24, int(l[0]))
 
 if do_bots:
     for p, f in files_bots.iteritems():
