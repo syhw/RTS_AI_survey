@@ -158,7 +158,7 @@ for line in f:
                 time_had[plyr][building+'3'] = max(24, int(l[0]))
             elif not building+'4' in time_had[plyr]:
                 time_had[plyr][building+'4'] = max(24, int(l[0]))
-        if "Train" in line:
+        if "Train" in line or "Hatch," in line:
             uname = l[-1].rstrip('\r\n')
             unit = races[l[-5]] + '_' + uname.replace(' ', '_')
             if not unit in time_had[l[-5]]:
