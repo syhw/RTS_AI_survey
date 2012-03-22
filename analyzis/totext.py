@@ -12,6 +12,7 @@ import sys
 # python totext.py LMRFILEHERE [--bots] [--races]
 # --bots will also make one .txt file for each bot
 # --races will also make one .txt file for each race
+# --names will also put bots names in the big .txt file
 
 f = sys.stdin
 o = sys.stdout
@@ -24,6 +25,8 @@ if len(sys.argv) > 1:
         do_bots = True
     if "--races" in sys.argv:
         do_races = True
+    if "--names" in sys.argv:
+        do_names = True
 
 
 header = True
@@ -108,6 +111,8 @@ def write(tb, fo):
             files_bots[names[p]].write('\n')
         if do_races:
             files_races[races[p]].write('\n')
+        if do_names:
+            fo.write('Name ' + names[p] + '; ')
         fo.write('\n')
     if loser != "":
         write_for_one(loser, tb.pop(loser))
