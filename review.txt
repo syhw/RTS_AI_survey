@@ -1,0 +1,30 @@
+
+4 ways to present it:
+    A. current:
+        1) Perception: Spatial, Temporal, Enemy
+        2) Strategy
+        3) Giving orders
+        4) Executing orders
+        5) Integration of domain knowledge
+        6) Reasoning with uncertainty
+    B. Buro's call for AI research in RTS:
+        1) Adversarial planning under uncertainty
+        2) Learning and opponent modeling
+        3) Spatial and temporal reasoning
+    C. Buro and Furtak's full paper:
+        1) Adversarial real-time planning
+        2) Decision making under uncertainty
+        3) Opponent modeling, learning
+        4) Spatial and temporal reasoning
+        5) Resource management
+        6) (Collaboration) 
+        7) Pathfinding
+    D. Synnaeve's Ph.D thesis (reversed)
+        1) Strategy
+            opponent modeling, strategy adaptation
+        2) Tactics
+            enemy prediction, decision-making
+        3) Micro-management
+            units tracking/filtering, reactive planning/programming
+        4) Meta-game and collaboration (discussions, there are no real works)
+
