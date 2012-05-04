@@ -179,8 +179,47 @@ Maybe the list above goes better in Section \ref{sec:questions}?
 
 \section{Existing work on RTS Game AI}\label{sec:review}
 
+\begin{figure*}
+    \centering
+    \includegraphics[width=0.9\columnwidth]{figures/levels_abstraction.pdf}
+    \caption{RTS AI levels of abstraction and their properties: uncertainty (from intentions and from partial observation) is going higher as the abstraction levels are raising. The timings on the right correspond to an estimate of the duration of a behavior switch in StarCraft.}
+    \label{fig:levels-abstraction}
+\end{figure*}
 
-\subsection{Perception}
+%\subsection{Integration of Domain Knowledge}\label{subsec:domainknowledge}
+{\color{blue}
+All bots attempt at integrating human domain knowledge in a way or another, be it in the form of build-orders, heuristics, strategies, or by automatically learning from human replays. This has been shown to be key to good performance in bots (for now, as Dave was saying: ``Starcraft AI is like Chess was in the 60s''). 
+
+Talk about learning, scripting, and other techniques to incorporate such knowledge.
+
+
+When talking about learning in RTS games, with regard to a particular match against an opponent, one has to differentiate between:
+\begin{itemize}
+\item prior learning: done before the match, like when a bot learns what is likely to happen on a given match-up (and map) from replays, or when a bot optimizes its micro-management parameters through simulated annealing or genetic evolution.
+\item in-match learning: done between the different games of match, ``the opponent rushed me last game so I will play this one safe''.
+\item in-game learning: done between the different actions of the game, ``I tried to attack here and it was a failure, let us try somewhere else''.
+\end{itemize}
+All these learning can be supervised (labeled replays, scripted situations) or unsupervised (unlabeled data, exploratory situations). The last two kinds of situations of learning are more inclined towards reinforcement learning because the AI has to deal with the exploration-exploitation duality. %prior learning: supervised \cite{WeberCIG09} \cite{SynnaeveCIG11}, unsupervised: \cite{SynnaeveAIIDE11}
+}
+
+%\subsection{Reasoning with Uncertainty}\label{subsec:uncertainty}
+{\color{blue}
+I think there are two important aspects of uncertainty in RTS games:
+\begin{itemize}
+\item First is trying to model uncertainty and try to reduce it (information gathering, and representation of knowledge), this includes scouting, and maintaining good estimates of locations and number of units of the enemy, etc.
+\item Second is actually using the uncertain information. Taking decisions like army strength estimation (like to attack or retreat).
+\end{itemize}
+
+There are two main kinds of uncertainty, existing for two different reasons, in RTS games. First, there is the incompleteness of information, due to the fog of war, which leads to some kind of ``extensional'' 
+%``extensive'' 
+uncertainty, that can be lowered by good scouting, and knowledge representation and reasoning (to infer what is possible given what has been seen). Also, there is the fact that we will never be able to read the opponent's mind, the ``intentional'' 
+%or ``intensive'' 
+uncertainty that we can't really be sure to scratch off, even with the best scouting possible. For intentional uncertainty, the AI, as the human player, can only build a sensible model of what the opponent is likely to do, to think, or to think knowing what we think he thinks. Both these kinds of uncertainty can be studied through probabilities, but only $P(Hidden | Seen)$ can be \textit{directly} linked to data only for extensional uncertainty. %now for the clumsy part:
+One could argue that the extensional data is the only thing that matters because it is the only thing that has an influence on the game, but in reality, for very highly skilled players, discovering the intentions of the enemy is the key to winning. It allows for a compact understanding of the game state and development, while also giving additional information about the future. Whereas a player is doing action A to follow it up by action B or C depends on its intention, while the information about action A is visible and information about B or C is hidden, only intention allows for a choice.
+}
+
+
+\subsection{Strategy}
 XXX Every AI needs to observe the world in order to analyze it and take decisions. In RTS games this task isn't trivial since we have to deal with imperfect information.
 
 %\textbf{Spatial}
@@ -204,7 +243,7 @@ to detect regions and relevant choke points in RTS maps. This approach is implem
 
 \cite{HagelbackJ08} presented a multi-agent potential fields based bot able to deal with fog of war in Tankbattle. XXX
 
-\cite{WeberAIIDE11} used a particle model, with a simple linear trajectory update, to track opponent units under fog of war in StarCraft.
+\cite{WeberAIIDE11} used a particle model with a simple linear trajectory update to track opponent units under fog of war in StarCraft.
 
 % {\color{ForestGreen}
 % Anyone did anything here? I think only Skynet uses temporal reasoning...
@@ -232,78 +271,29 @@ Nobody had described an efficient way to scout the opponent... better opponent i
 % Anyone did anything here?
 % }
 
-\subsection{Strategy}
+\subsection{Tactics}
 
 The most common decision making are Decision Trees. Some of the advantages of the decision trees are: simple to understand and interpret acting like a white box where we can explain why a decision is taken, and they are compatible with other decision techniques. For complex decisions we have many algorithms to generate an optimum decision tree like ID3 or C4.5, depends on the problem we will use one or another.
 
 A good alternative are Finite State Machine. The idea behind FSM is to decompose an object's behavior into easily manageable "chunks" or states, such as "attacking an enemy", "gathering resources" or "repairing" and establish the conditions that trigger transitions between them.
 
-\subsection{Giving orders}
+\subsection{Units Control}
 
-{\color{ForestGreen}
-Explain centralized models (like blackboard) and distributed/hierarchically models.
-}
-
-\subsection{Executing orders}
-
-\textbf{Pathfinding}
-
+% {\color{ForestGreen}
+% Explain centralized models (like blackboard) and distributed/hierarchically models.
+% }
 The most common pathfinding algorithm is A*, but the big problem of this algorithm is the time and  memory consumption, a show-stopper in a real-time environment.
-
 To solve this the search space needs to be reduced as much as possible. One common technique is reducing the tile map search into a navigation graph map. To do this some polygonal triangulations are calculated and abstracted on a grid-based map and this is the TRA* (Triangulation Reduction A*) algorithm\cite{Demyen_2006}. 
 
-{\color{ForestGreen}
-There are a lot of new pathfinding algorithms. Do we need to review all of them?
-}
+Craig Reynolds introduced algorithmic steering behaviors to simulate the aggregate motion of swarms using procedural animation\cite{Reynolds_1999}. His model describes how a system of multiple agents, each steering according to simple local rules, can produce the collective movement found in flocks of birds. With this behaviors, we are able to simulate intelligent squad movements and do tactical moves to flank the opponent in a RTS game\cite{Danielsiek_2008,SynnaeveMicroCig11}, improving the survival of our units.
 
-\textbf{Group behavior}
-
-Craig Reynols introduced algorithmic steering behaviors to simulate the aggregate motion of swarms using procedural animation\cite{Reynolds_1999}. His model describes how a system of multiple agents , each steering according to simple local rules, can produce the collective movement found in flocks of birds. With this behaviours we are able to simulate intelligent squad movements and do tactical moves to flank the opponent in a RTS game\cite{Danielsiek_2008}, improving the survival of our units.
-
-A good alternative to Flocking is using Reciprocal Velocity Obstacles (RVO)\cite{Berg_2008}, since it is easier to control the behavior and they guarantee to prevent collisions. With this algorithm we can move a large squad crossing another squad and avoid all possible collisions between units. This type of techniques are already applied in commercial RTS games like Starcraft 2 or Supreme Commander 2 with great success.
+A good alternative to Flocking is using Reciprocal Velocity Obstacles (RVO)\cite{Berg_2008}, since it is easier to control the behavior and they guarantee to prevent collisions. With this algorithm, we can move a large squad crossing another squad and avoid all possible collisions between units. This type of techniques are already applied in commercial RTS games like Starcraft 2 or Supreme Commander 2 with great success.
 
 Another popular technique is Potential Fields. basically, Potential Fields work like a charged particle moving through a magnetic field. The process of tuning and optimizing the parameters of potential field charges can be time reduced applying learning algorithms such as Q-Learning\cite{Liu_2008}. Another common issue we have to deal with when using potential fields is the local optima problem that can stuck the unit away from the goal. Some examples of the utilities of potential files in RTS games are avoiding obstacles (navigation), avoiding opponent fire, or staying at maximum shooting distance\cite{Hagelback08,Hagelback09}.
 
 There are some interesting uses of reinforcement learning (RL) \cite{Sutton}: \cite{Marthi05} employs concurrent hierarchical Q-learning (units Q-functions are combined at the group level) RL to efficiently control units in a ``one robot with multiple effectors'' fashion. \cite{Madeira06} advocates the use of prior domain knowledge to allow faster RL learning and applied their work on a turn-based strategy game. In real game setups, the actions spaces to explore is gigantic, it requires to use the structure of the game in a partial program (or a partial Markov decision process) and a shape function (or a heuristic) \cite{Marthi05}. There are other was to learn parameters of an underlying model, for instance \cite{GA} used evolutionary learning techniques, but face the same problem of dimensionality. The difficulty to work with multi-scale goals and plans is handled directly by case-based reasoning (CBR), which has been adapted for units behavior with continuous action models \cite{Molineaux08}, an integrated RL/CBR algorithm using continuous models, or with hybrid CBR/RL transfer learning \cite{CBR-RL}. Reactive planning (for behavior languages) \cite{WeberCig10}, a decompositional planning similar to hierarchical task networks \cite{HTNPlanning}, allows for plans to be changed at different granularity levels and so for multi-scale (hierarchical) goals integration.
 
 Self-organizing-maps (SOM) learned with evolutionary algorithms provide some way to learn (realistic) parameters for RTS units behavior \cite{teamCompositionRTS}. Bayesian programming has been applied to inverse fusion of the sensory inputs of the units \cite{SynnaeveMicroCig11}, which subsumes potential fields, allowing for integration of tactical goals directly in micro-management. There are also some cognitive approaches to RTS AI \cite{SORTS}, in which there is a human-like attention model for micro-management.
-
-
-
-%\subsection{Integration of Domain Knowledge}\label{subsec:domainknowledge}
-
-{\color{blue}
-All bots attempt at integrating human domain knowledge in a way or another, be it in the form of build-orders, heuristics, strategies, or by automatically learning from human replays. This has been shown to be key to good performance in bots (for now, as Dave was saying: ``Starcraft AI is like Chess was in the 60s''). 
-
-Talk about learning, scripting, and other techniques to incorporate such knowledge.
-
-
-When talking about learning in RTS games, with regard to a particular match against an opponent, one has to differentiate between:
-\begin{itemize}
-\item prior learning: done before the match, like when a bot learns what is likely to happen on a given match-up (and map) from replays, or when a bot optimizes its micro-management parameters through simulated annealing or genetic evolution.
-\item in-match learning: done between the different games of match, ``the opponent rushed me last game so I will play this one safe''.
-\item in-game learning: done between the different actions of the game, ``I tried to attack here and it was a failure, let us try somewhere else''.
-\end{itemize}
-All these learning can be supervised (labeled replays, scripted situations) or unsupervised (unlabeled data, exploratory situations). The last two kinds of situations of learning are more inclined towards reinforcement learning because the AI has to deal with the exploration-exploitation duality. %prior learning: supervised \cite{WeberCIG09} \cite{SynnaeveCIG11}, unsupervised: \cite{SynnaeveAIIDE11}
-}
-
-%\subsection{Reasoning with Uncertainty}\label{subsec:uncertainty}
-
-{\color{blue}
-I think there are two important aspects of uncertainty in RTS games:
-\begin{itemize}
-\item First is trying to model uncertainty and try to reduce it (information gathering, and representation of knowledge), this includes scouting, and maintaining good estimates of locations and number of units of the enemy, etc.
-\item Second is actually using the uncertain information. Taking decisions like army strength estimation (like to attack or retreat).
-\end{itemize}
-
-There are two main kinds of uncertainty, existing for two different reasons, in RTS games. First, there is the incompleteness of information, due to the fog of war, which leads to some kind of ``extensional'' 
-%``extensive'' 
-uncertainty, that can be lowered by good scouting, and knowledge representation and reasoning (to infer what is possible given what has been seen). Also, there is the fact that we will never be able to read the opponent's mind, the ``intentional'' 
-%or ``intensive'' 
-uncertainty that we can't really be sure to scratch off, even with the best scouting possible. For intentional uncertainty, the AI, as the human player, can only build a sensible model of what the opponent is likely to do, to think, or to think knowing what we think he thinks. Both these kinds of uncertainty can be studied through probabilities, but only $P(Hidden | Seen)$ can be \textit{directly} linked to data only for extensional uncertainty. %now for the clumsy part:
-One could argue that the extensional data is the only thing that matters because it is the only thing that has an influence on the game, but in reality, for very highly skilled players, discovering the intentions of the enemy is the key to winning. It allows for a compact understanding of the game state and development, while also giving additional information about the future. Whereas a player is doing action A to follow it up by action B or C depends on its intention, while the information about action A is visible and information about B or C is hidden, only intention allows for a choice.
-}
-
 
 
 \section{State of the Art Bots for Starcraft}\label{sec:bot}
