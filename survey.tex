@@ -181,26 +181,39 @@ Maybe the list above goes better in Section \ref{sec:questions}?
 
 
 \subsection{Perception}
-Every AI needs to observe the world in order to analyze it and take decisions. In RTS games this task isn't trivial since we have to deal with imperfect information.
+XXX Every AI needs to observe the world in order to analyze it and take decisions. In RTS games this task isn't trivial since we have to deal with imperfect information.
 
-\textbf{Spatial}
+%\textbf{Spatial}
 
-Terrain analysis supplies the AI with chunks of abstract information about the map in order to help in making decisions. This analysis is usually performed off-line, in order to save processing time during gameplay.
+XXX Terrain analysis supplies the AI with chunks of abstract information about the map in order to help in making decisions. This analysis is usually performed off-line, in order to save processing time during gameplay.
 
-Pottinger \cite{Pottinger00} described \emph{BANG!} engine implemented by Ensemble Studios for the game Age of Empires 2. This engine provides terrain analysis functionalities to the game using influence maps and areas with connectivity information. Later works \cite{Forbus01} showed the importance to have qualitative spatial information, and some others \cite{Karavelas04}\cite{Hale08} focused on spatial decomposition. The most recent work \cite{Perkins10} presented an algorithm using Voronoi diagrams to detect regions and relevant choke points.
+Pottinger \cite{Pottinger00} described \emph{BANG!} engine implemented by Ensemble Studios for the game Age of Empires II. This engine provides terrain analysis functionalities to the game using influence maps and areas with connectivity information.
 
-\textbf{Temporal}
+\cite{Forbus2002} showed the importance to have qualitative spatial informationfor wargames, for which they used geometric and pathfinding analysis.
 
-In \cite{WeberAIIDE11} a particle model is used to tracks opponent units under fog of war over time.
+\cite{Hale08} presented a 2D geometric navigation mesh generation method from expanding convex regions from seeds.
 
-{\color{ForestGreen}
-Anyone did anything here? I think only Skynet uses temporal reasoning...
-Maybe heat maps?? but I can't find any reference...
-}
+\cite{Perkins10} applied Voronoi decomposition (then pruning) %\cite{Karavelas04}
+to detect regions and relevant choke points in RTS maps. This approach is implemented for StarCraft in BWTA\footnote{\url{http://code.google.com/p/bwta/}}.
 
-\textbf{Enemy}
+%\textbf{Temporal}
+% Isla 2006 Game AI Programming Wisdom 3. Charles River Media. chapter Probabilistic Target Tracking and Search Using Occupancy Maps, 379–388. ? 
 
-Opponent modeling is the process of keeping track of what the enemy is doing during a game in order to estimate the probability of it using a specific strategy.
+\cite{Hladky2008} benchmarked hidden semi-Markov models (HSMM) and particle filters in FPS units tracking. They showed that the accuracy of occupancy maps was improved using movement models (learned from the player behavior) in HSMM. 
+% comparable with human experts ?
+
+\cite{HagelbackJ08} presented a multi-agent potential fields based bot able to deal with fog of war in Tankbattle. XXX
+
+\cite{WeberAIIDE11} used a particle model, with a simple linear trajectory update, to track opponent units under fog of war in StarCraft.
+
+% {\color{ForestGreen}
+% Anyone did anything here? I think only Skynet uses temporal reasoning...
+% Maybe heat maps?? but I can't find any reference...
+% }
+
+%\textbf{Enemy}
+
+XXX Opponent modeling is the process of keeping track of what the enemy is doing during a game in order to estimate the probability of it using a specific strategy.
 
 The main methods used to these ends are case-based reasoning (CBR) and planning or plan recognition \cite{LTW,CBR_Planning,OntanonCBR,HTNPlanning,Ramirez}.\cite{LTW} used CBR to perform dynamic plan retrieval extracted from domain knowledge in Wargus (Warcraft II clone). \cite{CBR_Planning} base their real-time case-based planning (CBP) system on a plan dependency graph which is learned from human demonstration. In \cite{OntanonCBR,PlanRetrieval}, they use CBR and expert demonstrations on Wargus. They update their previous CPB approach by using ``situation assessment'' for plan retrieval. They improve the speed of CPB by using a decision tree to select relevant features. Hsieh and Sun \cite{HsiehS08} based their work on \cite{LTW} CBR model and used StarCraft replays to construct states and building sequences. Strategies are choices of building construction order in their model. 
 
@@ -213,11 +226,11 @@ Most commercial games avoid gather this information making their AI omniscient a
 Nobody had described an efficient way to scout the opponent... better opponent information better opponent modeling...
 }
 
-\textbf{Ally}
-
-{\color{ForestGreen}
-Anyone did anything here?
-}
+% \textbf{Ally}
+% 
+% {\color{ForestGreen}
+% Anyone did anything here?
+% }
 
 \subsection{Strategy}
 
