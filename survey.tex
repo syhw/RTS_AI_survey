@@ -295,7 +295,9 @@ One could argue that the extensional data is the only thing that matters because
 
 \section{State of the Art Bots for Starcraft}\label{sec:bot}
 
-Thanks to the recent organization of international game AI competitions focused around the popular StarCraft game (see Section \ref{sec:competition}), several groups have been working on integrating many of the techniques described in the previous section into complete ``bots'', capable of playing complete StarCraft games. In this section we will overview some of the currently available top bots, and focus on the architecture being used to integrate all the techniques being used for the different aspects of the bot.
+Thanks to the recent organization of international game AI competitions focused around the popular StarCraft game (see Section \ref{sec:competition}), several groups have been working on integrating many of the techniques described in the previous section into complete ``bots'', capable of playing complete StarCraft games. In this section we will overview some of the currently available top bots, and focus, first on the architecture being used to integrate all the techniques being used for the different aspects of the bot, and then on which subsets of techniques are used for each bot.
+
+\subsection{RTS Bot Architectures}\label{sec:integration}
 
 Playing an RTS game involves dealing with all the problems described above. A few approaches, like CAT \cite{LTW}, Darmok \cite{OntanonMSR10} or ALisp \cite{Marthi05} try to deal with the problem in a monolithic manner, by using a single AI technique. This resembles approaches to solve other games, such as Chess or Go, where a single game-tree search approach is enough to play the game at human level. However, none of those systems aims at achieving near human performance. In order to achieve human-level performance, RTS AI designers use a lot of domain knowledge in order to divide the task of playing the game into a collection of sub-problems, which can be dealt-with using individual AI techniques (as discussed in the previous section). 
 
@@ -308,7 +310,7 @@ Playing an RTS game involves dealing with all the problems described above. A fe
 
 Figure \ref{fig:bot-architecture} shows some representative examples of the integration architectures used by different bots in the AIIDE and CIG 2011 Starcraft AI competitions \cite{url1,url2}: BroodwarQ \cite{???}, Nova \cite{???}, UAlbertaBot \cite{???}, Skynet \cite{???}, SPAR \cite{???}, and BTHAI \cite{???} (see Section \ref{sec:competition} for a comparison of their performance). Each box represents an individual module with a clearly defined task (only modules with a black background can send actions directly to Starcraft). Dashed arrows represent data flow, and solid arrows represent control (when a module can command another module to perform some task). For example, we can see how SPAR is divided in two sets of modules: {\em situation analysis} and {\em decision making}, the first with three modules dedicated to analyze the current situation of the game, and the later with 4 modules dedicated to exploit that information to decide what to do. We can see how the decision making aspect of SPAR is organized hierarchically, with the higher-level module ({\em strategic decision}) issuing commands to the next module ({\em tactical decision}), which sends commands to the next module ({\em action implementation}), and so on. Only the lower-level modules can send actions directly to Starcraft. 
 
-On the other hand, bots such as NOVA or BroodwarBotQ (BBQ) only use a hierarchical organization for {\em micro-management} (controlling the attack units), but use a decentralized organization for the rest of the bot. In Nova and BBQ, there is a collection of modules that control different aspects of the game (workers, production, construction, etc.). These modules can all send actions directly to Starcraft. In Nova those modules coordinate only through writing data in a shared blackboard, and in BBQ they coordinate only when they have to use a shared resource (unit) by means of an arbitrator.
+On the other hand, bots such as NOVA or BroodwarBotQ (BBQ) only use a hierarchical organization for {\em micro-management} (controlling the attack units), but use a decentralized organization for the rest of the bot. In Nova and BBQ, there is a collection of modules that control different aspects of the game (workers, production, construction, etc.). These modules can all send actions directly to Starcraft. In Nova those modules coordinate mostly through writing data in a shared blackboard, and in BBQ they coordinate only when they have to use a shared resource (unit) by means of an arbitrator.
 
 By analyzing the structure of these bots, we can see that there are two main tools that can be used when designing an integration architecture:
 
@@ -337,16 +339,13 @@ Most bots using divide-and-conquer (except for BBQ and UAlbertaBot), assume that
 
 One interesting aspect of the five bots described above is that, while all of them are reactive at the lower level (unit control), most if not all of them, are scripted at the highest level of abstraction. BTHAI reads build and squad formations from a predefined script, Nova's {\em Strategy Manager} is a predefined finite-state machine, BBQ's construction manager reads the build order from a predefined script, and Skynet's {\em BuildOrder Manager} is basically a predefined script. Such scripts describe the strategy that the bots will use, however, such strategy is always fixed. One could see this pre-scripting as if each bot defined a ``high-level programming language'' to describe Starcraft strategies, and the bots themselves are just interpreters of such strategy. Compared to current approaches for Chess or Go, this scripting seems a rigid and inflexible, but responds to the much higher complexity of the Starcraft game. An interesting exception to that is UAlbertaBot, which uses a search algorithm in the {\em Production Manager} to find near-optimal build orders. 
 
-In conclusion, we can see that there are two basic tools that can be used in an integration architecture: abstraction and divide-and-conquer, which are widely used by the existing Starcraft bots. However, several open questions remain:
+In conclusion, we can see that there are two basic tools that can be used in an integration architecture: abstraction and divide-and-conquer, which are widely used by the existing Starcraft bots. 
 
-{\color{red}
-This section is missing:
-\begin{itemize}
-\item Strengths and weaknesses?
-\item Which AI techniques do each bot use for each task?
-\end{itemize}
-}
+This section has focused on discussing the architecture of existing Starcraft bots. Let us now focus on what is the state of the art on the techniques used for each of the individual modules used by them.
 
+\subsection{Individual AI Techniques}\label{sec:techniques}
+
+{\color{red} TODO}
 
 \section{Recent Starcraft AI Competitions}\label{sec:competition}
 
