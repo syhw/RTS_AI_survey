@@ -137,7 +137,7 @@ state of the art in Starcraft AI
 
 \section{Real-Time Strategy Games}\label{sec:rts}
 
-\subsection{Starcraft}\label{subsec:starcraft}
+\subsection{StarCraft {\color{blue}- Situation}}\label{subsec:starcraft}
 
 Starcraft: Brood War is a popular RTS game released in 1998 by Blizzard Entertainment. Starcraft is set in a science-fiction based world where the player must choose one of the three races: Terran, Protoss or Zerg. The good work done by the people of Blizzard makes this game one of the most extremely well-balanced RTS games ever created.
 \begin{itemize}
@@ -146,7 +146,9 @@ Starcraft: Brood War is a popular RTS game released in 1998 by Blizzard Entertai
 	\item Zergs, the insectoid race, units are cheap and weak. They can be produced fast, encouraging players to overwhelm their opponents with sheer numbers.
 \end{itemize}
 
-\subsection{Challenges in RTS Game AI}\label{subsec:challenges}
+{\color{blue}TODO: explain the gameplay a little more, how are ppl not familiar to SC able to understand the problems for AI that we raise below?}
+
+\subsection{Challenges in RTS Game AI {\color{blue}- Problems}}\label{subsec:challenges}
 
 {\color{blue}
 This section should be brief, and just give us some basic ideas of which are the challenges in RTS Game AI, so that when we refer to related work, we can use this as a reference point.  The most important thing of this section is to demonstrate that RTS games are complex.
@@ -176,12 +178,10 @@ There has been a lot of work in many, but others have been untouched (e.g. Colla
 Maybe the list above goes better in Section \ref{sec:questions}?
 }
 
-
-\section{Existing work on RTS Game AI}\label{sec:review}
-
-\subsection{Problems}
-
 {\color{blue}
+\begin{LARGE}
+TODO merge above and bottom\\
+\end{LARGE}
 \textbf{Planning}
 TODO (Santi?) just a paragraph on exposing why there is a planning problem in RTS AI.
 
@@ -211,6 +211,10 @@ uncertainty, that can be lowered by good scouting, and knowledge representation 
 %or ``intensive'' 
 uncertainty that we cannot really be sure to scratch off, even with the best scouting possible. For intentional uncertainty, the AI, as the human player, can only build a sensible model of what the opponent is likely to do, to think, or to think knowing what we think he thinks. Both these kinds of uncertainty can be studied through probabilities, but only for extensional uncertainty can $P(Hidden | Seen)$ be \textit{directly} linked to data. %now for the clumsy part:
 One could argue that the extensional data is the only thing that matters because it is the only thing that has an influence on the game, but in reality, for very highly skilled players, discovering the intentions of the enemy is the key to winning. It allows for a compact understanding of the game state and development, while also giving additional information about the future. Whereas a player is doing action A to follow it up by action B or C depends on its intention, while the information about action A is visible and information about B or C is hidden, only intention allows for a choice.
+
+
+
+\section{Existing work on RTS Game AI - \color{blue}{Resolutions}}\label{sec:review}
 
 \subsection{RTS AI Decomposition}
 \begin{figure*}
@@ -303,7 +307,7 @@ There are some interesting uses of reinforcement learning (RL) \cite{Sutton}: \c
 Self-organizing-maps (SOM) learned with evolutionary algorithms provide some way to learn (realistic) parameters for RTS units behavior \cite{teamCompositionRTS}. Bayesian programming has been applied to inverse fusion of the sensory inputs of the units \cite{SynnaeveMicroCig11}, which subsumes potential fields, allowing for integration of tactical goals directly in micro-management. There are also some cognitive approaches to RTS AI \cite{SORTS}, in which there is a human-like attention model for micro-management.
 
 
-\section{State of the Art Bots for Starcraft}\label{sec:bot}
+\section{State of the Art Bots for Starcraft - \color{blue}{Information/Productions}}\label{sec:bot}
 
 Thanks to the recent organization of international game AI competitions focused around the popular StarCraft game (see Section \ref{sec:competition}), several groups have been working on integrating many of the techniques described in the previous section into complete ``bots'', capable of playing complete StarCraft games. In this section we will overview some of the currently available top bots, and focus, first on the architecture being used to integrate all the techniques being used for the different aspects of the bot, and then on which subsets of techniques are used for each bot.
 
