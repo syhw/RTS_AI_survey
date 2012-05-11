@@ -187,6 +187,7 @@ TODO (Santi?) just a paragraph on exposing why there is a planning problem in RT
 
 \textbf{Spatial and Temporal Reasoning}
 TODO just a paragraph on exposing why there are temporal and spatial reasoning in RTS AI.
+}
 
 \textbf{Learning}\\
 When talking about learning in RTS games, with regard to a particular match against an opponent, one has to differentiate between:
@@ -210,9 +211,8 @@ uncertainty, that can be lowered by good scouting, and knowledge representation 
 %or ``intensive'' 
 uncertainty that we cannot really be sure to scratch off, even with the best scouting possible. For intentional uncertainty, the AI, as the human player, can only build a sensible model of what the opponent is likely to do, to think, or to think knowing what we think he thinks. Both these kinds of uncertainty can be studied through probabilities, but only for extensional uncertainty can $P(Hidden | Seen)$ be \textit{directly} linked to data. %now for the clumsy part:
 One could argue that the extensional data is the only thing that matters because it is the only thing that has an influence on the game, but in reality, for very highly skilled players, discovering the intentions of the enemy is the key to winning. It allows for a compact understanding of the game state and development, while also giving additional information about the future. Whereas a player is doing action A to follow it up by action B or C depends on its intention, while the information about action A is visible and information about B or C is hidden, only intention allows for a choice.
-}
 
-\subsection{Decomposition}
+\subsection{RTS AI Decomposition}
 \begin{figure*}
     \centering
     \includegraphics[width=0.9\columnwidth]{figures/levels_abstraction.pdf}
@@ -220,7 +220,10 @@ One could argue that the extensional data is the only thing that matters because
     \label{fig:levels-abstraction}
 \end{figure*}
 As a work on RTS AI has to address several of these aforementioned problems together, we decided to study decompose RTS AI in three tasks, widely known by RTS players: strategy, tactics and units control (micro-management), see Figure~\ref{fig:levels-abstraction}. We consider strategy to be everything related to the \textit{technology tree}, being the buildings and the upgrades, and the army composition. It is the most intentional level, as a player performs a strategy with future stances (aggressive, defensive, economy, technology) and tactics in mind. To change its strategy, we consider that a player need about 3 minutes: they should need to construct a few new buildings and/or research some upgrades and/or produce units changing the army composition. Tactics represent the attacks and defenses. For the human player, decisions on tactics are made from spatial (exploiting the terrain) and temporal (army movements) reasoning, constrained on the possible types of attacks by the army composition of the player and their opponent. Units control, also called micro-management, is how the player takes action to maximize the efficiency of its units (applying the tactics) in real-time (simultaneous) and adversary conditions. As shown in Figure~\ref{fig:levels-abstraction}, strategy constrains possible tactics which in turn constrain units control. On a prediction/adaptation point of view, the units observation level gives information about the opponent's tactics and strategy. Flaws in opponents tactics can also steer our strategy into exploiting them.\\
+{\color{blue}
 perhaps TODO examples?
+}
+
 
 
 \subsection{Strategy}
