@@ -1,4 +1,6 @@
-﻿all: 
+﻿short:
+	pdflatex survey
+all: 
 	pdflatex survey
 	bibtex survey
 	pdflatex survey
