@@ -6,13 +6,16 @@ import sys
 # takes a .lmr file as argument 1 (or stdin) and dumps a txt file with 
 # one line for each players for each game as [building_name time_seconds; ...]
 # counts buildings up to the 4th, counts expansions (not the first town hall)
-# TODO less brute
+# if the loser is known, the first player (of the couple of the match)
+# is always the loser! Matches are separated by a blank line.
+# When both are indicated Winners, it is that we don't know for sure the winner
 
 # usage:
 # python totext.py LMRFILEHERE [--bots] [--races]
 # --bots will also make one .txt file for each bot
 # --races will also make one .txt file for each race
 # --names will also put bots names in the big .txt file
+# --winner will also put if the player won or not in the big .txt file
 
 f = sys.stdin
 o = sys.stdout
@@ -27,6 +30,8 @@ if len(sys.argv) > 1:
         do_races = True
     if "--names" in sys.argv:
         do_names = True
+    if "--winner" in sys.argv:
+        do_winner = True
 
 
 header = True
@@ -58,7 +63,7 @@ rchupgs = {'T' : ['Spider_Mines', ],
 
 def write(tb, fo):
     #print tb
-    def write_for_one(p, t):
+    def write_for_one(p, t, isloser=False):
         for e in buildings[races[p][0]]:
             b = races[p] + '_' + e
             twr = b + ' ' + str(t.get(b, -1)/24) + '; '
@@ -113,9 +118,14 @@ def write(tb, fo):
             files_races[races[p]].write('\n')
         if do_names:
             fo.write('Name ' + names[p] + '; ')
+        if do_winner:
+            if isloser:
+                fo.write('Winner No; ')
+            else:
+                fo.write('Winner Yes; ')
         fo.write('\n')
     if loser != "":
-        write_for_one(loser, tb.pop(loser))
+        write_for_one(loser, tb.pop(loser), isloser=True)
     for p, t in tb.iteritems():
         write_for_one(p, t)
 
@@ -183,7 +193,7 @@ for line in f:
                 time_had[l[-5]][rchupg+'2'] = max(24, int(l[0]))
             if not rchupg+'3' in time_had[l[-5]]:
                 time_had[l[-5]][rchupg+'3'] = max(24, int(l[0]))
-        if "Leaving" in line and "quit" in line and loser == "":
+        if "Leave" in line and "quit" in line and loser == "":
             loser = l[-5]
 
 if do_bots:
