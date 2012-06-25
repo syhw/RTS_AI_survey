@@ -211,4 +211,6 @@ print ""
 print ">>> Total Games:", sum(absolute_n_games.itervalues())/2
 print ""
 
-hinton(N.array(l), axes=[list(openings[list(openings)[0]]),list(openings[list(openings)[len(openings)-1]])], name="contingency"+matchup)
+yaxis = list(openings[list(openings)[len(openings)-1]])
+yaxis.reverse()
+hinton(N.array(l), axes=[list(openings[list(openings)[0]]),yaxis], name="contingency"+matchup)
