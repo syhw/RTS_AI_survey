@@ -1,0 +1,9 @@
+extract player names and winners:
+python ~/these/redaction/RTSsurvey/analyzis/totext.py PvP.lmr --names --winner
+
+annotate openings:
+python ~/these/code/starcraft/replays/openingtech/clustering/annotate.py PvP.txt -w > OUT_PvP
+
+count which opening won against which:
+python ~/these/redaction/RTSsurvey/analyzis/count_openings_wins.py < PvP_annotated.txt
+
