@@ -483,7 +483,28 @@ Here describe the results obtained in the competition comparing the bots.
 \section{Open Questions in RTS Game AI}\label{sec:questions}
 
 {\color{blue}
-Here, describe what is left to be done.
+[This is a preliminary list of open questions, derived from the Skype call on July 19. Some work is still required to turn this into the final list]
+
+There are a set of problems that are either solved in RTS games (path-finding), or for which we have very good solutions (micro management). But there are features that are not exhibited by any of the current Starcraft playing bots. For example, current bots are incapable of coming up on their own with tactical moves such as unit drops. Some bots do drops, but only if this is hard-coded; no bot has the capability of reasoning about all the possible moves available, and discovering that doing a drop is the best thing to do right now. This is related to the lack of real-time adversarial planning techniques that scale up to RTS games. Similarly, current bots do not exhibit adaptation to opponent strategies. Some switch between different build-orders, but do not fully adapt their strategy. No bot is capable of observing the opponent and autonomously come up with a good plan (from scratch) to counter the opponent strategy.
+
+In general, this is a list of open problems:
+
+\begin{itemize}
+\item Adaptation to opponent
+\item Learning (from opponent, from traces or from mistakes)
+\item Scalability: this includes:
+\begin{itemize}
+\item a) how to scale up existing algorithms for adversarial domains like game tree search or others, and 
+\item b) multi-scale planning/reasoning, how to integrate control, tactics and strategy together (e.g. how to interface them).
+\end{itemize}
+\item Adversarial real-time planning and scheduling under uncertainty with resources: this basically includes three general unsolved AI problems:
+\begin{itemize}
+\item Adversarial planning under real-time constraints (there is some work on this area to be presented this year in AIIDE)
+\item Adversarial planning under uncertainty 
+\item Planning with resources (there exist planning algorithms that handle resources, like GRT-R, but cannot scale up to the size of problems needed for e.g. Starcraft)
+\end{itemize}
+\item How to exploit and incorporate domain knowledge: we know how to incorporate some aspects of domain knowledge (e.g. build orders), but, in general, how to incorporate some forms of domain knowledge into algorithms for RTS games is still an open problem. For example, standard techniques to encode strategies for other forms of games, like Behavior Trees, are hard to deploy in RTS games. 
+\end{itemize}
 }
 
 
