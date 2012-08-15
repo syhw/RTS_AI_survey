@@ -137,6 +137,8 @@ state of the art in Starcraft AI
 
 \section{Real-Time Strategy Games}\label{sec:rts}
 
+{\color{blue} [Here, a brief overview of RTS games, which are their main characteristics, etc.]}
+
 \subsection{StarCraft {\color{blue}- Situation}}\label{subsec:starcraft}
 
 Starcraft: Brood War is a popular RTS game released in 1998 by Blizzard Entertainment. Starcraft is set in a science-fiction based world where the player must choose one of the three races: Terran, Protoss or Zerg. The good work done by the people of Blizzard makes this game one of the most extremely well-balanced RTS games ever created.
@@ -310,6 +312,9 @@ Other research falling into reactive control has been performed in the field of 
 % Pathfinding:
 Finally, although pathfinding does not fall under our previous definition of reactive control, we include it in this section, since it is typically performed as a low-level service, not part of either tactical nor strategical reasoning (although there are some exceptions, like the tactical pathfinding of Danielsiek et al. \cite{Danielsiek_2008}). The most common pathfinding algorithm is A*, but its big problem is CPU time and memory consumption, hard to satisfy in a complex, dynamic, real-time environment with large numbers of units. Even if specialized algorithms, such as D*-Lite \cite{KoenigL02} exist, it is most common to use A* combined with a map simplification technique that generates a simpler navigation graph to be used for pathfinding. An example of such technique is Triangulation Reduction A*, that computes polygonal triangulations on a grid-based map \cite{Demyen_2006}. Considering movement for groups of units, rather then individual units, techniques such as steering of flocking behaviors \cite{Reynolds_1999} can be used on top of a path-finding algorithm in order to make whole groups of units follow a given path. In recent commercial RTS games like Starcraft 2 or Supreme Commander 2, flocking-like behaviors are inspired of continuum crowds (``flow field'') \cite{Treuille2006}. A comprehensive review about (grid-based) pathfinding was recently done by Sturtevant \cite{sturtevant2012benchmarks}.
 
+\subsection{Holistic Approaches}
+
+{\color{red} [Santi: some RTS AI techniques attempt to address the problem in a holistic way, for example the Darmok system, is there enough work on this for justifying a whole subsection? or should we just spread the few pieces of work on this over the previous sections].}
 
 \section{State of the Art Bots for Starcraft - \color{blue}{Information/Productions}}\label{sec:bot}
 
@@ -536,26 +541,47 @@ Crashes & games & bot	& wins\\ \hline
 
 {\color{blue}
 [This is a preliminary list of open questions, derived from the Skype call on July 19. Some work is still required to turn this into the final list]
+}
 
-There are a set of problems that are either solved in RTS games (path-finding), or for which we have very good solutions (micro management). But there are features that are not exhibited by any of the current Starcraft playing bots. For example, current bots are incapable of coming up on their own with tactical moves such as unit drops. Some bots do drops, but only if this is hard-coded; no bot has the capability of reasoning about all the possible moves available, and discovering that doing a drop is the best thing to do right now. This is related to the lack of real-time adversarial planning techniques that scale up to RTS games. Similarly, current bots do not exhibit adaptation to opponent strategies. Some switch between different build-orders, but do not fully adapt their strategy. No bot is capable of observing the opponent and autonomously come up with a good plan (from scratch) to counter the opponent strategy.
+As illustrated in this paper, there is a set of problems in RTS game AI that could be considered mostly solved, of for which we have very good solutions. One example of such problems is pathfinding (mostly solved) or micro-management (we have good solutions). 
 
-In general, this is a list of open problems:
+However, there are many other problems for which this is not the case. For example, there is no current Starcraft bot that can come up with its own tactical moves, such as ``unit drops''. Some bots do drops, but only if this is hard-coded; no bot has the capability of reasoning about the current situation, synthesize a tactical move that involves a ``unit drop'', and determine that this move is the best one in the current situation. This is related to the lack of real-time adversarial planning techniques that scale up to the size required for RTS games. Similarly, current bots do not exhibit adaptation to opponent strategies. Some switch between different build-orders, but do not fully adapt their strategy. No bot is capable of observing the opponent and autonomously synthesize a good plan from scratch to counter the opponent strategy.
+
+Specifically, the list of problems that are currently unsolved, grouped in various categories:
+
+{\color{blue}
 
 \begin{itemize}
-\item Adaptation to opponent
-\item Learning (from opponent, from traces or from mistakes)
-\item Scalability: this includes:
+
+\item Learning and adaptation:
 \begin{itemize}
-\item a) how to scale up existing algorithms for adversarial domains like game tree search or others, and 
-\item b) multi-scale planning/reasoning, how to integrate control, tactics and strategy together (e.g. how to interface them).
+\item Adaptation to opponent strategy.
+\item Learning from experience in RTS games.
+\item Learning from observation (from demonstration, or from observing the opponent) in RTS games.
 \end{itemize}
-\item Adversarial real-time planning and scheduling under uncertainty with resources: this basically includes three general unsolved AI problems:
+
+\item Planning:
 \begin{itemize}
-\item Adversarial planning under real-time constraints (there is some work on this area to be presented this year in AIIDE)
-\item Adversarial planning under uncertainty 
-\item Planning with resources (there exist planning algorithms that handle resources, like GRT-R, but cannot scale up to the size of problems needed for e.g. Starcraft)
+\item Adversarial planning under real-time constraints (there is some work on this area to be presented this year in AIIDE).
+\item Adversarial planning under uncertainty.
+\item Adversarial planning in partially-observable domains.
+\item Adversarial planning with resources (there exist planning algorithms that handle resources, like GRT-R, but cannot scale up to the size of problems needed for e.g. Starcraft).
 \end{itemize}
-\item How to exploit and incorporate domain knowledge: we know how to incorporate some aspects of domain knowledge (e.g. build orders), but, in general, how to incorporate some forms of domain knowledge into algorithms for RTS games is still an open problem. For example, standard techniques to encode strategies for other forms of games, like Behavior Trees, are hard to deploy in RTS games. 
+
+\item Scalability:
+\begin{itemize}
+\item How to scale up existing algorithms for adversarial domains like game tree search or Monte Carlo search to the very large dimensions of RTS games.
+\end{itemize}
+
+\item Integration:
+\begin{itemize}
+\item Multi-scale planning/reasoning: how to integrate reasoning at multiple levels of abstraction.
+\end{itemize}
+
+\item Domain Knowledge: 
+\begin{itemize}
+\item we know how to incorporate some aspects of domain knowledge (e.g. build orders), but, in general, how to incorporate some forms of domain knowledge into algorithms for RTS games is still an open problem. For example, standard techniques to encode strategies for other forms of games, like Behavior Trees, are hard to deploy in RTS games. 
+\end{itemize}
 \end{itemize}
 }
 
