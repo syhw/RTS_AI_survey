@@ -137,6 +137,8 @@ state of the art in Starcraft AI
 
 \section{Real-Time Strategy Games}\label{sec:rts}
 
+{\color{blue} [Here, a brief overview of RTS games, which are their main characteristics, etc.]}
+
 \subsection{StarCraft {\color{blue}- Situation}}\label{subsec:starcraft}
 
 Starcraft: Brood War is a popular RTS game released in 1998 by Blizzard Entertainment. Starcraft is set in a science-fiction based world where the player must choose one of the three races: Terran, Protoss or Zerg. The good work done by the people of Blizzard makes this game one of the most extremely well-balanced RTS games ever created.
@@ -310,6 +312,9 @@ Other research falling into reactive control has been performed in the field of 
 % Pathfinding:
 Finally, although pathfinding does not fall under our previous definition of reactive control, we include it in this section, since it is typically performed as a low-level service, not part of either tactical nor strategical reasoning (although there are some exceptions, like the tactical pathfinding of Danielsiek et al. \cite{Danielsiek_2008}). The most common pathfinding algorithm is A*, but its big problem is CPU time and memory consumption, hard to satisfy in a complex, dynamic, real-time environment with large numbers of units. Even if specialized algorithms, such as D*-Lite \cite{KoenigL02} exist, it is most common to use A* combined with a map simplification technique that generates a simpler navigation graph to be used for pathfinding. An example of such technique is Triangulation Reduction A*, that computes polygonal triangulations on a grid-based map \cite{Demyen_2006}. Considering movement for groups of units, rather then individual units, techniques such as steering of flocking behaviors \cite{Reynolds_1999} can be used on top of a path-finding algorithm in order to make whole groups of units follow a given path. In recent commercial RTS games like Starcraft 2 or Supreme Commander 2, flocking-like behaviors are inspired of continuum crowds (``flow field'') \cite{Treuille2006}. A comprehensive review about (grid-based) pathfinding was recently done by Sturtevant \cite{sturtevant2012benchmarks}.
 
+\subsection{Holistic Approaches}
+
+{\color{red} [Santi: some RTS AI techniques attempt to address the problem in a holistic way, for example the Darmok system, is there enough work on this for justifying a whole subsection? or should we just spread the few pieces of work on this over the previous sections].}
 
 \section{State of the Art Bots for Starcraft - \color{blue}{Information/Productions}}\label{sec:bot}
 
@@ -395,7 +400,9 @@ maps which proved to look interesting but made the submitted bots
 so frequently that it would have been unjustifiable to announce a winner.
 
 At CIG 2011, the tournament was therefore run with a (secret) selection
-of maps used in league play. It was organized by Tobias Mahlmann and Mike
+of maps used in league play, which can be regarded as the most important
+difference to the AIIDE tournament that employed a known list of maps.
+The competition was organized by Tobias Mahlmann and Mike
 Preuss and attracted 10 bots. In addition to the ones discussed in previous
 sections (UAlbertaBot, Skynet, AIUR, Nova, BroodwarBotQ, BTHAI), 
 the set also contained LSAI, Xelnaga, Protoss Beast Jelly, and EvoBot,
@@ -427,7 +434,7 @@ to expanding). Gas is not mined as it is not needed for constructing Zealots.
 Qualified for the final round: UAlbertaBot and Skynet (from A), Xelnaga
 and BroodwarBotQ (from B, the latter by comparing direct encounters
 with BTHAI of which 6:4 were won).}
-\label{tab:correlations}
+\label{tab:cig-first-round}
 \begin{small}
 \begin{center}
 % bracket A
@@ -458,24 +465,74 @@ Crashes & games & bot	& wins\\ \hline
 \end{small}
 \end{table*}
 
+\subsubsection{First Round}
+\label{sec:cig-first-round}
 
-As BroodwarBotQ and BTHAI have the same number of wins, their direct encounter is evaluated which accounted 6 : 4 for the BroodwarBotQ.
-Note that all qualified bots play Protoss.
+As the CIG competition games were executed manually due to
+a lack of available software (the AIIDE program was not yet
+available at that time), we separated the ten entries into
+two brackets. In each bracket of 5 bots, a round-robin
+tournament was held with 10 repetitions per pairing, resulting
+in 40 games per bot.
+The 5 maps chosen for the first round were selected from the pool
+of well-known league play maps found on the internet:
+\emph{(2)MatchPoint 1.3}, \emph{(4)Fighting Spirit 1.3}, 
+\emph{iCCupdestination 1.1}, \emph{iCCup gaia}, and 
+\emph{iCCup great barrier reef}. Each bot pairing played
+on every map twice, with switched starting positions.
 
-Maps used for the first round: (2)MatchPoint 1.3, (4)Fighting Spirit 1.3, iCCupdestination 1.1, iCCup gaia, iCCup great barrier reef
+The two top bots of every bracket qualified
+for the final round. Table~\ref{tab:cig-first-round} summarizes
+the results.
+Note that as BroodwarBotQ and BTHAI have the same number of wins,
+their direct encounter was evaluated which accounted 6:4 for the BroodwarBotQ.
+The bots going into the final were thus UAlbertaBot, Skynet (from bracket A)
+and Xelnaga and BroodwarBotQ (from bracket B). All qualified bots play the
+Protoss faction. Most bots proved pretty stable, only Xelnaga and Protoss 
+Beast Jelly crashed relatively often (each in more than a quarter of the games). 
+Crashing of course resulted in an instant win for the other bot.
+In some cases, neither bot was able to finish the other off completely,
+so that they went into a passive state. We manually ended such games after
+around 15 minutes and assigned victory to the bot that had obtained more
+points as indicated on the end game screen.
 
-Final Round
 
-The final round was played in a similar mode as each of the first round brackets, using another set of 5 maps (see below), resulting in 30 games for each bot.
+\subsubsection{Final Round}
+\label{sec:cig-final-round}
 
-Crashes	 Games	 Bot	 Wins
-0	 30	 Skynet	 26
-0	 30	 UAlbertaBot	 22
-3	 30	 Xelnaga	 11
-2	 30	 BroodwarBotQ	 1
+The final round was played in a similar mode as each of the
+first round brackets,
+using another set of 5 previously unknown maps:
+\emph{iCCup lost temple 2.4}, \emph{iCCup rush hour 3.1},
+\emph{iCCup swordinthemoon 2.1}, \emph{iCCup yellow 1.1},
+and \emph{La\_Mancha 1.1}. 
+Letting each pairing play on each map twice again with
+switching starting positions resulted in 30 games per bot.
+The final results are displayed in table~\ref{tab:cig-final-round},
+indicating Skynet as winner and UAlbertaBot as runner-up, being
+almost equally strong, and the two other bots as clearly inferior.
 
 
-Here describe the results obtained in the competition comparing the bots.
+\begin{table}[bth]
+\caption{Results of the CIG 2011 final round.}
+\label{tab:cig-final-round}
+\begin{small}
+\begin{center}
+% bracket A
+\begin{tabular}{|l|c|c|c|}
+\hline
+Crashes & games & bot	& wins\\ \hline
+0 &  30 &	 Skynet	  		&  26\\
+0 &	 30 &	 UAlbertaBot 	&  22\\
+3 &	 30 &	 Xelnaga  		&  11\\
+2 &	 30 &	 BroodwarBotQ  	&  1\\
+\hline
+\end{tabular}
+\end{center}
+\end{small}
+\end{table}
+
+
 }
 
 
@@ -483,7 +540,49 @@ Here describe the results obtained in the competition comparing the bots.
 \section{Open Questions in RTS Game AI}\label{sec:questions}
 
 {\color{blue}
-Here, describe what is left to be done.
+[This is a preliminary list of open questions, derived from the Skype call on July 19. Some work is still required to turn this into the final list]
+}
+
+As illustrated in this paper, there is a set of problems in RTS game AI that could be considered mostly solved, of for which we have very good solutions. One example of such problems is pathfinding (mostly solved) or micro-management (we have good solutions). 
+
+However, there are many other problems for which this is not the case. For example, there is no current Starcraft bot that can come up with its own tactical moves, such as ``unit drops''. Some bots do drops, but only if this is hard-coded; no bot has the capability of reasoning about the current situation, synthesize a tactical move that involves a ``unit drop'', and determine that this move is the best one in the current situation. This is related to the lack of real-time adversarial planning techniques that scale up to the size required for RTS games. Similarly, current bots do not exhibit adaptation to opponent strategies. Some switch between different build-orders, but do not fully adapt their strategy. No bot is capable of observing the opponent and autonomously synthesize a good plan from scratch to counter the opponent strategy.
+
+Specifically, the list of problems that are currently unsolved, grouped in various categories:
+
+{\color{blue}
+
+\begin{itemize}
+
+\item Learning and adaptation:
+\begin{itemize}
+\item Adaptation to opponent strategy.
+\item Learning from experience in RTS games.
+\item Learning from observation (from demonstration, or from observing the opponent) in RTS games.
+\end{itemize}
+
+\item Planning:
+\begin{itemize}
+\item Adversarial planning under real-time constraints (there is some work on this area to be presented this year in AIIDE).
+\item Adversarial planning under uncertainty.
+\item Adversarial planning in partially-observable domains.
+\item Adversarial planning with resources (there exist planning algorithms that handle resources, like GRT-R, but cannot scale up to the size of problems needed for e.g. Starcraft).
+\end{itemize}
+
+\item Scalability:
+\begin{itemize}
+\item How to scale up existing algorithms for adversarial domains like game tree search or Monte Carlo search to the very large dimensions of RTS games.
+\end{itemize}
+
+\item Integration:
+\begin{itemize}
+\item Multi-scale planning/reasoning: how to integrate reasoning at multiple levels of abstraction.
+\end{itemize}
+
+\item Domain Knowledge: 
+\begin{itemize}
+\item we know how to incorporate some aspects of domain knowledge (e.g. build orders), but, in general, how to incorporate some forms of domain knowledge into algorithms for RTS games is still an open problem. For example, standard techniques to encode strategies for other forms of games, like Behavior Trees, are hard to deploy in RTS games. 
+\end{itemize}
+\end{itemize}
 }
 
 
