@@ -96,14 +96,16 @@ GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this %
 
 \maketitle
 
+{\color{blue}
 \begin{abstract}
 TODO: Idea of the paper is: ``one-stop guide on what is the
 state of the art in Starcraft AI''. It should help people participating in the competition focus
 their efforts, and also should help people implementing AI for RTS games in
 general (e.g. industry).  In Gabriel's words ``RTS AI problems, Solutions, State-of-the-art, conclude on what's "solved" since \cite{Buro03rts} and what's not.'' 
 
-For example, if someone wants to implement a bot, and wonders "how should I do scouting", our paper should provide a summary of the existing techniques, and pointers to know more. 
+For example, if someone wants to implement a bot, and wonders "how should I do scouting", our paper should provide a summary of the existing techniques, and pointers to know more.
 \end{abstract}
+}
 
 \begin{IEEEkeywords}
 Game AI, Real-Time Strategy, Starcraft, Review1
@@ -121,7 +123,7 @@ Game AI, Real-Time Strategy, Starcraft, Review1
 \IEEEpeerreviewmaketitle
 
 \section{Introduction}\label{sec:intro}
-\IEEEPARstart{S}{ince} Michael Buro's call for research in RTS games \cite{Buro03rts}, many researchers have answered the call. Specially, AI competitions like the Starcraft one have caused many AI techniques to be
+\IEEEPARstart{S}{ince} Michael Buro's call for research in RTS games \cite{Buro03rts}, many researchers have answered the call. Specially, AI competitions like the ``AIIDE Starcraft AI Competition'' have caused many AI techniques to be
 applied to RTS AI. We will list and classify these approaches, explain their 
 power and their downsides and conclude on what is left to achieve human-level 
 RTS AI.
@@ -135,27 +137,47 @@ Reiterate that the goal of this paper is to provide a one-stop guide on what is 
 state of the art in Starcraft AI
 }
 
+{\color{red} make sure to introduce the term ``bot''}
+
 \section{Real-Time Strategy Games}\label{sec:rts}
 
-{\color{blue} [Here, a brief overview of RTS games, which are their main characteristics, etc.]}
+Real-time Strategy (RTS) is a sub-genre of strategy games where players need to build an economy (gathering resources and building a base) and a military power (training units and researching technologies) in order to defeat their opponents (destroying their army and base). From a theoretical point of view, the main differences between RTS games and traditional board games such as Chess are:
 
-\subsection{StarCraft {\color{blue}- Situation}}\label{subsec:starcraft}
-
-Starcraft: Brood War is a popular RTS game released in 1998 by Blizzard Entertainment. Starcraft is set in a science-fiction based world where the player must choose one of the three races: Terran, Protoss or Zerg. The good work done by the people of Blizzard makes this game one of the most extremely well-balanced RTS games ever created.
 \begin{itemize}
-	\item Terrans, human exiled from Earth, provide units that are versatile and flexible giving a balanced option between Protoss and Zergs.
+\item They are {\em simultaneous move} games, where more than one player can issue actions at the same time. Additionally, these actions are {\em durative}, i.e. actions are not instantaneous, but take some amount of time time to complete.
+\item RTS games are ``real-time'', which actually means is that each player has a very small amount of time to decide the next move. Compared to Chess, where players have several minutes to decide the next action, in Starcraft, the game executes at 24 iterations per second, which means that players only have 55ms to decide a move, before the game state changes.
+\item Most RTS games are partially observable: players can only see the part of the map that has been explored.
+\item Most RTS games are non-deterministic.
+\item And finally, the complexity of these games, both in terms of state space size and in terms of number of actions available at each decision cycle is very large. {\color{red} For example, the state space of Chess is typically estimated to be around $10^{50}$, whereas the state space of Starcraft in a typical map is estimated to be around $10^{10000}$.}
+\end{itemize}
+
+For those reasons, standard techniques used for playing classic board games, such as minimax game tree search, cannot be directly applied to solve RTS games without the definition of some level of abstraction, or some other simplification. Interestingly enough, humans seem to be able to deal with the complexity of RTS games, and are still vastly superior to computers in these type of games \cite{burochurchill2012aimagazine}. For those reasons, a large spectrum of techniques have been attempted to deal with this domain, as we will describe below. The remainder of this section is devoted to describe Starcraft as a research testbed, and on detailing which are the open challenges in RTS game AI.
+
+\subsection{StarCraft}\label{subsec:starcraft}
+
+Starcraft: Brood War is a popular RTS game released in 1998 by Blizzard Entertainment. Starcraft is set in a science-fiction based world where the player must choose one of the three races: Terran, Protoss or Zerg. One of the most remarkable aspects of Starcraft is that the three races in Starcraft are extremely well balanced:
+
+\begin{itemize}
+	\item Terrans, provide units that are versatile and flexible giving a balanced option between Protoss and Zergs.
 	\item Protoss units have lengthy and expensive manufacturing process, but they are strong and resistant. These conditions makes players follow a strategy of quality over quantity.
 	\item Zergs, the insectoid race, units are cheap and weak. They can be produced fast, encouraging players to overwhelm their opponents with sheer numbers.
 \end{itemize}
 
-{\color{blue}TODO: explain the gameplay a little more, how are ppl not familiar to SC able to understand the problems for AI that we raise below?}
 
-\subsection{Challenges in RTS Game AI {\color{blue}- Problems}}\label{subsec:challenges}
+Figure \ref{fig:starcraft} shows a screenshot of Starcraft showing a player playing Terrans. In order to win a Starcraft game, players must first gather resources (minerals and gas), which they can spend in creating additional buildings and units. As resources become available, players need to allocate them for creating more buildings (which reinforce the economy, and allow players to create units or unlock stronger units) and train attack units. Units must be distributed to accomplish different tasks such as: reconnaissance, defense and attack. While performing all of those tasks, players also need to strategically understand the geometry of the map at hand, in order to decide where to place new buildings (concentrate in a single area, or expand to different areas) or where to set defensive outposts. Finally, when offensive units of two players meet, each player must quickly maneuver each of the units in order to fight the a battle, which requires quick and reactive control of each of the units in order to successfully fight a battle. 
 
-{\color{blue}
-This section should be brief, and just give us some basic ideas of which are the challenges in RTS Game AI, so that when we refer to related work, we can use this as a reference point.  The most important thing of this section is to demonstrate that RTS games are complex.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\columnwidth]{figures/starcraft1.png}
+    \caption{A screenshot of Starcraft {\color{red} is this a good screenshot? can we actually have a screenshot? or is this copyrighted? Do we even want a screenshot?}.}
+    \label{fig:starcraft}
+\end{figure}
 
-Many years have passed since Buro's call for research (8!!). he identified 6 challenges:
+{\color{red} A typical Starcraft map is defined as a rectangular grid, typically ranging between 64x64 to 128x128 in size (although the resolution at which units move is finer), and each player can control up to 200 units (not including buildings). Moreover, each different race contains between 30 to 35 different types of units and buildings, each one with a significant number of special abilities}. All these factors together make Starcraft a significant challenge, in which humans are still much better than computers.
+
+\subsection{Challenges in RTS Game AI}\label{subsec:challenges}
+
+Many years have passed since Buro's call for research, where he identified the following 6 challenges:
 \begin{itemize}
 \item Resource management
 \item Decision making under uncertainty
@@ -165,34 +187,24 @@ Many years have passed since Buro's call for research (8!!). he identified 6 cha
 \item Adversarial real-time planning
 \end{itemize}
 
-There has been a lot of work in many, but others have been untouched (e.g. Collaboration). Additionally, other challenges that are not in the list appeared, and have been worked on, like: how to exploit the existing domain knowledge (strategies, build-orders, replays, etc.), or how to design an architecture that integrates all the modules required for an agent to play an RTS games. 
+While there has been a significant work in many, others have been untouched (e.g. collaboration). Additionally, after the increase attention to the problem of RTS games, further, unforeseen challenges appeared. For example, how to exploit the massive amounts of existing domain knowledge (strategies, build-orders, replays, and so on), or how to design an architecture that integrates all the modules required for an agent to play an RTS games. In the following subsections, we describe current challenges in RTS Game AI, grouped in different areas.
 
-\begin{itemize}
-\item Task Decomposition (or ``Architecture'')
-\item Integration of Domain Knowledge
-\item Reasoning with Uncertainty (including information gathering)
-\item Opponent Modeling and Adaptation: opponent modeling is key if we have to adapt our strategy. As different strategies are dominating each others, forming multiple Nash equilibria, the AI has to be able to infer the intend of its opponent.
-\item Group and Individual Control (``micro''): the task of controlling units efficiently (we can not speak of optimality here due to the huge state space, and of the enemy behavior entails numerous Nash equilibria), focusing fire to diminish enemy's firepower and keeping our units alive the longest, casting defensive and offensive spells and abilities.
-\item Planning and Resource Allocation (``macro'')
-\item Spatial reasoning (``tactics'')
-\end{itemize}
+%\begin{itemize}
+%\item Task Decomposition (or ``Architecture'')
+%\item Integration of Domain Knowledge
+%\item Reasoning with Uncertainty (including information gathering)
+%\item Opponent Modeling and Adaptation: opponent modeling is key if we have to adapt our strategy. As different strategies are dominating each others, forming multiple Nash equilibria, the AI has to be able to infer the intend of its opponent.
+%\item Group and Individual Control (``micro''): the task of controlling units efficiently (we can not speak of optimality here due to the huge state space, and of the enemy behavior entails numerous Nash equilibria), focusing fire to diminish enemy's firepower and keeping our units alive the longest, casting defensive and offensive spells and abilities.
+%\item Planning and Resource Allocation (``macro'')
+%\item Spatial reasoning (``tactics'')
+%\end{itemize}
 
-Maybe the list above goes better in Section \ref{sec:questions}?
-}
-
-{\color{red}
-TODO merge above and bottom
-}
-
+\subsubsection{Planning}
 {\color{blue}
-\textbf{Planning}
-TODO (Santi?) just a paragraph on exposing why there is a planning problem in RTS AI.
+TODO (Santi?) just a paragraph on exposing why there is a planning problem in RTS AI (macro and micro).
 
-\textbf{Spatial and Temporal Reasoning}
-TODO just a paragraph on exposing why there are temporal and spatial reasoning in RTS AI.
-}
 
-\textbf{Learning}\\
+\paragraph{Learning}
 When talking about learning in RTS games, with regard to a particular match against an opponent (where a match is a sequence of games against the same opponent), one has to differentiate between:
 \begin{itemize}
 \item Prior learning: done before the match, like when a bot learns what is likely to happen on a given match-up (and map) from replays, or when a bot optimizes its parameters beforehand through simulated annealing or genetic evolution.
@@ -207,7 +219,7 @@ Learning in all these situations can be supervised (labeled replays, scripted si
 %%% \item Second is actually using the uncertain information. Taking decisions like army strength estimation (like to attack or retreat).
 %%% \end{itemize}
 
-\textbf{Uncertainty}\\
+\subsubsection{Uncertainty}
 In RTS games, there are two main kinds of uncertainty, existing for two different reasons. First, there is incompleteness of information, due to the fog of war, which leads to some kind of ``extensional'' 
 %``extensive'' 
 uncertainty, that can be lowered by good scouting, and knowledge representation (to infer what is possible given what has been seen). Secondly, there is the fact that we will never be able to read the opponent's mind, the ``intentional'' 
@@ -215,11 +227,19 @@ uncertainty, that can be lowered by good scouting, and knowledge representation 
 uncertainty that we cannot really be sure to scratch off, even with the best scouting possible. For intentional uncertainty, the AI, as the human player, can only build a sensible model of what the opponent is likely to do, to think, or to think knowing what we think he thinks. Both these kinds of uncertainty can be studied through probabilities, but only for extensional uncertainty can $P(Hidden | Seen)$ be \textit{directly} linked to data. %now for the clumsy part:
 One could argue that the extensional data is the only thing that matters because it is the only thing that has an influence on the game, but in reality, for very highly skilled players, discovering the intentions of the enemy is the key to winning. It allows for a compact understanding of the game state and development, while also giving additional information about the future. Whereas a player is doing action A to follow it up by action B or C depends on its intention, while the information about action A is visible and information about B or C is hidden, only intention allows for a choice.
 
+\subsubsection{Spatial and Temporal Reasoning}
+TODO just a paragraph on exposing why there are temporal and spatial reasoning in RTS AI.
+
+\subsubsection{Domain Knowledge Exploitation}
+TODO
+
+\subsubsection{Task Decomposition}
+TODO
+}
 
 
 \section{Existing work on RTS Game AI - \color{blue}{Resolutions}}\label{sec:review}
 
-%\subsection{RTS AI Decomposition}
 \begin{figure}
     \centering
     \includegraphics[width=0.9\columnwidth]{figures/levels_abstraction.pdf}
@@ -539,51 +559,39 @@ Crashes & games & bot	& wins\\ \hline
 
 \section{Open Questions in RTS Game AI}\label{sec:questions}
 
-{\color{blue}
-[This is a preliminary list of open questions, derived from the Skype call on July 19. Some work is still required to turn this into the final list]
-}
-
-As illustrated in this paper, there is a set of problems in RTS game AI that could be considered mostly solved, of for which we have very good solutions. One example of such problems is pathfinding (mostly solved) or micro-management (we have good solutions). 
+As illustrated in this paper, there is a set of problems in RTS game AI that could be considered mostly solved, of for which we have very good solutions. One example of such problems is pathfinding (mostly solved) or low-scale micro-management (for which we have good solutions). 
 
 However, there are many other problems for which this is not the case. For example, there is no current Starcraft bot that can come up with its own tactical moves, such as ``unit drops''. Some bots do drops, but only if this is hard-coded; no bot has the capability of reasoning about the current situation, synthesize a tactical move that involves a ``unit drop'', and determine that this move is the best one in the current situation. This is related to the lack of real-time adversarial planning techniques that scale up to the size required for RTS games. Similarly, current bots do not exhibit adaptation to opponent strategies. Some switch between different build-orders, but do not fully adapt their strategy. No bot is capable of observing the opponent and autonomously synthesize a good plan from scratch to counter the opponent strategy.
 
-Specifically, the list of problems that are currently unsolved, grouped in various categories:
-
-{\color{blue}
+We present here a list of problems that are currently unsolved, grouped in various categories.
 
 \begin{itemize}
 
-\item Learning and adaptation:
+\item {\bf Learning and adaptation:}
 \begin{itemize}
-\item Adaptation to opponent strategy.
-\item Learning from experience in RTS games.
-\item Learning from observation (from demonstration, or from observing the opponent) in RTS games.
+\item Adaptation to opponent strategy: observing the opponent strategy, and synthesizing an adequate counter strategy. Current bots switch between predefined strategies based on hard-coded preconditions, or based on the performance of each predefined strategy against an opponent in previous games, but no current bot creates new strategies (like Chess or Go playing programs do).
+\item Learning from experience in RTS games: how can we make a bot that improves performance over time? some current bots learn which strategy (out of a predefined set of strategies) is best against a given opponent, but how can we devise learning strategies that can perform more general learning?
+\item Learning from observation (from demonstration, or from observing the opponent) in RTS games: how can we learn by observing the game play of other players? can we devise algorithms that can automatically extract strategies from observation, and later apply them?
 \end{itemize}
 
-\item Planning:
+\item {\bf Planning:}
 \begin{itemize}
-\item Adversarial planning under real-time constraints (there is some work on this area to be presented this year in AIIDE).
-\item Adversarial planning under uncertainty.
-\item Adversarial planning in partially-observable domains.
-\item Adversarial planning with resources (there exist planning algorithms that handle resources, like GRT-R, but cannot scale up to the size of problems needed for e.g. Starcraft).
+\item Adversarial planning under real-time constraints: although some solutions for small-scale real-time planning have been recently proposed (such as \cite{churchill2012AIIDE}, based on alpha-beta game-tree search), the problem of large-scale adversarial planning under real-time constraints is still open.
+\item Adversarial planning under uncertainty of partially-observable domains: how can we adapt adversarial planning techniques for dealing with uncertainty? This problem has been widely studied in the context of simple games such as back-gammon \cite{???}, or Poker \cite{???}. However, the techniques developed for those domains do not scale to RTS-game scenarios.
+\item Adversarial planning with resources: similarly, even if there exist planning algorithms that handle resources (like GRT-R \cite{???}), they cannot scale up to the size of problems needed for RTS games like Starcraft.
 \end{itemize}
 
-\item Scalability:
+\item {\bf Integration:}
 \begin{itemize}
-\item How to scale up existing algorithms for adversarial domains like game tree search or Monte Carlo search to the very large dimensions of RTS games.
+\item Multi-scale planning/reasoning: as described in this paper, all the bots developed for the Starcraft AI competitions decompose the problem of playing an RTS game into smaller subproblems, and then solutions for each of those subproblems are integrated in to a common architecture to play the game. However, the integration of each of the modules in a unified architecture is still an open problem. For example, how can decisions made at high-level modules be integrated with decisions made at lower-level modules? 
 \end{itemize}
 
-\item Integration:
+\item {\bf Domain Knowledge: }
 \begin{itemize}
-\item Multi-scale planning/reasoning: how to integrate reasoning at multiple levels of abstraction.
+\item We know how to incorporate some aspects of domain knowledge (e.g. build orders) into RTS game playing agents. But, in general, how to incorporate some forms of domain knowledge into algorithms for RTS games is still an open problem. For example, standard techniques to encode strategies for other forms of games, like Behavior Trees, are hard to deploy in RTS games. Is it possible to devise techniques that can automatically mine the existing collections of domain knowledge for an RTS game like Starcraft, and incorporate it into the bot? An initial exploration of this idea was carried out by Branavan et al. \cite{???}
+\end{itemize}
 \end{itemize}
 
-\item Domain Knowledge: 
-\begin{itemize}
-\item we know how to incorporate some aspects of domain knowledge (e.g. build orders), but, in general, how to incorporate some forms of domain knowledge into algorithms for RTS games is still an open problem. For example, standard techniques to encode strategies for other forms of games, like Behavior Trees, are hard to deploy in RTS games. 
-\end{itemize}
-\end{itemize}
-}
 
 
 \section{Empirical Evidence of What is Missing in Existing Bots}\label{sec:experiments}
