@@ -173,7 +173,19 @@ Figure \ref{fig:starcraft} shows a screenshot of Starcraft showing a player play
     \label{fig:starcraft}
 \end{figure}
 
-{\color{red} A typical Starcraft map is defined as a rectangular grid, typically ranging between 64x64 to 128x128 in size (although the resolution at which units move is finer), and each player can control up to 200 units (not including buildings). Moreover, each different race contains between 30 to 35 different types of units and buildings, each one with a significant number of special abilities}. All these factors together make Starcraft a significant challenge, in which humans are still much better than computers.
+{\color{red} A typical Starcraft map is defined as a rectangular grid,
+  typically  ranging between 64x64  to 128x128  in size  (although the
+  resolution  at which  units  move  is finer),  and  each player  can
+  control up  to 200 units (not including  buildings).  Moreover, each
+  different race  contains between 30  to 35 different types  of units
+  and  buildings,  each  one  with  a significant  number  of  special
+  abilities}. All these factors  together make Starcraft a significant
+challenge,   in   which   humans    are   still   much   better   than
+computers. Indeed, best Starcraft AIs are ranked between $D$ and $D^-$
+on the iCCup\footnote{http://www.iccup.com/starcraft/} ranking system,
+where average  amateur players are  ranked between $C^+$ and  $B$. For
+comparison, Starcraft professional  players are usually ranked between
+$A^-$ and $A^+$.
 
 \subsection{Challenges in RTS Game AI}\label{subsec:challenges}
 
@@ -228,14 +240,36 @@ uncertainty that we cannot really be sure to scratch off, even with the best sco
 One could argue that the extensional data is the only thing that matters because it is the only thing that has an influence on the game, but in reality, for very highly skilled players, discovering the intentions of the enemy is the key to winning. It allows for a compact understanding of the game state and development, while also giving additional information about the future. Whereas a player is doing action A to follow it up by action B or C depends on its intention, while the information about action A is visible and information about B or C is hidden, only intention allows for a choice.
 
 \subsubsection{Spatial and Temporal Reasoning}
-TODO just a paragraph on exposing why there are temporal and spatial reasoning in RTS AI.
+% TODO just a paragraph on exposing why there are temporal and spatial
+% reasoning in RTS AI.
+Spatial  reasoning   is  related  to   each  aspect  of   the  terrain
+exploitation.  This  involves  buildings  placing  where  one  has  to
+carefully  consider buildings  position  into its  own  bases to  both
+protect them  by creating  a wall against  invasions and to  avoid bad
+configurations  where large  units could  be stuck.  Base expansion
+also belongs  to spatial reasoning,  in the sense  that the AI  has to
+choose good available emplacements to  build a new base, regarding its
+own  position  and opponent's  bases.  Finally,  spatial reasoning  is
+closely related to  tactics with questions like ``Where  should I place
+my  units for battle?'',  favoring for  instance engagements  when the
+opponent's units are into a  bottleneck. In Starcraft, it is always an
+advantage to  have its units  on high ground  whereas enemy is  on low
+ground, since units  on low ground have no vision  on high ground, and
+firing from low  ground have only 70\% of chance to  hit units on high
+ground.
+
+As well as spatial reasoning, temporal reasoning is related to tactics
+since it implies  to decide about army movements,  like when attacking
+or withdrawing  units from battle.  Strategy also copes  with temporal
+reasoning, mainly  with planning problems:  when researching upgrades,
+when constructing wished buildings,  when switching strategy if needed,
+etc.
 
 \subsubsection{Domain Knowledge Exploitation}
 TODO
 
 \subsubsection{Task Decomposition}
-TODO
-}
+TODO }
 
 
 \section{Existing work on RTS Game AI}\label{sec:review}
