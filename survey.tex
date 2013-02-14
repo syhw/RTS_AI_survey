@@ -269,7 +269,44 @@ etc.
 TODO
 
 \subsubsection{Task Decomposition}
-TODO }
+Playing a  RTS game like Starcraft  can be decomposed  into three main
+tasks: 
+\begin{itemize}
+\item Strategy:  corresponds to the  decision making process.  This is
+  the  highest level of  abstraction for  the game  comprehension. RTS
+  games   are   all   about   finding   an   efficient   strategy   or
+  counter-strategy  against a  given opponent.  It concerns  the whole
+  set of  units and buildings  one owns. If  we may allow  ourselves a
+  military analogy, strategy is orders given by generals at the HQ. 
+\item  Tactics: are  the implementation  of the  current  strategy. It
+  implies  army and  building positioning,  movements, timing,  and so
+  on.  Tactics concerns a  group of  units. They  are orders  given by
+  officers on the battlefield.
+\item  Reactive  control:  is  the  implementation  of  tactics.  This
+  consists in   moving,    targeting,   firing,    fleeing   during
+  battle. Reactive control focuses on  a specific unit. It is soldiers
+  applying officers' orders.
+\end{itemize}
+
+\noindent
+Both     strategy      and     tactics     are      usually     called
+\textit{macro-management},  whereas reactive  control  is also  called
+\textit{micro-management}. In addition of the three tasks shown above,
+one could also consider these two tasks that an AI has to deal with:
+\begin{itemize}
+\item Terrain analysis: consists  in the analysis of regions composing
+  the  map,  chokes,  minerals  and  gas emplacements,  low  and  high
+  walkable grounds, islands, etc.
+\item Intelligence gathering:  corresponds to information collected on
+  our  opponent. Because of  the fog  of war,  a non-cheating  AI must
+  regulary send scouts to localize and spy enemy bases, and must see or
+  infer what buildings and technology the enemy has developed in order
+  to adapt its strategy.
+\end{itemize}
+
+\noindent
+The reader can find a good presentation of task decomposition for AIs 
+playing RTS in~\cite{weber2011acs}.  }
 
 
 \section{Existing work on RTS Game AI}\label{sec:review}
