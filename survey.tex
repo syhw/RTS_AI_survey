@@ -260,10 +260,12 @@ ground.
 
 As well as spatial reasoning, temporal reasoning is related to tactics
 since it implies  to decide about army movements,  like when attacking
-or withdrawing  units from battle.  Strategy also copes  with temporal
-reasoning, mainly  with planning problems:  when researching upgrades,
-when constructing wished buildings,  when switching strategy if needed,
-etc.
+or  withdrawing  units from  battle.   A  part  of temporal  reasoning
+consists  of  threat predictions,  where  one  has  to plan  when  the
+opponent is  likely running an  attack.  Strategy copes  with temporal
+reasoning  as well,  mainly with  planning problems:  when researching
+upgrades, when constructing  wished buildings, when switching strategy
+if needed, etc. 
 
 \subsubsection{Domain Knowledge Exploitation}
 TODO
@@ -305,7 +307,7 @@ one could also consider these two tasks that an AI has to deal with:
 \end{itemize}
 
 \noindent
-The reader can find a good presentation of task decomposition for AIs 
+The reader can find a  good presentation of task decomposition for AIs
 playing RTS in~\cite{weber2011acs}.  }
 
 
@@ -446,22 +448,107 @@ If we imagine the different tasks to perform in a complex RTS game in a two-dime
 Different bots, use different combinations of these two tools. Looking back at Figure \ref{fig:bot-architecture}, we can see the following use of abstraction and divide-in-conquer in the bots:
 
 \begin{itemize}
-\item BroodwarBotQ: uses abstraction for micro-management, and divide-and-conquer for macro-management and intelligence gathering. To avoid conflicts between modules (since the individual tasks of each of the modules are not completely independent), BBQ uses an arbitrator.
-\item Nova: is similar in design as BroodwarBotQ, and uses abstraction for micro-management, and divide-and-conquer for macro-management. The differences are that Nova does not have an arbitrator to resolve conflicts, but has a higher-level module ({\em strategy manager}), which posts information to the blackboard that the rest of modules follow (thus, making use of abstraction).
-\item UAlbertaBot: also uses abstraction in micro-management like the previous two bots. But it also uses it in macro-management: as can be seen, the production manager sends commands to the building manager, who is in charge of producing the buildings. This bot also uses divide-and-conquer, and tasks like scouting and resource gathering are managed by separate, independent modules.
-\item Skynet: makes extensive use of both abstraction and divide-and-conquer. Considering the decision making component of Skynet, we can see a high level module that issues commands to a series of tactics modules. The collection of tactic modules queue {\em tasks} (that are analogous to the abstract actions used in SPAR). Each different task has a specific low level module that knows how to execute it. Thus, Skynet uses a 3 layered abstraction hierarchy, and uses divide-and-conquer in all levels except the highest.
-\item SPAR: only uses abstraction. Its high-level module determines the strategy to use, and the tactical decision module divides it into a collection of {\em abstract actions}, that are executed by the lower-level modules.
-\item AIUR:  is mainly divide-and-conquer oriented, for  macro as well
-  as  for  micro,  with  a  slight  abstraction  on  macro  due  to  a
-  SpendManager deciding how to spend and share resources among Base, Production and Construction Managers. At the beginning of a game, the MoodManager initializes a ``mood'' which will influence both micro and macro. For example, micro-management is divided into three independent managers: the {\em Defense Manager}, controlling military units when there is nothing special, the {\em Under Attack Manager}, activated when the opponent is attacking our bases, and the {\em Army Manager}, taking control of units when it is time to attack, following a timing given by the current mood.
-\item BTHAI: uses a two-tier abstraction hierarchy, where a collection of high-level modules command a collection of lower-level agents in charge of each of the units. At the high-level, BTHAI uses divide-and-conquer, having multiple high-level modules issuing commands to the lower-level units.
+\item
+  BroodwarBotQ\footnote{\url{http://github.com/SnippyHolloW/BroodwarBotQ}}:
+  uses  abstraction for  micro-management, and  divide-and-conquer for
+  macro-management  and  intelligence  gathering. To  avoid  conflicts
+  between modules (since  the individual tasks of each  of the modules
+  are not completely independent), BBQ uses an arbitrator.
+\item  Nova\footnote{\url{http://nova.wolfwork.com/}}:  is similar  in
+  design as  BroodwarBotQ, and uses  abstraction for micro-management,
+  and  divide-and-conquer for  macro-management.  The differences  are
+  that Nova does not have  an arbitrator to resolve conflicts, but has
+  a  higher-level   module  ({\em  strategy   manager}),  which  posts
+  information to the blackboard that the rest of modules follow (thus,
+  making use of abstraction).
+\item
+  UAlbertaBot\footnote{\url{http://code.google.com/p/ualbertabot/}}:
+  also  uses abstraction  in  micro-management like  the previous  two
+  bots. But it  also uses it in macro-management: as  can be seen, the
+  production manager sends commands to the building manager, who is in
+  charge   of   producing   the   buildings.  This   bot   also   uses
+  divide-and-conquer, and  tasks like scouting  and resource gathering
+  are managed by separate, independent modules.
+\item       Skynet\footnote{\url{http://code.google.com/p/skynetbot/}}:
+  makes     extensive     use      of     both     abstraction     and
+  divide-and-conquer.  Considering the  decision  making component  of
+  Skynet, we  can see a  high level module  that issues commands  to a
+  series of  tactics modules. The  collection of tactic  modules queue
+  {\em  tasks} (that  are analogous  to the  abstract actions  used in
+  SPAR).  Each different  task has  a specific  low level  module that
+  knows how to  execute it. Thus, Skynet uses  a 3 layered abstraction
+  hierarchy,  and uses  divide-and-conquer  in all  levels except  the
+  highest.
+\item
+  SPAR\footnote{\url{http://www.planiart.usherbrooke.ca/projects/spar/}}:
+  only uses abstraction. Its high-level module determines the strategy
+  to  use,  and  the  tactical  decision  module  divides  it  into  a
+  collection  of {\em  abstract  actions}, that  are  executed by  the
+  lower-level modules.
+\item  AIUR\footnote{\url{http://code.google.com/p/aiurproject/}}:  is
+  mainly divide-and-conquer oriented, for  macro as well as for micro,
+  with a  slight abstraction on  macro due to a  SpendManager deciding
+  how  to  spend  and  share  resources  among  Base,  Production  and
+  Construction Managers.  At the beginning of a  game, the MoodManager
+  initializes  a  ``mood''  which  will  influence  both  tactics  and
+  strategy. Tactics  are divided into three  independent managers: the
+  {\em  Defense Manager},  controlling  military units  when there  is
+  nothing special, the {\em  Under Attack Manager}, activated when the
+  opponent is attacking our bases,  and the {\em Army Manager}, taking
+  control of units when it is time to attack, following a timing given
+  by the current mood.
+\item  BTHAI\footnote{\url{http://code.google.com/p/bthai/}}:  uses  a
+  two-tier  abstraction hierarchy,  where a  collection  of high-level
+  modules command a collection of lower-level agents in charge of each
+  of  the units.  At  the high-level,  BTHAI uses  divide-and-conquer,
+  having   multiple  high-level  modules   issuing  commands   to  the
+  lower-level units.
 \end{itemize}
 
 Additionally, except for BTHAI, all other agents use divide-and-conquer at a higher-level bot design and divide all the modules into two or three categories: {\em information gathering} and {\em decision}, or {\em information gathering}, {\em micro-management} and {\em macro-management}.
 
-Some bots using divide-and-conquer, assume that each of the modules can act independently and that their actions can be executed without interference. BBQ, UAlbertaBot and AIUR, however use an arbitrator ({\em Game Commander'} in UAlbertaBot) that makes sure that modules do not send contradictory orders to the same unit. However, very little bots handle the problem of how to coordinate resource usage amongst modules, for instance BTHAI uses a first-come-first-serve policy for spending resources, the first module that requests resources is the one that gets them. Nova and Skynet are exceptions, and implement some rudimentary prioritization based on the high level strategy. Following available resources and timing, AIUR's {\em Spend Manager} orders Base, Production and Construction Managers what they have to build/produce. It also orders to start tech research and upgrades.
+Some bots  using divide-and-conquer, assume  that each of  the modules
+can act independently  and that their actions can  be executed without
+interference.  BBQ,  UAlbertaBot and  AIUR, however use  an arbitrator
+({\em Game Commander'} in UAlbertaBot) that makes sure that modules do
+not send contradictory orders to  the same unit.  However, very little
+bots handle  the problem of  how to coordinate resource  usage amongst
+modules, for  instance BTHAI uses a  first-come-first-serve policy for
+spending resources,  the first module  that requests resources  is the
+one that gets them. Nova and Skynet are exceptions, and implement some
+rudimentary prioritization based on the high level strategy. Following
+available  resources and  timing,  AIUR's {\em  Spend Manager}  orders
+Base,  Production   and  Construction  Managers  what   they  have  to
+build/produce. It also orders to start tech research and upgrades. The
+idea here is  not to allocation resources among  different managers to
+satisfy a need (informally: ``I want  to do that, so I need M minerals
+and G gas''), but to do the  opposite, that is, to find how the AI can
+spend the available money: ``I have right now M minerals and G gas, so
+how can I spend it?''.
 
-One interesting aspect of the seven bots described above is that, while all of them are reactive at the lower level (reactive control), most if not all of them, are scripted at the highest level of abstraction. BTHAI reads build and squad formations from a predefined script, Nova's {\em Strategy Manager} is a predefined finite-state machine, BBQ's construction manager reads the build order from a predefined script, and Skynet's {\em BuildOrder Manager} is basically a predefined script. Such scripts describe the strategy that the bots will use, however, such strategy is always fixed. One could see this pre-scripting as if each bot defined a ``high-level programming language'' to describe Starcraft strategies, and the bots themselves are just interpreters of such strategy. Compared to current approaches for Chess or Go, this scripting seems a rigid and inflexible, but responds to the much higher complexity of the Starcraft game. An interesting exception to that is UAlbertaBot, which uses a search algorithm in the {\em Production Manager} to find near-optimal build orders. Another interesting case is AIUR, that uses a {\em Mood Manager} to randomly pick a mood among five (rush, aggressive, defensive, macro, fast expand), which will influence the build order, strategy and tactics, all of them scripted so far. This mood can change during the game, following the opponent behavior.
+One  interesting aspect  of the  seven bots  described above  is that,
+while all of them are  reactive at the lower level (reactive control),
+most  if  not all  of  them,  are scripted  at  the  highest level  of
+abstraction. BTHAI reads build  and squad formations from a predefined
+script,  Nova's {\em  Strategy Manager}  is a  predefined finite-state
+machine,  BBQ's construction  manager  reads the  build  order from  a
+predefined script, and Skynet's  {\em BuildOrder Manager} is basically
+a predefined script. Such scripts  describe the strategy that the bots
+will use, however,  such strategy is always fixed.  One could see this
+pre-scripting  as  if  each  bot defined  a  ``high-level  programming
+language'' to  describe Starcraft strategies, and  the bots themselves
+are just interpreters of such strategy. Compared to current approaches
+for  Chess or Go,  this scripting  seems a  rigid and  inflexible, but
+responds  to the  much higher  complexity  of the  Starcraft game.  An
+interesting  exception to  that is  UAlbertaBot, which  uses  a search
+algorithm in  the {\em Production Manager} to  find near-optimal build
+orders.  Another interesting  case  is  AIUR, that  uses  a {\em  Mood
+  Manager}  to   randomly  pick  a  mood  among   six  (cheese,  rush,
+aggressive, defensive,  macro, fast expand), which  will influence the
+build order,  strategy and tactics. All  of them scripted  so far, but
+build  orders  can been  modified  but  the  Spend Manager,  following
+available resources.  This mood can change during  the game, regarding
+the opponent behavior.
 
 In conclusion, we can see that there are two basic tools that can be used in an integration architecture: abstraction and divide-and-conquer, which are widely used by the existing Starcraft bots. For space reasons, we do not include an exhaustive comparison of the architectures of all the participating bots. Some other bots have been documented by their authors, such as SCAIL \cite{YoungSCAIL} or QUORUM \cite{young2012evolutionary}.
 
@@ -531,7 +618,7 @@ based micromanagement system to guide their mutalisks, which led them to victory
 with a standard defensive Terran opening strategy which transitioned into mech play in the late game.
 
 
-\begin{table}[bth]
+\begin{table}[t!]
 \caption{Results of the AIIDE 2010 competition.}
 \label{tab:aiide2010}
 \begin{small}
@@ -561,11 +648,14 @@ be determined the winner. Also decided was that the competition would become ope
 only to prevent possible cheating, but to promote healthy competition in future tournaments by giving
 newcomers and easier entry point by basing their design off of previous bots.
 
-In the end, Skynet\footnote{\url{http://code.google.com/p/skynetbot/}} won the competition with its solid Protoss play (results are summarized in Table \ref{tab:aiide2011}). The bot executed one of a small set of
-strategies randomly at the start of the match based on the map and the race of the opponent. Skynet would
-then amass a medium to large sized army and expand before moving out to attack. Good use of Dragoon range
-and kiting micromanagement allowed it to hold off the early aggression of other bots such as UAlbertaBot,
-which came in 2nd. 
+In the  end, Skynet  won the competition  with its solid  Protoss play
+(results  are  summarized   in  Table  \ref{tab:aiide2011}).  The  bot
+executed one of a small set of strategies randomly at the start of the
+match based on the map and the race of the opponent. Skynet would then
+amass a  medium to large  sized army and  expand before moving  out to
+attack. Good  use of Dragoon range and  kiting micromanagement allowed
+it to hold off the early aggression of other bots such as UAlbertaBot,
+which came in 2nd.
 
 UAlbertaBot used an early zealot-rush strategy to take advantage of the power of early game Protoss units. 
 It would send out the first zealots which were made and immediately attack the enemy base, using a unit
@@ -573,15 +663,39 @@ counting heuristic to determine whether or retreat or keep pushing. Of note is t
 online planning algorithm to construct all of its economic build-orders\cite{churchill2011build}, as no hard-coded build orders
 were used. 
 
-AIUR also chose Protoss, with a strategy which was in between Skynet and UAlbertaBot in terms of attack
-timings. Of note in these results was that a rock-paper-scissors effect happened among the top 3 finishers.
-Of the 30 rounds, Skynet beat UAlbertaBot 26 times, UAlbertaBot beat AIUR 29 times, and AIUR beat Skynet
-19 times. Another notable result is that Overmind did not choose to compete despite winning the 2010
-competition. After the competition, many bot programmers (including the Overmind team) realized that 
-their 2010 strategy was quite easily defeated by early game rushing strategies, and so they submitted
-a Terran bot instead, called Undermind, which finished in 7th.
+AIUR also chose  Protoss, with a strategy which  was in between Skynet
+and UAlbertaBot in terms of  attack timings.  At that time, AIUR chose
+one  mood among  five (leading  to slightly  different  strategies and
+tactics) at the  beginning of a game and kept it  until the end. These
+five moods were:
+\begin{itemize}
+\item  Rush:  where  the  bot  tries  early  attacks,  and  have  good
+  probabilities to send  the two or three first  Zealots to harass the
+  opponent.
+\item Aggressive: where  we have less chance to  perform harasses with
+  the first  Zealots, and  the first attack  is usually a  bit delayed
+  with regard to the Rush mood.
+\item Macro: where the AI do not try any early attacks and focus a bit
+  more on its economy before attacking.
+\item Defense: where the AI  ``turtles'' and wait to have a consequent
+  army before running an attack.
+\item  Fast expand:  where the  first building  constructed it  a base
+  expansion, for a very economical-oriented game.
+\end{itemize}
+Notice that  build orders are not  fully hard-coded since  they can be
+altered by AIUR's Spend Manager.
 
-\begin{table}[bth]
+Of  note  in  these  results  was that  a  rock-paper-scissors  effect
+happened among  the top  3 finishers.  Of  the 30 rounds,  Skynet beat
+UAlbertaBot 26  times, UAlbertaBot beat  AIUR 29 times, and  AIUR beat
+Skynet  19 times.   Another notable  result is  that Overmind  did not
+choose  to compete despite  winning the  2010 competition.   After the
+competition,  many  bot  programmers  (including  the  Overmind  team)
+realized that their  2010 strategy was quite easily  defeated by early
+game rushing strategies,  and so they submitted a  Terran bot instead,
+called Undermind, which finished in 7th.
+
+\begin{table}[t!]
 \caption{Results of the AIIDE 2011 competition.}
 \label{tab:aiide2011}
 \begin{small}
@@ -629,24 +743,34 @@ on previous results. 6 of the 10 entrants used this feature to aid in strategy s
 top 4 finishers. More improvements to the tournament environment also meant that a total of 4240 games
 could now be played in the same time period. Results are shown in Table \ref{tab:aiide2012}.
 
-Skynet once again won the competition with its solid Protoss build orders and good Dragoon kiting. AIUR
-and UAlbertaBot switched positions from the previous year to come 2nd and 3rd respectively. Both AIUR
-and UAlbertaBot used data stored from the results of previous games to select a strategy for future matches.
-UAlbertaBot did this using the UCB algorithm, while AIUR used a custom algorithm to achieve similar
-results. The effect of this strategy selection process can be seen Figure \ref{fig:aiide2012} which shows bot
-win percentages over time. While the earlier rounds of the tournament fluctuated wildly in results,
-eventually the results converged to their final values. One of the main reasons for this is due to
-the bots learning which strategies to use as the tournament progressed.
+Skynet once  again won  the competition with  its solid  Protoss build
+orders  and  good  Dragoon  kiting.   AIUR  and  UAlbertaBot  switched
+positions from  the previous  year to come  2nd and  3rd respectively.
+Both  AIUR  and UAlbertaBot  used  data  stored  from the  results  of
+previous games  to select a strategy for  future matches.  UAlbertaBot
+did  this  using  the  UCB   algorithm,  while  AIUR  used  a  uniform
+distribution  to choose  its  mood before  altering this  distribution
+after  some  games  against  the  same  opponent  to  favor  efficient
+strategies, achieving  similar results than  UAlbertaBot. Notice that,
+compared  to AIIDE 2011,  AIUR proposes  a new  mood, \textit{Cheese},
+implementing a  Photon Cannon rush  strategy in order to  surprise the
+opponent and  to finish the game  as soon as possible.   The effect of
+this strategy selection process can be seen Figure \ref{fig:aiide2012}
+which shows bot  win percentages over time.  While  the earlier rounds
+of the tournament fluctuated wildly in results, eventually the results
+converged to their  final values. One of the main  reasons for this is
+due to  the bots  learning which strategies  to use as  the tournament
+progressed.
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
-    \includegraphics[width=\columnwidth]{figures/aiide2012.png}
+    \includegraphics[width=\columnwidth]{figures/aiide2012_v2}
     \caption{Evolution of the win percentage of each bot participating in the AIIDE 2012 competition}
     \label{fig:aiide2012}
 \end{figure}
 
 
-\begin{table}[bth]
+\begin{table}[t!]
 \caption{Results of the AIIDE 2012 competition.}
 \label{tab:aiide2012}
 \begin{small}
@@ -732,7 +856,7 @@ to expanding). Gas is not mined as it is not needed for constructing Zealots.
  yet fully ready. 
 
 
-\begin{table*}[htb]
+\begin{table*}[t!]
 \caption{Results of the first round at CIG 2011, held in two brackets.
 Qualified for the final round: UAlbertaBot and Skynet (from A), Xelnaga
 and BroodwarBotQ (from B, the latter by comparing direct encounters
@@ -816,7 +940,7 @@ indicating Skynet as winner and UAlbertaBot as runner-up, being
 almost equally strong, and the two other bots as clearly inferior.
 
 
-\begin{table}[bth]
+\begin{table}[t!]
 \caption{Results of the CIG 2011 final round.}
 \label{tab:cig-final-round}
 \begin{small}
