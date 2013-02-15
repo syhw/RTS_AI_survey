@@ -285,9 +285,9 @@ tasks:
   on.  Tactics concerns a  group of  units. They  are orders  given by
   officers on the battlefield.
 \item  Reactive  control:  is  the  implementation  of  tactics.  This
-  consists in   moving,    targeting,   firing,    fleeing   during
-  battle. Reactive control focuses on  a specific unit. It is soldiers
-  applying officers' orders.
+  consists   in  moving,   targeting,  firing,   fleeing,  hit-and-run
+  techniques (aka ``kiting'')  during battle. Reactive control focuses
+  on a specific unit. It is soldiers applying officers' orders. 
 \end{itemize}
 
 \noindent
@@ -496,7 +496,8 @@ Different bots, use different combinations of these two tools. Looking back at F
   nothing special, the {\em  Under Attack Manager}, activated when the
   opponent is attacking our bases,  and the {\em Army Manager}, taking
   control of units when it is time to attack, following a timing given
-  by the current mood.
+  by the  current mood. This bot  does not manage however  any kind of
+  reactive controls so far.
 \item  BTHAI\footnote{\url{http://code.google.com/p/bthai/}}:  uses  a
   two-tier  abstraction hierarchy,  where a  collection  of high-level
   modules command a collection of lower-level agents in charge of each
@@ -527,28 +528,28 @@ spend the available money: ``I have right now M minerals and G gas, so
 how can I spend it?''.
 
 One  interesting aspect  of the  seven bots  described above  is that,
-while all of them are  reactive at the lower level (reactive control),
-most  if  not all  of  them,  are scripted  at  the  highest level  of
-abstraction. BTHAI reads build  and squad formations from a predefined
-script,  Nova's {\em  Strategy Manager}  is a  predefined finite-state
-machine,  BBQ's construction  manager  reads the  build  order from  a
-predefined script, and Skynet's  {\em BuildOrder Manager} is basically
-a predefined script. Such scripts  describe the strategy that the bots
-will use, however,  such strategy is always fixed.  One could see this
-pre-scripting  as  if  each  bot defined  a  ``high-level  programming
-language'' to  describe Starcraft strategies, and  the bots themselves
-are just interpreters of such strategy. Compared to current approaches
-for  Chess or Go,  this scripting  seems a  rigid and  inflexible, but
-responds  to the  much higher  complexity  of the  Starcraft game.  An
-interesting  exception to  that is  UAlbertaBot, which  uses  a search
-algorithm in  the {\em Production Manager} to  find near-optimal build
-orders.  Another interesting  case  is  AIUR, that  uses  a {\em  Mood
-  Manager}  to   randomly  pick  a  mood  among   six  (cheese,  rush,
-aggressive, defensive,  macro, fast expand), which  will influence the
-build order,  strategy and tactics. All  of them scripted  so far, but
-build  orders  can been  modified  but  the  Spend Manager,  following
-available resources.  This mood can change during  the game, regarding
-the opponent behavior.
+while all  of them  - except AIUR  - are  reactive at the  lower level
+(reactive  control), most  if not  all of  them, are  scripted  at the
+highest level  of abstraction. BTHAI reads build  and squad formations
+from  a  predefined  script,   Nova's  {\em  Strategy  Manager}  is  a
+predefined finite-state machine,  BBQ's construction manager reads the
+build  order from a  predefined script,  and Skynet's  {\em BuildOrder
+  Manager} is basically a predefined script. Such scripts describe the
+strategy  that the  bots will  use, however,  such strategy  is always
+fixed.   One could see  this pre-scripting  as if  each bot  defined a
+``high-level programming language''  to describe Starcraft strategies,
+and   the   bots   themselves    are   just   interpreters   of   such
+strategy.  Compared  to  current  approaches  for Chess  or  Go,  this
+scripting  seems a  rigid and  inflexible,  but responds  to the  much
+higher complexity of the  Starcraft game.  An interesting exception to
+that  is  UAlbertaBot, which  uses  a  search  algorithm in  the  {\em
+  Production  Manager}  to find  near-optimal  build orders.   Another
+interesting case is  AIUR, that uses a {\em  Mood Manager} to randomly
+pick  a mood among  six (cheese,  rush, aggressive,  defensive, macro,
+fast  expand), which  will  influence the  build  order, strategy  and
+tactics.  All of  them  scripted so  far,  but build  orders can  been
+modified but  the Spend Manager, following  available resources.  This
+mood can change during the game, regarding the opponent behavior.
 
 In conclusion, we can see that there are two basic tools that can be used in an integration architecture: abstraction and divide-and-conquer, which are widely used by the existing Starcraft bots. For space reasons, we do not include an exhaustive comparison of the architectures of all the participating bots. Some other bots have been documented by their authors, such as SCAIL \cite{YoungSCAIL} or QUORUM \cite{young2012evolutionary}.
 
