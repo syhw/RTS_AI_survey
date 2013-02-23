@@ -1021,33 +1021,54 @@ of the originally considered maps which has thus been replaced.
 This is surprising as all maps are well known league play maps
 or have been provided with the StarCraft Broodwar distribution
 itself.
-
-\ref{tab:cig2012}
-
-\ref{fig:cig2012-results}
-\ref{fig:cig2012-mapresults}
-
-map ‘size‘ has an effect!
- Nova against BBQ: good on 6-player, bad on 3-player
- SCAIL and Adjutant better on 6-player, BBQ worse on 	6-player
- UAlbertaBot better on 6-player (due to scouting?)
- Nova consistently good against UAlbertaBot
- Xelnaga only bot to beat Skynet, but only on 3-player 	maps
-
-Here are the 2 replays shown in the presentation: Xelnaga surprising Skynet with a targetted DTS attack on its probes, and Nova successfully luring UAlbertaBot's probes into its own base.
-
-things (many) bots can‘t do:
- handle islands
- play zerg
- play maps of different sizes (!!!)
- play against random race
- finish off beaten opponent
- adapt to opponent strategy
- cooperate (no teamplay)
-
-
-Setup and results for the CIG 2012 competition are 
+Setup, replays and results for the CIG 2012 competition can be found
 here\footnote{\url{http://ls11-www.cs.tu-dortmund.de/rts-competition/starcraft-cig2012}}.
+
+The overall results are displayed in table~\ref{tab:cig2012},
+and the win rate evolution over time in figure~\ref{fig:cig2012-results}.
+These are quite consistent with the results of the AIIDE 2012 competition,
+so that we can conclude that the best bots are not very dependent on 
+knowing the maps beforehand. However, the bot vs. bot win rates as
+displayed in figure~\ref{fig:cig2012-mapresults} show some interesting
+trends. On the maps with more possible start points, some bots do 
+better than others, namely SCAIL, Adjutant, Nova, and UAlbertaBot,
+the latter probably due to its very efficient scouting routine.
+Some bots however suffer from the increased uncertainty about
+the enemies position, namely Xelnaga and the BroodwarBotQ.
+
+As already observed before in the previously described competitions,
+there are also bots who consistently beat top ranked bots but have
+severe problems against lower ranked bots. E.g., Xelnaga is especially
+strong against Skynet on the 3-player maps (about 70\% wins). Reviewing
+the replays led to the assumption that Xelnaga usually tries to attack
+Skynet's probes with a dark templar strategy, and often succeeds. 
+Nova does very well against the UAlbertaBot, and the replays show
+that it sometimes succeeds to lure the probes into its own base, where
+they get killed, leading to severe resource problems. However, we cannot
+tell how often this happens as this would require to review every single
+replay between the 2 bots. Summarizing, most bots seem to have improved,
+which becomes clear if the nearly unchanged BTHAI bot is taken as a baseline.
+In 2011, it won more than half of its qualifying games, in 2012 it came
+out last with around 20\% wins. However, designing a bot in order to 
+beat a top bot (as for Xelnaga with Skynet) leads to a very restricted
+strategy that often leads to failure if playing against different bots.
+Note that in the direct encounter between Xelnaga and AIUR, its ancestor,
+Xelnaga looses consistently.
+
+Nevertheless, from the observations we made during the tournament,
+we can draw the conclusion that the available bots are still 
+very constrained. No bot in the competition played the Zerg race,
+which is surprising as the AIIDE 2010 winner (Overmind) did so.
+Presumably, implementing a good Zerg strategy is more demanding
+than for the Protoss or Terran races. Many bots consistently crashed
+when playing against a random race built-in bot for testing, and
+also did so when the map size was changed from $128\times 128$ to 
+any other. Furthermore, every single bot sometimes failed to finish
+off an already beaten opponent, such that the game had to be stopped
+after a previously determined maximum time. It also seems that most of
+the current bots are not very good at adapting their strategy to the
+one of their opponent during a game, or at least (via the read/write
+procedure of game information) within a series of games.
 
 
 
