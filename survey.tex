@@ -96,16 +96,9 @@ GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this %
 
 \maketitle
 
-{\color{blue}
 \begin{abstract}
-TODO: Idea of the paper is: ``one-stop guide on what is the
-state of the art in StarCraft AI''. It should help people participating in the competition focus
-their efforts, and also should help people implementing AI for RTS games in
-general (e.g. industry).  In Gabriel's words ``RTS AI problems, Solutions, State-of-the-art, conclude on what's "solved" since \cite{Buro03rts} and what's not.'' 
-
-For example, if someone wants to implement a bot, and wonders "how should I do scouting", our paper should provide a summary of the existing techniques, and pointers to know more.
+This paper presents an overview of the existing work on creating AI for real-time strategy (RTS) games. Specifically, we focus on the work performed around the game {\em StarCraft}, which has emerged in the past few years as the unified test-bed for this line of research. We describe the specific AI challenges posed by RTS games, and overview the solutions that have been explored to address them. Additionally, we also present a summary of the results of the recent StarCraft AI competitions, describing some of the architectures used by the participants. Finally, we conclude with a discussion emphasizing which problems in the context of RTS game AI have been solved, and which remain open.
 \end{abstract}
-}
 
 \begin{IEEEkeywords}
 Game AI, Real-Time Strategy, StarCraft, Review1
@@ -123,7 +116,7 @@ Game AI, Real-Time Strategy, StarCraft, Review1
 \IEEEpeerreviewmaketitle
 
 \section{Introduction}\label{sec:intro}
-\IEEEPARstart{S}{ince} Michael Buro's call for research in RTS games \cite{Buro03rts}, many researchers have answered the call. Specially, AI competitions like the ``AIIDE StarCraft AI Competition'' have caused many AI techniques to be
+\IEEEPARstart{S}{ince} Michael Buro's call for research in real-time strategy (RTS) games \cite{Buro03rts}, many researchers have answered the call. Specially, AI competitions like the ``AIIDE StarCraft AI Competition'' have caused many AI techniques to be
 applied to RTS AI. We will list and classify these approaches, explain their 
 power and their downsides and conclude on what is left to achieve human-level 
 RTS AI.
@@ -136,14 +129,14 @@ environments. RTS games can be seen as a simplification of a real-life
 environment, where there  exist simpler rules in a  finite and smaller
 world, but are complex enough  to bring very difficult and interesting
 problems  to  the scientific  community,  like  decision making  under
-uncertainty  or  real-time  planning.   Finding  efficient  techniques
+uncertainty  or  real-time adversarial planning.   Finding  efficient  techniques
 tackling  these problems  on  RTS  games can  thus  profit broader  AI
 domains, but  have also concrete  and direct applications in  the huge
 industry of  video games,  generating worldwide two  and a  half times
 more revenue than the Film industry in 2011.
 
 This paper, aiming to provide a one-stop guide on what is the state of
-the art in StarCraft AI, is organized as follow: Section~\ref{sec:rts}
+the art in RTS AI, and with a particular emphasis on the work done in StarCraft, is organized as follows: Section~\ref{sec:rts}
 introduces real-time strategy games, in particular the game StarCraft,
 and  the main  AI challenges  in RTS  games.  Section~\ref{sec:review}
 reviews  the existing  work on  RTS games  tackling  these challenges.
@@ -1170,17 +1163,17 @@ We present here a list of problems that are currently unsolved, grouped in vario
 
 
 
-\section{Empirical Evidence of What is Missing in Existing Bots}\label{sec:experiments}
-
-{\color{blue}
-Here, whatever experiments we want to include to support which aspects of RTS Game AI require more work.
-}
+%\section{Empirical Evidence of What is Missing in Existing Bots}\label{sec:experiments}
+%
+%{\color{blue}
+%Here, whatever experiments we want to include to support which aspects of RTS Game AI require more work.
+%}
 
 \section{Discussion and Conclusions}\label{sec:conclusions}
 
 
 
-\section*{Acknowledgments} {\color{blue} This research is partially funded by projects ... and ... . The authors would like to thank Florian Richoux, author of the AIUR bot, for his helpful comments and help in early drafts of this paper. }
+%\section*{Acknowledgments} {\color{blue} This research is partially funded by projects ... and ... . }
 
 
 
