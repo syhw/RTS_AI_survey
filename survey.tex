@@ -384,6 +384,7 @@ Hard-coded approaches have been extensively used in commercial RTS games. The mo
 % XXX: Santi: I've commented out this paragraph, since it has nothing to do with RTS games. There is no commercial RTS game using planning (neither STRIPS nor HTN) that I'm aware of. The references below refer to FEAR, which is an FPS game.
 %To this end, several approaches have been developed like hierarchical task networks, behavior trees and the comeback of STRIPS \cite{FikesSTRIPS} planning in the industry \cite{orkinGDC_FEAR}. Regardless, one cannot but notice that adaptability is not the strong point of industrial RTS AI. In the context of RTS AI strategy adaptation is related to the idea of opponent modeling. An adapting AI needs to keep track of what the enemy is doing in order to estimate the probability that they will use a specific strategy and adapt its own strategy accordingly. 
 
+
 % PLANNING:
 Approaches using planning techniques have also been explored in the literature. For example Onta\~{n}\'{o}n et al. \cite{CBR_Planning} explored the use of real-time case-based planning (CBP) in the domain of Wargus (a Warcraft II clone). In their work, they used human demonstration to learn plans, that are then composed at run-time in order to form full-fledges strategies to play the game. In \cite{PlanRetrieval} they improve over  their previous CBP approach by using situation assessment for improving the quality and speed of plan retrieval. Hierarchical Task-Network (HTN) planning has also been explored with some success in the context of simpler first-person shooter games. Planning approaches offer more adaptivity of the AI strategy compared to hard-coded approaches. However, the real-time constraints of RTS games limit the planning approaches that can be applied, being HTN and case-based planning the only ones explored so far. Moreover, none of these approaches addresses any timing or scheduling issues, which are key in RTS games. On notable exception is the work of Churchill and Buro \cite{churchill2011build}, who used planning in order to construct its economic build-orders taking into account timing constraints of the different actions.
 
@@ -986,6 +987,24 @@ Position & bot & win \% \\ \hline
 \subsubsection{First Round}
 \label{sec:cig-first-round}
 
+\begin{figure*}[t]
+	%\vspace*{-2ex}
+    \centering
+    \includegraphics[width=0.34\textwidth]{figures/vstable3.pdf}
+    \includegraphics[width=0.3\textwidth]{figures/vstable6.pdf}
+    \includegraphics[width=0.3\textwidth]{figures/vstable.pdf}
+	%\vspace*{-4ex}
+    \caption{Win percentages of CIG 2012 competition, from left
+    to right: 3-player maps only, 6-player maps only, all maps.
+    Read from line to column, bot in row wins given fraction of
+    games against bot in column. For some bots, we find interesting
+    differences, e.g. Xelnaga gets worse on 6-player maps, UAlbertaBot
+    gets better. Only Xelnaga can reliably beat Skynet, but only on 
+    3-player maps}
+    \label{fig:cig2012-mapresults}
+\end{figure*}
+
+
 As the CIG competition games were executed manually due to
 a lack of available software (the AIIDE program was not yet
 available at that time), the organizers separated the ten entries into
@@ -1013,26 +1032,6 @@ In some cases, neither bot was able to finish the other off completely,
 so that they went into a passive state. We manually ended such games after
 around 15 minutes and assigned victory to the bot that had obtained more
 points as indicated on the end game screen.
-
-
-\begin{figure*}[t]
-	%\vspace*{-2ex}
-    \centering
-    \includegraphics[width=0.34\textwidth]{figures/vstable3.pdf}
-    \includegraphics[width=0.3\textwidth]{figures/vstable6.pdf}
-    \includegraphics[width=0.3\textwidth]{figures/vstable.pdf}
-	%\vspace*{-4ex}
-    \caption{Win percentages of CIG 2012 competition, from left
-    to right: 3-player maps only, 6-player maps only, all maps.
-    Read from line to column, bot in row wins given fraction of
-    games against bot in column. For some bots, we find interesting
-    differences, e.g. Xelnaga gets worse on 6-player maps, UAlbertaBot
-    gets better. Only Xelnaga can reliably beat Skynet, but only on 
-    3-player maps}
-    \label{fig:cig2012-mapresults}
-\end{figure*}
-
-
 
 \subsubsection{Final Round}
 \label{sec:cig-final-round}
@@ -1128,9 +1127,28 @@ procedure of game information) within a series of games.
 
 \section{Open Questions in RTS Game AI}\label{sec:questions}
 
+\begin{figure*}[tb]
+    \centering
+    \includegraphics[width=\textwidth]{figures/botopenings.pdf}
+    \caption{Distribution of different openings performed by the different bots participating in the AIIDE 2011 competition. For each bot match-up, the colors show the proportion of times that the column bot used a particular opening against the row bot.}
+    \label{fig:aiide2011-botopenings}
+\end{figure*}
+
+
 As illustrated in this paper, there is a set of problems in RTS game AI that could be considered mostly solved, of for which we have very good solutions. One example of such problems is pathfinding (mostly solved) or low-scale micro-management (for which we have good solutions). 
 
-However, there are many other problems for which this is not the case. For example, there is no current StarCraft bot that can come up with its own tactical moves, such as ``unit drops''. Some bots do drops, but only if this is hard-coded; no bot has the capability of reasoning about the current situation, synthesize a tactical move that involves a ``unit drop'', and determine that this move is the best one in the current situation. This is related to the lack of real-time adversarial planning techniques that scale up to the size required for RTS games. Similarly, current bots do not exhibit adaptation to opponent strategies. Some switch between different build-orders, but do not fully adapt their strategy. No bot is capable of observing the opponent and autonomously synthesize a good plan from scratch to counter the opponent strategy.
+However, there are many other problems for which this is not the case. For example, there is no current StarCraft bot that can come up with its own tactical moves, such as ``unit drops''. Some bots do drops, but only if this is hard-coded; no bot has the capability of reasoning about the current situation, synthesize a tactical move that involves a ``unit drop'', and determine that this move is the best one in the current situation. This is related to the lack of real-time adversarial planning techniques that scale up to the size required for RTS games. 
+
+
+\begin{figure*}[tb]
+    \centering
+    \includegraphics[width=\textwidth]{figures/botopenings2012.pdf}
+    \caption{Distribution of different openings performed by the different bots participating in the AIIDE 2012 competition. For each bot match-up, the colors show the proportion of times that the column bot used a particular opening against the row bot.}
+    \label{fig:aiide2012-botopenings}
+\end{figure*}
+
+
+Similarly, current bots do not exhibit adaptation to opponent strategies. Some switch between different build-orders, but do not fully adapt their strategy. No bot is capable of observing the opponent and autonomously synthesize a good plan from scratch to counter the opponent strategy. Figures \ref{fig:aiide2011-botopenings} and \ref{fig:aiide2012-botopenings} show evidence of this. We analyzed the replays from the 2011 and 2012 AIIDE competitions (shown in Figures \ref{fig:aiide2011-botopenings} and \ref{fig:aiide2012-botopenings} respectively). Specifically, we analyzed the way bots choose their openings depending on which other bot they are playing against. Given that there is no dominant strategy in StarCraft, and it is necessary to see what the opponent is doing in order to determine the best opening, we would expect bots to change their openings depending on which other bot they are playing (since each bot uses a different strategy, or set of strategies). Using clustering, we identified the most common openings in all the replays from the 2011 and 2012 competitions (each one shown with a different color in the figures). As the figures show, the top three ranked bots in the competition (Skynet, Aiur and UalbertaBot) do not change their strategy at all depending on their opponent. For example, the Skynet bot (both in 2011 and 2012), always uses the same opening (``two gates''), except when playing a Terran opponent, when it uses ``nony''. This reflects the trend that the performance of bots is still more dependent on carefully hand-crafted and non-adaptive behaviors, than on on-line decision making procedures. This is so, since most of the problems that need to be solved in order to implement such procedures are still open.
 
 We present here a list of problems that are currently unsolved, grouped in various categories.
 
@@ -1199,9 +1217,15 @@ As argued before, addressing these open research questions would not just lead t
 %Biography text here.
 %\end{IEEEbiographynophoto}
 
-\begin{IEEEbiography}[{\includegraphics[width=2cm, keepaspectratio]{jim.jpg}}]{Jim Raynor}
-Jim Raynor was a Confederate marshal on Mar Sara at the time of the first zerg incursions on that world. He is now with Raynor's Raiders Inc.
-\end{IEEEbiography}
+%\begin{IEEEbiography}[{\includegraphics[width=2cm, keepaspectratio]{jim.jpg}}]{Jim Raynor}
+%Jim Raynor was a Confederate marshal on Mar Sara at the time of the first zerg incursions on that world. He is now with Raynor's Raiders Inc.
+%\end{IEEEbiography}
+
+%\begin{IEEEbiography}[{\includegraphics[width=2cm, keepaspectratio]{figures/santi.jpg}}]{Santiago Onta\~{n}\'{o}n}
+\begin{IEEEbiographynophoto}{Santiago Onta\~{n}\'{o}n}
+is an assistant professor in the Computer Science Department at Drexel University. His main research interests are game AI, case-based reasoning and machine learning, fields in which he has published more than 90 peer-reviewed papers. He obtained his PhD form the Autonomous University of Barcelona (UAB), Spain. Before joining Drexel University, he held postdoctoral research positions at the Artificial Intelligence Research Institute (IIIA) in Barcelona, Spain, at the Georgia Institute of Technology (GeorgiaTech) in Atlanta, USA, and at the University of Barcelona, Spain.  
+\end{IEEEbiographynophoto}
+
 
 \end{document}
 
