@@ -610,7 +610,7 @@ some auxiliary libraries and the bot code. A consequence of this
 indirect way of integrating new bots is that every machine can
 only run one custom bot, requiring two computers for a 2-player game.
 
-The following subsections summarize the results of all the StarCraft AI competitions held at the AIIDE (Artificial Intelligence for Interactive Digital Entertainment) and CIG (Computational Intelligence in Games) conferences during the past years.
+The following subsections summarize the results of all the StarCraft AI competitions held at the AIIDE (Artificial Intelligence for Interactive Digital Entertainment) and CIG (Computational Intelligence in Games) conferences during the past years. Additionally we analyze the statistics from the StarCraft Bot Ladder, where the best bots play against each other all the time. 
 
 \subsection{AIIDE}\label{sec:AIIDE}
 
@@ -641,13 +641,13 @@ Tournament 3 was a tech-limited StarCraft game on a single known map with no fog
 were only allowed to choose the Protoss race, with no late game units allowed. 8 bots
 faced off in this double-elimination tournament with mimicbot taking first place over botnik in the final.
 As this was a perfect information variant of StarCraft, mimicbot adopted a strategy of
-"mimics its opponent's build order, gaining an economic advantage whenever possible" which
+``mimics its opponent's build order, gaining an economic advantage whenever possible'' which
 worked quite well.
 
 Tournament 4 was the complete game of {\em StarCraft: BroodWar} with fog of war enforced. The tournament
 was run with a random pairing double-elimination format with each match being best of 5 games.
 Competitors could play as any of the three races, with the only limitations in gameplay
-being those which were considered 'cheating' in the StarCraft community. A map pool of
+being those which were considered ``cheating'' in the StarCraft community. A map pool of
 5 well-known professional maps was announced to competitors in advance, with a random map being chosen for each game.
 
 Results are shown in Table \ref{tab:aiide2010}. The team that won was Overmind\footnote{\url{http://overmind.cs.berkeley.edu}}, from University of California, Berkeley. Using the Zerg race, their
@@ -1109,6 +1109,20 @@ strategy that often leads to failure if playing against different bots.
 Note that in the direct encounter between Xelnaga and AIUR, its ancestor,
 Xelnaga looses consistently.
 
+\begin{figure*}[tb]
+    \centering
+    \includegraphics[width=\textwidth]{figures/botLadder1.pdf}
+    \caption{StarCraft Bot Ladder: bot's Elo Rating from February 1, 2012 to June 20, 2012}
+    \label{fig:botLadder1}
+\end{figure*}
+
+\begin{figure*}[tb]
+    \centering
+    \includegraphics[width=\textwidth]{figures/botLadder2.pdf}
+    \caption{StarCraft Bot Ladder: bot's Elo Rating from September 1, 2012 to January 10, 2013}
+    \label{fig:botLadder2}
+\end{figure*}
+
 Nevertheless, from the observations we made during the tournament,
 we can draw the conclusion that the available bots are still 
 very constrained. No bot in the competition played the Zerg race,
@@ -1123,6 +1137,15 @@ after a previously determined maximum time. It also seems that most of
 the current bots are not very good at adapting their strategy to the
 one of their opponent during a game, or at least (via the read/write
 procedure of game information) within a series of games.
+
+
+
+\subsection{StarCraft Bot Ladder}\label{sec:cig2011}
+
+StacrCraft Bot Ladder is a website\footnote{\url{http://bots-stats.krasi0.com}} where bot versus bot matches are automatized to running all the time. This place is a great resource of data sets (all the game replays are available) and statistics. For the bot ranking they use an Elo rating system suitable for calculate the \emph{relative skill level} of a bot in two-players games. In this system each player has a numerical rating and they won or lost points after each game. The amount of points depends on the difference in the ratings of the players, so a player will gain more points by beating a higher-rated player than by beating a lower-rated player. These kind of rating system is widely used in games like chess.
+This bot ladder compiles different versions of bots from the main worldwide competitions (like AIIDE, CIG or SSCAI\footnote{\url{http://sscaitournament.com}}), even some independent or ``under construction'' bots. Therefore is the perfect place to test the performance of a bot and observer the current state of the art in StarCraft bots.
+
+Figure \ref{fig:botLadder1} shows the Elo rating of the bots in the ladder during the first half year of 2012. The ranking is practically equal than the AIIDE 2011 competition, showing the lack of adaptability of the current bots. We can notice these more extremely in Figure \ref{fig:botLadder2} for the second half year of 2012. During this period new bots were introduced in the ladder. We can observe how the first version of KillerBot made a huge impact on Skynet ranking and finally in the second version of KillerBot it becomes the best bot for more than one month (again we can see how the rest of the bots aren't able to adapt and the ranking doesn't change so much). And finally at January Ximp bot appears with a new strategy that overcomes the rest of the bots.
 
 
 
