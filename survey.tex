@@ -130,21 +130,23 @@ environment, where there  exist simpler rules in a  finite and smaller
 world, but are complex enough  to bring very difficult and interesting
 problems  to  the scientific  community,  like  decision making  under
 uncertainty  or  real-time adversarial planning.   Finding  efficient  techniques
-tackling  these problems  on  RTS  games can  thus  profit broader  AI
+to address these problems  on  RTS  games can  thus  profit broader  AI
 domains, but  have also concrete  and direct applications in  the huge
-industry of  video games,  generating worldwide two  and a  half times
-more revenue than the Film industry in 2011.
+industry of  video games.
+%,  generating worldwide two  and a  half times more revenue than the Film industry in 2011.
+% This statement is not fair, the reference I found it only compare all the game industry revenue (including hardware sales) vs theatrical film industry revenue (i.e. not DVD sales, ...)
 
 This paper, aiming to provide a one-stop guide on what is the state of
-the art in RTS AI, and with a particular emphasis on the work done in StarCraft, is organized as follows: Section~\ref{sec:rts}
+the art in RTS AI, and with a particular emphasis on the work done in StarCraft. 
+It is organized as follows: Section~\ref{sec:rts}
 introduces real-time strategy games, in particular the game StarCraft,
 and  the main  AI challenges  in RTS  games.  Section~\ref{sec:review}
 reviews  the existing  work on  RTS games  tackling  these challenges.
-Section~\ref{sec:bot} shows  the current state  of the art  AI players
-for  StarCraft, presenting  seven AI  players participating  to annual
+Section~\ref{sec:bot} shows  the current state  of the art of bots, i.e. a computer-controlled players, 
+for  StarCraft, presenting  seven bots participating  to annual
 StarCraft    AI    competitions     for    a    couple    of    years.
 Section~\ref{sec:competition}  presents these two  annual competitions
-held  at the AIIDE  and CIG  conferences.  Section~\ref{sec:questions}
+held  at the AIIDE  and CIG  conferences and a StarCraft bot game ladder\footnote{An extended tournament, which can potentially go on indefinitely.}.  Section~\ref{sec:questions}
 compiles open questions  in RTS game AI which must  be tackled to make
 bots reaching a high human-level play.
 % skip "empirical evidence..." for the moment
@@ -159,10 +161,6 @@ Finally, the paper concludes on discussions and perspectives.
 % state of the art in StarCraft AI
 % }
 
-% {\color{red} The term bot is introduced in II.B.2 Learning, when we talk about
-% bots for the first time in the paper.}
-% {\color{red} make sure to introduce the term ``bot''}
-
 \section{Real-Time Strategy Games}\label{sec:rts}
 
 Real-time Strategy (RTS) is a sub-genre of strategy games where players need to build an economy (gathering resources and building a base) and military power (training units and researching technologies) in order to defeat their opponents (destroying their army and base). From a theoretical point of view, the main differences between RTS games and traditional board games such as Chess are:
@@ -171,15 +169,15 @@ Real-time Strategy (RTS) is a sub-genre of strategy games where players need to 
 \item They are {\em simultaneous move} games, where more than one player can issue actions at the same time. Additionally, these actions are {\em durative}, i.e. actions are not instantaneous, but take some amount of time time to complete.
 \item RTS games are ``real-time'', which actually means is that each player has a very small amount of time to decide the next move. Compared to Chess, where players have several minutes to decide the next action, in StarCraft, the game executes at 24 iterations per second, which means that players only have 55ms to decide a move, before the game state changes.
 \item Most RTS games are partially observable: players can only see the part of the map that has been explored.
-\item Most RTS games are non-deterministic.
+\item Most RTS games are non-deterministic. Some actions have a chance of success.
 \item And finally, the complexity of these games, both in terms of state space size and in terms of number of actions available at each decision cycle is very large. For example, the state space of Chess is typically estimated to be around $10^{50}$, heads up no-limit texas holdem poker around $10^{80}$, and Go around $10^{170}$. In comparison, the state space of StarCraft in a typical map is estimated to be many orders of magnitude larger than any of those, as discussed in the next section.
 \end{itemize}
 
-For those reasons, standard techniques used for playing classic board games, such as alpha-beta search, cannot be directly applied to solve RTS games without the definition of some level of abstraction, or some other simplification. Interestingly enough, humans seem to be able to deal with the complexity of RTS games, and are still vastly superior to computers in these type of games \cite{burochurchill2012aimagazine}. For those reasons, a large spectrum of techniques have been attempted to deal with this domain, as we will describe below. The remainder of this section is devoted to describe StarCraft as a research testbed, and on detailing the open challenges in RTS game AI.
+For those reasons, standard techniques used for playing classic board games, such as game tree search, cannot be directly applied to solve RTS games without the definition of some level of abstraction, or some other simplification. Interestingly enough, humans seem to be able to deal with the complexity of RTS games, and are still vastly superior to computers in these type of games \cite{burochurchill2012aimagazine}. For those reasons, a large spectrum of techniques have been attempted to deal with this domain, as we will describe below. The remainder of this section is devoted to describe StarCraft as a research testbed, and on detailing the open challenges in RTS game AI.
 
 \subsection{StarCraft}\label{subsec:StarCraft}
 
-{\em StarCraft: Brood War} is an immensely popular RTS game released in 1998 by Blizzard Entertainment. StarCraft is set in a science-fiction based world where the player must choose one of the three races: Terran, Protoss or Zerg. One of the most remarkable aspects of StarCraft is that the three races in StarCraft are extremely well balanced:
+{\em StarCraft: Brood War} is an immensely popular RTS game released in 1998 by Blizzard Entertainment. StarCraft is set in a science-fiction based world where the player must choose one of the three races: Terran, Protoss or Zerg. One of the most remarkable aspects of StarCraft is that the three races are extremely well balanced:
 
 \begin{itemize}
 	\item Terrans, provide units that are versatile and flexible giving a balanced option between Protoss and Zergs.
@@ -188,28 +186,24 @@ For those reasons, standard techniques used for playing classic board games, suc
 \end{itemize}
 
 
-Figure~\ref{fig:StarCraft} shows a screenshot of StarCraft showing a player playing Terrans. In order to win a StarCraft game, players must first gather resources (minerals and gas), which they can spend in creating additional buildings and units. As resources become available, players need to allocate them for creating more buildings (which reinforce the economy, and allow players to create units or unlock stronger units) and train attack units. Units must be distributed to accomplish different tasks such as reconnaissance, defense and attack. While performing all of those tasks, players also need to strategically understand the geometry of the map at hand, in order to decide where to place new buildings (concentrate in a single area, or expand to different areas) or where to set defensive outposts. Finally, when offensive units of two players meet, each player must quickly maneuver each of the units in order to fight a battle, which requires quick and reactive control of each of the units in order to successfully fight the battle. 
+Figure~\ref{fig:StarCraft} shows a screenshot of StarCraft showing a player playing Terrans. In order to win a StarCraft game, players must first gather resources (minerals and Vespene gas). As resources become available, players need to allocate them for creating more buildings (which reinforce the economy, and allow players to create units or unlock stronger units), research new technologies (in order to use new unit abilities or improve the units) and train attack units. Units must be distributed to accomplish different tasks such as reconnaissance, defense and attack. While performing all of those tasks, players also need to strategically understand the geometry of the map at hand, in order to decide where to place new buildings (concentrate in a single area, or expand to different areas) or where to set defensive outposts. Finally, when offensive units of two players meet, each player must quickly maneuver each of the units in order to fight a battle, which requires quick and reactive control of each of the units in order to successfully fight the battle. 
 
 \begin{figure}
     \centering
     \includegraphics[width=0.8\columnwidth]{figures/starcraft1.png}
-    \caption{A screenshot of StarCraft% {\color{red} is this a good screenshot? can we actually have a screenshot? or is this copyrighted? Do we even want a screenshot?}.
+    \caption{A screenshot of \emph{StarCraft: Brood War}% {\color{red} is this a good screenshot? can we actually have a screenshot? or is this copyrighted? Do we even want a screenshot?}.
     .}
     \label{fig:StarCraft}
 \end{figure}
 
-A typical StarCraft map is defined as a rectangular grid,
-typically  ranging between 64x64  to 128x128  in size  (although the
-resolution  at which  units  move  is finer),  and  each player  can
+A typical StarCraft map is defined as a rectangular grid, where the $width \times height$ of the map is measured in the number of $32 \times 32$ square of pixels, a.k.a build tiles. Although the
+resolution  at which  units  move  is in squares of $8 \times 8$ pixels, a.k.a walk tiles. The standard dimensions are 64, 96, 128, 192 and 256. Each player  can
 control up  to 200 units (not including  buildings).  Moreover, each
 different race  contains between 30  to 35 different types  of units
 and  buildings,  each  one  with  a significant  number  of  special
 abilities. All these factors  together make StarCraft a significant
 challenge,   in   which   humans    are   still   much   better   than
-computers. Indeed, best StarCraft AIs are ranked between $D$ and $D^-$
-on the iCCup\footnote{http://www.iccup.com/StarCraft/} ranking system,
-where average  amateur players are  ranked between $C^+$ and  $B$. For
-comparison, StarCraft professional  players are usually ranked between
+computers. For instance, in the game ladder iCCup\footnote{http://www.iccup.com/StarCraft/} where users are ranked by their current point totals: $E$ being the lowest possible rank, and $A^+$ and $Olympic$ being the second highest and highest ranks, respectively. Best StarCraft AI bots are ranked between $D$ and $D^−$, where average  amateur players are  ranked between $C^+$ and  $B$. For comparison, StarCraft professional  players are usually ranked between
 $A^-$ and $A^+$.
 
 From a theoretical point of view, the state space of a StarCraft for a given map is enormous. For example, consider a 128x128 map. At any given moment there might be between 50 to 400 units in the map, each of which might have a complex internal state (remaining energy and hit-points, action being executed, etc.). Which, quickly lead to an immense number of possible states (way beyond the size of smaller games, such as Chess or Go). For example, just considering the location of each unit, we might have 128x128 possible positions per unit, and 400 units, giving us an initial number of $16384^{400} \approx 10^{1685}$. If we add the other factors playing a role in the game, we obtain even larger numbers. 
@@ -222,21 +216,21 @@ the branching factor, $b$ and the depth of the game, $d$, as proposed in~\cite{G
 
 % From Gabriel's dissertation:
 % ------------------------------------
-%�How does the state of possible actions grow?� To measure this, we
+%ÒHow does the state of possible actions grow?Ó To measure this, we
 %used a measure from perfect information zero-sum games (as Checkers,
 %Chess and Go): the branching factor* b and the depth d of a typical
 %game. The complexity of a game (for taking a decision) is proportional
 %to bd.
 %[...]
-%In RTS games, b � 200 is a lower bound (in StarCraft we may have
+%In RTS games, b Å 200 is a lower bound (in StarCraft we may have
 %between 50 to 400 units to control), and very good amateurs and
 %professional players perform more than 300 actions per minute. As
 %StarCraft is a simultaneous move, multi-units game, a strict number
 %for b would be |actions||units| (actions account for atomic moves and
 %abilities), thus for StarCraft b would be around 30^{60}. Strictly
 %speaking, for a StarCraft game, d = 24  game_seconds (24 game frames
-%per second), with a game duration of 25 minutes, this gives d �
-%36,000, thus b^d � 30^{60^{36000}} .
+%per second), with a game duration of 25 minutes, this gives d Å
+%36,000, thus b^d Å 30^{60^{36000}} .
 
 
 
@@ -265,14 +259,14 @@ While there has been a significant work in many, others have been untouched (e.g
 %\end{itemize}
 
 \subsubsection{Planning}
-As mentioned above, the size of the state space in RTS games is vastly larger than that of traditional board-games such as Chess or Go. Additionally, the number of actions that can be executed at given instant of time is also much larger. Thus, standard adversarial planning approaches, such as game tree search are not directly applicable. As we elaborate later, planning in RTS games can be seen as having multiple levels of abstraction: at a higher level, players need long-term planning capabilities, in order to develop a strong economy in the game; at a low level, individual units need to be moved in coordination to fight battles taking into account the terrain and the opponent. Techniques that can address this large planning problems by either sampling, or hierarchical decomposition do not yet exist.
+As mentioned above, the size of the state space in RTS games is vastly larger than that of traditional board-games such as Chess or Go. Additionally, the number of actions that can be executed at a given instant of time is also much larger. Thus, standard adversarial planning approaches, such as game tree search are not directly applicable. As we elaborate later, planning in RTS games can be seen as having multiple levels of abstraction: at a higher level, players need long-term planning capabilities, in order to develop a strong economy in the game; at a low level, individual units need to be moved in coordination to fight battles taking into account the terrain and the opponent. Techniques that can address this large planning problems by either sampling, or hierarchical decomposition do not yet exist.
 
 \subsubsection{Learning}
 Given the difficulties in playing RTS games by directly using adversarial planning techniques, many research groups have turned attention to learning techniques. We can distinguish three types of learning problems in RTS games:
 \begin{itemize}
-\item {\em Prior learning}: how can we exploit available data, such as existing replays, or information about specific maps for learning appropriate strategies before hand? A significant amount of work has gone in this direction.%, such as \cite{WeberCIG09,SynnaeveCIG11,SynnaeveAIIDE11,OntanonMSR10}.
-\item {\em In-game learning}: how can bots, \textit{i.e.,} AI players, can deploy online learning techniques that allow them to improve their game play while playing a game? these techniques might include reinforcement learning techniques, but also opponent modeling. The main problem again is the fact that the state space is too large.
-\item {\em Inter-game learning}: what can be learned from one game that can be used to increase the chances of victory in the next game? Some work has used simple game-theoretical solutions to select amongst a pool of predefined strategies, but the general problem remains unanswered.
+\item {\em Prior learning}: How can we exploit available data, such as existing replays, or information about specific maps for learning appropriate strategies before hand? A significant amount of work has gone in this direction.%, such as \cite{WeberCIG09,SynnaeveCIG11,SynnaeveAIIDE11,OntanonMSR10}.
+\item {\em In-game learning}: How can bots deploy online learning techniques that allow them to improve their game play while playing a game? These techniques might include reinforcement learning techniques, but also opponent modeling. The main problem again is the fact that the state space is too large and the fact that RTS games are partially observable.
+\item {\em Inter-game learning}: What can be learned from one game that can be used to increase the chances of victory in the next game? Some work has used simple game-theoretical solutions to select amongst a pool of predefined strategies, but the general problem remains unanswered.
 \end{itemize}
 
 %%% I think there are two important aspects of uncertainty in RTS games:
@@ -305,18 +299,19 @@ units are into a bottleneck.
 % [Flo:  70% to hit high  ground units according to  Ben Weber's paper
 % [3], and 53.125% according  to BWAPI website. Who's right? Should we
 % add this in the paper?]
-%In StarCraft, it is always an advantage to  have its units  on high ground  whereas enemy is  on low ground, since units  on low ground have no vision  on high ground, and firing from low  ground have only 70\% of chance to  hit units on high ground.
+% [Alberto: I guess Weber's number comes from StarCraft walkthroughs like this: http://www.supercheats.com/pc/walkthroughs/starcraftbroodwar-walkthrough01.txt, there is also a chance to hit in even grounds (like 98%). But since we cannot see the original code all of these numbers are approximations. In any case we can keep explaining the concept without numbers ;)]
+For instance, in StarCraft, it is always an advantage to  have its units  on high ground  whereas enemy is  on low ground, since units  on low ground have no vision  on high ground, and firing from low ground have a chance to  hit units on high ground.
 
 Analogously, temporal reasoning is key in tactical or strategic reasoning. For example, timing attacks and retreats to gain advantage. At a higher strategic level, players need to reason about when to perform long-impact economic actions such as upgrades, building construction, strategy switching, etc. all taking into account that the effects of these actions are not immediate, but longer term.
 
 
 \subsubsection{Domain Knowledge Exploitation}
-In traditional board-games such as Chess, researchers have exploited the large amounts of existing domain knowledge to create good evaluation functions to be used by alpha-beta search algorithms, extensive opening books, or end-game tables. In the case of RTS games, it is still unclear the ways in which the significantly large amount of domain knowledge (in the forms or strategy guides, replays, etc.) can be exploited by bots. Most work in this area has focused on two main directions: on the one hand, researchers are finding ways in which to hard-code existing strategies into bots, so that bots only need to decide which strategies to deploy, instead of having to solve the complete problem of deciding which actions to execute by each individual unit at each time step. One the other hand, large datasets of replays have been created \cite{synnaeve2012dataset}, from where strategies, trends or plans have been tried to learn. However, StarCraft games are quite complex, and how to automatically learn from such datasets is still an open problem.
+In traditional board-games such as Chess, researchers have exploited the large amounts of existing domain knowledge to create good evaluation functions to be used by alpha-beta search algorithms, extensive opening books, or end-game tables. In the case of RTS games, it is still unclear the ways in which the significantly large amount of domain knowledge (in the forms or strategy guides, replays, etc.) can be exploited by bots. Most work in this area has focused on two main directions: on the one hand, researchers are finding ways in which to hard-code existing strategies into bots, so that bots only need to decide which strategies to deploy, instead of having to solve the complete problem of deciding which actions to execute by each individual unit at each time step. One the other hand, large datasets of replays have been created \cite{WeberCig09, synnaeve2012dataset}, from where strategies, trends or plans have been tried to learn. However, StarCraft games are quite complex, and how to automatically learn from such datasets is still an open problem.
 
 \subsubsection{Task Decomposition}
 For all the previous reasons, most existing approaches to play games like StarCraft work by decomposing the problem of playing a RTS game into a collection of smaller problems, to be solved independently. Specifically, a common subdivision is:
 \begin{itemize}
-\item {\em Strategy}: often called {\em macro-management}, corresponds to the high-level decision making process.  This is
+\item {\em Strategy}: corresponds to the high-level decision making process.  This is
   the  highest level of  abstraction for  the game  comprehension. RTS
   games   are   all   about   finding   an   efficient   strategy   or
   counter-strategy  against a  given opponent.  It concerns  the whole
@@ -324,9 +319,9 @@ For all the previous reasons, most existing approaches to play games like StarCr
 \item  {\em Tactics}: are  the implementation  of the  current  strategy. It
   implies  army and  building positioning,  movements, timing,  and so
   on.  Tactics concerns a  group of  units. %They  are orders  given by officers on the battlefield.
-\item  {\em Reactive  control}: often called, {\em micro-management} is  the  implementation  of  tactics.  This
+\item  {\em Reactive  control}: is  the  implementation  of  tactics.  This
   consists   in  moving,   targeting,  firing,   fleeing,  hit-and-run
-  techniques (aka ``kiting'')  during battle. Reactive control focuses
+  techniques (a.k.a. ``kiting'')  during battle. Reactive control focuses
   on a specific unit. %It is soldiers applying officers' orders. 
 %\end{itemize}
 %
@@ -342,6 +337,12 @@ For all the previous reasons, most existing approaches to play games like StarCr
 \item {\em Intelligence gathering}:  corresponds to information collected about
   the  opponent. Because of  the fog-of-war,  players must
   regularly send scouts to localize and spy enemy bases.%, and must see or  infer what buildings and technology the enemy has developed in order  to adapt its strategy.
+\end{itemize}
+
+We want to mention also the task decomposition that the gamer community do. Given the fact that players cannot perform multiple actions at the same time, they divide their tasks in two groups:
+\begin{itemize}
+  \item {\em Macro}: is the ability to control your units individually. A good \emph{macro} player usually keeps their units alive during more time.
+  \item {\em Micro}: is the ability to produce units and to expand at the appropriate times to keep your production of units flowing. A good \emph{micro} player usually has the larger army.
 \end{itemize}
 
 The reader can find a  good presentation of task decomposition for AIs
@@ -413,7 +414,7 @@ Forbus et al. \cite{Forbus2002} showed the importance to have qualitative spatia
 Hale et al. \cite{Hale08} presented a 2D geometric navigation mesh generation method from expanding convex regions from seeds. 
 Finally, Perkins \cite{Perkins10} applied Voronoi decomposition (then pruning) %\cite{Karavelas04}
 to detect regions and relevant choke points in RTS maps. This approach is implemented for StarCraft in BWTA\footnote{\url{http://code.google.com/p/bwta/}}.
-% Isla 2006 Game AI Programming Wisdom 3. Charles River Media. chapter Probabilistic Target Tracking and Search Using Occupancy Maps, 379–388. ? 
+% Isla 2006 Game AI Programming Wisdom 3. Charles River Media. chapter Probabilistic Target Tracking and Search Using Occupancy Maps, 379â€“388. ? 
 
 % MACHINE LEARNING:
 Concerning tactical decision making, many different approaches have been explored such as machine learning or game tree search. Concerning machine learning approaches, 
@@ -472,7 +473,7 @@ Playing an RTS game involves dealing with all the problems described above. A fe
 
 Figure \ref{fig:bot-architecture} shows some representative examples of the integration architectures used by different bots in the AIIDE and CIG StarCraft AI competitions (see Section \ref{sec:competition}): BroodwarQ \cite{SynnaeveMicroCig11}, Nova \cite{uriarte2012kiting}, UAlbertaBot \cite{churchill2011build}, Skynet, SPAR, AIUR, and BTHAI \cite{Hagelback12}. Each box represents an individual module with a clearly defined task (only modules with a black background can send actions directly to StarCraft). Dashed arrows represent data flow, and solid arrows represent control (when a module can command another module to perform some task). For example, we can see how SPAR is divided in two sets of modules: {\em situation analysis} and {\em decision making}, the first with three modules dedicated to analyze the current situation of the game, and the later with 4 modules dedicated to exploit that information to decide what to do. We can see how the decision making aspect of SPAR is organized hierarchically, with the higher-level module ({\em strategic decision}) issuing commands to the next module ({\em tactical decision}), which sends commands to the next module ({\em action implementation}), and so on. Only the lower-level modules can send actions directly to StarCraft. 
 
-On the other hand, bots such as NOVA or BroodwarBotQ (BBQ) only use a hierarchical organization for {\em micro-management} (controlling the attack units), but use a decentralized organization for the rest of the bot. In Nova and BBQ, there is a collection of modules that control different aspects of the game (workers, production, construction, etc.). These modules can all send actions directly to StarCraft. In Nova those modules coordinate mostly through writing data in a shared blackboard, and in BBQ they coordinate only when they have to use a shared resource (unit) by means of an arbitrator.
+On the other hand, bots such as Nova or BroodwarBotQ (BBQ) only use a hierarchical organization for {\em micro-management} (controlling the attack units), but use a decentralized organization for the rest of the bot. In Nova and BBQ, there is a collection of modules that control different aspects of the game (workers, production, construction, etc.). These modules can all send actions directly to StarCraft. In Nova those modules coordinate mostly through writing data in a shared blackboard, and in BBQ they coordinate only when they have to use a shared resource (unit) by means of an arbitrator.
 
 By analyzing the structure of these bots, we can see that there are two main tools that can be used when designing an integration architecture:
 
