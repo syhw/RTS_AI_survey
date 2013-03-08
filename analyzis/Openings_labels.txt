@@ -1,0 +1,54 @@
+"two_gates" -> 2 Gateways rush zealots
+http://wiki.teamliquid.net/starcraft/2_Gate_(vs._Protoss)
+"fast_dt" -> rush Dark Templars asap to benefit before detection is
+out http://wiki.teamliquid.net/starcraft/DT_Rush_(vs._Protoss)
+"templar" -> have high templars in the mix as fast as possible,
+standard against hydralisks, mutas (if no corsairs), mid-game PvP
+"speedzeal" -> zealots +1 attack + speed (legs enhancement) timing
+http://wiki.teamliquid.net/starcraft/%2B1_SpeedZeal_(vs_Zerg)
+"corsair" -> have a corsair asap and then either sair/DT (Bisu build)
+http://wiki.teamliquid.net/starcraft/Corsair/Dark_Templar_(vs._Zerg)
+or sair/Reaver http://wiki.teamliquid.net/starcraft/Sair/Reaver_(vs._Zerg)
+or sair/goon http://wiki.teamliquid.net/starcraft/Corsair/Dragoon_(vs._Zerg)
+"nony" -> 3 gates goons into robo it's between
+http://wiki.teamliquid.net/starcraft/4_Gate_Goon_(vs._Protoss) and
+http://wiki.teamliquid.net/starcraft/2_Gate_Reaver_(vs._Protoss)
+"reaver_drop" -> reaver drop asap
+http://wiki.teamliquid.net/starcraft/1_Gate_Reaver
+
+"bio" -> M&M (marines and medics) from
+http://wiki.teamliquid.net/starcraft/Sparks_Terran to
+http://wiki.teamliquid.net/starcraft/Standard_Pre-Hive_Timing_Attack
+"rax_fe" -> 1 rax into fast expand
+http://wiki.teamliquid.net/starcraft/1_Rax_FE_(vs._Zerg) , siege
+expand should be counted in here too (as the early timing of the
+expansion is a strong feature)
+"two_facto" -> two factories push/timing based on tanks (but _not_
+vultures only pushes)
+http://wiki.teamliquid.net/starcraft/2_Factory_Builds like the
+http://wiki.teamliquid.net/starcraft/Nada_2_Fac
+"vultures" -> fast vultures
+http://wiki.teamliquid.net/starcraft/2_Fact_Vults_(vs._Terran) or
+http://wiki.teamliquid.net/starcraft/2_Fact_Vult/Mines_(vs._Protoss)
+"air" -> fast wraith
+http://wiki.teamliquid.net/starcraft/1_Port_Wraith_(vs._Terran)
+"drop" -> fast drop (1 tank + vultures with mines vs Protoss or M&M vs
+Zerg) http://wiki.teamliquid.net/starcraft/Fast_Drop_(vs._Protoss)
+
+"speedlings" -> fast speedlings timing attack
+http://wiki.teamliquid.net/starcraft/9_Pool_Speed_(vs._Protoss) or
+http://wiki.teamliquid.net/starcraft/12_Pool_(vs._Zerg)
+"fast_mutas" -> fast mutalisks
+http://wiki.teamliquid.net/starcraft/9_Gas,_10_Pool_(vs._Zerg) ,
+http://wiki.teamliquid.net/starcraft/9_Pool_Speed_into_1_Hatch_Spire_(vs._Zerg)
+, http://wiki.teamliquid.net/starcraft/2_Hatch_Muta_(vs._Protoss) and
+http://wiki.teamliquid.net/starcraft/2_Hatch_Muta_(vs._Terran)
+"mutas" -> mutalisks but in a more economical/industrial way, here the
+3rd hatch (2nd expansion) is the first feature
+http://wiki.teamliquid.net/starcraft/3_Hatch_Muta_(vs._Terran)
+"lurkers" -> lurkers asap to benefit before detection is out
+http://wiki.teamliquid.net/starcraft/1_Hatch_Lurker_(vs._Protoss) and
+http://wiki.teamliquid.net/starcraft/1_Hatch_Lurker and
+http://wiki.teamliquid.net/starcraft/2_Hatch_Lurker_(vs._Terran)
+"hydras" -> mass hydra push (before templar/siege tech)
+http://wiki.teamliquid.net/starcraft/3_Hatch_Hydralisk_(vs._Protoss)
