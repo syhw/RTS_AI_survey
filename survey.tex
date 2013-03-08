@@ -92,12 +92,12 @@ GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this %
 
 % The paper headers
 \markboth{TCIAIG ~Vol.~X, No.~Y, Month~Year}%
-{Shell \MakeLowercase{\textit{et al.}}: TODO: Title here}
+{??? \MakeLowercase{\textit{et al.}}: A Survey of RTS Game AI Research and Competition in StarCraft}
 
 \maketitle
 
 \begin{abstract}
-This paper presents an overview of the existing work on creating AI for real-time strategy (RTS) games. Specifically, we focus on the work performed around the game {\em StarCraft}, which has emerged in the past few years as the unified test-bed for this line of research. We describe the specific AI challenges posed by RTS games, and overview the solutions that have been explored to address them. Additionally, we also present a summary of the results of the recent StarCraft AI competitions, describing some of the architectures used by the participants. Finally, we conclude with a discussion emphasizing which problems in the context of RTS game AI have been solved, and which remain open.
+This paper presents an overview of the existing work on AI for real-time strategy (RTS) games. Specifically, we focus on the work around the game {\em StarCraft}, which has emerged in the past few years as the unified test-bed for this research. We describe the specific AI challenges posed by RTS games, and overview the solutions that have been explored to address them. Additionally, we also present a summary of the results of the recent StarCraft AI competitions, describing the architectures used by the participants. Finally, we conclude with a discussion emphasizing which problems in the context of RTS game AI have been solved, and which remain open.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -116,37 +116,31 @@ Game AI, Real-Time Strategy, StarCraft, Review1
 \IEEEpeerreviewmaketitle
 
 \section{Introduction}\label{sec:intro}
-\IEEEPARstart{S}{ince} Michael Buro's call for research in real-time strategy (RTS) games \cite{Buro03rts}, many researchers have answered the call. Specially, AI competitions like the ``AIIDE StarCraft AI Competition'' have caused many AI techniques to be
-applied to RTS AI. We will list and classify these approaches, explain their 
-power and their downsides and conclude on what is left to achieve human-level 
+\IEEEPARstart{T}{he} field of real-time strategy (RTS) game AI has advanced significantly since Michael Buto's call for research in this area \cite{Buro03rts}. Specially, competitions like the ``AIIDE StarCraft AI Competition'' have motivated the exploration of many AI approaches in the context of RTS AI. We will list and classify these approaches, explain their 
+strengths and weaknesses and conclude on what is left to achieve human-level 
 RTS AI.
 
-Many  challenging AI  problems can  be found  in  dynamic environments
-where  one does  not have  a  perfect, complete  information of  their
-current  state, as well  as their  evolution.  Road  traffic, finance,
-weather  forecasts are  examples of  huge, complex,  real-life dynamic
+Complex dynamic environments, where it is not possible to have perfect nor complete information about the current state or about the dynamics of the environment, pose significant challenges for artificial intelligence. Road  traffic, finance, or
+weather  forecasts are  examples of such large, complex, real-life dynamic
 environments. RTS games can be seen as a simplification of a real-life
-environment, where there  exist simpler rules in a  finite and smaller
-world, but are complex enough  to bring very difficult and interesting
-problems  to  the scientific  community,  like  decision making  under
-uncertainty  or  real-time adversarial planning.   Finding  efficient  techniques
-tackling  these problems  on  RTS  games can  thus  profit broader  AI
-domains, but  have also concrete  and direct applications in  the huge
-industry of  video games,  generating worldwide two  and a  half times
-more revenue than the Film industry in 2011.
+environment, simpler dynamics in a  finite and smaller
+world, although still complex enough  to bring very difficult and interesting
+problems  to  the scientific  community like  decision making  under
+uncertainty  or  real-time adversarial planning. Finding efficient  techniques for
+tackling  these problems  on  RTS  games can  thus  benefit broader  AI
+domains, but  also have concrete  and direct applications in  the ever growing
+industry of  video games.%, generating worldwide two  and a  half times more revenue than the Film industry in 2011.
 
 This paper, aiming to provide a one-stop guide on what is the state of
 the art in RTS AI, and with a particular emphasis on the work done in StarCraft, is organized as follows: Section~\ref{sec:rts}
 introduces real-time strategy games, in particular the game StarCraft,
 and  the main  AI challenges  in RTS  games.  Section~\ref{sec:review}
-reviews  the existing  work on  RTS games  tackling  these challenges.
-Section~\ref{sec:bot} shows  the current state  of the art  AI players
-for  StarCraft, presenting  seven AI  players participating  to annual
-StarCraft    AI    competitions     for    a    couple    of    years.
-Section~\ref{sec:competition}  presents these two  annual competitions
-held  at the AIIDE  and CIG  conferences.  Section~\ref{sec:questions}
-compiles open questions  in RTS game AI which must  be tackled to make
-bots reaching a high human-level play.
+reviews  the existing  work on tackling these challenges in RTS games.
+Section~\ref{sec:bot} analyzes several current state of the art RTS game playing agents (called {\em bots}), selected form the participants to annual
+StarCraft    AI    competitions.
+Section~\ref{sec:competition}  presents results of the recent annual competitions
+held at the AIIDE  and CIG  conferences.  Section~\ref{sec:questions}
+compiles open questions in RTS game AI.
 % skip "empirical evidence..." for the moment
 Finally, the paper concludes on discussions and perspectives.
 
@@ -1221,21 +1215,20 @@ As argued before, addressing these open research questions would not just lead t
 %Jim Raynor was a Confederate marshal on Mar Sara at the time of the first zerg incursions on that world. He is now with Raynor's Raiders Inc.
 %\end{IEEEbiography}
 
-%\begin{IEEEbiography}[{\includegraphics[width=2cm, keepaspectratio]{figures/santi.jpg}}]{Santiago Onta\~{n}\'{o}n}
-\begin{IEEEbiographynophoto}{Santiago Onta\~{n}\'{o}n}
-is an assistant professor in the Computer Science Department at Drexel University. His main research interests are game AI, case-based reasoning and machine learning, fields in which he has published more than 90 peer-reviewed papers. He obtained his PhD form the Autonomous University of Barcelona (UAB), Spain. Before joining Drexel University, he held postdoctoral research positions at the Artificial Intelligence Research Institute (IIIA) in Barcelona, Spain, at the Georgia Institute of Technology (GeorgiaTech) in Atlanta, USA, and at the University of Barcelona, Spain.  
-\end{IEEEbiographynophoto}
-
-\begin{IEEEbiographynophoto}{Florian Richoux}
-  is an associate  professor at the Laboratory of  Computer Science of
-  the University of Nantes,  France.  His main research field concerns
-  parallel  algorithms for solving  constraint-based problems  and has
-  strong  interests   in  AI,  in  particular  game   AI  and  machine
-  learning. He  obtained his Ph.D. in Theoretical  Computer Science at
-  the {\'E}cole Polytechnique  in 2009 and has been  for three years a
-  CNRS   research  fellow  at   the  Japanese-French   Laboratory  for
-  Informatics of the University of Tokyo, Japan.
-\end{IEEEbiographynophoto}
+%\begin{IEEEbiographynophoto}{Santiago Onta\~{n}\'{o}n}
+%is an assistant professor in the Computer Science Department at Drexel University. His main research interests are game AI, case-based reasoning and machine learning, fields in which he has published more than 90 peer-reviewed papers. He obtained his PhD form the Autonomous University of Barcelona (UAB), Spain. Before joining Drexel University, he held postdoctoral research positions at the Artificial Intelligence Research Institute (IIIA) in Barcelona, Spain, at the Georgia Institute of Technology (GeorgiaTech) in Atlanta, USA, and at the University of Barcelona, Spain.  
+%\end{IEEEbiographynophoto}
+%
+%\begin{IEEEbiographynophoto}{Florian Richoux}
+%  is an associate  professor at the Laboratory of  Computer Science of
+%  the University of Nantes,  France.  His main research field concerns
+%  parallel  algorithms for solving  constraint-based problems  and has
+%  strong  interests   in  AI,  in  particular  game   AI  and  machine
+%  learning. He  obtained his Ph.D. in Theoretical  Computer Science at
+%  the {\'E}cole Polytechnique  in 2009 and has been  for three years a
+%  CNRS   research  fellow  at   the  Japanese-French   Laboratory  for
+%  Informatics of the University of Tokyo, Japan.
+%\end{IEEEbiographynophoto}
 
 \end{document}
 
