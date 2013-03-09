@@ -1180,7 +1180,37 @@ However, there are many other problems for which this is not the case. For examp
 \end{figure*}
 
 
-Similarly, current bots do not exhibit adaptation to opponent strategies. Some switch between different build-orders, but do not fully adapt their strategy. No bot is capable of observing the opponent and autonomously synthesize a good plan from scratch to counter the opponent strategy. Figures \ref{fig:aiide2011-botopenings} and \ref{fig:aiide2012-botopenings} show evidence of this. We analyzed the replays from the 2011 and 2012 AIIDE competitions (shown in Figures \ref{fig:aiide2011-botopenings} and \ref{fig:aiide2012-botopenings} respectively). Specifically, we analyzed the way bots choose their openings depending on which other bot they are playing against. Given that there is no dominant strategy in StarCraft, and it is necessary to see what the opponent is doing in order to determine the best opening, we would expect bots to change their openings depending on which other bot they are playing (since each bot uses a different strategy, or set of strategies). Using clustering, we identified the most common openings in all the replays from the 2011 and 2012 competitions (each one shown with a different color in the figures). As the figures show, the top three ranked bots in the competition (Skynet, Aiur and UalbertaBot) do not change their strategy at all depending on their opponent. For example, the Skynet bot (both in 2011 and 2012), always uses the same opening (``two gates''), except when playing a Terran opponent, when it uses ``nony''. This reflects the trend that the performance of bots is still more dependent on carefully hand-crafted and non-adaptive behaviors, than on on-line decision making procedures. This is so, since most of the problems that need to be solved in order to implement such procedures are still open.
+Similarly, current bots do not exhibit adaptation to opponent strategies. Some switch between different build-orders, but do not fully adapt their strategy. No bot is capable of observing the opponent and autonomously synthesize a good plan from scratch to counter the opponent strategy. Figures \ref{fig:aiide2011-botopenings} and \ref{fig:aiide2012-botopenings} show evidence of this. We analyzed the replays from the 2011 and 2012 AIIDE competitions (shown in Figures \ref{fig:aiide2011-botopenings} and \ref{fig:aiide2012-botopenings} respectively). Specifically, we analyzed the way bots choose their openings depending on which other bot they are playing against. Given that there is no dominant strategy in StarCraft, and it is necessary to see what the opponent is doing in order to determine the best opening, we would expect bots to change their openings depending on which other bot they are playing (since each bot uses a different strategy, or set of strategies). Using clustering, we identified the most common openings in all the replays from the 2011 and 2012 competitions (each one shown with a different color in the figures). Now we give a description of the different openings that we considered to build the clustering. Most of the following names are specific building or units of StarCraft, for a better comprehension we refer the reader to \footnote{\url{http://wiki.teamliquid.net/starcraft/Category:Strategies}}:
+\begin{itemize}
+  \item Protoss openings:
+  \begin{itemize}
+    \item \emph{two\_gates}: Build two \emph{Gateways} and keep training \emph{Zealots}.
+    \item \emph{fast\_dt}: Produce \emph{Dark Templars} as soon as possible.
+    \item \emph{templar}: Train \emph{High Templars} as fast as possible.
+    \item \emph{speedzeal}: Train \emph{Zealots}  and research attack and speed upgrades as soon as possible.
+    \item \emph{corsair}: Produce \emph{Corsairs} as soon as possible and then make transition to train \emph{Dark Templars}, \emph{Reavers} or \emph{Dragoons}.
+    \item \emph{nony}: Build three \emph{Gateways} and massive training of \emph{Dragoons}.
+    \item \emph{reaver\_drop}: Train \emph{Reavers} as soon as possible to be able to do drops.
+  \end{itemize}
+  \item Terran openings:
+  \begin{itemize}
+    \item \emph{bio}: Produce a large army of \emph{Marines} and \emph{Medics}.
+    \item \emph{rax\_fe}: Take the closest ``natural expansion'' as soon as possible. This provides a big economic boost in the early to mid game.
+    \item \emph{two\_facto}: Build two \emph{Factories} and keep producing \emph{Tanks}.
+    \item \emph{vultures}: Produce mainly \emph{Vultures} and research mines.
+    \item \emph{air}: Produce \emph{Wraiths} as soon as possible for an air attack.
+    \item \emph{drop}: Train \emph{Dropships} as soon as possible to be able to do drops. 
+  \end{itemize}
+  \item Zerg openings:
+  \begin{itemize}
+    \item \emph{speedlings}: Train \emph{Zerlings} and research speed upgrade as soon as possible.
+    \item \emph{fast\_mutas}: Produce mainly \emph{Mutalisks}.
+    \item \emph{mutas}: Expand two times for a stronger economy before massive training of \emph{Mutalisks}.
+    \item \emph{lurkers}: Train \emph{Lurkers} as soon as possible to take benefit of its cloak ability.
+    \item \emph{hydras}: Massive production of \emph{Hydralisks}.
+  \end{itemize}
+\end{itemize}
+As the figures show, the top three ranked bots in the competition (Skynet, Aiur and UalbertaBot) do not change their strategy at all depending on their opponent. For example, the Skynet bot (both in 2011 and 2012), always uses the same opening (\emph{two\_gates}), except when playing a Terran opponent, when it uses \emph{nony}. This reflects the trend that the performance of bots is still more dependent on carefully hand-crafted and non-adaptive behaviors, than on on-line decision making procedures. This is so, since most of the problems that need to be solved in order to implement such procedures are still open.
 
 We present here a list of problems that are currently unsolved, grouped in various categories.
 
