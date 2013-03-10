@@ -450,7 +450,7 @@ Finally, although pathfinding does not fall under our previous definition of rea
 
 \subsection{Holistic Approaches}
 
-Holistic approaches to address RTS AI attempt to address the whole problem using a single unified method. To the best of our knowledge, with a few exceptions, such as the Darmok system \cite{OntanonMSR10} (which uses a combination of case-based reasoning and learning from demonstration), there hasn't been much work in this direction.   The main reason is that the complexity of RTS games is too large, and approaches that decompose the problem into smaller, separate, problems, achieve better results in practice. However, holistic approaches, based, for example, on Monte Carlo Tree Search, have not been explored so far, and would be a very interesting venue of future work.
+Holistic approaches to address RTS AI attempt to address the whole problem using a single unified method. To the best of our knowledge, with a few exceptions, such as the Darmok system \cite{OntanonMSR10} (which uses a combination of case-based reasoning and learning from demonstration) or ALisp \cite{Marthi05}, there hasn't been much work in this direction.   The main reason is that the complexity of RTS games is too large, and approaches that decompose the problem into smaller, separate, problems, achieve better results in practice. However, holistic approaches, based, for example, on Monte Carlo Tree Search, have not been explored so far, and would be a very interesting venue of future work.
 
 A related problem is that of integrating reasoning at multiple levels of abstraction. Molineaux et al. \cite{Molineaux08} showed that the difficulty of working with multi-scale goals and plans can be handled directly by case-based reasoning (CBR), via an integrated RL/CBR algorithm using continuous models. Reactive planning \cite{WeberCig10}, a decompositional planning similar to hierarchical task networks \cite{HTNPlanning}, allows for plans to be changed at different granularity levels and so for multi-scale (hierarchical) goals integration of low-level control. Synnaeve and Bessi\`{e}re \cite{SynnaeveMicroCig11} achieve hierarchical goals (coming from tactical decisions) integration through the addition of another sensory input corresponding to the goal's objective. 
 
@@ -461,7 +461,7 @@ Thanks to the recent organization of international game AI competitions focused 
 
 %\subsection{RTS Bot Architectures}\label{sec:integration}
 
-Playing an RTS game involves dealing with all the problems described above. A few approaches, like CAT \cite{LTW}, Darmok \cite{OntanonMSR10} or ALisp \cite{Marthi05} try to deal with the problem in a monolithic manner, by using a single AI technique. This resembles approaches to solve other games, such as Chess or Go, where a single game-tree search approach is enough to play the game at human level. However, none of those systems aims at achieving near human performance. In order to achieve human-level performance, RTS AI designers use a lot of domain knowledge in order to divide the task of playing the game into a collection of sub-problems, which can be dealt-with using individual AI techniques (as discussed in the previous section). 
+Playing an RTS game involves dealing with all the problems described above. A few approaches, like CAT \cite{LTW}, Darmok \cite{OntanonMSR10} or ALisp \cite{Marthi05} try to deal with the problem in a monolithic manner, by using a single AI technique. However, none of those systems aims at achieving near human performance. In order to achieve human-level performance, RTS AI designers use a lot of domain knowledge in order to divide the task of playing the game into a collection of sub-problems, which can be dealt-with using individual AI techniques.
 
 \begin{figure*}[ta]
     \centering
@@ -470,11 +470,11 @@ Playing an RTS game involves dealing with all the problems described above. A fe
     \label{fig:bot-architecture}
 \end{figure*}
 
-Figure \ref{fig:bot-architecture} shows some representative examples of the integration architectures used by different bots in the AIIDE and CIG StarCraft AI competitions (see Section \ref{sec:competition}): BroodwarQ \cite{SynnaeveMicroCig11}, Nova \cite{uriarte2012kiting}, UAlbertaBot \cite{churchill2011build}, Skynet, SPAR, AIUR, and BTHAI \cite{Hagelback12}. Each box represents an individual module with a clearly defined task (only modules with a black background can send actions directly to StarCraft). Dashed arrows represent data flow, and solid arrows represent control (when a module can command another module to perform some task). For example, we can see how SPAR is divided in two sets of modules: {\em situation analysis} and {\em decision making}, the first with three modules dedicated to analyze the current situation of the game, and the later with 4 modules dedicated to exploit that information to decide what to do. We can see how the decision making aspect of SPAR is organized hierarchically, with the higher-level module ({\em strategic decision}) issuing commands to the next module ({\em tactical decision}), which sends commands to the next module ({\em action implementation}), and so on. Only the lower-level modules can send actions directly to StarCraft. 
+Figure \ref{fig:bot-architecture} shows some representative examples of the architectures used by different bots in the AIIDE and CIG StarCraft AI competitions (see Section \ref{sec:competition}): BroodwarBotQ \cite{SynnaeveMicroCig11}, Nova \cite{uriarte2012kiting}, UAlbertaBot \cite{churchill2011build}, Skynet, SPAR, AIUR, and BTHAI \cite{Hagelback12}. Each box represents an individual module with a clearly defined task (only modules with a black background can send actions directly to StarCraft). Dashed arrows represent data flow, and solid arrows represent control (when a module can command another module to perform some task). For example, we can see how SPAR is divided in two sets of modules: {\em situation analysis} and {\em decision making}. Situation analysis in SPAR has three modules dedicated to analyze the current situation of the game. Decision making in SPAR is done through four hierarchically organized modules, with the higher-level module ({\em strategic decision}) issuing commands to the next module ({\em tactical decision}), which sends commands to the next module ({\em action implementation}), and so on. Only the two lower-level modules can send actions directly to StarCraft. 
 
 On the other hand, bots such as Nova or BroodwarBotQ (BBQ) only use a hierarchical organization for {\em micro-management} (controlling the attack units), but use a decentralized organization for the rest of the bot. In Nova and BBQ, there is a collection of modules that control different aspects of the game (workers, production, construction, etc.). These modules can all send actions directly to StarCraft. In Nova those modules coordinate mostly through writing data in a shared blackboard, and in BBQ they coordinate only when they have to use a shared resource (unit) by means of an arbitrator.
 
-By analyzing the structure of these bots, we can see that there are two main tools that can be used when designing an integration architecture:
+By analyzing the structure of these bots, we can see that there are two main tools being used in these integration architectures:
 
 \begin{itemize}
 \item {\em Abstraction}: complex tasks can be formulated at different levels of abstraction. For example, playing an RTS game can be seen as issuing individual low-level actions to each of the units in the game, or at a higher level, it can be seen as deploying a specific strategy (e.g. a ``BBS strategy'', or a ``Reaver Drop'' strategy). Some bots, reason at multiple levels of abstraction at the same time, making the task of playing StarCraft simpler. Assuming that each module in the architecture of a bot has a goal and determines some actions to achieve that goal, the actions determined by higher-level modules are considered as the goals of the lower level modules. In this way, each module can focus on reasoning at only one level of abstraction, thus, making the problem easier.
@@ -484,7 +484,7 @@ By analyzing the structure of these bots, we can see that there are two main too
 
 If we imagine the different tasks to perform in a complex RTS game in a two-dimensional plane, where the vertical axis represents abstraction, and the horizontal axis represents the different aspects of the game (micro-management, resource gathering, etc.), abstraction can be seen as dividing the space with horizontal lines, whereas divide-and-conquer divides the space using vertical lines.
 
-Different bots, use different combinations of these two tools. Looking back at Figure \ref{fig:bot-architecture}, we can see the following use of abstraction and divide-in-conquer in the bots:
+Different bots use different combinations of these two tools. Looking back at Figure \ref{fig:bot-architecture}, we can see the following use of abstraction and divide-in-conquer in the bots:
 
 \begin{itemize}
 \item
@@ -560,14 +560,11 @@ rudimentary prioritization based on the high level strategy. Following
 available  resources and  timing,  AIUR's {\em  Spend Manager}  orders
 Base,  Production   and  Construction  Managers  what   they  have  to
 build/produce. It also orders to start tech research and upgrades. The
-idea here is  not to allocation resources among  different managers to
-satisfy a need (informally: ``I want  to do that, so I need M minerals
-and G gas''), but to do the  opposite, that is, to find how the AI can
-spend the available money: ``I have right now M minerals and G gas, so
-how can I spend it?''.
+idea here is not to let the different managers allocate the resources they want, but to do the opposite, that is: finding how the AI can
+spend the available money.
 
 One  interesting aspect  of the  seven bots  described above  is that,
-while all  of them  - except AIUR  - are  reactive at the  lower level
+while all  of them (except AIUR) are  reactive at the  lower level
 (reactive  control), most  if not  all of  them, are  scripted  at the
 highest level  of abstraction. BTHAI reads build  and squad formations
 from  a  predefined  script,   Nova's  {\em  Strategy  Manager}  is  a
@@ -586,13 +583,11 @@ that  is  UAlbertaBot, which  uses  a  search  algorithm in  the  {\em
 interesting case is  AIUR, that uses a {\em  Mood Manager} to randomly
 pick  a mood among  six (cheese,  rush, aggressive,  defensive, macro,
 fast  expand), which  will  influence the  build  order, strategy  and
-tactics.  All of  them  scripted so  far,  but build  orders can  been
-modified but  the Spend Manager, following  available resources.  This
-mood can change during the game, regarding the opponent behavior.
+tactics. % All of  them  scripted so  far,  but build  orders can  been modified but  the Spend Manager, following  available resources.  This mood can change during the game, regarding the opponent behavior.
 
 In conclusion, we can see that there are two basic tools that can be used in an integration architecture: abstraction and divide-and-conquer, which are widely used by the existing StarCraft bots. For space reasons, we do not include an exhaustive comparison of the architectures of all the participating bots. Some other bots have been documented by their authors, such as SCAIL \cite{YoungSCAIL} or QUORUM \cite{young2012evolutionary}.
-
-This section has focused on discussing the architecture of existing StarCraft bots. Let us now focus on what is the state of the art on the techniques used for each of the individual modules used by them.
+%This section has focused on discussing the architecture of existing StarCraft bots. 
+Let us now focus on their performance.
 
 %\subsection{Individual AI Techniques}\label{sec:techniques}
 
