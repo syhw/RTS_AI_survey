@@ -1136,7 +1136,7 @@ Figure \ref{fig:botLadder1} shows the Elo rating of the bots in the ladder durin
 
 \subsection{Adaptation Analysis}
 
-One of the major conclusions from the results of the StarCraft competitions, is the lack of adaptation of bots.  Some switch between different build-orders, but do not fully adapt their strategy. No bot is capable of observing the opponent and autonomously synthesize a good plan from scratch to counter the opponent strategy. In this section we analyzed this claim quantitatively. We analyzed the replays from the 2011 and 2012 AIIDE competitions (shown in Figures \ref{fig:aiide2011-botopenings} and \ref{fig:aiide2012-botopenings} respectively). Specifically, we analyzed the way bots choose their openings depending on which other bot they are playing against. Given that there is no dominant strategy in StarCraft, and it is necessary to see what the opponent is doing in order to determine the best opening, we would expect bots to change their openings depending on which other bot they are playing (since each bot uses a different strategy, or set of strategies). Using clustering, we identified the most common openings in all the replays from the 2011 and 2012 competitions (each one shown with a different color in the figures). 
+One of the major conclusions from the results of the StarCraft competitions, is the lack of adaptation of bots.  Some switch between different build-orders, but do not fully adapt their strategy. No bot is capable of observing the opponent and autonomously synthesize a good plan from scratch to counter the opponent strategy. In this section we analyzed this claim quantitatively. We analyzed the replays from the 2011 and 2012 AIIDE competitions (shown in Figures \ref{fig:aiide2011-botopenings} and \ref{fig:aiide2012-botopenings} respectively). Specifically, we analyzed the way bots choose their openings depending on which other bot they are playing against. Given that there is no dominant strategy in StarCraft, and it is necessary to see what the opponent is doing in order to determine the best opening, we would expect bots to change their openings depending on which other bot they are playing (since each bot uses a different strategy, or set of strategies). Using clustering, we identified the most common openings in all the replays from the 2011 and 2012 competitions (each one shown with a different color in the figures). No data is shown for the ItayUnvermind bot, since its opening did not match significantly with any of the ones used in our study.
 
 Specifically, we identified the following openings (Most of the following names are specific building or units of StarCraft, for a better comprehension we refer the reader to \footnote{\url{http://wiki.teamliquid.net/starcraft/Category:Strategies}}):
 \begin{itemize}
@@ -1176,7 +1176,7 @@ As the figures show, the top three ranked bots in the competition (Skynet, Aiur 
 
 \begin{figure*}[tb]
     \centering
-    \includegraphics[width=\textwidth]{figures/botopenings.pdf}
+    \includegraphics[width=\textwidth]{figures/botopenings2011.png}
     \caption{Distribution of different openings performed by the different bots participating in the AIIDE 2011 competition. For each bot match-up, the colors show the proportion of times that the column bot used a particular opening against the row bot.}
     \label{fig:aiide2011-botopenings}
 \end{figure*}
@@ -1186,7 +1186,7 @@ As illustrated in this paper, there is a set of problems in RTS game AI that cou
 
 \begin{figure*}[tb]
     \centering
-    \includegraphics[width=\textwidth]{figures/botopenings2012.pdf}
+    \includegraphics[width=\textwidth]{figures/botopenings2012.png}
     \caption{Distribution of different openings performed by the different bots participating in the AIIDE 2012 competition. For each bot match-up, the colors show the proportion of times that the column bot used a particular opening against the row bot.}
     \label{fig:aiide2012-botopenings}
 \end{figure*}
