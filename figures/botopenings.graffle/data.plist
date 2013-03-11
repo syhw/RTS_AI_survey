@@ -18,7 +18,7 @@
 	<key>GuidesVisible</key>
 	<string>YES</string>
 	<key>ImageCounter</key>
-	<integer>3</integer>
+	<integer>5</integer>
 	<key>ImageLinkBack</key>
 	<array>
 		<dict/>
@@ -26,8 +26,8 @@
 	</array>
 	<key>ImageList</key>
 	<array>
+		<string>image4.tiff</string>
 		<string>image2.png</string>
-		<string>image1.png</string>
 	</array>
 	<key>LinksVisible</key>
 	<string>NO</string>
@@ -36,7 +36,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2013-03-07 01:52:44 +0000</string>
+	<string>2013-03-11 18:20:29 +0000</string>
 	<key>Modifier</key>
 	<string>Santiago Ontanon</string>
 	<key>NotesVisible</key>
@@ -416,13 +416,13 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{275.98160000000001, 89.104973000000001}, {1196, 543}}</string>
+					<string>{{279.98161842446586, 92.825163430851731}, {1197, 553}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
-					<integer>3</integer>
+					<integer>18</integer>
 					<key>ImageID</key>
-					<integer>1</integer>
+					<integer>4</integer>
 					<key>Shape</key>
 					<string>Rectangle</string>
 					<key>Style</key>
@@ -931,8 +931,10 @@
 				<string>Canvas 1</string>
 			</dict>
 		</array>
+		<key>FitInWindow</key>
+		<true/>
 		<key>Frame</key>
-		<string>{{60, 0}, {1220, 778}}</string>
+		<string>{{410, 259}, {1970, 1045}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -946,14 +948,14 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{0, 94}, {1085, 639}}</string>
+		<string>{{0, -60}, {1728.0582899749779, 853.1993518895531}}</string>
 		<key>Zoom</key>
-		<real>1</real>
+		<real>1.0618854761123657</real>
 		<key>ZoomValues</key>
 		<array>
 			<array>
 				<string>Canvas 1</string>
-				<real>1</real>
+				<real>0.0</real>
 				<real>4</real>
 			</array>
 			<array>
