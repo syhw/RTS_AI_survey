@@ -197,8 +197,8 @@ Figure~\ref{fig:StarCraft} shows a screenshot of StarCraft showing a player play
     \label{fig:StarCraft}
 \end{figure}
 
-A typical StarCraft map is defined as a rectangular grid, where the $width \times height$ of the map is measured in the number of $32 \times 32$ square of pixels, a.k.a build tiles. Although the
-resolution  at which  units  move  is in squares of $8 \times 8$ pixels, a.k.a walk tiles. The typical dimensions for maps range from $64 \times 64$ to $256 \times 256$ build tiles. Each player  can
+A typical StarCraft map is defined as a rectangular grid, where the $width \times height$ of the map is measured in the number of $32 \times 32$ square of pixels, also knows as build tiles. Although the
+resolution  at which  units  move  is in squares of $8 \times 8$ pixels, also knows as walk tiles. The typical dimensions for maps range from $64 \times 64$ to $256 \times 256$ build tiles. Each player  can
 control up  to 200 units (not including  buildings).  Moreover, each
 different race  contains between 30  to 35 different types  of units
 and  buildings,  each  one  with  a significant  number  of  special
@@ -207,7 +207,7 @@ challenge,   in   which   humans    are   still   much   better   than
 computers. For instance, in the game ladder iCCup\footnote{http://www.iccup.com/StarCraft/} where users are ranked by their current point totals ($E$ being the lowest possible rank, and $A^+$ and $Olympic$ being the second highest and highest ranks, respectively), the best StarCraft AI bots are ranked between $D$ and $D^+$, where average  amateur players are  ranked between $C^+$ and  $B$. For comparison, StarCraft professional  players are usually ranked between
 $A^-$ and $A^+$.
 
-From a theoretical point of view, the state space of a StarCraft for a given map is enormous. For example, consider a 128x128 map. At any given moment there might be between 50 to 400 units in the map, each of which might have a complex internal state (remaining energy and hit-points, action being executed, etc.). This quickly leads to an immense number of possible states (way beyond the size of smaller games, such as Chess or Go). For example, just considering the location of each unit (with 128x128 possible positions per unit), and 400 units, gives us an initial number of $16384^{400} \approx 10^{1685}$. If we add the other factors playing a role in the game, we obtain even larger numbers. 
+From a theoretical point of view, the state space of a StarCraft for a given map is enormous. For example, consider a $128 \times 128$ map. At any given moment there might be between 50 to 400 units in the map, each of which might have a complex internal state (remaining energy and hit-points, action being executed, etc.). This quickly leads to an immense number of possible states (way beyond the size of smaller games, such as Chess or Go). For example, just considering the location of each unit (with $128 \times 128$ possible positions per unit), and 400 units, gives us an initial number of $16384^{400} \approx 10^{1685}$. If we add the other factors playing a role in the game, we obtain even larger numbers. 
 
 Another way  to measure the complexity  of the game is  by looking at
 the branching factor, $b$, and the depth of the game, $d$, as proposed in~\cite{Gaby}. In Chess, $b \approx 35$ and $d \approx 80$. In more complex games, like Go, $b \approx 30 - 300$, and $d \approx 150 - 200$. In StarCraft, humans can issue only one action at a time (this is because of the GUI used by the game, computer players can issue several actions, to different units, at any given time), thus, assuming a player controls between 50 to 200 units, and that each unit can execute between 4 to 20 actions (moving in each of the 4 cardinal directions, attacking units in range, use special abilities, etc.), we estimate the branching factor for human players to be around $b \approx 200 - 4000$. Good players can execute about 300 actions per minute, and the typical length of a game is about 25 minutes. Thus, $d \approx 7500$.
@@ -321,7 +321,7 @@ For all the previous reasons, most existing approaches to play games like StarCr
   on.  Tactics concerns a  group of  units. %They  are orders  given by officers on the battlefield.
 \item  {\em Reactive  control}: is  the  implementation  of  tactics.  This
   consists   in  moving,   targeting,  firing,   fleeing,  hit-and-run
-  techniques (a.k.a. ``kiting'')  during battle. Reactive control focuses
+  techniques (also knows as ``kiting'')  during battle. Reactive control focuses
   on a specific unit. %It is soldiers applying officers' orders. 
 %\end{itemize}
 %
@@ -419,7 +419,7 @@ Hladky and Bulitko \cite{Hladky2008} benchmarked hidden semi-Markov models (HSMM
 % GAME TREE SEARCH:
 Game tree search techniques have also been explored for tactical decision making. \cite{Chung05} applied Monte-Carlo planning to a capture-the-flag version of Open RTS. Balla and Fern \cite{UCT} applied the UCT algorithm (a Monte Carlo Tree Search algorithm) to tactical assault planning in Wargus. To make game tree search is applicable at this level, abstract game state representations are used in order to reduce the complexity. Also, abstractions, or simplifications about the set of possible actions to execute in a given game state need to be used.
 
-% (Santi: I commented this one, since it's mentioned above) On influence maps, \cite{teamCompositionRTS} studied team composition and maneuvering by learning a self-organizing map, while \cite{HagelbackJ08} presented a multi-agent potential field based bot.  
+% (Santi: I commented this one, since it's mentioned above) On influence maps, \cite{teamCompositionRTS} studied team composition and maneuvering by learning a self-organizing map, while \cite{HagelbackJ08} presented a multiagent potential field based bot.  
 
 % SCOUTING:
 Additionally, scouting is equally important in tactical decision making as in strategic decision making. However, as mentioned earlier, very little work has been done in this respect, being that of Weber et al. \cite{WeberAIIDE11} the only exception. All previous approaches, including all game tree search ones, assume complete information.
@@ -431,7 +431,7 @@ Reactive control %, also called micro-management in RTS games,
 aims at maximizing the effectiveness of units, including simultaneous control of units of different types in complex battles on heterogeneous terrain. 
 
 % POTENTIAL FIELDS:
-Potential fields (or influence maps) have been found to be a useful technique for reactive decision making. Some uses of potential fields in RTS games are: avoiding obstacles (navigation), avoiding opponent fire \cite{uriarte2012kiting}, or staying at maximum shooting distance \cite{Hagelback09}. Potential fields have also been combined with A* path-finding to avoid local traps \cite{Hagelback12}. Hagelb\"{a}ck and Johansson \cite{HagelbackJ08} presented a multi-agent potential fields based bot able to deal with fog-of-war in the Tankbattle game. Avery et al. \cite{Avery09} and Smith et al. \cite{SmithCIG10} co-evolved influence map trees for spatial reasoning in RTS games. Danielsiek et al. \cite{Danielsiek_2008} used influence maps to achieve intelligent squad movement to flank the opponent in a RTS game. Despite their success, a drawback for potential field-based techniques is the large number of parameters that has to be tuned in order to achieve the desired behavior. Approaches for automatically learning such parameters have been explored, for example, using reinforcement learning \cite{Liu_2008}, or self-organizing-maps (SOM) \cite{teamCompositionRTS}. We would like to note that potential fields are a reactive control technique, and as such, they do not perform any form of lookahead. As a consequence, these techniques are prone to make units stuck in local maxima. 
+Potential fields (or influence maps) have been found to be a useful technique for reactive decision making. Some uses of potential fields in RTS games are: avoiding obstacles (navigation), avoiding opponent fire \cite{uriarte2012kiting}, or staying at maximum shooting distance \cite{Hagelback09}. Potential fields have also been combined with A* path-finding to avoid local traps \cite{Hagelback12}. Hagelb\"{a}ck and Johansson \cite{HagelbackJ08} presented a multiagent potential fields based bot able to deal with fog-of-war in the Tankbattle game. Avery et al. \cite{Avery09} and Smith et al. \cite{SmithCIG10} co-evolved influence map trees for spatial reasoning in RTS games. Danielsiek et al. \cite{Danielsiek_2008} used influence maps to achieve intelligent squad movement to flank the opponent in a RTS game. Despite their success, a drawback for potential field-based techniques is the large number of parameters that has to be tuned in order to achieve the desired behavior. Approaches for automatically learning such parameters have been explored, for example, using reinforcement learning \cite{Liu_2008}, or self-organizing-maps (SOM) \cite{teamCompositionRTS}. We would like to note that potential fields are a reactive control technique, and as such, they do not perform any form of lookahead. As a consequence, these techniques are prone to make units stuck in local maxima. 
 
 
 % Machine learning:
@@ -607,7 +607,7 @@ The following subsections summarize the results of all the StarCraft AI competit
 Started in 2010, the AIIDE StarCraft AI Competition\footnote{\url{http://www.StarCraftAICompetition.com}} is the most
 well known and longest running StarCraft AI Competition in the world. Each year,
 AI bots are submitted by competitors to do battle within the retail version of
-StarCraft: BroodWar, with prizes supplied by Blizzard Entertainment. %This competition has been made possible by the BWAPI StarCraft programming interface, which allows players to write programs which can retrieve game data and issue game commands to StarCraft via an easy to use C++ API.
+StarCraft: Brood War, with prizes supplied by Blizzard Entertainment. %This competition has been made possible by the BWAPI StarCraft programming interface, which allows players to write programs which can retrieve game data and issue game commands to StarCraft via an easy to use C++ API.
 
 
 The first competition in 2010 was organized and run by Ben Weber in the Expressive
@@ -650,7 +650,7 @@ As this was a perfect information variant of StarCraft, mimicbot adopted a strat
 ``mimic its opponent's build order, gaining an economic advantage whenever possible'' which
 worked quite well.
 
-Tournament 4 was the complete game of {\em StarCraft: BroodWar} with fog-of-war enforced. The tournament
+Tournament 4 was the complete game of {\em StarCraft: Brood War} with fog-of-war enforced. The tournament
 was run with a random pairing double-elimination format with each match being best of 5 games.
 Competitors could play as any of the three races, with the only limitations in gameplay
 being those which were considered ``cheating'' in the StarCraft community. A map pool of
@@ -908,7 +908,7 @@ All results, videos, and replays from the AIIDE StarCraft AI Competition can be 
 An initial attempt to run a StarCraft tournament at the Computational
 Intelligence in Games conference (CIG 2010) suffered from technical problems.
 These mainly stemmed from the desire to use evolved, largely untested
-maps which proved to look interesting but made the submitted bots and the Broodwar Terrain Analyzer (BWTA) provided with the BWAPI interface crash
+maps which proved to look interesting but made the submitted bots and the Brood War Terrain Analyzer (BWTA) provided with the BWAPI interface crash
 so frequently that it would have been unjustifiable to announce a winner.
 
 At CIG 2011, the tournament was therefore run with a (secret) selection
@@ -1060,7 +1060,7 @@ and three 6-player maps:
 We shall note that some bots consistently crashed on one
 of the originally considered maps which has thus been replaced.
 This is surprising as all maps are well known league play maps
-or have been provided with the StarCraft Broodwar distribution
+or have been provided with the StarCraft Brood War distribution
 itself.
 Setup, replays and results for the CIG 2012 competition can be found
 here\footnote{\url{http://ls11-www.cs.tu-dortmund.de/rts-competition/StarCraft-cig2012}}.
@@ -1068,14 +1068,14 @@ here\footnote{\url{http://ls11-www.cs.tu-dortmund.de/rts-competition/StarCraft-c
 \begin{figure*}[tb]
     \centering
     \includegraphics[width=\textwidth]{figures/botLadder1.pdf}
-    \caption{StarCraft Bot Ladder: bot's Elo Rating from February 1, 2012 to June 20, 2012}
+    \caption{StarCraft Bot Ladder: bot's ELO Rating from February 1, 2012 to June 20, 2012}
     \label{fig:botLadder1}
 \end{figure*}
 
 \begin{figure*}[tb]
     \centering
     \includegraphics[width=\textwidth]{figures/botLadder2.pdf}
-    \caption{StarCraft Bot Ladder: bot's Elo Rating from September 1, 2012 to January 10, 2013}
+    \caption{StarCraft Bot Ladder: bot's ELO Rating from September 1, 2012 to January 10, 2013}
     \label{fig:botLadder2}
 \end{figure*}
 
