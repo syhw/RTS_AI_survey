@@ -397,7 +397,7 @@ Finally, evolutionary approaches to determine priorities of high level tasks was
 Also falling into the machine-learning category, a significant group of researchers has explored case-based reasoning (CBR) \cite{Aamodt94CBR} approaches for strategic decision making. For example Aha et al. \cite{LTW} used CBR to perform dynamic plan retrieval in the Wargus domain. Hsieh and Sun \cite{HsiehS08} based their work on Aha et al.'s CBR model \cite{LTW} and used StarCraft replays to construct states and building sequences (``build orders''). Finally, Schadd et al. \cite{SchaddBS07} applied a CBR approach to opponent modeling through hierarchically structured models of the opponent behavior and they applied their work to the Spring RTS game (a ``Total Annihilation'' clone).
 
 % SCOUTING:
-One final consideration concerning strategy is that RTS games are typically partially observable. Games like StarCraft implement the ``fog of war'' idea, which basically means that a player can only see the areas of the map close to her own units. Areas of the map away from the field of view of individual units are not observable. Players need to scout in order to obtain information about the opponent's strategy. The size of the state space in StarCraft prevents solutions based on POMDPs from being directly applicable, and very few of the previous approaches deal with this problem. Most research in RTS game AI assumes perfect information all the time. In the case of commercial games, most AI implementations cheat, since they have perfect information, while the human player does not. In order to make the human player believe the AI of this games does not cheat, sometimes they simulate some scouting tasks as Bob Fitch described in his AIIDE 2011 keynote for the WarCraft and StarCraft game series. A notable exception is the work of Weber et al. \cite{WeberAIIDE11}, who used a particle model with a linear trajectory update to track opponent units under fog of war in StarCraft. They also produced tactical goals through reactive planning and goal-driven autonomy \cite{WeberCig10,Weber10}, finding the more relevant goal(s) to spawn in unforeseen situations. 
+One final consideration concerning strategy is that RTS games are typically partially observable. Games like StarCraft implement the ``fog-of-war'' idea, which basically means that a player can only see the areas of the map close to her own units. Areas of the map away from the field of view of individual units are not observable. Players need to scout in order to obtain information about the opponent's strategy. The size of the state space in StarCraft prevents solutions based on POMDPs from being directly applicable, and very few of the previous approaches deal with this problem. Most research in RTS game AI assumes perfect information all the time. In the case of commercial games, most AI implementations cheat, since they have perfect information, while the human player does not. In order to make the human player believe the AI of this games does not cheat, sometimes they simulate some scouting tasks as Bob Fitch described in his AIIDE 2011 keynote for the WarCraft and StarCraft game series. A notable exception is the work of Weber et al. \cite{WeberAIIDE11}, who used a particle model with a linear trajectory update to track opponent units under fog-of-war in StarCraft. They also produced tactical goals through reactive planning and goal-driven autonomy \cite{WeberCig10,Weber10}, finding the more relevant goal(s) to spawn in unforeseen situations. 
 
 
 \subsection{Tactics}
@@ -431,7 +431,7 @@ Reactive control %, also called micro-management in RTS games,
 aims at maximizing the effectiveness of units, including simultaneous control of units of different types in complex battles on heterogeneous terrain. 
 
 % POTENTIAL FIELDS:
-Potential fields (or influence maps) have been found to be a useful technique for reactive decision making. Some uses of potential fields in RTS games are: avoiding obstacles (navigation), avoiding opponent fire \cite{uriarte2012kiting}, or staying at maximum shooting distance \cite{Hagelback09}. Potential fields have also been combined with A* path-finding to avoid local traps \cite{Hagelback12}. Hagelb\"{a}ck and Johansson \cite{HagelbackJ08} presented a multi-agent potential fields based bot able to deal with fog of war in the Tankbattle game. Avery et al. \cite{Avery09} and Smith et al. \cite{SmithCIG10} co-evolved influence map trees for spatial reasoning in RTS games. Danielsiek et al. \cite{Danielsiek_2008} used influence maps to achieve intelligent squad movement to flank the opponent in a RTS game. Despite their success, a drawback for potential field-based techniques is the large number of parameters that has to be tuned in order to achieve the desired behavior. Approaches for automatically learning such parameters have been explored, for example, using reinforcement learning \cite{Liu_2008}, or self-organizing-maps (SOM) \cite{teamCompositionRTS}. We would like to note that potential fields are a reactive control technique, and as such, they do not perform any form of lookahead. As a consequence, these techniques are prone to make units stuck in local maxima. 
+Potential fields (or influence maps) have been found to be a useful technique for reactive decision making. Some uses of potential fields in RTS games are: avoiding obstacles (navigation), avoiding opponent fire \cite{uriarte2012kiting}, or staying at maximum shooting distance \cite{Hagelback09}. Potential fields have also been combined with A* path-finding to avoid local traps \cite{Hagelback12}. Hagelb\"{a}ck and Johansson \cite{HagelbackJ08} presented a multi-agent potential fields based bot able to deal with fog-of-war in the Tankbattle game. Avery et al. \cite{Avery09} and Smith et al. \cite{SmithCIG10} co-evolved influence map trees for spatial reasoning in RTS games. Danielsiek et al. \cite{Danielsiek_2008} used influence maps to achieve intelligent squad movement to flank the opponent in a RTS game. Despite their success, a drawback for potential field-based techniques is the large number of parameters that has to be tuned in order to achieve the desired behavior. Approaches for automatically learning such parameters have been explored, for example, using reinforcement learning \cite{Liu_2008}, or self-organizing-maps (SOM) \cite{teamCompositionRTS}. We would like to note that potential fields are a reactive control technique, and as such, they do not perform any form of lookahead. As a consequence, these techniques are prone to make units stuck in local maxima. 
 
 
 % Machine learning:
@@ -605,48 +605,17 @@ The following subsections summarize the results of all the StarCraft AI competit
 \subsection{AIIDE}\label{sec:AIIDE}
 
 Started in 2010, the AIIDE StarCraft AI Competition\footnote{\url{http://www.StarCraftAICompetition.com}} is the most
-well known and longest running StarCraft AI Competition in the world. Each year
+well known and longest running StarCraft AI Competition in the world. Each year,
 AI bots are submitted by competitors to do battle within the retail version of
-StarCraft: BroodWar, with prizes supplied by Blizzard Entertainment. This
-competition has been made possible by the BWAPI StarCraft programming interface,
-which allows players to write programs which can retrieve game data and issue
-game commands to StarCraft via an easy to use C++ API.
+StarCraft: BroodWar, with prizes supplied by Blizzard Entertainment. %This competition has been made possible by the BWAPI StarCraft programming interface, which allows players to write programs which can retrieve game data and issue game commands to StarCraft via an easy to use C++ API.
 
 
 The first competition in 2010 was organized and run by Ben Weber in the Expressive
-Intelligence Studio at University of California , Santa Cruz\footnote{\url{http://eis.ucsc.edu/StarCraftAICompetition}}. 26 total submissions
+Intelligence Studio at University of California, Santa Cruz\footnote{\url{http://eis.ucsc.edu/StarCraftAICompetition}}. 26 total submissions
 were received from around the world. As this was the first year of the competition,
 and little infrastructure had been created, each game of the tournament was run 
-manually on two laptop computers and monitored by Ben to record the results. Also,
+manually on two laptop computers and monitored by hand to record the results. Also,
 no persistent data was kept for bots to learn about opponents between matches.
-
-The 2010 competition had 4 different tournament categories in which to compete. Tournament 1
-was a flat-terrain unit micromanagement battle consisting of four separate unit
-composition games. Of the six competitors, FreSCBot won the competition with
-Sherbrooke coming in 2nd place. Tournament 2 was another micro-focused game with
-non-trivial terrain. Two competitors submitted for this category, with FreSCBot
-once again coming in 1st by beating Sherbrooke.
-
-Tournament 3 was a tech-limited StarCraft game on a single known map with no fog of war enforced. Players
-were only allowed to choose the Protoss race, with no late game units allowed. 8 bots
-faced off in this double-elimination tournament with mimicbot taking first place over botnik in the final.
-As this was a perfect information variant of StarCraft, mimicbot adopted a strategy of
-``mimics its opponent's build order, gaining an economic advantage whenever possible'' which
-worked quite well.
-
-Tournament 4 was the complete game of {\em StarCraft: BroodWar} with fog of war enforced. The tournament
-was run with a random pairing double-elimination format with each match being best of 5 games.
-Competitors could play as any of the three races, with the only limitations in gameplay
-being those which were considered ``cheating'' in the StarCraft community. A map pool of
-5 well-known professional maps was announced to competitors in advance, with a random map being chosen for each game.
-
-Results are shown in Table \ref{tab:aiide2010}. The team that won was Overmind\footnote{\url{http://overmind.cs.berkeley.edu}}, from University of California, Berkeley. Using the Zerg race, their
-strategy was to defend early aggression with zergling units while amassing mutalisk units
-which they used to contain and eventually defeat their opponents. The mutalisk is a very fast and agile
-flying unit which is able to attack while moving with no drawback, which makes them quite a powerful
-unit when controlled by a computer, which has super-human input speeds. Overmind used a potential-field
-based micromanagement system to guide their mutalisks, which led them to victory. Krasi0 came in 2nd place
-with a standard defensive Terran opening strategy which transitioned into mech play in the late game.
 
 
 \begin{table}[t!]
@@ -667,15 +636,43 @@ Position & bot\\ \hline
 \end{table}
 
 
+The 2010 competition had 4 different tournament categories in which to compete. Tournament 1
+was a flat-terrain unit micromanagement battle consisting of four separate unit
+composition games. Of the six competitors, FreSCBot won the competition with
+Sherbrooke coming in 2nd place. Tournament 2 was another micro-focused game with
+non-trivial terrain. Two competitors submitted for this category, with FreSCBot
+once again coming in 1st by beating Sherbrooke.
+
+Tournament 3 was a tech-limited StarCraft game on a single known map with no fog-of-war enforced. Players
+were only allowed to choose the Protoss race, with no late game units allowed. 8 bots
+faced off in this double-elimination tournament with mimicbot taking first place over botnik in the final.
+As this was a perfect information variant of StarCraft, mimicbot adopted a strategy of
+``mimic its opponent's build order, gaining an economic advantage whenever possible'' which
+worked quite well.
+
+Tournament 4 was the complete game of {\em StarCraft: BroodWar} with fog-of-war enforced. The tournament
+was run with a random pairing double-elimination format with each match being best of 5 games.
+Competitors could play as any of the three races, with the only limitations in gameplay
+being those which were considered ``cheating'' in the StarCraft community. A map pool of
+5 well-known professional maps was announced to competitors in advance, with a random map being chosen for each game.
+
+Results are shown in Table \ref{tab:aiide2010}. The team that won was Overmind\footnote{\url{http://overmind.cs.berkeley.edu}}, from University of California, Berkeley. Using the Zerg race, their
+strategy was to defend early aggression with zergling units while amassing mutalisk units
+which they used to contain and eventually defeat their opponents. The mutalisk is a very fast and agile
+flying unit which is able to attack while moving with no drawback, which makes them quite a powerful
+unit when controlled by a computer. Overmind used a potential-field
+based micromanagement system to guide their mutalisks, which led them to victory. Krasi0 came in 2nd place
+with a standard defensive Terran opening strategy which transitioned into mech play in the late game.
+
 In 2011 the competition was hosted by the University of Alberta, with organization by Michael Buro and
 David Churchill\footnote{\url{https://skatgame.net/mburo/sc2011/}}. Due to a lack of entrants in tournament categories 1-3 in the 2010 competition, it was
 decided that only the full game category would be played in the 2011 competition. Another important
 change in the 2011 competition was the introduction of automated tournament-managing software running
-StarCraft games simultaneously on 20 computers, allowing a total of 1170 games to be played in the far less
+StarCraft games simultaneously on 20 computers, allowing a total of 1170 games to be played in far less
 time than the 108 games of the 2010 competition. This increase in games played also allowed the tournament
 to switch to a round-robin format, eliminating the ``luck'' factor of the pairings inherent in bracket
 style tournaments. The bot which achieved the highest win percentage over the course of the competition would
-be determined the winner. Also decided was that the competition would become open-source, in an effort not
+be determined the winner. Also, the competition became open-source, in an effort not
 only to prevent possible cheating, but to promote healthy competition in future tournaments by giving
 newcomers and easier entry point by basing their design off of previous bots.
 
@@ -765,7 +762,7 @@ however due to poor unit targeting decisions it started to attack useless medics
 had died, rather than the tanks. Oriol overcame the Dragoon army and was victorious. Later analysis
 of the match concluded that Skynet, while dominant over the other bots, was unable to properly
 adapt and transition into a mid-game strategy in game one once its early pressure failed, and in game
-two made a key blunder in unit targeting which cost it the game. The humans were still in command.
+two made a key blunder in unit targeting which cost it the game. Humans were still in command.
 
 The 2012 competition was also hosted by the University of Alberta, with the major difference from the 2011
 competition being the addition of persistent storage. Bots could now write information to disk during a
@@ -779,7 +776,7 @@ orders  and  good  Dragoon  kiting.   AIUR  and  UAlbertaBot  switched
 positions from  the previous  year to come  2nd and  3rd respectively.
 Both  AIUR  and UAlbertaBot  used  data  stored  from the  results  of
 previous games  to select a strategy for  future matches.  UAlbertaBot
-did  this  using  the  UCB   algorithm,  while  AIUR  used  a  uniform
+did  this  using  the  UCB  \cite{auer2002finite} algorithm,  while  AIUR  used  a  uniform
 distribution  to choose  its  mood before  altering this  distribution
 after  some  games  against  the  same  opponent  to  favor  efficient
 strategies, achieving  similar results than  UAlbertaBot. Notice that,
@@ -878,7 +875,7 @@ Position & crashes & games & bot	& win\%\\ \hline
 
 
 The 2012 man vs. machine match again used the winner of the competition (Skynet), who played against
-Mike Lange, aka LRM) Bakuryu. At the time of the match, Bakuryu was an A- ranked Zerg player on ICCup,
+Mike Lange, also known as Bakuryu. At the time of the match, Bakuryu was an A- ranked Zerg player on ICCup,
 and known as one of the best non-Korean Zerg players in the world. Bakuryu was considered much
 stronger than Oriol at the time that the match was played, and the results showed that this was true.
 In the first game of the best-of-three, Bakuryu made Skynet look quite silly by running around inside
@@ -896,11 +893,12 @@ player in Skynet's position in the first game would have realized he was being t
 adapted his strategy accordingly, however the inability to put the local context (Bakuryu kiting his
 units around his base) into the larger context of the game (that this would delay Skynet until
 reinforcements arrived) and then the lack of strategy change to fix the situation led to an easy
-victory for the human. These problems remain the main challenges in RTS AI today: to both recognize
+victory for the human. These problems remain as some of the the main challenges in RTS AI today: to both recognize
 the strategy and intent of an opponent's actions, and how to effectively adapt your own strategy to 
 overcome them.
 
-All results, videos, and replays from the AIIDE StarCraft AI Competition can be found in\footnote{\url{http://www.StarCraftAICompetition.com}}
+All results, videos, and replays from the AIIDE StarCraft AI Competition can be found in \url{http://www.StarCraftAICompetition.com}.
+% \footnote{\url{http://www.StarCraftAICompetition.com}}.
 
 
 
@@ -908,10 +906,9 @@ All results, videos, and replays from the AIIDE StarCraft AI Competition can be 
 \label{sec:cig2011}
 
 An initial attempt to run a StarCraft tournament at the Computational
-Intelligence in Games conference 2010 suffered from technical problems.
+Intelligence in Games conference (CIG 2010) suffered from technical problems.
 These mainly stemmed from the desire to use evolved, largely untested
-maps which proved to look interesting but made the submitted bots 
-(and/or the Broodwar Terrain Analyzer (BWTA) provided with the BWAPI interface) crash
+maps which proved to look interesting but made the submitted bots and the Broodwar Terrain Analyzer (BWTA) provided with the BWAPI interface crash
 so frequently that it would have been unjustifiable to announce a winner.
 
 At CIG 2011, the tournament was therefore run with a (secret) selection
@@ -923,7 +920,7 @@ sections (UAlbertaBot, Skynet, AIUR, Nova, BroodwarBotQ, BTHAI),
 the set also contained LSAI, Xelnaga, Protoss Beast Jelly, and EvoBot,
 these are shortly described in the following:
 
-\paragraph*{LSAI (Zerg)} utilizes a heavily modified BWSAL to divide management
+\paragraph*{LSAI (Zerg)} utilizes a heavily modified BWSAL\footnote{\url{https://code.google.com/p/bwsal/}} to divide management
  of the units to different modules that communicate via a centralized information
  module. It works using a simple reactive strategy to try and survive early game
  attacks and macro up to a larger attack force and maintain map control.
@@ -1055,9 +1052,9 @@ the CIG competition. The only other difference to the
 AIIDE competition was that the used maps were not 
 made available to the competitors in advance. 
 
-These maps came in two flavors, namely 3 3-player maps:
+These maps came in two flavors, namely three 3-player maps:
 \emph{Athena-II}, \emph{Neo Moon Glaive}, \emph{Tears of the Moon},
-and 3 6-player maps:
+and three 6-player maps:
 \emph{Legacy}, \emph{River of Light}, and 
 \emph{The Huntress 1.1}. 
 We shall note that some bots consistently crashed on one
@@ -1092,7 +1089,7 @@ trends. On the maps with more possible start points, some bots do
 better than others, namely SCAIL, Adjutant, Nova, and UAlbertaBot,
 the latter probably due to its very efficient scouting routine.
 Some bots however suffer from the increased uncertainty about
-the enemies position, namely Xelnaga and the BroodwarBotQ.
+the enemies position, namely Xelnaga and BroodwarBotQ.
 
 As already observed before in the previously described competitions,
 there are also bots who consistently beat top ranked bots but have
@@ -1132,37 +1129,16 @@ procedure of game information) within a series of games.
 
 \subsection{StarCraft Bot Ladder}\label{sec:cig2011}
 
-StacrCraft Bot Ladder is a website\footnote{\url{http://bots-stats.krasi0.com}} where bot versus bot matches are automatized to running all the time. This place is a great resource of data sets (all the game replays are available) and statistics. For the bot ranking they use an Elo rating system suitable for calculate the \emph{relative skill level} of a bot in two-players games. In this system each player has a numerical rating and they won or lost points after each game. The amount of points depends on the difference in the ratings of the players, so a player will gain more points by beating a higher-rated player than by beating a lower-rated player. These kind of rating system is widely used in games like chess.
-This bot ladder compiles different versions of bots from the main worldwide competitions (like AIIDE, CIG or SSCAI\footnote{\url{http://sscaitournament.com}}), even some independent or ``under construction'' bots. Therefore is the perfect place to test the performance of a bot and observer the current state of the art in StarCraft bots.
+The StarCraft Bot Ladder is a website\footnote{\url{http://bots-stats.krasi0.com}} where bot versus bot matches are automatized, and are running all the time. This ladder is a great resource for creating data sets (all the game replays are available) and statistics. For bot ranking, the ladder uses an ELO rating system suitable for calculating the \emph{relative skill level} of a bot in two-player games. In the ELO system each player has a numerical rating that gets incremented or decremented some points after each game. The amount of points depends on the difference in the ratings of the players. A player will gain more points by beating a higher-rated player than by beating a lower-rated player. These kind of rating system is widely used in games like chess. This bot ladder compiles different versions of bots from the main worldwide competitions (like AIIDE, CIG or SSCAI\footnote{\url{http://sscaitournament.com}}), even some independent or ``under construction'' bots. Therefore, it is a very good resource to test the performance of new bots against the current state of the art in StarCraft bots before participating in the official competitions.
 
-Figure \ref{fig:botLadder1} shows the Elo rating of the bots in the ladder during the first half year of 2012. The ranking is practically equal than the AIIDE 2011 competition, showing the lack of adaptability of the current bots. We can notice these more extremely in Figure \ref{fig:botLadder2} for the second half year of 2012. During this period new bots were introduced in the ladder. We can observe how the first version of KillerBot made a huge impact on Skynet ranking and finally in the second version of KillerBot it becomes the best bot for more than one month (again we can see how the rest of the bots aren't able to adapt and the ranking doesn't change so much). And finally at January Ximp bot appears with a new strategy that overcomes the rest of the bots.
-
+Figure \ref{fig:botLadder1} shows the ELO rating of the bots in the ladder during the first half year of 2012. The ranking is practically equal than the AIIDE 2011 competition, showing the lack of adaptability of the current bots. We can notice these more extremely in Figure \ref{fig:botLadder2} for the second half year of 2012. During this period new bots were introduced in the ladder. We can observe how the first version of KillerBot made a huge impact on Skynet ranking and finally, the second version of KillerBot quickly became the best bot for more than one month (again we can see how the rest of the bots aren't able to adapt and the ranking doesn't change so much). And finally, in January, the Ximp bot appears with a new strategy that overcomes the rest of the bots. Both KillerBot and Ximp use hard-coded strategies without any kind of adaptation capabilities. However, they implement strategies that no other bot has a counter for, and thus manage to win a very large percentage of games. This points out, once again, that one of the major open challenges in RTS game AI is how achieving adaptive strategies, that can recognize the opponent's intentions, and select an adequate response.
 
 
-\section{Open Questions in RTS Game AI}\label{sec:questions}
+\subsection{Adaptation Analysis}
 
-\begin{figure*}[tb]
-    \centering
-    \includegraphics[width=\textwidth]{figures/botopenings.pdf}
-    \caption{Distribution of different openings performed by the different bots participating in the AIIDE 2011 competition. For each bot match-up, the colors show the proportion of times that the column bot used a particular opening against the row bot.}
-    \label{fig:aiide2011-botopenings}
-\end{figure*}
+One of the major conclusions from the results of the StarCraft competitions, is the lack of adaptation of bots.  Some switch between different build-orders, but do not fully adapt their strategy. No bot is capable of observing the opponent and autonomously synthesize a good plan from scratch to counter the opponent strategy. In this section we analyzed this claim quantitatively. We analyzed the replays from the 2011 and 2012 AIIDE competitions (shown in Figures \ref{fig:aiide2011-botopenings} and \ref{fig:aiide2012-botopenings} respectively). Specifically, we analyzed the way bots choose their openings depending on which other bot they are playing against. Given that there is no dominant strategy in StarCraft, and it is necessary to see what the opponent is doing in order to determine the best opening, we would expect bots to change their openings depending on which other bot they are playing (since each bot uses a different strategy, or set of strategies). Using clustering, we identified the most common openings in all the replays from the 2011 and 2012 competitions (each one shown with a different color in the figures). 
 
-
-As illustrated in this paper, there is a set of problems in RTS game AI that could be considered mostly solved, of for which we have very good solutions. One example of such problems is pathfinding (mostly solved) or low-scale micro-management (for which we have good solutions). 
-
-However, there are many other problems for which this is not the case. For example, there is no current StarCraft bot that can come up with its own tactical moves, such as ``unit drops''. Some bots do drops, but only if this is hard-coded; no bot has the capability of reasoning about the current situation, synthesize a tactical move that involves a ``unit drop'', and determine that this move is the best one in the current situation. This is related to the lack of real-time adversarial planning techniques that scale up to the size required for RTS games. 
-
-
-\begin{figure*}[tb]
-    \centering
-    \includegraphics[width=\textwidth]{figures/botopenings2012.pdf}
-    \caption{Distribution of different openings performed by the different bots participating in the AIIDE 2012 competition. For each bot match-up, the colors show the proportion of times that the column bot used a particular opening against the row bot.}
-    \label{fig:aiide2012-botopenings}
-\end{figure*}
-
-
-Similarly, current bots do not exhibit adaptation to opponent strategies. Some switch between different build-orders, but do not fully adapt their strategy. No bot is capable of observing the opponent and autonomously synthesize a good plan from scratch to counter the opponent strategy. Figures \ref{fig:aiide2011-botopenings} and \ref{fig:aiide2012-botopenings} show evidence of this. We analyzed the replays from the 2011 and 2012 AIIDE competitions (shown in Figures \ref{fig:aiide2011-botopenings} and \ref{fig:aiide2012-botopenings} respectively). Specifically, we analyzed the way bots choose their openings depending on which other bot they are playing against. Given that there is no dominant strategy in StarCraft, and it is necessary to see what the opponent is doing in order to determine the best opening, we would expect bots to change their openings depending on which other bot they are playing (since each bot uses a different strategy, or set of strategies). Using clustering, we identified the most common openings in all the replays from the 2011 and 2012 competitions (each one shown with a different color in the figures). Now we give a description of the different openings that we considered to build the clustering. Most of the following names are specific building or units of StarCraft, for a better comprehension we refer the reader to \footnote{\url{http://wiki.teamliquid.net/starcraft/Category:Strategies}}:
+Specifically, we identified the following openings (Most of the following names are specific building or units of StarCraft, for a better comprehension we refer the reader to \footnote{\url{http://wiki.teamliquid.net/starcraft/Category:Strategies}}):
 \begin{itemize}
   \item Protoss openings:
   \begin{itemize}
@@ -1192,7 +1168,28 @@ Similarly, current bots do not exhibit adaptation to opponent strategies. Some s
     \item \emph{hydras}: Massive production of \emph{Hydralisks}.
   \end{itemize}
 \end{itemize}
+
 As the figures show, the top three ranked bots in the competition (Skynet, Aiur and UalbertaBot) do not change their strategy at all depending on their opponent. For example, the Skynet bot (both in 2011 and 2012), always uses the same opening (\emph{two\_gates}), except when playing a Terran opponent, when it uses \emph{nony}. This reflects the trend that the performance of bots is still more dependent on carefully hand-crafted and non-adaptive behaviors, than on on-line decision making procedures. This is so, since most of the problems that need to be solved in order to implement such procedures are still open.
+
+
+\section{Open Questions in RTS Game AI}\label{sec:questions}
+
+\begin{figure*}[tb]
+    \centering
+    \includegraphics[width=\textwidth]{figures/botopenings.pdf}
+    \caption{Distribution of different openings performed by the different bots participating in the AIIDE 2011 competition. For each bot match-up, the colors show the proportion of times that the column bot used a particular opening against the row bot.}
+    \label{fig:aiide2011-botopenings}
+\end{figure*}
+
+As illustrated in this paper, there is a set of problems in RTS game AI that could be considered mostly solved, of for which we have very good solutions. One example of such problems is pathfinding (mostly solved) or low-scale micro-management (for which we have good solutions). However, there are many other problems for which this is not the case. For example, there is no current StarCraft bot that can come up with its own tactical moves, such as ``unit drops'' in response to an observed opponent strategy. Some bots do drops, but only if this is hard-coded; no bot has the capability of reasoning about the current situation, synthesize a tactical move that involves a ``unit drop'', and determine that this move is the best one in the current situation. This is related to the lack of real-time adversarial planning techniques that scale up to the size required for RTS games. 
+
+
+\begin{figure*}[tb]
+    \centering
+    \includegraphics[width=\textwidth]{figures/botopenings2012.pdf}
+    \caption{Distribution of different openings performed by the different bots participating in the AIIDE 2012 competition. For each bot match-up, the colors show the proportion of times that the column bot used a particular opening against the row bot.}
+    \label{fig:aiide2012-botopenings}
+\end{figure*}
 
 We present here a list of problems that are currently unsolved, grouped in various categories.
 
@@ -1235,9 +1232,9 @@ We present here a list of problems that are currently unsolved, grouped in vario
 
 As the list in the previous section indicates, Real-Time Strategy games are an excellent testbed for AI techniques, which pose a very large list of open problems. As Section \ref{sec:competition} has shown, the current top performing programs to play RTS games such as StarCraft still rely mainly on hard-coded strategies. It is still possible to perform strongly, or even win, one of these competitions simply by finding a hard-coded strategy that no other bot has a predefined counter-strategy for. Additionally, good human players are still clearly superior to the best computer programs.
 
-One of the main goals of this paper is to provide a centralized and unified overview to the research being done in the area of RTS game AI. To that end, in this paper we have tried to highlight the existing challenges in RTS games, from an AI point of view, and survey the recent advances towards addressing these challenges, with a focus on StarCraft, which has emerged as a unified test-bed. Given that playing an RTS game is a very challenging task, researchers tend to divide such task into smaller tasks, that can be individually addressed by AI techniques. We have also surveyed the different task subdivisions used in some of the top StarCraft-playing programs, highlighting advantages and disadvantages. Additionally, we have presented an analysis of the results of the different StarCraft AI competitions, highlighting strengths and weaknesses of each of the bots. Finally, we have closed the paper with a list of specific open research questions for future research.
+One of the main goals of this paper is to provide a centralized and unified overview to the research being done in the area of RTS game AI. To that end, in this paper we have  highlighted the existing challenges in RTS games, from an AI point of view, and surveyed the recent advances towards addressing these challenges with a focus on StarCraft (which has emerged as a unified test-bed). Given that playing an RTS game is a very challenging task, researchers tend to divide such task into smaller tasks, that can be individually addressed by AI techniques. We have also surveyed the different task subdivisions used in some of the top StarCraft-playing programs, highlighting advantages and disadvantages. Additionally, we have presented an analysis of the results of the different StarCraft AI competitions, highlighting strengths and weaknesses of each of the bots. Finally, we have closed the paper with a list of specific open research questions for future research.
 
-As argued before, addressing these open research questions would not just lead to better RTS game playing bots. Since RTS games embody many characteristics of many other problems appearing in many areas of AI (such as robotics, multiagent systems, etc.), addressing these questions would also benefit many other areas of AI. 
+As argued before, addressing these open research questions would not just lead to better RTS game playing bots, but would bring significant advances to many other areas of artificial intelligence. This is so because RTS games embody many characteristics of many other problems appearing in many areas of AI (such as robotics, multiagent systems, etc.).  
 
 
 
