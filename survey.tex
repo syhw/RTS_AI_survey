@@ -440,7 +440,7 @@ There has been a significant amount of work on using machine learning techniques
 Additionally, there has been some interesting uses of reinforcement learning (RL) \cite{Sutton}: 
 Wender and Watson \cite{WenderRL} evaluated the different major RL algorithms for (decentralized) micro-management, which perform all equally. Marthi et al. \cite{Marthi05} employ concurrent hierarchical Q-learning (units Q-functions are combined at the group level) RL to efficiently control units in a ``one robot with multiple effectors'' fashion. Madeira et al. \cite{Madeira06} advocate the use of prior domain knowledge to allow faster RL learning and applied their work on a turn-based strategy game. This is because the action space to explore is gigantic for real game setups. It requires exploiting the existing structure of the game in a partial program (or a partial Markov decision process) and a shape function (or a heuristic) \cite{Marthi05}. Another approach is that proposed by Jaide and Mu{\~n}oz-Avila \cite{jaidee2012classq} through learning just one Q-function for each unit type, in order to cut down the search space. Other approaches that aim at learning the parameters of an underlying model have also been explored. For example Ponsen and Spronck \cite{GA} used evolutionary learning techniques, but face the same problem of dimensionality. For example, evolutionary optimization by simulating fights can easily adapted to any parameter-dependent micro-management control model, as shown by \cite{OthmanSimu} which optimizes an AIIDE 2010 micro-management competition bot.
 
-Finally, approaches based on game tree search are recently being explored for micro management. Churchill et al. \cite{churchill2012AIIDE} presented a variant of alpha-beta search capable of dealing with simultaneous moves and durative actions, which could handle reactive control for situations with up to eight versus eight units. 
+Finally, approaches based on game tree search are recently being explored for micro-management. Churchill et al. \cite{churchill2012AIIDE} presented a variant of alpha-beta search capable of dealing with simultaneous moves and durative actions, which could handle reactive control for situations with up to eight versus eight units. 
 
 % Other:
 Other research falling into reactive control has been performed in the field of cognitive science, where Wintermute et al. \cite{SORTS} have explored human-like attention models (with units grouping and vision of a unique screen location) for reactive control.
@@ -470,9 +470,9 @@ Playing an RTS game involves dealing with all the problems described above. A fe
     \label{fig:bot-architecture}
 \end{figure*}
 
-Figure \ref{fig:bot-architecture} shows some representative examples of the architectures used by different bots in the AIIDE and CIG StarCraft AI competitions (see Section \ref{sec:competition}): BroodwarBotQ \cite{SynnaeveMicroCig11}, Nova \cite{uriarte2012kiting}, UAlbertaBot \cite{churchill2011build}, Skynet, SPAR, AIUR, and BTHAI \cite{Hagelback12}. Each box represents an individual module with a clearly defined task (only modules with a black background can send actions directly to StarCraft). Dashed arrows represent data flow, and solid arrows represent control (when a module can command another module to perform some task). For example, we can see how SPAR is divided in two sets of modules: {\em situation analysis} and {\em decision making}. Situation analysis in SPAR has three modules dedicated to analyze the current situation of the game. Decision making in SPAR is done through four hierarchically organized modules, with the higher-level module ({\em strategic decision}) issuing commands to the next module ({\em tactical decision}), which sends commands to the next module ({\em action implementation}), and so on. Only the two lower-level modules can send actions directly to StarCraft. 
+Figure \ref{fig:bot-architecture} shows some representative examples of the architectures used by different bots in the AIIDE and CIG StarCraft AI competitions (see Section \ref{sec:competition}): BroodwarBotQ \cite{SynnaeveMicroCig11}, Nova \cite{uriarte2012kiting}, UAlbertaBot \cite{churchill2011build}, Skynet, SPAR, AIUR, and BTHAI \cite{Hagelback12}. Each box represents an individual module with a clearly defined task (only modules with a black background can send actions directly to StarCraft). Dashed arrows represent data flow, and solid arrows represent control (when a module can command another module to perform some task). For example, we can see how SPAR is divided in two sets of modules: {\em intelligence} and {\em decision making}. Intelligence in SPAR has three modules dedicated to analyze the current situation of the game. Decision making in SPAR is done through four hierarchically organized modules, with the higher-level module ({\em strategic decision}) issuing commands to the next module ({\em tactical decision}), which sends commands to the next module ({\em action implementation}), and so on. Only the two lower-level modules can send actions directly to StarCraft. 
 
-On the other hand, bots such as Nova or BroodwarBotQ (BBQ) only use a hierarchical organization for {\em micro-management} (controlling the attack units), but use a decentralized organization for the rest of the bot. In Nova and BBQ, there is a collection of modules that control different aspects of the game (workers, production, construction, etc.). These modules can all send actions directly to StarCraft. In Nova those modules coordinate mostly through writing data in a shared blackboard, and in BBQ they coordinate only when they have to use a shared resource (unit) by means of an arbitrator: a bidding market and broker for settling units control, military and civilian groups/task forces bid for units proportionally to their usefulness and the task importance.
+On the other hand, bots such as Nova or BroodwarBotQ (BBQ) only use a hierarchical organization for {\em combat} (controlling the attack units), but use a decentralized organization for the rest of the bot. In Nova and BBQ, there is a collection of modules that control different aspects of the game (workers, production, construction, etc.). These modules can all send actions directly to StarCraft. In Nova those modules coordinate mostly through writing data in a shared blackboard, and in BBQ they coordinate only when they have to use a shared resource (unit) by means of an arbitrator: a bidding market and broker for settling units control, military and civilian groups/task forces bid for units proportionally to their usefulness and the task importance.
 
 By analyzing the structure of these bots, we can see that there are two main tools being used in these integration architectures:
 
@@ -482,36 +482,35 @@ By analyzing the structure of these bots, we can see that there are two main too
 \item {\em Divide-and-conquer}: playing a complex RTS, such as StarCraft, requires performing many conceptually different tasks, such as gathering resources, attacking, placing buildings, etc. Assuming each of these tasks can be performed relatively independently and without interference, we can have one module focusing on each of the tasks independently, thus making the problem easier. 
 \end{itemize}
 
-If we imagine the different tasks to perform in a complex RTS game in a two-dimensional plane, where the vertical axis represents abstraction, and the horizontal axis represents the different aspects of the game (micro-management, resource gathering, etc.), abstraction can be seen as dividing the space with horizontal lines, whereas divide-and-conquer divides the space using vertical lines.
+If we imagine the different tasks to perform in a complex RTS game in a two-dimensional plane, where the vertical axis represents abstraction, and the horizontal axis represents the different aspects of the game (combat, resource gathering, etc.), abstraction can be seen as dividing the space with horizontal lines, whereas divide-and-conquer divides the space using vertical lines.
 
 Different bots use different combinations of these two tools. Looking back at Figure \ref{fig:bot-architecture}, we can see the following use of abstraction and divide-in-conquer in the bots:
 
 \begin{itemize}
 \item
   BroodwarBotQ\footnote{\url{http://github.com/SnippyHolloW/BroodwarBotQ}}:
-  uses  abstraction for  micro-management, and  divide-and-conquer for
-  macro-management  and  intelligence  gathering. To  avoid  conflicts
+  uses  abstraction for  {\em combat}, and  divide-and-conquer for
+  {\em economy}  and  {\em intelligence  gathering}. To  avoid  conflicts
   between modules (since  the individual tasks of each  of the modules
   are not completely independent), BBQ uses an arbitrator.
 \item  Nova\footnote{\url{http://nova.wolfwork.com/}}:  is similar  in
-  design as  BroodwarBotQ, and uses  abstraction for micro-management,
-  and  divide-and-conquer for  macro-management.  The differences  are
+  design as  BroodwarBotQ, and uses  abstraction for {\em combat},
+  and  divide-and-conquer for  {\em economy}.  The differences  are
   that Nova does not have  an arbitrator to resolve conflicts, but has
   a  higher-level   module  ({\em  strategy   manager}),  which  posts
   information to the blackboard that the rest of modules follow (thus,
   making use of abstraction).
 \item
   UAlbertaBot\footnote{\url{http://code.google.com/p/ualbertabot/}}:
-  also  uses abstraction  in  micro-management like  the previous  two
-  bots. But it  also uses it in macro-management: as  can be seen, the
+  also  uses abstraction  in  {\em combat} like  the previous  two
+  bots. But it  also uses it in {|em economy}: as  can be seen, the
   production manager sends commands to the building manager, who is in
   charge   of   producing   the   buildings.  This   bot   also   uses
   divide-and-conquer, and  tasks like scouting  and resource gathering
   are managed by separate, independent modules.
 \item       Skynet\footnote{\url{http://code.google.com/p/skynetbot/}}:
   makes     extensive     use      of     both     abstraction     and
-  divide-and-conquer.  Considering the  decision  making component  of
-  Skynet, we  can see a  high level module  that issues commands  to a
+  divide-and-conquer.  We  can see a  high level module  that issues commands  to a
   series of  tactics modules. The  collection of tactic  modules queue
   {\em  tasks} (that  are analogous  to the  abstract actions  used in
   SPAR).  Each different  task has  a specific  low level  module that
@@ -525,12 +524,12 @@ Different bots use different combinations of these two tools. Looking back at Fi
   collection  of {\em  abstract  actions}, that  are  executed by  the
   lower-level modules.
 \item  AIUR\footnote{\url{http://code.google.com/p/aiurproject/}}:  is
-  mainly divide-and-conquer oriented, for  macro as well as for micro,
+  mainly divide-and-conquer oriented, for {\em economy} as well as for {\em combat},
   with a  slight abstraction on  macro due to a  SpendManager deciding
   how  to  spend  and  share  resources  among  Base,  Production  and
   Construction Managers.  At the beginning of a  game, the MoodManager
   initializes  a  ``mood''  which  will  influence  both  tactics  and
-  strategy. Tactics  are divided into three  independent managers: the
+  strategy. {\em Combat} is divided into three  independent managers: the
   {\em  Defense Manager},  controlling  military units  when there  is
   nothing special, the {\em  Under Attack Manager}, activated when the
   opponent is attacking our bases,  and the {\em Army Manager}, taking
@@ -545,7 +544,7 @@ Different bots use different combinations of these two tools. Looking back at Fi
   lower-level units.
 \end{itemize}
 
-Additionally, except for BTHAI, all other agents use divide-and-conquer at a higher-level bot design and divide all the modules into two or three categories: {\em information gathering} and {\em decision}, or {\em information gathering}, {\em micro-management} and {\em macro-management}.
+Additionally, except for BTHAI, all other agents use divide-and-conquer at a higher-level bot design and divide all the modules into two or three categories: {\em intelligence gathering} and {\em decision making} (sometimes divided into {\em combat} and {\em economy}).
 
 Some bots  using divide-and-conquer, assume  that each of  the modules
 can act independently  and that their actions can  be executed without
@@ -637,7 +636,7 @@ Position & bot\\ \hline
 
 
 The 2010 competition had 4 different tournament categories in which to compete. Tournament 1
-was a flat-terrain unit micromanagement battle consisting of four separate unit
+was a flat-terrain unit micro-management battle consisting of four separate unit
 composition games. Of the six competitors, FreSCBot won the competition with
 Sherbrooke coming in 2nd place. Tournament 2 was another micro-focused game with
 non-trivial terrain. Two competitors submitted for this category, with FreSCBot
@@ -661,7 +660,7 @@ strategy was to defend early aggression with zergling units while amassing mutal
 which they used to contain and eventually defeat their opponents. The mutalisk is a very fast and agile
 flying unit which is able to attack while moving with no drawback, which makes them quite a powerful
 unit when controlled by a computer. Overmind used a potential-field
-based micromanagement system to guide their mutalisks, which led them to victory. Krasi0 came in 2nd place
+based micro-management system to guide their mutalisks, which led them to victory. Krasi0 came in 2nd place
 with a standard defensive Terran opening strategy which transitioned into mech play in the late game.
 
 In 2011 the competition was hosted by the University of Alberta, with organization by Michael Buro and
@@ -681,7 +680,7 @@ In the  end, Skynet  won the competition  with its solid  Protoss play
 executed one of a small set of strategies randomly at the start of the
 match based on the map and the race of the opponent. Skynet would then
 amass a  medium to large  sized army and  expand before moving  out to
-attack. Good  use of Dragoon (powerful ranged ground unit with clumsy movement) range and  kiting micromanagement allowed
+attack. Good  use of Dragoon (powerful ranged ground unit with clumsy movement) range and  kiting micro-management allowed
 it to hold off the early aggression of other bots such as UAlbertaBot,
 which came in 2nd.
 
@@ -818,6 +817,27 @@ Position & bot & win \% \\ \hline
 \end{table}
 
 
+\begin{table}[b]
+\caption{Results of the CIG 2011 final round.}
+\label{tab:cig-final-round}
+\begin{small}
+\begin{center}
+% bracket A
+\begin{tabular}{|l|c|c|c|r|}
+\hline
+Position & crashes & games & bot	& win\%\\ \hline
+1 & 0 &  30 &	 Skynet	  		&  86.7\%\\
+2 & 0 &	 30 &	 UAlbertaBot 	&  73.3\%\\
+3 & 3 &	 30 &	 Xelnaga  		&  36.7\%\\
+4 & 2 &	 30 &	 BroodwarBotQ  	&  3.3\%\\
+\hline
+\end{tabular}
+\end{center}
+\end{small}
+\end{table}
+
+
+
 \begin{table*}[t]
 \caption{Results of the first round at CIG 2011, held in two brackets.
 Qualified for the final round: UAlbertaBot and Skynet (from A), Xelnaga
@@ -853,25 +873,6 @@ B5 & 0 &	 40 &	 EvoBot	  &  30.0\%\\
 \end{center}
 \end{small}
 \end{table*}
-
-\begin{table}[b]
-\caption{Results of the CIG 2011 final round.}
-\label{tab:cig-final-round}
-\begin{small}
-\begin{center}
-% bracket A
-\begin{tabular}{|l|c|c|c|r|}
-\hline
-Position & crashes & games & bot	& win\%\\ \hline
-1 & 0 &  30 &	 Skynet	  		&  86.7\%\\
-2 & 0 &	 30 &	 UAlbertaBot 	&  73.3\%\\
-3 & 3 &	 30 &	 Xelnaga  		&  36.7\%\\
-4 & 2 &	 30 &	 BroodwarBotQ  	&  3.3\%\\
-\hline
-\end{tabular}
-\end{center}
-\end{small}
-\end{table}
 
 
 The 2012 man vs. machine match again used the winner of the competition (Skynet), who played against
