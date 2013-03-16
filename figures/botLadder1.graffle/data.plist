@@ -44,14 +44,534 @@
 	<key>Creator</key>
 	<string>Alberto Uriarte</string>
 	<key>DisplayScale</key>
-	<string>1 0/72 in = 1 0/72 in</string>
+	<string>1 0/72 in = 1.0000 in</string>
 	<key>GraphDocumentVersion</key>
 	<integer>8</integer>
 	<key>GraphicsList</key>
 	<array>
 		<dict>
 			<key>Bounds</key>
-			<string>{{692.5, 335}, {77, 12}}</string>
+			<string>{{454.75012, 9}, {119, 14}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FitText</key>
+			<string>YES</string>
+			<key>Flow</key>
+			<string>Resize</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>ID</key>
+			<integer>50</integer>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Pad</key>
+				<integer>0</integer>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf510
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+
+\f0\b\fs24 \cf0 StarCraft Bot Ladder}</string>
+				<key>VerticalPad</key>
+				<integer>0</integer>
+			</dict>
+			<key>Wrap</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{503.25012, 319}, {27, 14}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FitText</key>
+			<string>YES</string>
+			<key>Flow</key>
+			<string>Resize</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>ID</key>
+			<integer>49</integer>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Pad</key>
+				<integer>0</integer>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf510
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+
+\f0\b\fs24 \cf0 Date}</string>
+				<key>VerticalPad</key>
+				<integer>0</integer>
+			</dict>
+			<key>Wrap</key>
+			<string>NO</string>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{913.5, 211.875}, {26, 18.5}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>48</integer>
+			<key>ImageID</key>
+			<integer>2</integer>
+			<key>ManualSizeImage</key>
+			<string>YES</string>
+			<key>Offset</key>
+			<string>{0.69920826, 0.5865764}</string>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>image fill</key>
+				<dict>
+					<key>ImageSizing</key>
+					<integer>0</integer>
+					<key>Offset</key>
+					<string>{0.69920826, 0.5865764}</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{913.5, 195.25}, {26, 18.5}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>47</integer>
+			<key>ImageID</key>
+			<integer>3</integer>
+			<key>ManualSizeImage</key>
+			<string>YES</string>
+			<key>Offset</key>
+			<string>{0.69100219, -0.48977187}</string>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>image fill</key>
+				<dict>
+					<key>ImageSizing</key>
+					<integer>0</integer>
+					<key>Offset</key>
+					<string>{0.69100219, -0.48977187}</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{913.5, 177.25}, {26, 18.5}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>46</integer>
+			<key>ImageID</key>
+			<integer>3</integer>
+			<key>ManualSizeImage</key>
+			<string>YES</string>
+			<key>Offset</key>
+			<string>{0.69444138, 0.46681383}</string>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>image fill</key>
+				<dict>
+					<key>ImageSizing</key>
+					<integer>0</integer>
+					<key>Offset</key>
+					<string>{0.69444138, 0.46681383}</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{913.5, 158.5}, {26, 18.5}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>45</integer>
+			<key>ImageID</key>
+			<integer>5</integer>
+			<key>ManualSizeImage</key>
+			<string>YES</string>
+			<key>Offset</key>
+			<string>{0.72449219, -0.46826431}</string>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>image fill</key>
+				<dict>
+					<key>ImageSizing</key>
+					<integer>0</integer>
+					<key>Offset</key>
+					<string>{0.72449219, -0.46826431}</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{913.5, 138.75}, {26, 18.5}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>44</integer>
+			<key>ImageID</key>
+			<integer>2</integer>
+			<key>ManualSizeImage</key>
+			<string>YES</string>
+			<key>Offset</key>
+			<string>{0.70217121, 0.22289903}</string>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>image fill</key>
+				<dict>
+					<key>ImageSizing</key>
+					<integer>0</integer>
+					<key>Offset</key>
+					<string>{0.70217121, 0.22289903}</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{912.5, 119}, {26, 18.5}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>43</integer>
+			<key>ImageID</key>
+			<integer>4</integer>
+			<key>ManualSizeImage</key>
+			<string>YES</string>
+			<key>Offset</key>
+			<string>{0.68399721, -0}</string>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>image fill</key>
+				<dict>
+					<key>ImageSizing</key>
+					<integer>0</integer>
+					<key>Offset</key>
+					<string>{0.68399721, -0}</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{912.5, 99.25}, {26, 18.5}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>42</integer>
+			<key>ImageID</key>
+			<integer>2</integer>
+			<key>ManualSizeImage</key>
+			<string>YES</string>
+			<key>Offset</key>
+			<string>{0.70513421, -0.5103215}</string>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>image fill</key>
+				<dict>
+					<key>ImageSizing</key>
+					<integer>0</integer>
+					<key>Offset</key>
+					<string>{0.70513421, -0.5103215}</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{912.5, 80.75}, {26, 18.5}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>41</integer>
+			<key>ImageID</key>
+			<integer>4</integer>
+			<key>ManualSizeImage</key>
+			<string>YES</string>
+			<key>Offset</key>
+			<string>{0.68036342, 0.4808352}</string>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>image fill</key>
+				<dict>
+					<key>ImageSizing</key>
+					<integer>0</integer>
+					<key>Offset</key>
+					<string>{0.68036342, 0.4808352}</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{912.5, 61}, {26, 18.5}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>40</integer>
+			<key>ImageID</key>
+			<integer>5</integer>
+			<key>ManualSizeImage</key>
+			<string>YES</string>
+			<key>Offset</key>
+			<string>{0.72759855, -0}</string>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>image fill</key>
+				<dict>
+					<key>ImageSizing</key>
+					<integer>0</integer>
+					<key>Offset</key>
+					<string>{0.72759855, -0}</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{912.5, 42.5}, {26, 18.5}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>39</integer>
+			<key>ImageID</key>
+			<integer>4</integer>
+			<key>ManualSizeImage</key>
+			<string>YES</string>
+			<key>Offset</key>
+			<string>{0.67672962, -0.4730798}</string>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>image fill</key>
+				<dict>
+					<key>ImageSizing</key>
+					<integer>0</integer>
+					<key>Offset</key>
+					<string>{0.67672962, -0.4730798}</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{940, 266.75}, {77, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -106,7 +626,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{692.5, 317}, {54, 12}}</string>
+			<string>{{938.5, 64.25}, {54, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -161,7 +681,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{692.5, 299}, {38, 12}}</string>
+			<string>{{940, 160.375}, {38, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -216,7 +736,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{607.5, 335}, {44, 12}}</string>
+			<string>{{938.5, 82.5}, {44, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -271,7 +791,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{607.5, 317}, {29, 12}}</string>
+			<string>{{939, 121.5}, {29, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -326,7 +846,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{607.5, 299}, {31, 12}}</string>
+			<string>{{938.5, 45.75}, {31, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -381,7 +901,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{521.5, 335}, {49, 12}}</string>
+			<string>{{939, 179.25}, {49, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -436,7 +956,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{521.5, 317}, {27, 12}}</string>
+			<string>{{940, 249.375}, {27, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -491,7 +1011,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{521.5, 299}, {32, 12}}</string>
+			<string>{{939.5, 197.25}, {32, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -546,7 +1066,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{414, 354}, {66, 12}}</string>
+			<string>{{939, 214}, {66, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -601,7 +1121,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{414, 335}, {27, 12}}</string>
+			<string>{{939.5, 142}, {27, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -656,7 +1176,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{414, 317}, {24, 12}}</string>
+			<string>{{940, 230.75}, {24, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -711,7 +1231,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{414, 299}, {18, 12}}</string>
+			<string>{{938.5, 101.75}, {18, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -766,7 +1286,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{880, 277}, {22, 12}}</string>
+			<string>{{778.75037, 300}, {22, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -821,7 +1341,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{717, 277}, {28, 12}}</string>
+			<string>{{637.50024, 300}, {28, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -876,7 +1396,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{562.5, 277}, {24, 12}}</string>
+			<string>{{502.25012, 300}, {24, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -931,7 +1451,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{395, 277}, {26, 12}}</string>
+			<string>{{360, 300}, {26, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -986,7 +1506,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{243, 277}, {26, 12}}</string>
+			<string>{{229.5, 300}, {26, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -1041,7 +1561,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{112, 7}, {23, 12}}</string>
+			<string>{{112, 30}, {23, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -1096,7 +1616,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{112, 55}, {23, 12}}</string>
+			<string>{{112, 78}, {23, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -1151,7 +1671,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{112, 107}, {23, 12}}</string>
+			<string>{{112, 130}, {23, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -1206,7 +1726,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{112, 160}, {23, 12}}</string>
+			<string>{{112, 183}, {23, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -1261,7 +1781,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{112, 212}, {23, 12}}</string>
+			<string>{{112, 235}, {23, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -1316,7 +1836,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{118, 264}, {17, 12}}</string>
+			<string>{{118, 287}, {17, 12}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -1371,7 +1891,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{138.5, 7}, {878, 268}}</string>
+			<string>{{138.5, 30}, {755.50031, 268}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -1401,7 +1921,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{657.25, 294}, {26, 58}}</string>
+			<string>{{912.5, 264.75}, {26, 18.5}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -1411,7 +1931,7 @@
 			<key>ManualSizeImage</key>
 			<string>YES</string>
 			<key>Offset</key>
-			<string>{0.72759855, -0}</string>
+			<string>{0.72759855, 0.46826431}</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -1426,7 +1946,7 @@
 					<key>ImageSizing</key>
 					<integer>0</integer>
 					<key>Offset</key>
-					<string>{0.72759855, -0}</string>
+					<string>{0.72759855, 0.46826431}</string>
 				</dict>
 				<key>shadow</key>
 				<dict>
@@ -1442,48 +1962,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{575.75, 295}, {26, 56}}</string>
-			<key>Class</key>
-			<string>ShapedGraphic</string>
-			<key>ID</key>
-			<integer>8</integer>
-			<key>ImageID</key>
-			<integer>4</integer>
-			<key>ManualSizeImage</key>
-			<string>YES</string>
-			<key>Offset</key>
-			<string>{0.68092245, -0}</string>
-			<key>Shape</key>
-			<string>Rectangle</string>
-			<key>Style</key>
-			<dict>
-				<key>fill</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-				<key>image fill</key>
-				<dict>
-					<key>ImageSizing</key>
-					<integer>0</integer>
-					<key>Offset</key>
-					<string>{0.68092245, -0}</string>
-				</dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-				<key>stroke</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>Bounds</key>
-			<string>{{485.25, 296}, {31, 57}}</string>
+			<string>{{913, 247.625}, {26, 18.5}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -1493,7 +1972,7 @@
 			<key>ManualSizeImage</key>
 			<string>YES</string>
 			<key>Offset</key>
-			<string>{0.69788057, -0}</string>
+			<string>{0.69100219, -0}</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -1508,7 +1987,7 @@
 					<key>ImageSizing</key>
 					<integer>0</integer>
 					<key>Offset</key>
-					<string>{0.69788057, -0}</string>
+					<string>{0.69100219, -0}</string>
 				</dict>
 				<key>shadow</key>
 				<dict>
@@ -1524,7 +2003,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{382.5, 291}, {26, 80}}</string>
+			<string>{{913.5, 228.875}, {26, 18.5}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -1534,7 +2013,7 @@
 			<key>ManualSizeImage</key>
 			<string>YES</string>
 			<key>Offset</key>
-			<string>{0.70217127, -0}</string>
+			<string>{0.69920826, -0.13491258}</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -1549,7 +2028,7 @@
 					<key>ImageSizing</key>
 					<integer>0</integer>
 					<key>Offset</key>
-					<string>{0.70217127, -0}</string>
+					<string>{0.69920826, -0.13491258}</string>
 				</dict>
 				<key>shadow</key>
 				<dict>
@@ -1565,13 +2044,20 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{67, 134}, {63, 14}}</string>
+			<string>{{67, 157}, {66, 14}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
 			<string>YES</string>
 			<key>Flow</key>
 			<string>Resize</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
 			<key>ID</key>
 			<integer>5</integer>
 			<key>Shape</key>
@@ -1604,7 +2090,7 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs24 \cf0 ELO Rating}</string>
+\f0\b\fs24 \cf0 ELO Rating}</string>
 				<key>VerticalPad</key>
 				<integer>0</integer>
 			</dict>
@@ -1677,7 +2163,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2013-03-08 08:04:25 +0000</string>
+	<string>2013-03-16 17:24:12 +0000</string>
 	<key>Modifier</key>
 	<string>Alberto Uriarte</string>
 	<key>NotesVisible</key>
@@ -1780,7 +2266,7 @@
 			<array>
 				<string>Canvas 1</string>
 				<real>1</real>
-				<real>1</real>
+				<real>2</real>
 			</array>
 		</array>
 	</dict>

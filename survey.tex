@@ -198,7 +198,7 @@ Figure~\ref{fig:StarCraft} shows a screenshot of StarCraft showing a player play
 \end{figure}
 
 A typical StarCraft map is defined as a rectangular grid, where the $width \times height$ of the map is measured in the number of $32 \times 32$ square of pixels, also knows as build tiles. Although the
-resolution  at which  units  move  is in squares of $8 \times 8$ pixels, also knows as walk tiles. The typical dimensions for maps range from $64 \times 64$ to $256 \times 256$ build tiles. Each player  can
+resolution of walkable areas is in squares of $8 \times 8$ pixels, also knows as walk tiles. The typical dimensions for maps range from $64 \times 64$ to $256 \times 256$ build tiles. Each player  can
 control up  to 200 units (plus an unlimited number of buildings).  Moreover, each
 different race  contains between 30  to 35 different types  of units
 and  buildings,  each  one  with  a significant  number  of  special
@@ -616,25 +616,6 @@ and little infrastructure had been created, each game of the tournament was run
 manually on two laptop computers and monitored by hand to record the results. Also,
 no persistent data was kept for bots to learn about opponents between matches.
 
-
-\begin{table}[t!]
-\caption{Results of the AIIDE 2010 competition.}
-\label{tab:aiide2010}
-\begin{small}
-\begin{center}
-% bracket A
-\begin{tabular}{|l|c|}
-\hline
-Position & bot\\ \hline
-1 & Overmind \\
-2 & Krasi0 \\
-3 & Chronos \\ \hline
-\end{tabular}
-\end{center}
-\end{small}
-\end{table}
-
-
 The 2010 competition had 4 different tournament categories in which to compete. Tournament 1
 was a flat-terrain unit micro-management battle consisting of four separate unit
 composition games. Of the six competitors, FreSCBot won the competition with
@@ -663,6 +644,21 @@ unit when controlled by a computer. Overmind used a potential-field
 based micro-management system to guide their mutalisks, which led them to victory. Krasi0 came in 2nd place
 with a standard defensive Terran opening strategy which transitioned into mech play in the late game.
 
+\begin{table}[!t]
+\caption{Results of the AIIDE 2010 competition}
+\label{tab:aiide2010}
+\centering
+\begin{tabular}{|c|l|}
+\hline
+{\bfseries Position} & {\bfseries Bot}\\
+\hline
+1 & Overmind \\
+2 & Krasi0 \\
+3 & Chronos \\
+\hline
+\end{tabular}
+\end{table}
+
 In 2011 the competition was hosted by the University of Alberta, with organization by Michael Buro and
 David Churchill\footnote{\url{https://skatgame.net/mburo/sc2011/}}. Due to a lack of entrants in tournament categories 1-3 in the 2010 competition, it was
 decided that only the full game category would be played in the 2011 competition. Another important
@@ -683,6 +679,23 @@ amass a  medium to large  sized army and  expand before moving  out to
 attack. Good  use of Dragoon (powerful ranged ground unit with clumsy movement) range and  kiting micro-management allowed
 it to hold off the early aggression of other bots such as UAlbertaBot,
 which came in 2nd.
+
+\begin{table}[!b]
+\caption{Results of the AIIDE 2011 competition}
+\label{tab:aiide2011}
+\centering
+\begin{tabular}{|c|l|r|}
+\hline
+{\bfseries Position} & {\bfseries Bot} & {\bfseries Win \%} \\
+\hline
+1 & Skynet & 88.9\% \\
+2 & UAlbertaBot & 79.4\% \\
+3 & AIUR & 70.3\% \\
+4 & ItayUndermind & 65.8\% \\
+5 & EISBot & 60.6\% \\
+\hline
+\end{tabular}
+\end{table}
 
 UAlbertaBot used an early zealot-rush strategy to take advantage of the power of early game Protoss units. 
 It would send out the first zealots which were made and immediately attack the enemy base, using a unit
@@ -722,25 +735,6 @@ realized that their  2010 strategy was quite easily  defeated by early
 game rushing strategies,  and so they submitted a  Terran bot instead,
 called Undermind, which finished in 7th.
 
-\begin{table}[t!]
-\caption{Results of the AIIDE 2011 competition.}
-\label{tab:aiide2011}
-\begin{small}
-\begin{center}
-% bracket A
-\begin{tabular}{|l|c|c|}
-\hline
-Position & bot & win \% \\ \hline
-1 & Skynet & 88.9\% \\
-2 & UAlbertaBot & 79.4\% \\
-3 & AIUR & 70.3\% \\
-4 & ItayUndermind & 65.8\% \\
-5 & EISBot & 60.6\% \\ \hline
-\end{tabular}
-\end{center}
-\end{small}
-\end{table}
-
 After the competition was over, a man vs. machine match was held between the winner (Skynet) and an
 ex-professional StarCraft player named Oriol Vinyals. Oriol was a competitor in the 2001 World Cyber
 Games StarCraft competition, and though he had been out of practice for a few years was still quite a
@@ -762,6 +756,23 @@ had died, rather than the tanks. Oriol overcame the Dragoon army and was victori
 of the match concluded that Skynet, while dominant over the other bots, was unable to properly
 adapt and transition into a mid-game strategy in game one once its early pressure failed, and in game
 two made a key blunder in unit targeting which cost it the game. Humans were still in command.
+
+\begin{table}[!t]
+\caption{Results of the AIIDE 2012 competition}
+\label{tab:aiide2012}
+\centering
+\begin{tabular}{|c|l|r|}
+\hline
+{\bfseries Position} & {\bfseries Bot} & {\bfseries Win \%} \\
+\hline
+1 & Skynet & 84.4\% \\
+2 & AIUR & 72.2\% \\
+3 & UAlbertaBot & 68.6\% \\
+4 & BroodwarBotQ & 59.1\% \\
+5 & AdjutantBot & 52.8\% \\
+\hline
+\end{tabular}
+\end{table}
 
 The 2012 competition was also hosted by the University of Alberta, with the major difference from the 2011
 competition being the addition of persistent storage. Bots could now write information to disk during a
@@ -797,82 +808,10 @@ progressed.
 \end{figure}
 
 
-\begin{table}[t!]
-\caption{Results of the AIIDE 2012 competition.}
-\label{tab:aiide2012}
-\begin{small}
-\begin{center}
-% bracket A
-\begin{tabular}{|l|c|c|}
-\hline
-Position & bot & win \% \\ \hline
-1 & Skynet & 84.4\% \\
-2 & AIUR & 72.2\% \\
-3 & UAlbertaBot & 68.6\% \\
-4 & BroodwarBotQ & 59.1\% \\
-5 & AdjutantBot & 52.8\% \\ \hline
-\end{tabular}
-\end{center}
-\end{small}
-\end{table}
-
-
-\begin{table}[b]
-\caption{Results of the CIG 2011 final round.}
-\label{tab:cig-final-round}
-\begin{small}
-\begin{center}
-% bracket A
-\begin{tabular}{|l|c|c|c|r|}
-\hline
-Position & crashes & games & bot	& win\%\\ \hline
-1 & 0 &  30 &	 Skynet	  		&  86.7\%\\
-2 & 0 &	 30 &	 UAlbertaBot 	&  73.3\%\\
-3 & 3 &	 30 &	 Xelnaga  		&  36.7\%\\
-4 & 2 &	 30 &	 BroodwarBotQ  	&  3.3\%\\
-\hline
-\end{tabular}
-\end{center}
-\end{small}
-\end{table}
 
 
 
-\begin{table*}[t]
-\caption{Results of the first round at CIG 2011, held in two brackets.
-Qualified for the final round: UAlbertaBot and Skynet (from A), Xelnaga
-and BroodwarBotQ (from B, the latter by comparing direct encounters
-with BTHAI of which 6:4 were won).}
-\label{tab:cig-first-round}
-\begin{small}
-\begin{center}
-% bracket A
-\begin{tabular}{|l|c|c|c|r|}
-\hline
-\multicolumn{5}{|c|}{Bracket A} \\ \hline
-Position & crashes & games & bot	& win\%\\ \hline
-A1 & 0 &	 40 &	 UAlbertaBot & 82.5\% \\
-A2 & 1 &  	 40 &	 Skynet	  &  77.5\% \\
-A3 & 2 &	 40 &	 AIUR	  &  60.0\% \\
-A4 & 1 &	 40 &	 Nova	  &  20.0\% \\
-A5 & 0 &	 40 &	 LSAI	  &  10.0\%\\
-\hline
-\end{tabular}
-% bracket B
-\begin{tabular}{|l|c|c|c|r|}
-\hline
-\multicolumn{5}{|c|}{Bracket B} \\ \hline
-Position & crashes & games & bot	& win\%\\ \hline
-B1 & 12 &	 40 &	 Xelnaga &	 62.5\%\\
-B2 & 3 &   40 &	 BroodwarBotQ  &  57.5\%\\
-B3 & 0 &	 40 &	 BTHAI	  &  57.5\%\\
-B4 & 17 &	 40 &	 Protoss Beast Jelly  & 42.5\%\\
-B5 & 0 &	 40 &	 EvoBot	  &  30.0\%\\
-\hline
-\end{tabular}
-\end{center}
-\end{small}
-\end{table*}
+
 
 
 The 2012 man vs. machine match again used the winner of the competition (Skynet), who played against
@@ -901,7 +840,40 @@ overcome them.
 All results, videos, and replays from the AIIDE StarCraft AI Competition can be found in \url{http://www.StarCraftAICompetition.com}.
 % \footnote{\url{http://www.StarCraftAICompetition.com}}.
 
-
+\begin{table*}[!t]
+\caption{Results of the first round at CIG 2011, held in two brackets.
+Qualified for the final round: UAlbertaBot and Skynet (from A), Xelnaga
+and BroodwarBotQ (from B, the latter by comparing direct encounters
+with BTHAI of which 6:4 were won)}
+\label{tab:cig-first-round}
+\centering
+% bracket A
+\begin{tabular}{|c|c|c|l|r|}
+\hline
+\multicolumn{5}{|c|}{Bracket A} \\ \hline
+{\bfseries Position} & {\bfseries Crashes} & {\bfseries Games} & {\bfseries Bot} & {\bfseries Win \%} \\
+\hline
+A1 & 0 &   40 &  UAlbertaBot & 82.5\% \\
+A2 & 1 &     40 &  Skynet   &  77.5\% \\
+A3 & 2 &   40 &  AIUR   &  60.0\% \\
+A4 & 1 &   40 &  Nova   &  20.0\% \\
+A5 & 0 &   40 &  LSAI   &  10.0\%\\
+\hline
+\end{tabular}
+% bracket B
+\begin{tabular}{|c|c|c|l|r|}
+\hline
+\multicolumn{5}{|c|}{Bracket B} \\ \hline
+{\bfseries Position} & {\bfseries Crashes} & {\bfseries Games} & {\bfseries Bot} & {\bfseries Win \%} \\
+\hline
+B1 & 12 &  40 &  Xelnaga &   62.5\%\\
+B2 & 3 &   40 &  BroodwarBotQ  &  57.5\%\\
+B3 & 0 &   40 &  BTHAI    &  57.5\%\\
+B4 & 17 &  40 &  Protoss Beast Jelly  & 42.5\%\\
+B5 & 0 &   40 &  EvoBot   &  30.0\%\\
+\hline
+\end{tabular}
+\end{table*}
 
 \subsection{CIG}
 \label{sec:cig2011}
@@ -941,7 +913,8 @@ to expanding). Gas is not mined as it is not needed for constructing Zealots.
  that this bot was submitted in a very early version, with many of its designed features not
  yet fully ready. 
 
-
+\subsubsection{First Round}
+\label{sec:cig-first-round}
 
 \begin{figure}[t]
 	%\vspace*{-1ex}
@@ -953,30 +926,7 @@ CIG 2012 competition}
     \label{fig:cig2012-results}
 \end{figure}
 
-\begin{table}[b]
-\caption{Results of the CIG 2012 competition.}
-\label{tab:cig2012}
-\begin{small}
-\begin{center}
-% bracket A
-\begin{tabular}{|l|c|c|}
-\hline
-Position & bot & win \% \\ \hline
-1 & Skynet & 78.3\% \\
-2 & UAlbertaBot & 65.2\% \\
-3 & AIUR & 60.4\% \\
-4 & Adjutant & 58.6\% \\
-5 & Nova & 52.4\% \\ \hline
-\end{tabular}
-\end{center}
-\end{small}
-\end{table}
-
-
-\subsubsection{First Round}
-\label{sec:cig-first-round}
-
-\begin{figure*}[t]
+\begin{figure*}[b]
 	%\vspace*{-2ex}
     \centering
     \includegraphics[width=0.32\textwidth]{figures/vstable3.pdf}
@@ -993,7 +943,6 @@ Position & bot & win \% \\ \hline
     \label{fig:cig2012-mapresults}
 \end{figure*}
 
-
 As the CIG competition games were executed manually due to
 a lack of available software (the AIIDE program was not yet
 available at that time), the organizers separated the ten entries into
@@ -1006,6 +955,7 @@ of well-known league play maps found on the internet:
 \emph{iCCupdestination 1.1}, \emph{iCCup gaia}, and 
 \emph{iCCup great barrier reef}. Each bot pairing played
 on every map twice, with switched starting positions.
+
 
 The two top bots of every bracket qualified
 for the final round. Table~\ref{tab:cig-first-round} summarizes
@@ -1021,6 +971,24 @@ In some cases, neither bot was able to finish the other off completely,
 so that they went into a passive state. We manually ended such games after
 around 15 minutes and assigned victory to the bot that had obtained more
 points as indicated on the end game screen.
+
+\begin{table}[!b]
+\caption{Results of the CIG 2011 competition}
+\label{tab:cig-final-round}
+\centering
+\begin{tabular}{|c|c|c|l|r|}
+\hline
+{\bfseries Position} & {\bfseries Crashes} & {\bfseries Games} & {\bfseries Bot} & {\bfseries Win \%} \\
+\hline
+1 & 0 &  30 &  Skynet       &  86.7\%\\
+2 & 0 &  30 &  UAlbertaBot  &  73.3\%\\
+3 & 3 &  30 &  Xelnaga      &  36.7\%\\
+4 & 2 &  30 &  BroodwarBotQ   &  3.3\%\\
+\hline
+\end{tabular}
+\end{table}
+
+
 
 \subsubsection{Final Round}
 \label{sec:cig-final-round}
@@ -1066,17 +1034,34 @@ itself.
 Setup, replays and results for the CIG 2012 competition can be found
 here\footnote{\url{http://ls11-www.cs.tu-dortmund.de/rts-competition/StarCraft-cig2012}}.
 
+\begin{table}[t]
+\caption{Results of the CIG 2012 competition.}
+\label{tab:cig2012}
+\centering
+\begin{tabular}{|c|l|r|}
+\hline
+{\bfseries Position} & {\bfseries Bot} & {\bfseries Win \%} \\
+\hline
+1 & Skynet & 78.3\% \\
+2 & UAlbertaBot & 65.2\% \\
+3 & AIUR & 60.4\% \\
+4 & Adjutant & 58.6\% \\
+5 & Nova & 52.4\% \\ 
+\hline
+\end{tabular}
+\end{table}
+
 \begin{figure*}[tb]
     \centering
     \includegraphics[width=\textwidth]{figures/botLadder1.pdf}
-    \caption{StarCraft Bot Ladder: bot's Elo Rating from February 1, 2012 to June 20, 2012}
+    \caption{Bot's Elo Rating from February 1, 2012 to June 20, 2012}
     \label{fig:botLadder1}
 \end{figure*}
 
 \begin{figure*}[tb]
     \centering
     \includegraphics[width=\textwidth]{figures/botLadder2.pdf}
-    \caption{StarCraft Bot Ladder: bot's Elo Rating from September 1, 2012 to January 10, 2013}
+    \caption{Bot's Elo Rating from September 1, 2012 to January 10, 2013}
     \label{fig:botLadder2}
 \end{figure*}
 
