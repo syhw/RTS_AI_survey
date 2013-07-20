@@ -125,11 +125,11 @@ Game AI, Real-Time Strategy, StarCraft, Review1
 \IEEEpeerreviewmaketitle
 
 \section{Introduction}\label{sec:intro}
-\IEEEPARstart{T}{he} field of real-time strategy (RTS) game AI has advanced significantly since Michael Buto's call for research in this area \cite{Buro03rts}. Specially, competitions like the ``AIIDE StarCraft AI Competition'' have motivated the exploration of many AI approaches in the context of RTS AI. We will list and classify these approaches, explain their 
+\IEEEPARstart{T}{he} field of real-time strategy (RTS) game AI has advanced significantly since Michael Buro's call for research in this area \cite{Buro03rts}. Specially, competitions like the ``AIIDE StarCraft AI Competition'' have motivated the exploration of many AI approaches in the context of RTS AI. We will list and classify these approaches, explain their 
 strengths and weaknesses and conclude on what is left to achieve human-level 
 RTS AI.
 
-Complex dynamic environments, where it is not possible to have perfect nor complete information about the current state or about the dynamics of the environment, pose significant challenges for artificial intelligence. Road  traffic, finance, or
+Complex dynamic environments, where it is not possible to have neither perfect nor complete information about the current state or about the dynamics of the environment, pose significant challenges for artificial intelligence. Road  traffic, finance, or
 weather  forecasts are  examples of such large, complex, real-life dynamic
 environments. RTS games can be seen as a simplification of one such real-life
 environment, with simpler dynamics in a  finite and smaller
@@ -137,7 +137,7 @@ world, although still complex enough  to study some of the key interesting
 problems like decision making  under
 uncertainty  or  real-time adversarial planning. Finding efficient  techniques for
 tackling  these problems  on  RTS  games can  thus  benefit other AI disciplines and application
-domains, ans also have concrete  and direct applications in  the ever growing
+domains, and also have concrete  and direct applications in  the ever growing
 industry of  video games.%, generating worldwide two  and a  half times more revenue than the Film industry in 2011.
 % This statement is not fair, the reference I found it only compare all the game industry revenue (including hardware sales) vs theatrical film industry revenue (i.e. not DVD sales, ...)
 
@@ -167,14 +167,14 @@ compiles open questions in RTS game AI. Finally, the paper concludes on discussi
 Real-time Strategy (RTS) is a sub-genre of strategy games where players need to build an economy (gathering resources and building a base) and military power (training units and researching technologies) in order to defeat their opponents (destroying their army and base). From a theoretical point of view, the main differences between RTS games and traditional board games such as Chess are:
 
 \begin{itemize}
-\item They are {\em simultaneous move} games, where more than one player can issue actions at the same time. Additionally, these actions are {\em durative}, i.e. actions are not instantaneous, but take some amount of time time to complete.
+\item They are {\em simultaneous move} games, where more than one player can issue actions at the same time. Additionally, these actions are {\em durative}, i.e. actions are not instantaneous, but take some amount of time to complete.
 \item RTS games are ``real-time'', which actually means is that each player has a very small amount of time to decide the next move. Compared to Chess, where players may have several minutes to decide the next action, in StarCraft, the game executes at 24 iterations per second, which means that players can act as fast as every 42ms, before the game state changes.
 \item Most RTS games are partially observable: players can only see the part of the map that has been explored. This is referred to as the {\em fog-of-war}.
 \item Most RTS games are non-deterministic. Some actions have a chance of success.
-\item And finally, the complexity of these games, both in terms of state space size and in terms of number of actions available at each decision cycle is very large. For example, the state space of Chess is typically estimated to be around $10^{50}$, heads up no-limit texas holdem poker around $10^{80}$, and Go around $10^{170}$. In comparison, the state space of StarCraft in a typical map is estimated to be many orders of magnitude larger than any of those, as discussed in the next section.
+\item And finally, the complexity of these games, both in terms of state space size and in terms of number of actions available at each decision cycle is very large. For example, the state space of Chess is typically estimated to be around $10^{50}$, heads up no-limit Texas holdem poker around $10^{80}$, and Go around $10^{170}$. In comparison, the state space of StarCraft in a typical map is estimated to be many orders of magnitude larger than any of those, as discussed in the next section.
 \end{itemize}
 
-For those reasons, standard techniques used for playing classic board games, such as game tree search, cannot be directly applied to solve RTS games without the definition of some level of abstraction, or some other simplification. Interestingly enough, humans seem to be able to deal with the complexity of RTS games, and are still vastly superior to computers in these type of games \cite{burochurchill2012aimagazine}. For those reasons, a large spectrum of techniques have been attempted to deal with this domain, as we will describe below. The remainder of this section is devoted to describe StarCraft as a research testbed, and on detailing the open challenges in RTS game AI.
+For those reasons, standard techniques used for playing classic board games, such as game tree search, cannot be directly applied to solve RTS games without the definition of some level of abstraction, or some other simplification. Interestingly enough, humans seem to be able to deal with the complexity of RTS games, and are still vastly superior to computers in these types of games \cite{burochurchill2012aimagazine}. For those reasons, a large spectrum of techniques have been attempted to deal with this domain, as we will describe below. The remainder of this section is devoted to describe StarCraft as a research testbed, and on detailing the open challenges in RTS game AI.
 
 \subsection{StarCraft}\label{subsec:StarCraft}
 
@@ -201,7 +201,7 @@ A typical StarCraft map is defined as a rectangular grid, where the $width \time
 resolution of walkable areas is in squares of $8 \times 8$ pixels, also known as walk tiles. The typical dimensions for maps range from $64 \times 64$ to $256 \times 256$ build tiles. Each player  can
 control up  to 200 units (plus an unlimited number of buildings).  Moreover, each
 different race  contains between 30  to 35 different types  of units
-and  buildings,  each  one  with  a significant  number  of  special
+and  buildings,  most of them with  a significant  number  of  special
 abilities. All these factors  together make StarCraft a significant
 challenge,   in   which   humans    are   still   much   better   than
 computers. For instance, in the game ladder iCCup\footnote{http://www.iccup.com/StarCraft/} where users are ranked by their current point totals ($E$ being the lowest possible rank, and $A^+$ and $Olympic$ being the second highest and highest ranks, respectively), the best StarCraft AI bots are ranked between $D$ and $D^+$, where average  amateur players are  ranked between $C^+$ and  $B$. For comparison, StarCraft professional  players are usually ranked between
@@ -262,7 +262,7 @@ While there has been a significant work in many, others have been untouched (e.g
 %\end{itemize}
 
 \subsubsection{Planning}
-As mentioned above, the size of the state space in RTS games is much larger than that of traditional board-games such as Chess or Go. Additionally, the number of actions that can be executed at a given instant of time is also much larger. Thus, standard adversarial planning approaches, such as game tree search are not directly applicable. As we elaborate later, planning in RTS games can be seen as having multiple levels of abstraction: at a higher level, players need long-term planning capabilities, in order to develop a strong economy in the game; at a low level, individual units need to be moved in coordination to fight battles taking into account the terrain and the opponent. Techniques that can address these large planning problems by either sampling, or hierarchical decomposition do not yet exist.
+As mentioned above, the size of the state space in RTS games is much larger than that of traditional board games such as Chess or Go. Additionally, the number of actions that can be executed at a given instant of time is also much larger. Thus, standard adversarial planning approaches, such as game tree search are not directly applicable. As we elaborate later, planning in RTS games can be seen as having multiple levels of abstraction: at a higher level, players need long-term planning capabilities, in order to develop a strong economy in the game; at a low level, individual units need to be moved in coordination to fight battles taking into account the terrain and the opponent. Techniques that can address these large planning problems by either sampling, or hierarchical decomposition do not yet exist.
 
 \subsubsection{Learning}
 Given the difficulties in playing RTS games by directly using adversarial planning techniques, many research groups have turned attention to learning techniques. We can distinguish three types of learning problems in RTS games:
@@ -309,7 +309,7 @@ Analogously, temporal reasoning is key in tactical or strategic reasoning. For e
 
 
 \subsubsection{Domain Knowledge Exploitation}
-In traditional board-games such as Chess, researchers have exploited the large amounts of existing domain knowledge to create good evaluation functions to be used by alpha-beta search algorithms, extensive opening books, or end-game tables. In the case of RTS games, it is still unclear the ways in which the significantly large amount of domain knowledge (in the forms or strategy guides, replays, etc.) can be exploited by bots. Most work in this area has focused on two main directions: on the one hand, researchers are finding ways in which to hard-code existing strategies into bots, so that bots only need to decide which strategies to deploy, instead of having to solve the complete problem of deciding which actions to execute by each individual unit at each time step. One the other hand, large datasets of replays have been created \cite{WeberCig09,synnaeve2012dataset}, from where strategies, trends or plans have been tried to learn. However, StarCraft games are quite complex, and how to automatically learn from such datasets is still an open problem.
+In traditional board games such as Chess, researchers have exploited the large amounts of existing domain knowledge to create good evaluation functions to be used by alpha-beta search algorithms, extensive opening books, or end-game tables. In the case of RTS games, it is still unclear the ways in which the significantly large amount of domain knowledge (in the forms or strategy guides, replays, etc.) can be exploited by bots. Most work in this area has focused on two main directions: on the one hand, researchers are finding ways in which to hard-code existing strategies into bots, so that bots only need to decide which strategies to deploy, instead of having to solve the complete problem of deciding which actions to execute by each individual unit at each time step. One the other hand, large datasets of replays have been created \cite{WeberCig09,synnaeve2012dataset}, from where strategies, trends or plans have been tried to learn. However, StarCraft games are quite complex, and how to automatically learn from such datasets is still an open problem.
 
 \subsubsection{Task Decomposition}
 For all the previous reasons, most existing approaches to play games like StarCraft work by decomposing the problem of playing a RTS game into a collection of smaller problems, to be solved independently. Specifically, a common subdivision is:
@@ -341,7 +341,7 @@ For all the previous reasons, most existing approaches to play games like StarCr
   regularly send scouts to localize and spy enemy bases.%, and must see or  infer what buildings and technology the enemy has developed in order  to adapt its strategy.
 \end{itemize}
 
-In comparison, when humans play StarCraft, they typically divide their decision making in a very different way. The StarCraft community typically talk about two tasks:
+In comparison, when humans play StarCraft, they typically divide their decision making in a very different way. The StarCraft community typically talks about two tasks:
 \begin{itemize}
   \item {\em Micro}: is the ability to control your units individually. A good \emph{micro} player usually keeps their units alive during more time.
   \item {\em Macro}: is the ability to produce units and to expand at the appropriate times to keep your production of units flowing. A good \emph{macro} player usually has the larger army.
@@ -362,7 +362,7 @@ playing RTS in~\cite{weber2011acs}. Although the previous task decomposition is 
 
 Systems that play RTS games need to address most, if not all, the aforementioned problems together. Therefore, it is hard to classify existing work on RTS AI as addressing the different problems above. For that reason, in order to classify existing work on RTS AI, we will divide it according to three levels of abstraction: strategy (which loosely corresponds to ``macro''), tactics and reactive control (which loosely corresponds to ``micro''). 
 
-Figure~\ref{fig:levels-abstraction} graphically illustrates how strategy, tactics and reactive control are three points in a continuum scale where strategy corresponds to decisions making processes that affect long spans of time (several minutes in the case of StarCraft), reactive control corresponds to low-level second-by-second decisions, and tactics sit in the middle. Also, strategic decisions reason about the whole game at once, whereas tactical or reactive control decisions are localized, and affect only specific groups of units. Typically, strategic decisions constraint future tactical decisions, which in turn condition reactive control. Moreover, information gathered while performing reactive control, can cause reconsideration of the tactics being employed; which could trigger further strategical reasoning.
+Figure~\ref{fig:levels-abstraction} graphically illustrates how strategy, tactics and reactive control are three points in a continuum scale where strategy corresponds to decisions making processes that affect long spans of time (several minutes in the case of StarCraft), reactive control corresponds to low-level second-by-second decisions, and tactics sit in the middle. Also, strategic decisions reason about the whole game at once, whereas tactical or reactive control decisions are localized, and affect only specific groups of units. Typically, strategic decisions constraint future tactical decisions, which in turn condition reactive control. Moreover, information gathered while performing reactive control, can cause reconsideration of the tactics being employed; which could trigger further strategic reasoning.
 
 Following this idea, we consider strategy to be everything related to the technology trees, build-order\footnote{The {\em build-order} is the specific sequence in which buildings of different types will be constructed at the beginning of a game, and completely determines the long-term strategy of a player.}, upgrades, and army composition. It is the most deliberative level, as a player selects and performs a strategy with future stances (aggressive, defensive, economy, technology) and tactics in mind. We consider tactics to be everything related to confrontations between groups of units. Tactical reasoning involves both spatial (exploiting the terrain) and temporal (army movements) reasoning, constrained on the possible types of attacks by the army composition of the player and their opponent. Finally, we will call reactive control to how the player controls individual units to maximize their efficiency (when executing tactics) in real-time. The main difference between tactics and reactive control is that tactical reasoning typically involves some sort of planning ahead for some short spans of time, whereas reactive control involves no planning ahead whatsoever.
 
@@ -389,7 +389,7 @@ Hard-coded approaches have been extensively used in commercial RTS games. The mo
 
 
 % PLANNING:
-Approaches using planning techniques have also been explored in the literature. For example Onta\~{n}\'{o}n et al. \cite{CBR_Planning} explored the use of real-time case-based planning (CBP) in the domain of Wargus (a Warcraft II clone). In their work, they used human demonstration to learn plans, that are then composed at run-time in order to form full-fledges strategies to play the game. In \cite{PlanRetrieval} they improve over  their previous CBP approach by using situation assessment for improving the quality and speed of plan retrieval. Hierarchical Task-Network (HTN) planning has also been explored with some success in the context of simpler first-person shooter games \cite{HTNPlanning}. Planning approaches offer more adaptivity of the AI strategy compared to hard-coded approaches. However, the real-time constraints of RTS games limit the planning approaches that can be applied, being HTN and case-based planning the only ones explored so far. Moreover, none of these approaches addresses any timing or scheduling issues, which are key in RTS games. On notable exception is the work of Churchill and Buro \cite{churchill2011build}, who used planning in order to construct its economic build-orders taking into account timing constraints of the different actions.
+Approaches using planning techniques have also been explored in the literature. For example Onta\~{n}\'{o}n et al. \cite{CBR_Planning} explored the use of real-time case-based planning (CBP) in the domain of Wargus (a Warcraft II clone). In their work, they used human demonstration to learn plans, which are then composed at run-time in order to form full-fledges strategies to play the game. In \cite{PlanRetrieval} they improve over  their previous CBP approach by using situation assessment for improving the quality and speed of plan retrieval. Hierarchical Task-Network (HTN) planning has also been explored with some success in the context of simpler first-person shooter games \cite{HTNPlanning}. Planning approaches offer more adaptivity of the AI strategy compared to hard-coded approaches. However, the real-time constraints of RTS games limit the planning approaches that can be applied, being HTN and case-based planning the only ones explored so far. Moreover, none of these approaches addresses any timing or scheduling issues, which are key in RTS games. On notable exception is the work of Churchill and Buro \cite{churchill2011build}, who used planning in order to construct its economic build-orders taking into account timing constraints of the different actions.
 
 % MACHINE LEARNING:
 Concerning machine learning-based approaches, Weber and Mateas \cite{WeberCig09} proposed a data mining approach to strategy prediction and performed supervised learning on labeled StarCraft replays. Dereszynski et al. \cite{HMMstrat_RTS_AIIDE11} used Hidden Markov Models (HMM) to learn the transition probabilities of sequences of building construction orders and kept the most probable ones to produce probabilistic behavior models (in StarCraft). Synnaeve and Bessi\`{e}re \cite{SynnaeveOpeningCig11} used the dataset of \cite{WeberCig09} and presented a Bayesian semi-supervised model to learn from replays and predict openings (early game strategies) from StarCraft replays. The openings are labeled by EM clustering considering appropriate features. Then, in \cite{SynnaeveAIIDE11}, they presented an unsupervised learning Bayesian model for tech-tree prediction, still using replays. % Finally \cite{GemineImitative} used the same ``build-order features'' approach to learn to adapt the bot's build order to the opponents strategy in StarCraft 2.
@@ -399,7 +399,7 @@ Finally, evolutionary approaches to determine priorities of high level tasks was
 Also falling into the machine-learning category, a significant group of researchers has explored case-based reasoning (CBR) \cite{Aamodt94CBR} approaches for strategic decision making. For example Aha et al. \cite{LTW} used CBR to perform dynamic plan retrieval in the Wargus domain. Hsieh and Sun \cite{HsiehS08} based their work on Aha et al.'s CBR model \cite{LTW} and used StarCraft replays to construct states and building sequences (``build orders''). Finally, Schadd et al. \cite{SchaddBS07} applied a CBR approach to opponent modeling through hierarchically structured models of the opponent behavior and they applied their work to the Spring RTS game (a ``Total Annihilation'' clone).
 
 % SCOUTING:
-One final consideration concerning strategy is that RTS games are typically partially observable. Games like StarCraft implement the ``fog-of-war'' idea, which basically means that a player can only see the areas of the map close to her own units. Areas of the map away from the field of view of individual units are not observable. Players need to scout in order to obtain information about the opponent's strategy. The size of the state space in StarCraft prevents solutions based on POMDPs from being directly applicable, and very few of the previous approaches deal with this problem. Most research in RTS game AI assumes perfect information all the time. In the case of commercial games, most AI implementations cheat, since they have perfect information, while the human player does not. In order to make the human player believe the AI of this games does not cheat, sometimes they simulate some scouting tasks as Bob Fitch described in his AIIDE 2011 keynote for the WarCraft and StarCraft game series. A notable exception is the work of Weber et al. \cite{WeberAIIDE11}, who used a particle model with a linear trajectory update to track opponent units under fog-of-war in StarCraft. They also produced tactical goals through reactive planning and goal-driven autonomy \cite{WeberCig10,Weber10}, finding the more relevant goal(s) to spawn in unforeseen situations. 
+One final consideration concerning strategy is that RTS games are typically partially observable. Games like StarCraft implement the ``fog-of-war'' idea, which basically means that a player can only see the areas of the map close to her own units. Areas of the map away from the field of view of individual units are not observable. Players need to scout in order to obtain information about the opponent's strategy. The size of the state space in StarCraft prevents solutions based on POMDPs from being directly applicable, and very few of the previous approaches deal with this problem. Most research in RTS game AI assumes perfect information all the time, this mean that they only consider the information that they can see to make decisions. In the case of commercial games, most AI implementations cheat, since they have perfect information, while the human player does not. In order to make the human player believe the AI of these games does not cheat, sometimes they simulate some scouting tasks as Bob Fitch described in his AIIDE 2011 keynote for the WarCraft and StarCraft game series. A notable exception is the work of Weber et al. \cite{WeberAIIDE11}, who used a particle model with a linear trajectory update to track opponent units under fog-of-war in StarCraft. They also produced tactical goals through reactive planning and goal-driven autonomy \cite{WeberCig10,Weber10}, finding the more relevant goal(s) to spawn in unforeseen situations. 
 
 
 \subsection{Tactics}
@@ -419,7 +419,7 @@ to detect regions and relevant choke points in RTS maps. This approach is implem
 Concerning tactical decision making, many different approaches have been explored such as machine learning or game tree search. 
 Hladky and Bulitko \cite{Hladky2008} benchmarked hidden semi-Markov models (HSMM) and particle filters in first person shooter games (FPS) units tracking. They showed that the accuracy of occupancy maps was improved using movement models (learned from the player behavior) in HSMM. Kabanza et al. \cite{OBRecog} improve the probabilistic hostile agent task tracker (PHATT \cite{PHATT}, a simulated HMM for plan recognition) by encoding strategies as HTN, used for plan and intent recognition to find tactical opportunities. Sharma et al. \cite{CBR-RL} combined CBR and reinforcement learning to enable reuse of tactical plan components. Cadena and Garrido \cite{CadenaG11} used fuzzy CBR (fuzzy case matching) for strategic and tactical planning. Finally, \cite{SynnaeveTactics} combined space abstraction into regions from \cite{Perkins10} and tactical-decision making by assigning scores (economical, defenses, etc.) to regions and looking for their correspondences to tactical moves (attacks) in pro-gamers replays.
 % GAME TREE SEARCH:
-Game tree search techniques have also been explored for tactical decision making. \cite{Chung05} applied Monte-Carlo planning to a capture-the-flag version of Open RTS. Balla and Fern \cite{UCT} applied the UCT algorithm (a Monte Carlo Tree Search algorithm) to tactical assault planning in Wargus. To make game tree search is applicable at this level, abstract game state representations are used in order to reduce the complexity. Also, abstractions, or simplifications about the set of possible actions to execute in a given game state need to be used.
+Game tree search techniques have also been explored for tactical decision making. \cite{Chung05} applied Monte-Carlo planning to a capture-the-flag version of Open RTS. Balla and Fern \cite{UCT} applied the UCT algorithm (a Monte Carlo Tree Search algorithm) to tactical assault planning in Wargus. To make game tree search applicable at this level, abstract game state representations are used in order to reduce the complexity. Also, abstractions, or simplifications about the set of possible actions to execute in a given game state need to be used.
 
 % (Santi: I commented this one, since it's mentioned above) On influence maps, \cite{teamCompositionRTS} studied team composition and maneuvering by learning a self-organizing map, while \cite{HagelbackJ08} presented a multiagent potential field based bot.  
 
@@ -433,7 +433,7 @@ Reactive control %, also called micro-management in RTS games,
 aims at maximizing the effectiveness of units, including simultaneous control of units of different types in complex battles on heterogeneous terrain. 
 
 % POTENTIAL FIELDS:
-Potential fields (or influence maps) have been found to be a useful technique for reactive decision making. Some uses of potential fields in RTS games are: avoiding obstacles (navigation), avoiding opponent fire \cite{uriarte2012kiting}, or staying at maximum shooting distance \cite{Hagelback09}. Potential fields have also been combined with A* path-finding to avoid local traps \cite{Hagelback12}. Hagelb\"{a}ck and Johansson \cite{HagelbackJ08} presented a multiagent potential fields based bot able to deal with fog-of-war in the Tankbattle game. Avery et al. \cite{Avery09} and Smith et al. \cite{SmithCIG10} co-evolved influence map trees for spatial reasoning in RTS games. Danielsiek et al. \cite{Danielsiek_2008} used influence maps to achieve intelligent squad movement to flank the opponent in a RTS game. Despite their success, a drawback for potential field-based techniques is the large number of parameters that has to be tuned in order to achieve the desired behavior. Approaches for automatically learning such parameters have been explored, for example, using reinforcement learning \cite{Liu_2008}, or self-organizing-maps (SOM) \cite{teamCompositionRTS}. We would like to note that potential fields are a reactive control technique, and as such, they do not perform any form of lookahead. As a consequence, these techniques are prone to make units stuck in local maxima. 
+Potential fields and influence maps have been found to be a useful technique for reactive decision making. Some uses of potential fields in RTS games are: avoiding obstacles (navigation), avoiding opponent fire \cite{uriarte2012kiting}, or staying at maximum shooting distance \cite{Hagelback09}. Potential fields have also been combined with A* path-finding to avoid local traps \cite{Hagelback12}. Hagelb\"{a}ck and Johansson \cite{HagelbackJ08} presented a multiagent potential fields based bot able to deal with fog-of-war in the Tankbattle game. Avery et al. \cite{Avery09} and Smith et al. \cite{SmithCIG10} co-evolved influence map trees for spatial reasoning in RTS games. Danielsiek et al. \cite{Danielsiek_2008} used influence maps to achieve intelligent squad movement to flank the opponent in a RTS game. Despite their success, a drawback for potential field-based techniques is the large number of parameters that has to be tuned in order to achieve the desired behavior. Approaches for automatically learning such parameters have been explored, for example, using reinforcement learning \cite{Liu_2008}, or self-organizing-maps (SOM) \cite{teamCompositionRTS}. We would like to note that potential fields are a reactive control technique, and as such, they do not perform any form of lookahead. As a consequence, these techniques are prone to make units stuck in local maxima. 
 
 
 % Machine learning:
@@ -596,8 +596,7 @@ Let us now focus on their performance.
 
 \section{Recent StarCraft AI Competitions}\label{sec:competition}
 
-This section reviews the results of the recent international competitions on AI for StarCraft. These competitions, typically co-located with scientific conferences, have been possible thanks to the existence of the the 
-Brood War Application Programming Interface 
+This section reviews the results of the recent international competitions on AI for StarCraft. These competitions, typically co-located with scientific conferences, have been possible thanks to the existence of the Brood War Application Programming Interface 
 (BWAPI)\footnote{\url{http://code.google.com/p/bwapi/}}, which 
 enables replacing the human player interface with C++ code.
 %A consequence of this indirect way of integrating new bots is that every machine can only run one custom bot, requiring two computers for a 2-player game.
@@ -635,16 +634,16 @@ worked quite well.
 Tournament 4 was the complete game of {\em StarCraft: Brood War} with fog-of-war enforced. The tournament
 was run with a random pairing double-elimination format with each match being best of 5 games.
 Competitors could play as any of the three races, with the only limitations in gameplay
-being those which were considered ``cheating'' in the StarCraft community. A map pool of
-5 well-known professional maps was announced to competitors in advance, with a random map being chosen for each game.
+being those that were considered ``cheating'' in the StarCraft community. A map pool of
+5 well-known professional maps were announced to competitors in advance, with a random map being chosen for each game.
 
 Results are shown in Table \ref{tab:aiide2010}. The team that won was Overmind\footnote{\url{http://overmind.cs.berkeley.edu}}, from University of California, Berkeley. Using the Zerg race, their
-strategy was to defend early aggression with zergling units while amassing mutalisk units
+strategy was to defend early aggression with zergling units while amassing mutalisk units,
 which they used to contain and eventually defeat their opponents. The mutalisk is a very fast and agile
 flying unit which is able to attack while moving with no drawback, which makes them quite a powerful
 unit when controlled by a computer. Overmind used a potential-field
 based micro-management system to guide their mutalisks, which led them to victory. Krasi0 came in 2nd place
-with a standard defensive Terran opening strategy which transitioned into mech play in the late game.
+with a standard defensive Terran opening strategy that transitioned into mech play in the late game.
 
 \begin{table}[!t]
 \caption{Results of the AIIDE 2010 competition}
@@ -661,14 +660,14 @@ with a standard defensive Terran opening strategy which transitioned into mech p
 \end{tabular}
 \end{table}
 
-In 2011 the competition was hosted by the University of Alberta, with organization by Michael Buro and
+In 2011 the University of Alberta hosted the competition, with organization by Michael Buro and
 David Churchill\footnote{\url{https://skatgame.net/mburo/sc2011/}}. Due to a lack of entrants in tournament categories 1-3 in the 2010 competition, it was
 decided that only the full game category would be played in the 2011 competition. Another important
 change in the 2011 competition was the introduction of automated tournament-managing software running
 StarCraft games simultaneously on 20 computers, allowing a total of 1170 games to be played in far less
 time than the 108 games of the 2010 competition. This increase in games played also allowed the tournament
 to switch to a round-robin format, eliminating the ``luck'' factor of the pairings inherent in bracket
-style tournaments. The bot which achieved the highest win percentage over the course of the competition would
+style tournaments. The bot that achieved the highest win percentage over the course of the competition would
 be determined the winner. Also, the competition became open-source, in an effort not
 only to prevent possible cheating, but to promote healthy competition in future tournaments by giving
 newcomers and easier entry point by basing their design off of previous bots.
@@ -700,12 +699,12 @@ which came in 2nd.
 \end{table}
 
 UAlbertaBot used an early zealot-rush strategy to take advantage of the power of early game Protoss units. 
-It would send out the first zealots which were made and immediately attack the enemy base, using a unit
+It would send out the first zealots that were made and immediately attack the enemy base, using a unit
 counting heuristic to determine whether or retreat or keep pushing. Of note is that UAlbertaBot used an
 online planning algorithm to construct all of its economic build-orders\cite{churchill2011build}, as no hard-coded build orders
 were used. 
 
-AIUR also chose  Protoss, with a strategy which  was in between Skynet
+AIUR also chose  Protoss, with a strategy that was in between Skynet
 and UAlbertaBot in terms of  attack timings.  At that time, AIUR chose
 one  mood among  five (leading  to slightly  different  strategies and
 tactics) at the  beginning of a game and kept it  until the end. These
@@ -776,7 +775,7 @@ two made a key blunder in unit targeting which cost it the game. Humans were sti
 \end{tabular}
 \end{table}
 
-The 2012 competition was also hosted by the University of Alberta, with the major difference from the 2011
+The University of Alberta also hosted the 2012 competition, with the major difference from the 2011
 competition being the addition of persistent storage. Bots could now write information to disk during a
 match, and then read the information during other matches, allowing them to adjust strategies based
 on previous results. 6 of the 10 entrants used this feature to aid in strategy selection, including the
@@ -835,7 +834,7 @@ player in Skynet's position in the first game would have realized he was being t
 adapted his strategy accordingly, however the inability to put the local context (Bakuryu kiting his
 units around his base) into the larger context of the game (that this would delay Skynet until
 reinforcements arrived) and then the lack of strategy change to fix the situation led to an easy
-victory for the human. These problems remain as some of the the main challenges in RTS AI today: to both recognize
+victory for the human. These problems remain as some of the main challenges in RTS AI today: to both recognize
 the strategy and intent of an opponent's actions, and how to effectively adapt your own strategy to 
 overcome them.
 
@@ -1077,7 +1076,7 @@ trends. On the maps with more possible start points, some bots do
 better than others, namely SCAIL, Adjutant, Nova, and UAlbertaBot,
 the latter probably due to its very efficient scouting routine.
 Some bots however suffer from the increased uncertainty about
-the enemies position, namely Xelnaga and BroodwarBotQ.
+the enemies' position, namely Xelnaga and BroodwarBotQ.
 
 As already observed before in the previously described competitions,
 there are also bots who consistently beat top ranked bots but have
@@ -1117,14 +1116,14 @@ procedure of game information) within a series of games.
 
 \subsection{StarCraft Bot Ladder}\label{sec:ladder}
 
-The StarCraft Bot Ladder is a website\footnote{\url{http://bots-stats.krasi0.com}} where bot versus bot matches are automatized, and are running all the time. This ladder is a great resource for creating data sets (all the game replays are available) and statistics. For bot ranking, the ladder uses an Elo rating system suitable for calculating the \emph{relative skill level} of a bot in two-player games. In the Elo system each player has a numerical rating that gets incremented or decremented some points after each game. The amount of points depends on the difference in the ratings of the players. A player will gain more points by beating a higher-rated player than by beating a lower-rated player. These kind of rating system is widely used in games like chess. This bot ladder compiles different versions of bots from the main worldwide competitions (like AIIDE, CIG or SSCAI\footnote{\url{http://sscaitournament.com}}), even some independent or ``under construction'' bots. Therefore, it is a very good resource to test the performance of new bots against the current state of the art in StarCraft bots before participating in the official competitions.
+The StarCraft Bot Ladder is a website\footnote{\url{http://bots-stats.krasi0.com}} where bot versus bot matches are automatized, and are running all the time. This ladder is a great resource for creating data sets (all the game replays are available) and statistics. For bot ranking, the ladder uses an Elo rating system suitable for calculating the \emph{relative skill level} of a bot in two-player games. In the Elo system each player has a numerical rating that gets incremented or decremented some points after each game. The amount of points depends on the difference in the ratings of the players. A player will gain more points by beating a higher-rated player than by beating a lower-rated player. This kind of rating system is widely used in games like chess. This bot ladder compiles different versions of bots from the main worldwide competitions (like AIIDE, CIG or SSCAI\footnote{\url{http://sscaitournament.com}}), even some independent or ``under construction'' bots. Therefore, it is a very good resource to test the performance of new bots against the current state of the art in StarCraft bots before participating in the official competitions.
 
 Figure \ref{fig:botLadder1} shows the Elo rating of the bots in the ladder during the first half year of 2012. The ranking is practically equal than the AIIDE 2011 competition, showing the lack of adaptability of the current bots. We can notice these more extremely in Figure \ref{fig:botLadder2} for the second half year of 2012. During this period new bots were introduced in the ladder. We can observe how the first version of KillerBot made a huge impact on Skynet ranking and finally, the second version of KillerBot quickly became the best bot for more than one month (again we can see how the rest of the bots aren't able to adapt and the ranking doesn't change so much). And finally, in January, the Ximp bot appears with a new strategy that overcomes the rest of the bots. Both KillerBot and Ximp use hard-coded strategies without any kind of adaptation capabilities. However, they implement strategies that no other bot has a counter for, and thus manage to win a very large percentage of games. This points out, once again, that one of the major open challenges in RTS game AI is how achieving adaptive strategies, that can recognize the opponent's intentions, and select an adequate response.
 
 
 \subsection{Adaptation Analysis}
 
-One of the major conclusions from the results of the StarCraft competitions, is the lack of adaptation of bots.  Some switch between different build-orders, but do not fully adapt their strategy. No bot is capable of observing the opponent and autonomously synthesize a good plan from scratch to counter the opponent strategy. In this section we analyzed this claim quantitatively using the tools of \cite{SynnaeveOpeningCig11}. We analyzed the replays from the 2011 and 2012 AIIDE competitions (shown in Figures \ref{fig:aiide2011-botopenings} and \ref{fig:aiide2012-botopenings} respectively). We analyzed the way bots choose their openings depending on which other bot they are playing against. Given that there is no dominant strategy in StarCraft, and it is necessary to see what the opponent is doing in order to determine the best opening, we would expect bots to change their openings depending on which other bot they are playing (since each bot uses a different strategy, or set of strategies). Using clustering, we identified the most common openings in all the replays from the 2011 and 2012 competitions (each one shown with a different color in the figures). No data is shown for the ItayUnvermind bot, since its opening did not match significantly with any of the ones used in our study (extracted from humans pro-gamers).
+One of the major conclusions from the results of the StarCraft competitions is the lack of adaptation of bots.  Some switch between different build-orders, but do not fully adapt their strategy. No bot is capable of observing the opponent and autonomously synthesize a good plan from scratch to counter the opponent strategy. In this section we analyzed this claim quantitatively using the tools of \cite{SynnaeveOpeningCig11}. We analyzed the replays from the 2011 and 2012 AIIDE competitions (shown in Figures \ref{fig:aiide2011-botopenings} and \ref{fig:aiide2012-botopenings} respectively). We analyzed the way bots choose their openings depending on which other bot they are playing against. Given that there is no dominant strategy in StarCraft, and it is necessary to see what the opponent is doing in order to determine the best opening, we would expect bots to change their openings depending on which other bot they are playing (since each bot uses a different strategy, or set of strategies). Using clustering, we identified the most common openings in all the replays from the 2011 and 2012 competitions (each one shown with a different color in the figures). No data is shown for the ItayUnvermind bot, since its opening did not match significantly with any of the ones used in our study (extracted from humans pro-gamers).
 
 Specifically, we identified the following openings (for a better comprehension of strategies, buildings or units of StarCraft, we refer the reader to Teamliquid's wiki\footnote{\url{http://wiki.teamliquid.net/starcraft/Category:Strategies}}):
 \begin{itemize}
@@ -1157,7 +1156,7 @@ Specifically, we identified the following openings (for a better comprehension o
   \end{itemize}
 \end{itemize}
 
-As the figures show, the top three ranked bots in the competition (Skynet, Aiur and UalbertaBot) do not change their strategy at all depending on their opponent. For example, the Skynet bot (both in 2011 and 2012), always uses the same opening (\emph{two\_gates}), except when playing a Terran opponent, when it uses \emph{nony}. This reflects the trend that the performance of bots is still more dependent on carefully hand-crafted and non-adaptive behaviors, than on on-line decision making procedures. This is so, since most of the problems that need to be solved in order to implement such procedures are still open.
+As the figures show, the top three ranked bots in the competition (Skynet, Aiur and UalbertaBot) do not change their strategy at all depending on their opponent. For example, the Skynet bot (both in 2011 and 2012), always uses the same opening (\emph{two\_gates}), except when playing a Terran opponent, when it uses \emph{nony}. This reflects the trend that the performance of bots is still more dependent on carefully handcrafted and non-adaptive behaviors, than on on-line decision making procedures. This is so, since most of the problems that need to be solved in order to implement such procedures are still open.
 
 
 \section{Open Questions in RTS Game AI}\label{sec:questions}
@@ -1186,8 +1185,8 @@ We present here a list of problems that are currently unsolved, grouped in vario
 \item {\bf Learning and adaptation:}
 \begin{itemize}
 \item Adaptation to opponent strategy: observing the opponent strategy, and synthesizing an adequate counter strategy. Current bots switch between predefined strategies based on hard-coded preconditions, or based on the performance of each predefined strategy against an opponent in previous games, but no current bot creates new strategies (like Chess or Go playing programs do).
-\item Learning from experience in RTS games: how can we make a bot that improves performance over time? some current bots learn which strategy (out of a predefined set of strategies) is best against a given opponent, but how can we devise learning strategies that can perform more general learning? This has been achieved in classical board games, such as Chess~\cite{tesauro2001comparison}, in the context of game-tree search (by learning the evaluation function). But it's unclear how to do it in RTS games.
-\item Learning from observation (from demonstration, or from observing the opponent) in RTS games: how can we learn by observing the game play of other players? can we devise algorithms that can automatically extract strategies from observation, and later apply them? There has been some work in this direction \cite{OntanonMSR10}, but it is very far from being mature.
+\item Learning from experience in RTS games: how can we make a bot that improves performance over time? Some current bots learn which strategy (out of a predefined set of strategies) is best against a given opponent, but how can we devise learning strategies that can perform more general learning? This has been achieved in classical board games, such as Chess~\cite{tesauro2001comparison}, in the context of game-tree search (by learning the evaluation function). But it's unclear how to do it in RTS games.
+\item Learning from observation (from demonstration, or from observing the opponent) in RTS games: how can we learn by observing the game play of other players? Can we devise algorithms that can automatically extract strategies from observation, and later apply them? There has been some work in this direction \cite{OntanonMSR10}, but it is very far from being mature.
 \end{itemize}
 
 \item {\bf Planning:}
@@ -1200,7 +1199,7 @@ We present here a list of problems that are currently unsolved, grouped in vario
 \item {\bf Integration:}
 %\begin{itemize}
 %\item 
-Multi-scale planning/reasoning: as described in this paper, all the bots developed for the StarCraft AI competitions decompose the problem of playing an RTS game into smaller subproblems, and then solutions for each of those subproblems are integrated in to a common architecture to play the game. However, the integration of each of the modules in a unified architecture is still an open problem. For example, how can decisions made at high-level modules be integrated with decisions made at lower-level modules? 
+Multi-scale planning/reasoning: as described in this paper, all the bots developed for the StarCraft AI competitions decompose the problem of playing an RTS game into smaller sub-problems, and then solutions for each of those sub-problems are integrated in to a common architecture to play the game. However, the integration of each of the modules in a unified architecture is still an open problem. For example, how can decisions made at high-level modules be integrated with decisions made at lower-level modules? 
 %\end{itemize}
 
 \item {\bf Domain Knowledge: }
@@ -1222,20 +1221,20 @@ We know how to incorporate some aspects of domain knowledge (e.g. build orders) 
 
 As the list in the previous section indicates, Real-Time Strategy games are an excellent testbed for AI techniques, which pose a very large list of open problems. As Section \ref{sec:competition} has shown, the current top performing programs to play RTS games such as StarCraft still rely mainly on hard-coded strategies. It is still possible to perform strongly, or even win, one of these competitions simply by finding a hard-coded strategy that no other bot has a predefined counter-strategy for. Additionally, good human players are still clearly superior to the best computer programs. From an industry point of view, one additional challenge is to make bots more believable to play against, and thus, more fun for human players (this includes, for example, doing scouting, instead of cheating and having full information of the game state).
 
-One of the main goals of this paper is to provide a centralized and unified overview to the research being done in the area of RTS game AI. To that end, in this paper we have  highlighted the existing challenges in RTS games, from an AI point of view, and surveyed the recent advances towards addressing these challenges with a focus on StarCraft (which has emerged as a unified test-bed). Given that playing an RTS game is a very challenging task, researchers tend to divide such task into smaller tasks, that can be individually addressed by AI techniques. We have also surveyed the different task subdivisions used in some of the top StarCraft-playing programs, highlighting advantages and disadvantages. Additionally, we have presented an analysis of the results of the different StarCraft AI competitions, highlighting strengths and weaknesses of each of the bots. Finally, we have closed the paper with a list of specific open research questions for future research.
+One of the main goals of this paper is to provide a centralized and unified overview to the research being done in the area of RTS game AI. To that end, in this paper we have  highlighted the existing challenges in RTS games, from an AI point of view, and surveyed the recent advances towards addressing these challenges with a focus on StarCraft (which has emerged as a unified test-bed). Given that playing an RTS game is a very challenging task, researchers tend to divide such task into smaller tasks, which can be individually addressed by AI techniques. We have also surveyed the different task subdivisions used in some of the top StarCraft-playing programs, highlighting advantages and disadvantages. Additionally, we have presented an analysis of the results of the different StarCraft AI competitions, highlighting strengths and weaknesses of each of the bots. Finally, we have closed the paper with a list of specific open research questions for future research.
 
 Real-time strategy games encompass many interesting and complex
-sub-problems which are closely related not only to other fields of AI
+sub-problems that are closely related not only to other fields of AI
 research, but to real-world problems as well. For example, optimizing assembly line operations in factories is akin to performing build-order optimizations. 
-Troop positioning in military conflicts involves the same spacial and
-tactical reasoning used in RTS games. Robot navigation in unknown environments require real-time path-finding and decision making to avoid hitting obstacles.
+Troop positioning in military conflicts involves the same spatial and
+tactical reasoning used in RTS games. Robot navigation in unknown environments requires real-time path-finding and decision making to avoid hitting obstacles.
 All of these issues mentioned in this paper must are being tackled by
 the real-time strategy game AI community, and in doing so we will not
 only be improving techniques for writing tournament-winning bots, but
 for advance the state of the art for many other fields as well.
 
 
-%As argued before, addressing these open research questions would not just lead to better RTS game playing bots, but would provide means to improve many other complex AI components, not solely focussing on games. This would apply to many areas that are in need of real-time decision components working under uncertainty in the form of incomplete and/or noisy information, such as  e.g. robotics and assistance systems.
+%As argued before, addressing these open research questions would not just lead to better RTS game playing bots, but would provide means to improve many other complex AI components, not solely focusing on games. This would apply to many areas that are in need of real-time decision components working under uncertainty in the form of incomplete and/or noisy information, such as  e.g. robotics and assistance systems.
 %bring significant advances to many other areas of artificial intelligence. This is so because RTS games embody many characteristics of many other problems appearing in many areas of AI (such as robotics, multiagent systems, etc.).  
 
 
