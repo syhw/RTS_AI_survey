@@ -1,0 +1,160 @@
+\documentclass{article}
+
+\usepackage{cite,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\usepackage{graphicx}
+\usepackage[cmex10]{amsmath}
+\usepackage{algorithmic}
+\usepackage{array}
+\usepackage{mdwmath}
+\usepackage{mdwtab}
+\usepackage{eqparbox}
+%\usepackage[tight,footnotesize]{subfigure}
+%\usepackage[caption=false]{caption}
+%\usepackage[font=footnotesize]{subfig}
+%\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage{fixltx2e}
+\usepackage{stfloats}
+\usepackage{url}
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{A Survey of Real-Time Strategy Game AI\\ Research and Competition in StarCraft \\ Responses to Reviewers Comments}
+
+\author{Santiago~Onta\~{n}\'{o}n\thanks{Santiago~Onta\~{n}\'{o}n is with the Computer Science Department at Drexel University, Philadelphia, PA, USA.},
+        Gabriel~Synnaeve\thanks{Gabriel~Synnaeve is with the Laboratory of Cognitive Science and Psycholinguistics (LSCP) of ENS Ulm in Paris, France.},
+        Alberto~Uriarte\thanks{Alberto Uriarte is with the Computer Science Department at Drexel University, Philadelphia, PA, USA.},\\
+        Florian~Richoux\thanks{Florian~Richoux is with the Nantes Atlantic Computer Science Laboratory, France.},
+        David~Churchill\thanks{David~Churchill is with the Computing Science Department of the University of Alberta, Edmonton, Canada.},
+        Mike~Preuss\thanks{Mike~Preuss is with the Department of Computer Science of Technische Universit{\"a}t Dortmund, Germany.}}
+
+
+
+\maketitle
+
+
+We'd like to start by thanking the reviewers for the constructive comments and suggestions, which have definitively helped in making the paper stronger. Below, we include responses to the specific comments by each of the reviewers.
+
+
+\section*{Reviewer 1}
+
+
+{\bf Reviewer Comment}: {\em There are several spelling and grammar errors that needs to be fixed.}
+
+{\bf Answer}: We have revised the paper accordingly. Thanks for the suggestion.
+
+\vspace{0.3cm}
+\noindent {\bf Reviewer Comment}: {\em First in the introduction, I think the ORTS competition that preceded the Starcraft competition should be mentioned.}
+
+{\bf Answer}: Indeed, we have included a mention to it in the introduction.
+
+
+\vspace{0.3cm}
+\noindent {\bf Reviewer Comment}: {\em On page 2 the authors state that ``... 30 to 35 different types of units and buildings, each one with a significant number of special abilities.''. This is not entirely true. There are both units (for example Zealots) and buildings (for example Pylons) that does not have any special abilities. I would prefer to use the word ``most'' instead of ``each one''.}
+
+{\bf Answer}: Fixed.
+
+
+\vspace{0.3cm}
+\noindent {\bf Reviewer Comment}: {\em On page 5: "Most research in RTS game AI assumes perfect information all the time.". As the authors state later in the paper, most of the mentioned bot competitions use fog-of-war and therefore have imperfect information for the AI.}
+
+{\bf Answer}: Thanks for noticing, that sentence was indeed problematic, we have changed the wording to reflect what we intended to sa
+
+
+\vspace{0.3cm}
+\noindent {\bf Reviewer Comment}: {\em On page 6: ``Potential fields (or influence maps) have been...''. There are significant differences between these two techniques and they are not the same, as the reader might think by reading that sentence.}
+
+{\bf Answer}: Thanks for pointing this out, we have corrected this in all the places in the paper were the same confusion appeared.
+
+
+\vspace{0.3cm}
+\noindent {\bf Reviewer Comment}: {\em Chapter ``III. Existing work on RTS game AI'' is a bit confusing. As a reader I want to know what work has been done in the RTS game AI area, but in several places (for example in page 5) other very different game genres (FPS games) are mentioned. I think these related work should either be removed, or the authors should state more clearly why this particular related work in FPS games is relevant to RTS game AI.}
+
+{\bf Answer}: We have clarified that this piece of work in particular is relevant for RTS games.
+
+
+\vspace{0.3cm}
+\noindent {\bf Reviewer Comment}: {\em Table I, II and III. The tables show the top bots in each competition, but it is nowhere mentioned that they only show the top bots and that other bots participated as well. For example Table I shows three bots while a total of 17 bots participated in the tournament. Table VI only shows the top bots as well, but in this case it was mentioned in the text that more bots participated.}
+
+{\bf Answer}: Agreed, and fixed.
+
+
+\section*{Reviewer 2}
+
+{\bf Reviewer Comment}: {\em Page 2. Please make your estimates a little better. I've played SC and SC2 and it is not that I think you are off, I am just really curious and want to get it as close and as supportable as possible.  The paper would be much improved if, for example, you looked at average estimates for b and d from real games? Novices versus experts. Specifically, when estimating pow(b, d), 
+
+\begin{enumerate}
+\item For d: Should you also consider buildings? Should you look at
+early, mid, and late game value for d? From say 30 pro and 30 novice games?
+
+\item For b: What is the range? SC is well defined, you should be able to
+come up with a more justifiable estimate.
+\end{enumerate}
+
+Please do spend a little more time on coming up with more refined estimates and supporting them with evidence. This will be most helpful in defining the role of RTS games in CI and AI research.
+}
+
+{\bf Answer}: Indeed coming up with accurate estimates is very important to determining the actual complexity of games like StarCraft, and compare it with other tasks in AI and CI. The original estimate in our paper was intended to be a rough lower-bound (which was already tremendously large), just to give the reader an idea of the difference between RTS games and games like Chess or Go. We have improved our estimate (we carefully assessed the number of actions of each unit available in StarCraft for the Terran race. With that analysis, we came up with a more accurate estimate. This is still a lower-bound, and indeed buildings could be added to the equation, making $b$ even larger. But again, our intention is just to provide a lower bound, which shows that StarCraft is many, many, orders of magnitude larger than any game solved to date.
+
+However, we would like to point out that our intention is just to provide a theoretical measure of complexity, which only depends on the rules of the game, and not on the specific players (whether they are novices or experts). The play-style of the player affects the measure of complexity, at most, in the number of units they control at once. But everything else is just determined by the rules of the game. However, an exact analysis of the branching factor $b$ that actually occurs in specific instances of games, like those player by humans, seems like a very interesting experiment, which we will indeed consider for our future work. Thanks for the suggestion!
+
+
+\vspace{0.3cm}
+\noindent {\bf Reviewer Comment}: {\em Page 4. There is at least one other way you can subdivide the tasks to get high quality, RTS bots, and I would refer you to some of Chris Miles' work in RTS games (and also the first thesis on RTS games: \url{http://www.cse.unr.edu/~miles/papers/index.htm#dissertation} ). Strangely hard to find with google}
+
+{\bf Answer}: Agreed. Thanks for pointing to this piece of work, which we had missed. We have added a few references in different parts of the paper where the work of Chris Miles was relevant.
+
+
+\vspace{0.3cm}
+\noindent {\bf Reviewer Comment}: {\em Fig 2. Caption seems rushed, please fix the obvious grammer issues. Nice Figure. }
+
+{\bf Answer}: Fixed.
+
+
+\vspace{0.3cm}
+\noindent {\bf Reviewer Comment}: {\em Column 2: line 13: Should be: constrain}
+
+{\bf Answer}: Fixed.
+
+
+\vspace{0.3cm}
+\noindent {\bf Reviewer Comment}: {\em Column 2: Please rewrite: Finally, we will call reactive control to how the player controls individual units to maximize their efﬁciency (when executing tactics) in real-time.}
+
+{\bf Answer}: Done.
+
+
+\vspace{0.3cm}
+\noindent {\bf Reviewer Comment}: {\em Column 2: lines 34 - 43, You might want to point out the relationship with micro and macro here?}
+
+{\bf Answer}: Indeed, that was missing. Done.
+
+
+\vspace{0.3cm}
+\noindent {\bf Reviewer Comment}: {\em Page 5: Column 1: line 27: ``being'' should come after ``planning''}
+
+{\bf Answer}: Fixed.
+
+
+\vspace{0.3cm}
+\noindent {\bf Reviewer Comment}: {\em line 50 or thereabouts: Please describe Miles' approach to strategic planning as well}
+
+{\bf Answer}: Done.
+
+
+\vspace{0.3cm}
+\noindent {\bf Reviewer Comment}: {\em Page 6: Column 1: line 20: remove the "is" at the beginning of the sentence}
+
+{\bf Answer}: Done.
+
+
+\vspace{0.3cm}
+\noindent {\bf Reviewer Comment}: {\em Page 9+: There are several small grammatical errors that can be easily fixed. I am not going to point them all out.}
+
+{\bf Answer}: Thanks, we have proofread the complete paper for typos and grammar.
+
+
+
+\end{document}
