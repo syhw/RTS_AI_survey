@@ -212,7 +212,7 @@ From a theoretical point of view, the state space of a StarCraft game for a give
 
 Another way  to measure the complexity of the game is  by looking at the branching factor, $b$, and the depth of the game, $d$, as proposed in~\cite{Gaby}, with a total game complexity of $b^d$. In Chess, $b \approx 35$ and $d \approx 80$. In more complex games, like Go, $b \approx 30$ to $300$, and $d \approx 150$ to $200$. In order to determine the branching factor in StarCraft when an AI plays it, we must have in mind, that the AI can issue actions simultaneously to as many units in the game as desired. Thus, considering that, in a typical game, a player controls between 50 to 200 units, the branching factor would be between $u^{50}$ and $u^{200}$, where $u$ is the average number of actions each unit can execute. 
 {\color{blue}
-Estimating the value of $u$ is not easy, since the number of actions a unit can execute is highly dependent on the context. Let us make the following assumptions: 1) at most 16 enemy units will be in range of a friendly unit (larger values are possible, but unlikely), 2) when an AI plays StarCraft, it only makes sense to consider movement in the 8 cardinal directions per unit (instead of assuming that the player can issue a ``move'' command to anywhere in the map at any point in time), 3) for ``build'' actions, we consider that SCVs (terran worker units) only build in their current location (otherwise, if they need to move, we consider that as first issuing a ``move'' action, and then a ``build''), and 4) let's consider only the {\em Terran} race. With those assumptions, units in StarCraft can execute between 1 (units like ``Supply Depots'', whose only action is to be ``idle'') to 43 actions (Terran ``Ghosts''), with typical values around 20 to 30. Now, if we have in mind that actions have cool-down times, and thus not all units can execute all of the actions at every frame, we can take a conservative estimation of about $10$ possible actions per unit per game frame. This results in a conservative estimate for the branching factor between $b \in [10^{50},10^{200}]$, only considering units (ignoring the actions buildings can execute). 
+Estimating the value of $u$ is not easy, since the number of actions a unit can execute is highly dependent on the context. Let us make the following assumptions: 1) at most 16 enemy units will be in range of a friendly unit (larger values are possible, but unlikely), 2) when an AI plays StarCraft, it only makes sense to consider movement in the 8 cardinal directions per unit (instead of assuming that the player can issue a ``move'' command to anywhere in the map at any point in time), 3) for ``build'' actions, we consider that SCVs (Terran worker units) only build in their current location (otherwise, if they need to move, we consider that as first issuing a ``move'' action, and then a ``build''), and 4) let's consider only the {\em Terran} race. With those assumptions, units in StarCraft can execute between 1 (units like ``Supply Depots'', whose only action is to be ``idle'') to 43 actions (Terran ``Ghosts''), with typical values around 20 to 30. Now, if we have in mind that actions have cool-down times, and thus not all units can execute all of the actions at every frame, we can take a conservative estimation of about $10$ possible actions per unit per game frame. This results in a conservative estimate for the branching factor between $b \in [10^{50},10^{200}]$, only considering units (ignoring the actions buildings can execute). 
 }
 %Assuming a conservative value for $u$ of about $30$ (moving to nearby positions, attacking units in range, using special abilities, etc.), we obtain a branching factor of $b$ between  $30^{50}$ and $30^{200}$.
 Now, to compute $d$, we simply consider the fact that typical games last for about 25 minutes, which results in $d \approx 36000$ (25 minutes $\times$ 60 seconds $\times$ 24 frames per second).
@@ -295,22 +295,22 @@ In RTS games, there are two main kinds of uncertainty. First, the game is partia
 \subsubsection{Spatial and Temporal Reasoning}
 % TODO just a paragraph on exposing why there are temporal and spatial
 % reasoning in RTS AI.
-Spatial  reasoning   is  related  to   each  aspect  of   terrain
-exploitation.  It is involved in tasks such as building placement or base expansion. In the former, the player needs to
-carefully  consider building  positioning  into its  own  bases to  both
-protect them  by creating  a wall against  invasions and to  avoid bad
-configurations  where large  units could  be stuck. In base expansion, the player has to
-choose good available locations to  build a new base, regarding its
-own  position  and opponent's  bases.  Finally,  spatial reasoning  is
-key to tactical reasoning: players need to decide where to place units
-for battle,  favoring, for  instance, engagements when  the opponent's
+Spatial reasoning is related to each aspect of terrain exploitation.
+It is involved in tasks such as building placement or base expansion. In the
+former, the player needs to carefully consider building positioning into its
+own bases to both protect them by creating a wall against invasions and to
+avoid bad configurations where large units could be stuck. In base
+expansion, the player has to choose good available locations to build a new
+base, regarding its own position and opponent's bases. Finally, spatial
+reasoning is key to tactical reasoning: players need to decide where to place
+units for battle, favoring, for instance, engagements when the opponent's
 units are lead into a bottleneck. 
 
 % [Flo:  70% to hit high  ground units according to  Ben Weber's paper
 % [3], and 53.125% according  to BWAPI website. Who's right? Should we
 % add this in the paper?]
 % [Alberto: I guess Weber's number comes from StarCraft walkthroughs like this: http://www.supercheats.com/pc/walkthroughs/starcraftbroodwar-walkthrough01.txt, there is also a chance to hit in even grounds (like 98%). But since we cannot see the original code all of these numbers are approximations. In any case we can keep explaining the concept without numbers ;)]
-Another example of spatial reasoning in StarCraft is that it is always an advantage to  have own units  on high ground  while the enemy is on low ground, since units  on low ground have no vision  onto the  high ground. %, and firing from low ground have a chance to  hit units on high ground. 
+Another example of spatial reasoning in StarCraft is that it is always an advantage to have own units on high ground while the enemy is on low ground, since units on low ground have no vision onto the high ground. %, and firing from low ground have a chance to hit units on high ground. 
 %MP: took out last half sentence as it seems to be rather confusing.
 
 Analogously, temporal reasoning is key in tactical or strategic reasoning. For example, timing attacks and retreats to gain an advantage. At a higher strategic level, players need to reason about when to perform long-term impact economic actions such as upgrades, building construction, strategy switching, etc. all taking into account that the effects of these actions are not immediate, but longer term.
@@ -322,31 +322,31 @@ In traditional board games such as Chess, researchers have exploited the large a
 \subsubsection{Task Decomposition}
 For all the previous reasons, most existing approaches to play games as StarCraft work by decomposing the problem of playing an RTS game into a collection of smaller problems, to be solved independently. Specifically, a common subdivision is:
 \begin{itemize}
-\item {\em Strategy}: corresponds to the high-level decision making process.  This is
-  the  highest level of  abstraction for  the game  comprehension. Finding   an   efficient   strategy   or
-  counter-strategy  against a  given opponent is key in RTS games.  It concerns  the whole
-  set of  units and buildings  a player owns. %If  we may allow  ourselves a  military analogy, strategy is orders given by generals at the HQ. 
-\item  {\em Tactics}: are  the implementation  of the  current  strategy. It
-  implies  army and  building positioning,  movements, timing,  and so
-  on.  Tactics concerns a  group of  units. %They  are orders  given by officers on the battlefield.
-\item  {\em Reactive  control}: is  the  implementation  of  tactics.  This
-  consists   in  moving,   targeting,  firing,   fleeing,  hit-and-run
-  techniques (also knows as ``kiting'')  during battle. Reactive control focuses
-  on a specific unit. %It is soldiers applying officers' orders. 
+\item {\em Strategy}: corresponds to the high-level decision making process. This is
+ the highest level of abstraction for the game comprehension. Finding an efficient strategy or
+ counter-strategy against a given opponent is key in RTS games. It concerns the whole
+ set of units and buildings a player owns. %If we may allow ourselves a military analogy, strategy is orders given by generals at the HQ. 
+\item {\em Tactics}: are the implementation of the current strategy. It
+ implies army and building positioning, movements, timing, and so
+ on. Tactics concerns a group of units. %They are orders given by officers on the battlefield.
+\item {\em Reactive control}: is the implementation of tactics. This
+ consists in moving, targeting, firing, fleeing, hit-and-run
+ techniques (also knows as ``kiting'') during battle. Reactive control focuses
+ on a specific unit. %It is soldiers applying officers' orders. 
 %\end{itemize}
 %
 %\noindent
-%Both     strategy      and     tactics     are      usually     called
-%\textit{macro-management},  whereas reactive  control  is also  called
+%Both  strategy  and  tactics  are  usually  called
+%\textit{macro-management}, whereas reactive control is also called
 %\textit{micro-management}. In addition of the three tasks shown above,
 %one could also consider these two tasks that an AI has to deal with:
 %\begin{itemize}
-\item {\em Terrain analysis}: consists  in the analysis of regions composing
-  the  map:  choke-points,  minerals  and  gas emplacements,  low  and  high
-  walkable grounds, islands, etc.
-\item {\em Intelligence gathering}:  corresponds to information collected about
-  the  opponent. Because of  the fog-of-war,  players must
-  regularly send scouts to localize and spy enemy bases.%, and must see or  infer what buildings and technology the enemy has developed in order  to adapt its strategy.
+\item {\em Terrain analysis}: consists in the analysis of regions composing
+ the map: choke-points, minerals and gas emplacements, low and high
+ walkable grounds, islands, etc.
+\item {\em Intelligence gathering}: corresponds to information collected about
+ the opponent. Because of the fog-of-war, players must
+ regularly send scouts to localize and spy enemy bases.%, and must see or infer what buildings and technology the enemy has developed in order to adapt its strategy.
 \end{itemize}
 
 In comparison, when humans play StarCraft, they typically divide their decision making in a very different way. The StarCraft community typically talks about two tasks:
@@ -355,7 +355,7 @@ In comparison, when humans play StarCraft, they typically divide their decision 
   \item {\em Macro}: is the ability to produce units and to expand at the appropriate times to keep your production of units flowing {\color{blue} (roughly corresponding to everything but {\em Reactive Control} and part of {\em Tactics} above)}. A good \emph{macro} player usually has the larger army.
 \end{itemize}
 
-The reader can find a  good presentation of task decomposition for AIs
+The reader can find a good presentation of task decomposition for AIs
 playing RTS in~\cite{weber2011acs}. Although the previous task decomposition is common, a significant challenge is on designing architectures so that the individual AI techniques that address each of those tasks can communicate and effectively work together, resolving conflicts, prioritizing resources between them, etc. Section \ref{sec:bot} provides an overview of the task decompositions that state-of-the-art bots use. {\color{blue} Moreover, we would like to point out that the task decomposition above is not the only possible approach. Some systems, such as IMAI \cite{miles2007co}, divide gameplay into much smaller tasks, which are then assigned resources depending on the expected benefits of achieving each task.}
 
 
@@ -447,7 +447,7 @@ Reactive control %, also called micro-management in RTS games,
 aims at maximizing the effectiveness of units, including simultaneous control of units of different types in complex battles on heterogeneous terrain. 
 
 % POTENTIAL FIELDS:
-Potential fields and influence maps have been found to be useful techniques for reactive decision making. Some uses of potential fields in RTS games are: avoiding obstacles (navigation), avoiding opponent fire \cite{uriarte2012kiting}, or staying at maximum shooting distance \cite{Hagelback09}. Potential fields have also been combined with A* path-finding to avoid local traps \cite{Hagelback12}. Hagelb\"{a}ck and Johansson \cite{HagelbackJ08} presented a multiagent potential fields based bot able to deal with fog-of-war in the Tankbattle game. Avery et al. \cite{Avery09} and Smith et al. \cite{SmithCIG10} co-evolved influence map trees for spatial reasoning in RTS games. Danielsiek et al. \cite{Danielsiek_2008} used influence maps to achieve intelligent squad movement to flank the opponent in a RTS game. Despite their success, a drawback for potential field-based techniques is the large number of parameters that has to be tuned in order to achieve the desired behavior. Approaches for automatically learning such parameters have been explored, for example, using reinforcement learning \cite{Liu_2008}, or self-organizing-maps (SOM) \cite{teamCompositionRTS}. We would like to note that potential fields are a reactive control technique, and as such, they do not perform any form of lookahead. As a consequence, these techniques are prone to make units stuck in local maxima. 
+Potential fields and influence maps have been found to be useful techniques for reactive decision making. Some uses of potential fields in RTS games are: avoiding obstacles (navigation), avoiding opponent fire \cite{uriarte2012kiting}, or staying at maximum shooting distance \cite{Hagelback09}. Potential fields have also been combined with A* path-finding to avoid local traps \cite{Hagelback12}. Hagelb\"{a}ck and Johansson \cite{HagelbackJ08} presented a multi-agent potential fields based bot able to deal with fog-of-war in the Tankbattle game. Avery et al. \cite{Avery09} and Smith et al. \cite{SmithCIG10} co-evolved influence map trees for spatial reasoning in RTS games. Danielsiek et al. \cite{Danielsiek_2008} used influence maps to achieve intelligent squad movement to flank the opponent in a RTS game. Despite their success, a drawback for potential field-based techniques is the large number of parameters that has to be tuned in order to achieve the desired behavior. Approaches for automatically learning such parameters have been explored, for example, using reinforcement learning \cite{Liu_2008}, or self-organizing-maps (SOM) \cite{teamCompositionRTS}. We would like to note that potential fields are a reactive control technique, and as such, they do not perform any form of lookahead. As a consequence, these techniques are prone to make units stuck in local maxima. 
 
 
 % Machine learning:
@@ -640,8 +640,8 @@ once again coming in 1st by beating Sherbrooke.
 
 Tournament 3 was a tech-limited StarCraft game on a single known map with no fog-of-war enforced. Players
 were only allowed to choose the Protoss race, with no late game units allowed. 8 bots
-faced off in this double-elimination tournament with mimicbot taking first place over botnik in the final.
-As this was a perfect information variant of StarCraft, mimicbot adopted a strategy of
+faced off in this double-elimination tournament with MimicBot taking first place over Botnik in the final.
+As this was a perfect information variant of StarCraft, MimicBot adopted a strategy of
 ``mimic its opponent's build order, gaining an economic advantage whenever possible'' which
 worked quite well.
 
@@ -657,7 +657,7 @@ which they used to contain and eventually defeat their opponents. The mutalisk i
 flying unit which is able to attack while moving with no drawback, which makes them quite a powerful
 unit when controlled by a computer. Overmind used a potential-field
 based micro-management system to guide their mutalisks, which led them to victory. Krasi0 came in 2nd place
-with a standard defensive Terran opening strategy that transitioned into mech play in the late game.
+with a standard defensive Terran opening strategy that transitioned into ``mech'' play in the late game.
 
 \begin{table}[!t]
 \caption{Ranking of the three best bots of the AIIDE 2010 competition}
@@ -965,10 +965,10 @@ two brackets. In each bracket of 5 bots, a round-robin
 tournament was held with 10 repetitions per pairing, resulting
 in 40 games per bot.
 The 5 maps chosen for the first round were selected from the pool
-of well-known league play maps found on the internet:
+of well-known league play maps found on the Internet:
 \emph{(2)MatchPoint 1.3}, \emph{(4)Fighting Spirit 1.3}, 
-\emph{iCCupdestination 1.1}, \emph{iCCup gaia}, and 
-\emph{iCCup great barrier reef}. Each bot pairing played
+\emph{iCCup Destination 1.1}, \emph{iCCup Gaia}, and 
+\emph{iCCup Great Barrier Reef}. Each bot pairing played
 on every map twice, with switched starting positions.
 
 
@@ -1282,6 +1282,14 @@ for advance the state of the art for many other fields as well.
 
 % \begin{IEEEbiographynophoto}{Santiago Onta\~{n}\'{o}n}
 % is an assistant professor in the Computer Science Department at Drexel University. His main research interests are game AI, case-based reasoning and machine learning, fields in which he has published more than 90 peer-reviewed papers. He obtained his PhD form the Autonomous University of Barcelona (UAB), Spain. Before joining Drexel University, he held postdoctoral research positions at the Artificial Intelligence Research Institute (IIIA) in Barcelona, Spain, at the Georgia Institute of Technology (GeorgiaTech) in Atlanta, USA, and at the University of Barcelona, Spain.  
+% \end{IEEEbiographynophoto}
+
+% \begin{IEEEbiographynophoto}{Gabriel Synnaeve}
+% is a post-doc in the Laboratory of Cognitive Science and Psycholinguistics
+% (LSCP) at Ecole Normale Sup\'{e}rieure in Paris, France. Previously, he
+% worked on Bayesian modeling in game AI research at INRIA (Grenoble) and
+% Coll`{e}ge de France (Paris). He obtained his PhD in 2012 from Grenoble
+% University, France.
 % \end{IEEEbiographynophoto}
 
 % \begin{IEEEbiographynophoto}{Alberto Uriarte}
