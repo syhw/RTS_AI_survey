@@ -322,8 +322,8 @@ For all the previous reasons, most existing approaches to play games as StarCraf
 \begin{itemize}
 \item {\em Strategy}: corresponds to the high-level decision making process. This is
  the highest level of abstraction for the game comprehension. Finding an efficient strategy or
- counter-strategy against a given opponent is key in RTS games. It concerns the whole
- set of units and buildings a player owns. %If we may allow ourselves a military analogy, strategy is orders given by generals at the HQ. 
+ counter-strategy against a given opponent is key in RTS games, and concerns the whole
+ set of units a player owns. %If we may allow ourselves a military analogy, strategy is orders given by generals at the HQ. 
 \item {\em Tactics}: are the implementation of the current strategy. It
  implies army and building positioning, movements, timing, and so
  on. Tactics concerns a group of units. %They are orders given by officers on the battlefield.
@@ -464,7 +464,7 @@ Finally, although pathfinding does not fall under our previous definition of rea
 
 \subsection{Holistic Approaches}
 
-Holistic approaches to address RTS AI attempt to address the whole problem using a single unified method. To the best of our knowledge, with a few exceptions, such as the Darmok system \cite{OntanonMSR10} (which uses a combination of case-based reasoning and learning from demonstration) or ALisp \cite{Marthi05}, there has not been much work in this direction.   The main reason is that the complexity of RTS games is too large, and approaches that decompose the problem into smaller, separate, problems, achieve better results in practice. However, holistic approaches, based, for example, on Monte Carlo Tree Search, have only been explored in the context of smaller-scale RTS games~\cite{ontanon2013naive}, but techniques that scale up to large RTS games as StarCraft are still not available.
+Holistic approaches to address RTS AI attempt to address the whole problem using a single unified method. To the best of our knowledge, with a few exceptions, such as the Darmok system \cite{OntanonMSR10} (which uses a combination of case-based reasoning and learning from demonstration) or ALisp \cite{Marthi05}, there has not been much work in this direction.   The main reason is that the complexity of RTS games is too large, and approaches that decompose the problem into smaller, separate, problems, achieve better results in practice. However, holistic approaches, based, for example, on Monte Carlo Tree Search, have only been explored in the context of smaller-scale RTS games~\cite{ontanon2013naive}. Techniques that scale up to large RTS games as StarCraft are still not available.
 
 A related problem is that of integrating reasoning at multiple levels of abstraction. Molineaux et al. \cite{Molineaux08} showed that the difficulty of working with multi-scale goals and plans can be handled directly by case-based reasoning (CBR), via an integrated RL/CBR algorithm using continuous models. Reactive planning \cite{WeberCig10}, a decompositional planning similar to hierarchical task networks \cite{HTNPlanning}, allows for plans to be changed at different granularity levels and so for multi-scale (hierarchical) goals integration of low-level control. Synnaeve and Bessi\`{e}re \cite{SynnaeveMicroCig11} achieve hierarchical goals (coming from tactical decisions) integration through the addition of another sensory input corresponding to the goal's objective. 
 
@@ -1111,7 +1111,7 @@ we can draw the conclusion that the available bots are still
 very constrained. No bot in the competition played the Zerg race,
 which is surprising as the AIIDE 2010 winner (Overmind) did so.
 Presumably, implementing a good Zerg strategy is more demanding
-than for the Protoss or Terran races. Many bots consistently crashed
+than implementing one for the Protoss or Terran races. Many bots consistently crashed
 when playing against a random race built-in bot for testing, and
 also did so when the map size was changed from $128\times 128$ to 
 any other. Furthermore, every single bot sometimes failed to finish
@@ -1132,7 +1132,7 @@ Figure \ref{fig:botLadder1} shows the Elo rating of the bots in the ladder durin
 
 \subsection{Adaptation Analysis}
 
-One of the major conclusions from the results of the StarCraft competitions is the lack of adaptation of bots.  Some switch between different build-orders, but do not fully adapt their strategy. No bot is capable of observing the opponent and autonomously synthesize a good plan from scratch to counter the opponent strategy. In this section we analyzed this claim quantitatively using the tools of \cite{SynnaeveOpeningCig11}. We analyzed the replays from the 2011 and 2012 AIIDE competitions (shown in Figures \ref{fig:aiide2011-botopenings} and \ref{fig:aiide2012-botopenings} respectively). We analyzed the way bots choose their openings depending on which other bot they are playing against. Given that there is no dominant strategy in StarCraft, and it is necessary to see what the opponent is doing in order to determine the best opening, we would expect bots to change their openings depending on which other bot they are playing (since each bot uses a different strategy, or set of strategies). Using clustering, we identified the most common openings in all the replays from the 2011 and 2012 competitions (each one shown with a different color in the figures). No data is shown for the ItayUnvermind bot, since its opening did not match significantly with any of the ones used in our study (extracted from humans pro-gamers).
+One of the major conclusions from the results of the StarCraft competitions is the lack of adaptation of bots.  Some switch between different build-orders, but do not fully adapt their strategy. No bot is capable of observing the opponent and autonomously synthesize a good plan from scratch to counter the opponent strategy. In this section we analyzed this claim quantitatively using the tools of \cite{SynnaeveOpeningCig11}. We analyzed the replays from the 2011 and 2012 AIIDE competitions (shown in Figures \ref{fig:aiide2011-botopenings} and \ref{fig:aiide2012-botopenings} respectively). We analyzed the way bots choose their openings depending on which other bot they are playing against. Given that there is no dominant strategy in StarCraft, and that it is necessary to see what the opponent is doing in order to determine the best opening, we would expect bots to change their openings depending on which other bot they are playing (since each bot uses a different strategy, or set of strategies). Using clustering, we identified the most common openings in all the replays from the 2011 and 2012 competitions (each one shown with a different color in the figures). No data is shown for the ItayUnvermind bot, since its opening did not match significantly with any of the ones used in our study (extracted from humans pro-gamers).
 
 Specifically, we identified the following openings (for a better comprehension of strategies, buildings or units of StarCraft, we refer the reader to Teamliquid's wiki\footnote{\url{http://wiki.teamliquid.net/starcraft/Category:Strategies}}):
 \begin{itemize}
