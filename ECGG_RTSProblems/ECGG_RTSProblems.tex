@@ -100,7 +100,7 @@ games.
 This article aims to  provide an overview on what is  the state of the
 art  in  RTS AI,  with  a  particular emphasis  on  the  work done  in
 StarCraft.  It is organized as follows: 
-{\color{blue} TODO}
+{\color{blue} TODO (or not)}
 
 % Section~\ref{sec:rts}
 % introduces RTS games, in particular the game StarCraft, and their main
@@ -165,27 +165,35 @@ challenges in RTS game AI.
 
 \subsection{StarCraft}\label{subsec:StarCraft}
 
+{\color{blue}  Do we  need this  part?  Should  we talk  about RTS  AI
+  problems  and   techniques  in  general,  but   take  examples  from
+  StarCraft only, arguing this game is mainstream?}
+
+
 {\em StarCraft: Brood  War} is an immensely popular  RTS game released
 in   1998  by   Blizzard  Entertainment.   StarCraft  is   set  in   a
 science-fiction based universe where the player must choose one of the
 three  races: Terran,  Protoss or  Zerg.  One of  the most  remarkable
 aspects  of StarCraft  is  that  the three  races  are extremely  well
-balanced:
+balanced.
 
-\begin{itemize}
-\item Terrans provide  units that are versatile and  flexible giving a
-  balanced option between Protoss and Zergs.
-\item  Protoss   units  have   lengthy  and   expensive  manufacturing
-  processes, but they are strong and resistant.  These conditions make
-  players follow a strategy of quality over quantity.
-\item Zergs, the insectoid race, units are cheap and weak. They can be
-  produced fast, encouraging players to overwhelm their opponents with
-  sheer numbers.
-\end{itemize}
+% \begin{itemize}
+% \item Terrans provide  units that are versatile and  flexible giving a
+%   balanced option between Protoss and Zergs.
+% \item  Protoss   units  have   lengthy  and   expensive  manufacturing
+%   processes, but they are strong and resistant.  These conditions make
+%   players follow a strategy of quality over quantity.
+% \item Zergs, the insectoid race, units are cheap and weak. They can be
+%   produced fast, encouraging players to overwhelm their opponents with
+%   sheer numbers.
+% \end{itemize}
 
 % What about copyright problems with this screenshot?
 % Figure~\ref{fig:StarCraft} shows  a screenshot of StarCraft  showing a
-% player playing the Terran race. 
+% player playing the Terran race.
+
+{\color{blue}  Thus,  merge the  following  paragraph  with the  first
+  paragraph of the RTS section?}
 In order to win a StarCraft  game, players must first gather resources
 (minerals  and Vespene  gas). As  resources become  available, players
 need to allocate them for creating more buildings (which reinforce the
@@ -208,76 +216,78 @@ requires quick and reactive control of each of the units.
 %     \label{fig:StarCraft}
 % \end{figure}
 
-A typical  StarCraft map is defined  as a rectangular grid,  where the
-$width \times  height$ of  the map  is measured in  the number  of $32
-\times 32$ squares of pixels, also  known as build tiles. However, the
-resolution of  walkable areas is  in squares  of $8 \times  8$ pixels,
-also known as  walk tiles. The typical dimensions for  maps range from
-$64  \times 64$  to  $256 \times  256$ build  tiles.  Each player  can
-control  up to  200 units  (plus  an unlimited  number of  buildings).
-Moreover,  each different  race contains  between 30  to 35  different
-types of units  and buildings, most of them with  a significant number
-of  special abilities.  All these  factors together  make StarCraft  a
-significant  challenge, in  which humans  are still  much better  than
-computers.      For     instance,      in     the      game     ladder
-iCCup\footnote{http://www.iccup.com/StarCraft/} where users are ranked
-by their current point totals ($E$ being the lowest possible rank, and
-$A^+$  and  $Olympic$ being  the  second  highest and  highest  ranks,
-respectively), the best  StarCraft AI bots are ranked  between $D$ and
-$D^+$,  where average  amateur players  are ranked  between $C^+$  and
-$B$. For comparison, StarCraft professional players are usually ranked
-between $A^-$ and $A^+$.
+% A typical  StarCraft map is defined  as a rectangular grid,  where the
+% $width \times  height$ of  the map  is measured in  the number  of $32
+% \times 32$ squares of pixels, also  known as build tiles. However, the
+% resolution of  walkable areas is  in squares  of $8 \times  8$ pixels,
+% also known as  walk tiles. The typical dimensions for  maps range from
+% $64  \times 64$  to  $256 \times  256$ build  tiles.  Each player  can
+% control  up to  200 units  (plus  an unlimited  number of  buildings).
+% Moreover,  each different  race contains  between 30  to 35  different
+% types of units  and buildings, most of them with  a significant number
+% of  special abilities.  All these  factors together  make StarCraft  a
+% significant  challenge, in  which humans  are still  much better  than
+% computers.      For     instance,      in     the      game     ladder
+% iCCup\footnote{http://www.iccup.com/StarCraft/} where users are ranked
+% by their current point totals ($E$ being the lowest possible rank, and
+% $A^+$  and  $Olympic$ being  the  second  highest and  highest  ranks,
+% respectively), the best  StarCraft AI bots are ranked  between $D$ and
+% $D^+$,  where average  amateur players  are ranked  between $C^+$  and
+% $B$. For comparison, StarCraft professional players are usually ranked
+% between $A^-$ and $A^+$.
 
 From a theoretical point of view,  the state space of a StarCraft game
-for a given map is enormous.  For example, consider a $128 \times 128$
-map. At any given moment there might be between 50 to 400 units in the
-map,  each of  which might  have a  complex internal  state (remaining
-energy  and hit-points,  action  being executed,  etc.). This  quickly
-leads to an immense number of  possible states (way beyond the size of
-smaller games, such as Chess or Go). For example, just considering the
-location of  each unit (with  $128 \times 128$ possible  positions per
-unit),  and 400  units, gives  us  an initial  number of  $16384^{400}
-\approx 10^{1685}$. If we add the  other factors playing a role in the
-game, we obtain even larger numbers.
+for a  given map is  enormous.  For  example, consider a  typical $128
+\times 128$ map. At any given moment  there might be between 50 to 400
+units in  the map, each of  which might have a  complex internal state
+(remaining energy  and hit-points, action being  executed, etc.). This
+quickly leads to an immense number  of possible states (way beyond the
+size  of smaller  games,  such  as Chess  or  Go).  For example,  just
+considering the location of each  unit (with $128 \times 128$ possible
+positions per  unit), and  400 units,  gives us  an initial  number of
+$16384^{400} \approx 10^{1685}$. If we add the other factors playing a
+role in the game, we obtain even larger numbers.
 
-Another way to measure the complexity of the game is by looking at the
-branching factor,  $b$, and the  depth of  the game, $d$,  as proposed
-in~\cite{Gaby}, with  a total game  complexity of $b^d$. In  Chess, $b
-\approx 35$  and $d \approx  80$. In more  complex games, like  Go, $b
-\approx  30$ to  $300$, and  $d  \approx 150$  to $200$.  In order  to
-determine the  branching factor in StarCraft  when an AI plays  it, we
-must have in mind, that the  AI can issue actions simultaneously to as
-many  units in  the  game as  desired. Thus,  considering  that, in  a
-typical game, a player controls between 50 to 200 units, the branching
-factor  would be  between $u^{50}$  and  $u^{200}$, where  $u$ is  the
-average number of actions each unit can execute.  Estimating the value
-of $u$ is not easy, since the  number of actions a unit can execute is
-highly  dependent   on  the  context.   Let  us  make   the  following
-assumptions: 1) at most 16 enemy units  will be in range of a friendly
-unit (larger values  are possible, but unlikely), 2) when  an AI plays
-StarCraft, it only makes sense to  consider movement in the 8 cardinal
-directions per unit  (instead of assuming that the player  can issue a
-``move'' command to anywhere in the map  at any point in time), 3) for
-``build'' actions,  we consider that  SCVs (Terran worker  units) only
-build in their  current location (otherwise, if they need  to move, we
-consider  that  as  first  issuing  a  ``move''  action,  and  then  a
-``build''), and  4) let's  consider only the  {\em Terran}  race. With
-those assumptions,  units in  StarCraft can  execute between  1 (units
-like ``Supply  Depots'', whose only  action is  to be ``idle'')  to 43
-actions (Terran ``Ghosts''), with typical values around 20 to 30. Now,
-if we have in mind that actions have cool-down times, and thus not all
-units can  execute all of  the actions at every  frame, we can  take a
-conservative estimation  of about $10$  possible actions per  unit per
-game frame. This results in  a conservative estimate for the branching
-factor  between $b  \in  [10^{50},10^{200}]$,  only considering  units
-(ignoring the actions buildings can execute).
+% Another way to measure the complexity of the game is by looking at the
+% branching factor,  $b$, and the  depth of  the game, $d$,  as proposed
+% in~\cite{Gaby}, with  a total game  complexity of $b^d$. In  Chess, $b
+% \approx 35$  and $d \approx  80$. In more  complex games, like  Go, $b
+% \approx  30$ to  $300$, and  $d  \approx 150$  to $200$.  In order  to
+% determine the  branching factor in StarCraft  when an AI plays  it, we
+% must have in mind, that the  AI can issue actions simultaneously to as
+% many  units in  the  game as  desired. Thus,  considering  that, in  a
+% typical game, a player controls between 50 to 200 units, the branching
+% factor  would be  between $u^{50}$  and  $u^{200}$, where  $u$ is  the
+% average number of actions each unit can execute.  Estimating the value
+% of $u$ is not easy, since the  number of actions a unit can execute is
+% highly  dependent   on  the  context.   Let  us  make   the  following
+% assumptions: 1) at most 16 enemy units  will be in range of a friendly
+% unit (larger values  are possible, but unlikely), 2) when  an AI plays
+% StarCraft, it only makes sense to  consider movement in the 8 cardinal
+% directions per unit  (instead of assuming that the player  can issue a
+% ``move'' command to anywhere in the map  at any point in time), 3) for
+% ``build'' actions,  we consider that  SCVs (Terran worker  units) only
+% build in their  current location (otherwise, if they need  to move, we
+% consider  that  as  first  issuing  a  ``move''  action,  and  then  a
+% ``build''), and  4) let's  consider only the  {\em Terran}  race. With
+% those assumptions,  units in  StarCraft can  execute between  1 (units
+% like ``Supply  Depots'', whose only  action is  to be ``idle'')  to 43
+% actions (Terran ``Ghosts''), with typical values around 20 to 30. Now,
+% if we have in mind that actions have cool-down times, and thus not all
+% units can  execute all of  the actions at every  frame, we can  take a
+% conservative estimation  of about $10$  possible actions per  unit per
+% game frame. This results in  a conservative estimate for the branching
+% factor  between $b  \in  [10^{50},10^{200}]$,  only considering  units
+% (ignoring the actions buildings can execute).
+
 % Assuming  a conservative  value for  $u$  of about  $30$ (moving  to
 % nearby positions, attacking units in range, using special abilities,
 % etc.), we  obtain a  branching factor of  $b$ between  $30^{50}$ and
 % $30^{200}$.
-Now, to  compute $d$, we simply  consider the fact that  typical games
-last for  about 25  minutes, which  results in  $d \approx  36000$ (25
-minutes $\times$ 60 seconds $\times$ 24 frames per second).
+
+% Now, to  compute $d$, we simply  consider the fact that  typical games
+% last for  about 25  minutes, which  results in  $d \approx  36000$ (25
+% minutes $\times$ 60 seconds $\times$ 24 frames per second).
 
 
 % In StarCraft,  humans can issue only  one action at a  time (this is
@@ -563,6 +573,446 @@ the task decomposition  above is not the only  possible approach. Some
 systems, such  as IMAI  \cite{miles2007co}, divide gameplay  into much
 smaller  tasks, which  are then  assigned resources  depending on  the
 expected benefits of achieving each task.
+
+
+\section{Existing work on RTS Game AI}\label{sec:review}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\columnwidth]{figures/levels_abstraction.pdf}
+    \caption{RTS  AI  levels  of abstraction  and  theirs  properties:
+      uncertainty  (coming  from  partial  observation  and  from  not
+      knowing the  intentions of  the opponent)  is higher  for higher
+      abstraction  levels.  Timings  on  the right  correspond  to  an
+      estimate   of   the   duration   of   a   behavior   switch   in
+      StarCraft. Spatial and temporal  reasoning are indicated for the
+      levels at which greedy solutions are not enough.}
+    \label{fig:levels-abstraction}
+\end{figure}
+
+Systems that  play RTS  games need  to address most,  if not  all, the
+aforementioned problems  together. Therefore,  it is hard  to classify
+existing  work  on  RTS  AI   as  addressing  the  different  problems
+above. For that reason, %in order to classify existing work on RTS AI,
+we will divide  it according to three levels  of abstraction: strategy
+(which loosely corresponds to ``macro''), tactics and reactive control
+(which loosely corresponds to ``micro'').
+
+Figure~\ref{fig:levels-abstraction}   graphically    illustrates   how
+strategy, tactics and reactive control are three points in a continuum
+scale where  strategy corresponds  to decisions making  processes that
+affect long spans of time (several  minutes in the case of StarCraft),
+reactive control corresponds  to low-level second-by-second decisions,
+and tactics sit in the  middle. Also, strategic decisions reason about
+the whole game at once, whereas tactical or reactive control decisions
+are localized,  and affect only  specific groups of  units. Typically,
+strategic decisions constrain future tactical decisions, which in turn
+condition  reactive  control.  Moreover,  information  gathered  while
+performing reactive control, can  cause reconsideration of the tactics
+being employed; which could trigger further strategic reasoning.
+
+Following this idea, we consider  strategy to be everything related to
+the  technology trees,  build-order\footnote{The {\em  build-order} is
+  the specific sequence in which  buildings of different types will be
+  constructed at  the beginning of  a game, and  completely determines
+  the   long-term  strategy   of  a   player.},  upgrades,   and  army
+composition. It  is the most  deliberative level, as a  player selects
+and performs  a strategy  with future stances  (aggressive, defensive,
+economy, technology)  and tactics in  mind. We consider tactics  to be
+everything related to confrontations between groups of units. Tactical
+reasoning involves both spatial  (exploiting the terrain) and temporal
+(army  movements)  reasoning, constrained  on  the  possible types  of
+attacks   by  the   army   composition  of   the   player  and   their
+opponent. Finally, reactive control  describes how the player controls
+individual units to  maximize their efficiency in  real-time. The main
+difference  between  tactics and  reactive  control  is that  tactical
+reasoning  typically involves  some sort  of planning  ahead for  some
+short spans  of time,  whereas reactive  control involves  no planning
+ahead whatsoever.
+
+% Example:
+For example,  after starting a  game, a player  might decide to  use a
+{\em rushing}  strategy (which involves  quickly building an  army and
+sending it  to attack as  early as possible  in the game);  then, when
+performing the attack use a {\em surrounding} tactic, where the player
+tries to surround the enemy  cutting potential escape routes; finally,
+while executing the surrounding tactic, the player might decide to use
+reactive control  techniques that command individual  units to perform
+repeated {\em attack  and flee} movements, to  maximize the efficiency
+of each of the units being used in the attack.
+
+% {\color{blue}  perhaps  TODO  ``how  it's  done  in  the  industry''
+% regrouping  the  first   paragraph  of  each  of   the  following  3
+% sections?  }
+
+
+\subsection{Strategy}
+% Every AI needs to observe the world  in order to analyze it and take
+% decisions. In  RTS games this  task isn't  trivial since we  have to
+% deal with  imperfect information.   The most common  decision making
+% are Decision  Trees. Some  of the advantages  of the  decision trees
+% are:  simple to  understand and  interpret acting  like a  white box
+% where  we  can  explain  why  a decision  is  taken,  and  they  are
+% compatible with other decision  techniques. For complex decisions we
+% have many algorithms  to generate an optimum decision  tree like ID3
+% or C4.5, depends on the problem we will use one or another.
+
+% INTRO:
+Strategic  decision  making in  real-time  domains  is still  an  open
+problem. In the context of RTS  games is has been addressed using many
+AI techniques, like  hard-coded approaches, planning-based approaches,
+or  machine   learning-based  approaches.  We  cover   each  of  these
+approaches in turn.
+
+% HARD-CODED:
+\subsubsection{Hard-coded  approaches}
+They have  been extensively  used in commercial  RTS games.   The most
+common      ones     use      finite     state      machines     (FSM)
+\cite{FSM_AIGameProgWisdom2003}  in   order  to  let  the   AI  author
+hard-code the strategy  that the AI will employ. The  idea behind FSMs
+is to decompose the AI behavior into easily manageable states, such as
+``attacking'', ``gathering resources''  or ``repairing'' and establish
+the  conditions that  trigger  transitions  between them.   Commercial
+approaches also include Hierarchical FSMs,  in which FSMs are composed
+hierarchically.    These  hard-coded   approaches   have  achieved   a
+significant  amount of  success,  and,  as we  will  discuss later  in
+Section~\ref{sec:bot}, have  also been  used in  many academic  RTS AI
+research systems.   However, these  hard-coded approaches  struggle to
+encode  dynamic, adaptive  behaviors,  and are  easily exploitable  by
+adaptive opponents.
+
+% XXX: Santi: I've commented out  this paragraph, since it has nothing
+% to do with RTS games. There is no commercial RTS game using planning
+% (neither STRIPS  nor HTN)  that I'm aware  of. The  references below
+% refer  to  FEAR,  which  is  an FPS  game.   To  this  end,  several
+% approaches  have been  developed  like  hierarchical task  networks,
+% behavior  trees  and  the   comeback  of  STRIPS  \cite{FikesSTRIPS}
+% planning  in  the  industry  \cite{orkinGDC_FEAR}.  Regardless,  one
+% cannot  but notice  that adaptability  is  not the  strong point  of
+% industrial RTS AI.  In the context of RTS AI  strategy adaptation is
+% related to  the idea of opponent  modeling. An adapting AI  needs to
+% keep  track of  what the  enemy is  doing in  order to  estimate the
+% probability that they will use a specific strategy and adapt its own
+% strategy accordingly.
+
+
+% PLANNING:
+\subsubsection{Planning}
+Approaches using  planning techniques have  also been explored  in the
+literature.  For example  Onta\~{n}\'{o}n  et al.  \cite{CBR_Planning}
+explored the use of real-time  case-based planning (CBP) in the domain
+of  Wargus (a  Warcraft  II clone).  In their  work,  they used  human
+demonstration to learn  plans, which are then composed  at run-time in
+order  to   form  full-fledges  strategies   to  play  the   game.  In
+\cite{PlanRetrieval} they improve over  their previous CBP approach by
+using situation assessment for improving the quality and speed of plan
+retrieval.  Hierarchical Task-Network  (HTN)  planning  has also  been
+explored  with some  success in  the context  of simpler  first-person
+shooter  games  \cite{HTNPlanning}.  Planning  approaches  offer  more
+adaptivity    of   the    AI   strategy    compared   to    hard-coded
+approaches. However, the real-time constraints  of RTS games limit the
+planning approaches that  can be applied, HTN  and case-based planning
+being  the  only  ones  explored  so  far.  Moreover,  none  of  these
+approaches addresses any timing or scheduling issues, which are key in
+RTS games.  On notable  exception is  the work  of Churchill  and Buro
+\cite{churchill2011build}, who used planning in order to construct its
+economic build-orders,  taking into account timing  constraints of the
+different actions.
+
+% MACHINE LEARNING:
+\subsubsection{Machine Learning}
+Concerning  machine   learning-based  approaches,  Weber   and  Mateas
+\cite{WeberCig09}  proposed   a  data  mining  approach   to  strategy
+prediction  and performed  supervised  learning  on labeled  StarCraft
+replays.  Dereszynski et  al. \cite{HMMstrat_RTS_AIIDE11}  used Hidden
+Markov Models (HMM) to learn the transition probabilities of sequences
+of building  construction orders  and kept the  most probable  ones to
+produce  probabilistic behavior  models (in  StarCraft). Synnaeve  and
+Bessi\`{e}re   \cite{SynnaeveOpeningCig11}   used   the   dataset   of
+\cite{WeberCig09} and  presented a  Bayesian semi-supervised  model to
+learn from replays  and predict openings (early  game strategies) from
+StarCraft  replays.   The  openings  are  labeled   by  EM  clustering
+considering  appropriate  features. Then,  in  \cite{SynnaeveAIIDE11},
+they presented  an unsupervised learning Bayesian  model for tech-tree
+prediction, still using
+replays. % Finally \cite{GemineImitative} used the same ``build-order features'' approach to learn to adapt the bot's build order to the opponents strategy in StarCraft 2.
+Finally, evolutionary approaches to determine priorities of high level
+tasks  were  explored  by  Young  and Hawes  in  their  QUORUM  system
+\cite{young2012evolutionary},   showing    improvement   over   static
+priorities.
+
+% CBR:
+\subsubsection{Case-Based Reasoning}
+Also falling  into the machine-learning category,  a significant group
+of    researchers   has    explored    case-based   reasoning    (CBR)
+\cite{Aamodt94CBR}  approaches  for  strategic  decision  making.  For
+example  Aha  et al.  \cite{LTW}  used  CBR  to perform  dynamic  plan
+retrieval in  the Wargus domain.  Hsieh and Sun  \cite{HsiehS08} based
+their work  on Aha et  al.'s CBR  model \cite{LTW} and  used StarCraft
+replays   to  construct   states  and   building  sequences   (``build
+orders''). Schadd et  al. \cite{SchaddBS07} applied a  CBR approach to
+opponent  modeling through  hierarchically  structured  models of  the
+opponent behavior and  they applied their work to the  Spring RTS game
+(a ``Total Annihilation'' clone).  Jaidee et al. \cite{jaidee2011case}
+study the  use of CBR for  automatic goal selection, while  playing an
+RTS game. These goals will then determine which Q-tables to be used in
+a  reinforcement  learning  framework.  Finally,  \v{C}ertick\'{y}  et
+al. \cite{certicky2013cbr} used CBR to  build their army, based on the
+opponent's army composition, and they pointed out on the importance of
+proper scouting for better results.
+
+% SCOUTING:
+\subsubsection{Scouting}
+One  final consideration  concerning strategy  is that  RTS games  are
+typically  partially observable.  Games like  StarCraft implement  the
+``fog-of-war'' idea, which basically means  that a player can only see
+the areas  of the map close  to her own  units. Areas of the  map away
+from the field of view of individual units are not observable. Players
+need  to scout  in order  to obtain  information about  the opponent's
+strategy. The size of the  state space in StarCraft prevents solutions
+based on  POMDPs from being directly  applicable, and very few  of the
+previous approaches deal  with this problem. Much work in  RTS game AI
+assumes perfect information all the time.  For example, in the case of
+commercial games, most AI implementations  cheat, since the AI can see
+the  complete game  map  at all  times, while  the  human player  does
+not. In order to  make the human player believe the  AI of these games
+does not  cheat, sometimes  they simulate some  scouting tasks  as Bob
+Fitch  described  in his  AIIDE  2011  keynote  for the  WarCraft  and
+StarCraft game series.  Even if the StarCraft  AI competition enforces
+fog-of-war, which  means that  bots are forced  to work  under partial
+information, little published research exists on this topic. A notable
+exception is the work of Weber  et al. \cite{WeberAIIDE11}, who used a
+particle model with a linear trajectory update to track opponent units
+under  fog-of-war  in StarCraft.  They  also  produced tactical  goals
+through     reactive     planning     and     goal-driven     autonomy
+\cite{WeberCig10,Weber10}, finding the more  relevant goal(s) to spawn
+in unforeseen situations.
+
+
+\subsection{Tactics}
+
+% INTRO:
+Tactical reasoning involves reasoning about the different abilities of
+the units in a group and about the environment (terrain) and positions
+of the different  groups of units in order to  gain military advantage
+in battles. For  example, it would be a very  bad tactical decision to
+send  fast, invisible  or flying  units (typically  expensive) in  the
+first line  of fire against slower  heavier units, since they  will be
+wiped out fast.  We will divide the work on  tactical reasoning in two
+parts: terrain analysis and decision making.
+
+% TERRAIN ANALYSIS:
+\subsubsection{Terrain analysis}
+In order  to help making  decisions, terrain analysis supplies  the AI
+with structured information  about the map.  This  analysis is usually
+performed off-line,  in order to  save CPU  time during the  game. For
+example, Pottinger \cite{Pottinger00} described the \emph{BANG} engine
+implemented by Ensemble  Studios for the game Age of  Empires II. This
+engine  provides terrain  analysis functionalities  to the  game using
+influence maps and areas with connectivity information.  Forbus et al.
+\cite{Forbus2002} showed  the importance  to have  qualitative spatial
+information  for   wargames,  for   which  they  used   geometric  and
+pathfinding  analysis.   Hale  et  al. \cite{Hale08}  presented  a  2D
+geometric  navigation mesh  generation  method  from expanding  convex
+regions from seeds.  Finally, Perkins \cite{Perkins10} applied Voronoi
+decomposition (then pruning) %\cite{Karavelas04}
+to detect regions and relevant choke points in RTS maps. This approach
+is        implemented        for        StarCraft        in        the
+BWTA\footnote{\url{http://code.google.com/p/bwta/}}  library, used  by
+most state of the art StarCraft bots.
+% Isla 2006 Game AI Programming Wisdom 3. Charles River Media. chapter Probabilistic Target Tracking and Search Using Occupancy Maps, 379â€“388. ? 
+
+% WALLING
+\subsubsection{Walling}
+Walling is the act of  intentionally placing buildings at the entrance
+of your  base to block  the path and  to prevent the  opponent's units
+from getting inside. This technique is used by human StarCraft players
+to   survive  early   aggression   and  earn   time   to  train   more
+units.  \v{C}ertick\'{y} solved  this constraint  satisfaction problem
+using Answer Set Programming (ASP) \cite{certicky2013wallin}.
+
+% MACHINE LEARNING:
+\subsubsection{Machine Learning}
+Concerning tactical  decision making,  many different  approaches have
+been explored  such as machine  learning or game tree  search.  Hladky
+and  Bulitko \cite{Hladky2008}  benchmarked hidden  semi-Markov models
+(HSMM)  and particle  filters for  unit tracking.  Although they  used
+first-person  shooter  (FPS)  games  for  their  experimentation,  the
+results apply to  RTS games as well. They showed  that the accuracy of
+occupancy maps  was improved using  movement models (learned  from the
+player behavior)  in HSMM. Kabanza  et al. \cite{OBRecog}  improve the
+probabilistic  hostile  agent  task  tracker  (PHATT  \cite{PHATT},  a
+simulated HMM  for plan  recognition) by  encoding strategies  as HTN,
+used   for   plan   and    intent   recognition   to   find   tactical
+opportunities.   Sharma  et   al.  \cite{CBR-RL}   combined  CBR   and
+reinforcement   learning   to   enable    reuse   of   tactical   plan
+components. Cadena and Garrido  \cite{CadenaG11} used fuzzy CBR (fuzzy
+case       matching)       for      strategic       and       tactical
+planning.  \cite{SynnaeveTactics}  combined   space  abstraction  into
+regions   from  \cite{Perkins10}   and  tactical-decision   making  by
+assigning scores  (economical, defenses, etc.) to  regions and looking
+for their  correspondences to  tactical moves (attacks)  in pro-gamers
+replays.  Finally,  Miles \cite{miles2006co} created the  idea of {\em
+  IMTrees}, a tree where each leaf  node is an influence map, and each
+intermediate node  is a  combination operation  (sum, multiplication);
+Miles used evolutionary algorithms to learn IMTrees for each strategic
+decision in the game involving spatial reasoning by combining a set of
+basic influence maps.
+
+% GAME TREE SEARCH:
+\subsubsection{Game  tree search}
+These  techniques  have  also  been  explored  for  tactical  decision
+making. Churchill and Buro \cite{churchill2012fast} presented the ABCD
+algorithm  (Alpha-Beta  Considering  Durations), a  game  tree  search
+algorithm   for   tactical   battles   in   RTS   games.    Chung   et
+al. \cite{Chung05} applied Monte-Carlo  planning to a capture-the-flag
+version  of Open  RTS.   Balla  and Fern  \cite{UCT}  applied the  UCT
+algorithm (a  Monte Carlo Tree  Search algorithm) to  tactical assault
+planning in Wargus. To make game tree search applicable at this level,
+abstract game  state representations are  used in order to  reduce the
+complexity. Also,  abstractions, or  simplifications about the  set of
+possible actions to execute in a given game state need to be used.
+
+% (Santi: I commented this one, since it's mentioned above) On influence maps, \cite{teamCompositionRTS} studied team composition and maneuvering by learning a self-organizing map, while \cite{HagelbackJ08} presented a multiagent potential field based bot.  
+
+% SCOUTING:
+\subsubsection{Scouting}
+Additionally,  scouting  is  equally important  in  tactical  decision
+making as in strategic decision making. However, as mentioned earlier,
+very little work has been done in this respect, being that of Weber et
+al. \cite{WeberAIIDE11}  the only exception. All  previous approaches,
+including all game tree search ones, assume complete information.
+
+
+\subsection{Reactive Control}
+
+Reactive control %, also called micro-management in RTS games,
+aims at maximizing the  effectiveness of units, including simultaneous
+control  of   units  of   different  types   in  complex   battles  on
+heterogeneous terrain.
+
+% POTENTIAL FIELDS:
+\subsubsection{Potential  fields}
+Potential  fields and  influence maps  have  been found  to be  useful
+techniques for reactive decision making. Some uses of potential fields
+in RTS  games are: avoiding obstacles  (navigation), avoiding opponent
+fire \cite{uriarte2012kiting}, or staying at maximum shooting distance
+\cite{Hagelback09}. Potential  fields have also been  combined with A*
+path-finding  to avoid  local traps  \cite{Hagelback12}. Hagelb\"{a}ck
+and  Johansson \cite{HagelbackJ08}  presented a  multi-agent potential
+fields  based bot  able  to  deal with  fog-of-war  in the  Tankbattle
+game. Avery et  al. \cite{Avery09} and Smith  et al. \cite{SmithCIG10}
+co-evolved  influence   map  trees   for  spatial  reasoning   in  RTS
+games. Danielsiek et al. \cite{Danielsiek_2008} used influence maps to
+achieve  intelligent squad  movement to  flank the  opponent in  a RTS
+game.  Despite their  success,  a drawback  for potential  field-based
+techniques is the  large number of parameters that has  to be tuned in
+order to  achieve the  desired behavior. Approaches  for automatically
+learning  such  parameters  have  been explored,  for  example,  using
+reinforcement learning \cite{Liu_2008},  or self-organizing-maps (SOM)
+\cite{teamCompositionRTS}. We would like to note that potential fields
+are a reactive control technique, and as such, they do not perform any
+form of  lookahead. As  a consequence, these  techniques are  prone to
+make units stuck in local maxima.
+
+
+% Machine learning:
+\subsubsection{Machine Learning}
+There has been a significant amount  of work on using machine learning
+techniques for the problem of  reactive control. Bayesian modeling has
+been applied  to inverse  fusion of  the sensory  inputs of  the units
+\cite{SynnaeveMicroCig11}, which  subsumes potential  fields, allowing
+for integration of tactical goals directly in micro-management.
+
+Additionally, there  have been some interesting  uses of reinforcement
+learning  (RL)   \cite{Sutton}:  Wender  and   Watson  \cite{WenderRL}
+evaluated  the  different  major  RL  algorithms  for  (decentralized)
+micro-management,    which   perform    all    equally.   Marthi    et
+al. \cite{Marthi05}  employ concurrent hierarchical  Q-learning (units
+Q-functions are combined at the group level) RL to efficiently control
+units in a  ``one robot with multiple effectors''  fashion. Madeira et
+al. \cite{Madeira06}  advocate the  use of  prior domain  knowledge to
+allow  faster RL  learning  and  applied their  work  on a  turn-based
+strategy game. This is because the action space to explore is gigantic
+for real game setups. It requires exploiting the existing structure of
+the game in  a partial program (or a partial  Markov decision process)
+and  a  shape  function  (or  a  heuristic)  \cite{Marthi05}.  Another
+approach   has   been   proposed    by   Jaide   and   Mu{\~n}oz-Avila
+\cite{jaidee2012classq} through learning just  one Q-function for each
+unit type,  in order to  cut down  the search space.  Other approaches
+that aim at  learning the parameters of an underlying  model have also
+been  explored.   For  example  Ponsen  and   Spronck  \cite{GA}  used
+evolutionary  learning  techniques,  but  face  the  same  problem  of
+dimensionality. For  example, evolutionary optimization  by simulating
+fights   can   easily   be    adapted   to   any   parameter-dependent
+micro-management control  model, as  shown by  \cite{OthmanSimu} which
+optimizes an AIIDE 2010 micro-management competition bot.
+
+Finally,  approaches based  on  game tree  search  are recently  being
+explored        for        micro-management.       Churchill        et
+al. \cite{churchill2012AIIDE} presented a variant of alpha-beta search
+capable of dealing with simultaneous moves and durative actions, which
+could handle reactive  control for situations with up  to eight versus
+eight units.
+
+% Other:
+Other research falling into reactive control has been performed in the
+field of cognitive science, where  Wintermute et al. \cite{SORTS} have
+explored human-like  attention models (with units  grouping and vision
+of a unique screen location) for reactive control.
+
+% Pathfinding:
+\subsubsection{Pathfinding}
+Finally,  although  pathfinding  does  not  fall  under  our  previous
+definition of reactive  control, we include it in  this section, since
+it is typically  performed as a low-level service, not  part of either
+tactical   nor  strategical   reasoning  (although   there  are   some
+exceptions,   like  the   tactical   pathfinding   of  Danielsiek   et
+al. \cite{Danielsiek_2008}). The most  common pathfinding algorithm is
+A*, but  its big problem is  CPU time and memory  consumption, hard to
+satisfy  in  a  complex,  dynamic, real-time  environment  with  large
+numbers  of units.  Even if  specialized algorithms,  such as  D*-Lite
+\cite{KoenigL02} exist,  it is most common  to use A* combined  with a
+map simplification technique that generates a simpler navigation graph
+to  be  used  for  pathfinding.   An  example  of  such  technique  is
+Triangulation Reduction A*, that  computes polygonal triangulations on
+a grid-based  map \cite{Demyen_2006}. Considering movement  for groups
+of units, rather then individual units, techniques such as steering of
+flocking  behaviors  \cite{Reynolds_1999} can  be  used  on top  of  a
+path-finding algorithm in order to make whole groups of units follow a
+given path. In recent commercial RTS games like StarCraft 2 or Supreme
+Commander 2, flocking-like behaviors  are inspired of continuum crowds
+(``flow  field'') \cite{Treuille2006}.  A  comprehensive review  about
+(grid-based)   pathfinding    was   recently   done    by   Sturtevant
+\cite{sturtevant2012benchmarks}.
+
+\subsection{Holistic Approaches}
+
+Holistic approaches  to address  RTS AI attempt  to address  the whole
+problem using a  single unified method. To the best  of our knowledge,
+with a few  exceptions, such as the  Darmok system \cite{OntanonMSR10}
+(which uses  a combination of  case-based reasoning and  learning from
+demonstration) or ALisp \cite{Marthi05}, there  has not been much work
+in this  direction.  The  main reason  is that  the complexity  of RTS
+games is  too large,  and approaches that  decompose the  problem into
+smaller,    separate,   problems,    achieve    better   results    in
+practice. However,  holistic approaches, based, for  example, on Monte
+Carlo  Tree  Search,  have  only  been  explored  in  the  context  of
+smaller-scale RTS games~\cite{ontanon2013naive}. Techniques that scale
+up to large RTS games as StarCraft are still not available.
+
+A related problem is that  of integrating reasoning at multiple levels
+of abstraction.  Molineaux et  al. \cite{Molineaux08} showed  that the
+difficulty of working with multi-scale  goals and plans can be handled
+directly  by  case-based reasoning  (CBR),  via  an integrated  RL/CBR
+algorithm     using    continuous     models.    Reactive     planning
+\cite{WeberCig10}, a decompositional  planning similar to hierarchical
+task networks  \cite{HTNPlanning}, allows for  plans to be  changed at
+different  granularity levels  and so  for multi-scale  (hierarchical)
+goals  integration of  low-level  control.  Synnaeve and  Bessi\`{e}re
+\cite{SynnaeveMicroCig11}  achieve  hierarchical  goals  (coming  from
+tactical  decisions)  integration  through  the  addition  of  another
+sensory input corresponding to the goal's objective.
 
 
 \bibliographystyle{splncs}
