@@ -25,7 +25,7 @@
 % Title
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{RTS AI Problems and Techniques
+\title{RTS AI: Problems and Techniques
 %\thanks{Supported by ...}
 }
 
@@ -70,16 +70,14 @@ in this area \cite{Buro03rts}. Specially, competitions like the ``ORTS
 RTS  Game AI  Competition''  (held  from 2006  to  2009), the  ``AIIDE
 StarCraft AI Competition'' (held since  2010), and the ``CIG StarCraft
 RTS AI Competition'' (held since  2011) have motivated the exploration
-of many  AI approaches  in the  context of  RTS AI.  We will  list and
-classify these approaches, explain  their strengths and weaknesses and
-conclude on what is left to achieve human-level RTS AI.
+of many AI approaches  in the  context of  RTS AI. This paper, based on the work work presented in \cite{ontanon2013survey}, lists the open problems in RTS game AI, and the approaches that have been proposed to address these problems.
 
 Complex  dynamic  environments,  where neither  perfect  nor  complete
 information  about the  current state  or  about the  dynamics of  the
 environment are available, pose  significant challenges for artificial
 intelligence. Road traffic, finance, or weather forecasts are examples
 of such large, complex, real-life  dynamic environments. RTS games can
-be seen  as a simplification  of one such real-life  environment, with
+be seen  as a simplification  of one such real-life  environments, with
 simpler dynamics in a finite and smaller world, although still complex
 enough to  study some  of the key  interesting problems  like decision
 making under  uncertainty or  real-time adversarial  planning. Finding
@@ -97,10 +95,10 @@ games.
 % on the time flow, we can run many experiments in parallel, ...
 
 
-This article aims to  provide an overview on what is  the state of the
-art  in  RTS AI,  with  a  particular emphasis  on  the  work done  in
-StarCraft.  It is organized as follows: 
-{\color{blue} TODO (or not)}
+%This article aims to  provide an overview on what is  the state of the
+%art  in  RTS AI,  with  a  particular emphasis  on  the  work done  in
+%StarCraft.  It is organized as follows: 
+%{\color{blue} TODO (or not)}
 
 % Section~\ref{sec:rts}
 % introduces RTS games, in particular the game StarCraft, and their main
@@ -123,24 +121,24 @@ to  build an  economy (gathering  resources and  building a  base) and
 military power (training units  and researching technologies) in order
 to defeat  their opponents  (destroying their army  and base).  From a
 theoretical point of view, the  main differences between RTS games and
-traditional board games such as Chess or Go are:
+traditional board games such as Chess are:
 
 \begin{itemize}
-\item  They are  {\em simultaneous  move} games,  where more  than one
-  player  can issue  actions  at the  same  time. Additionally,  these
-  actions are {\em durative}, i.e.  actions are not instantaneous, but
+\item  RTS games are  {\em simultaneous  move} games,  where more  than one
+  player  can issue  actions  at the  same  time. 
+\item Action in RTS games are {\em durative}, i.e.  actions are not instantaneous, but
   take some amount of time to complete.
 \item RTS games  are ``real-time'', which actually means  is that each
   player  has  a  very  small  amount  of  time  to  decide  the  next
   move. Compared to  Chess, where players may have  several minutes to
-  decide the next action, in StarCraft, the game executes at 24 frames
+  decide the next action, in StarCraft, a popular RTS game, the game executes at 24 frames
   per second, which means that players  can act as fast as every 42ms,
   before the game state changes.
 \item Most  RTS games are  partially observable: players can  only see
   the part of the  map that has been explored. This  is referred to as
   the {\em fog-of-war}.
-\item Most RTS games are non-deterministic. Some actions have a chance
-  of success.
+\item Most RTS games are non-deterministic: some actions have a chance
+  of success, and the amount of damage dealt by different units is sometimes stochastic.
 \item And  finally, the complexity  of these  games, both in  terms of
   state space size and in terms of number of actions available at each
   decision cycle is very large. For  example, the state space of Chess
@@ -159,24 +157,26 @@ deal with the  complexity of RTS games, and are  still vastly superior
 to       computers      in       these       types      of       games
 \cite{burochurchill2012aimagazine}.   For  those   reasons,  a   large
 spectrum of techniques  have been attempted to deal  with this domain,
-as we will describe below. The remainder of this section is devoted to
-describe StarCraft  as a research  testbed, and on detailing  the open
-challenges in RTS game AI.
-
-\subsection{StarCraft}\label{subsec:StarCraft}
-
-{\color{blue}  Do we  need this  part?  Should  we talk  about RTS  AI
-  problems  and   techniques  in  general,  but   take  examples  from
-  StarCraft only, arguing this game is mainstream?}
+as we will describe below. 
+%The remainder of this section is devoted to describe StarCraft  as a research  testbed, and on detailing  the open
+% challenges in RTS game AI.
 
 
-{\em StarCraft: Brood  War} is an immensely popular  RTS game released
-in   1998  by   Blizzard  Entertainment.   StarCraft  is   set  in   a
+%\subsection{StarCraft}\label{subsec:StarCraft}
+%{\color{blue}  Do we  need this  part?  Should  we talk  about RTS  AI
+%  problems  and   techniques  in  general,  but   take  examples  from
+%  StarCraft only, arguing this game is mainstream?}
+In the past few years, {\em StarCraft: Brood War} (an immensely popular  
+RTS game released in 1998 by Blizzard  Entertainment) has become the 
+standard testbed for evaluating AI techniques in RTS games.
+%{\em StarCraft: Brood  War} is an immensely popular  RTS game released
+%in   1998  by   Blizzard  Entertainment.   
+StarCraft  is   set  in   a
 science-fiction based universe where the player must choose one of the
-three  races: Terran,  Protoss or  Zerg.  One of  the most  remarkable
-aspects  of StarCraft  is  that  the three  races  are extremely  well
-balanced.
-
+three  races: Terran,  Protoss or  Zerg.  %One of  the most  remarkable
+%aspects  of StarCraft  is  that  the three  races  are extremely  well
+%balanced.
+%
 % \begin{itemize}
 % \item Terrans provide  units that are versatile and  flexible giving a
 %   balanced option between Protoss and Zergs.
@@ -187,13 +187,13 @@ balanced.
 %   produced fast, encouraging players to overwhelm their opponents with
 %   sheer numbers.
 % \end{itemize}
-
+%
 % What about copyright problems with this screenshot?
 % Figure~\ref{fig:StarCraft} shows  a screenshot of StarCraft  showing a
 % player playing the Terran race.
-
-{\color{blue}  Thus,  merge the  following  paragraph  with the  first
-  paragraph of the RTS section?}
+%
+%{\color{blue}  Thus,  merge the  following  paragraph  with the  first
+%  paragraph of the RTS section?}
 In order to win a StarCraft  game, players must first gather resources
 (minerals  and Vespene  gas). As  resources become  available, players
 need to allocate them for creating more buildings (which reinforce the
@@ -246,7 +246,7 @@ size  of smaller  games,  such  as Chess  or  Go).  For example,  just
 considering the location of each  unit (with $128 \times 128$ possible
 positions per  unit), and  400 units,  gives us  an initial  number of
 $16384^{400} \approx 10^{1685}$. If we add the other factors playing a
-role in the game, we obtain even larger numbers.
+role in the game, we obtain even larger numbers (see \ref{ontanon2013survey} for a more in-depth description of the complexity of StarCraft).
 
 % Another way to measure the complexity of the game is by looking at the
 % branching factor,  $b$, and the  depth of  the game, $d$,  as proposed
@@ -566,9 +566,10 @@ playing  RTS   in~\cite{weber2011acs}.  Although  the   previous  task
 decomposition  is  common, a  significant  challenge  is on  designing
 architectures so that  the individual AI techniques  that address each
 of  those  tasks  can   communicate  and  effectively  work  together,
-resolving conflicts, prioritizing resources between them, etc. Section
-\ref{sec:bot}  provides an  overview of  the task  decompositions that
-state-of-the-art bots use.  Moreover, we would like to  point out that
+resolving conflicts, or prioritizing resources between them.% Section
+%\ref{sec:bot}  provides an  overview of  the task  decompositions that
+%state-of-the-art bots use.  
+Moreover, we would like to  point out that
 the task decomposition  above is not the only  possible approach. Some
 systems, such  as IMAI  \cite{miles2007co}, divide gameplay  into much
 smaller  tasks, which  are then  assigned resources  depending on  the
@@ -675,8 +676,7 @@ is to decompose the AI behavior into easily manageable states, such as
 the  conditions that  trigger  transitions  between them.   Commercial
 approaches also include Hierarchical FSMs,  in which FSMs are composed
 hierarchically.    These  hard-coded   approaches   have  achieved   a
-significant  amount of  success,  and,  as we  will  discuss later  in
-Section~\ref{sec:bot}, have  also been  used in  many academic  RTS AI
+significant  amount of  success,  and, have  also been  used in  many academic  RTS AI
 research systems.   However, these  hard-coded approaches  struggle to
 encode  dynamic, adaptive  behaviors,  and are  easily exploitable  by
 adaptive opponents.
@@ -828,8 +828,8 @@ Walling is the act of  intentionally placing buildings at the entrance
 of your  base to block  the path and  to prevent the  opponent's units
 from getting inside. This technique is used by human StarCraft players
 to   survive  early   aggression   and  earn   time   to  train   more
-units.  \v{C}ertick\'{y} solved  this constraint  satisfaction problem
-using Answer Set Programming (ASP) \cite{certicky2013wallin}.
+units.  \v{C}ertick\'{y} addressed  this constraint  satisfaction problem
+using Answer Set Programming (ASP) \cite{certicky2013wallin}. Richoux et al. \cite{richoux2014walling} presented an alternative approach based on constraint programming and local search, designed to be run-time.
 
 % MACHINE LEARNING:
 \subsubsection{Machine Learning}
@@ -870,8 +870,7 @@ version  of Open  RTS.   Balla  and Fern  \cite{UCT}  applied the  UCT
 algorithm (a  Monte Carlo Tree  Search algorithm) to  tactical assault
 planning in Wargus. To make game tree search applicable at this level,
 abstract game  state representations are  used in order to  reduce the
-complexity. Also,  abstractions, or  simplifications about the  set of
-possible actions to execute in a given game state need to be used.
+complexity. Uriarte and Onta\~{n}\'{o}n \cite{uriarte2014high,uriarte2014game} explored different game state abstractions in the context of Monte-Carlo Tree Search for high-level tactical reasoning in StarCraft. Other algorithms, such as Greedy Portfolio Search \cite{churchill2013portfolio}, perform abstraction at the level of actions, by employing a collection of predefined ``scripts'', and using these scripts as the possible actions that the players can execute in the context of game tree search.
 
 % (Santi: I commented this one, since it's mentioned above) On influence maps, \cite{teamCompositionRTS} studied team composition and maneuvering by learning a self-organizing map, while \cite{HagelbackJ08} presented a multiagent potential field based bot.  
 
@@ -988,7 +987,7 @@ Commander 2, flocking-like behaviors  are inspired of continuum crowds
 
 \subsection{Holistic Approaches}
 
-Holistic approaches  to address  RTS AI attempt  to address  the whole
+Finally, holistic approaches  to address  RTS AI attempt  to address  the whole
 problem using a  single unified method. To the best  of our knowledge,
 with a few  exceptions, such as the  Darmok system \cite{OntanonMSR10}
 (which uses  a combination of  case-based reasoning and  learning from
@@ -1013,6 +1012,11 @@ goals  integration of  low-level  control.  Synnaeve and  Bessi\`{e}re
 \cite{SynnaeveMicroCig11}  achieve  hierarchical  goals  (coming  from
 tactical  decisions)  integration  through  the  addition  of  another
 sensory input corresponding to the goal's objective.
+
+
+%\section{Conclusions}
+%
+%This paper has summarized the set of open problem in RTS game AI, and summarized existing work toward addressing those problems. 
 
 
 \bibliographystyle{splncs}
