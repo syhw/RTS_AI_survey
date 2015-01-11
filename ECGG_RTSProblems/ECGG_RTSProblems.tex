@@ -58,33 +58,31 @@
 
 \maketitle
 
-\begin{abstract}
-  This is the abstract.
-\end{abstract}
+%\begin{abstract}
+%  This is the abstract.
+%\end{abstract}
 
 
 \section{Introduction}\label{sec:intro}
 The  field of  Real-Time Strategy  (RTS) game  Artificial Intelligence
-(AI) has advanced significantly since Michael Buro's call for research
-in this area \cite{Buro03rts}. Specially, competitions like the ``ORTS
+(AI) has advanced significantly in the past few year, partially thanks to competitions like the ``ORTS
 RTS  Game AI  Competition''  (held  from 2006  to  2009), the  ``AIIDE
 StarCraft AI Competition'' (held since  2010), and the ``CIG StarCraft
-RTS AI Competition'' (held since  2011) have motivated the exploration
-of many AI approaches  in the  context of  RTS AI. This paper, based on the work work presented in \cite{ontanon2013survey}, lists the open problems in RTS game AI, and the approaches that have been proposed to address these problems.
+RTS AI Competition'' (held since  2011). Based on the work work presented in \cite{ontanon2013survey}, here we first define RTS games, and then list here the open problems in creating AI for RTS games, and the approaches that have been proposed to address these problems.
 
-Complex  dynamic  environments,  where neither  perfect  nor  complete
-information  about the  current state  or  about the  dynamics of  the
-environment are available, pose  significant challenges for artificial
-intelligence. Road traffic, finance, or weather forecasts are examples
-of such large, complex, real-life  dynamic environments. RTS games can
-be seen  as a simplification  of one such real-life  environments, with
-simpler dynamics in a finite and smaller world, although still complex
-enough to  study some  of the key  interesting problems  like decision
-making under  uncertainty or  real-time adversarial  planning. Finding
-efficient techniques for tackling these problems on RTS games can thus
-benefit other  AI disciplines and  application domains, and  also have
-concrete and direct applications in the ever growing industry of video
-games.
+%Complex  dynamic  environments,  where neither  perfect  nor  complete
+%information  about the  current state  or  about the  dynamics of  the
+%environment are available, pose  significant challenges for artificial
+%intelligence. Road traffic, finance, or weather forecasts are examples
+%of such large, complex, real-life  dynamic environments. RTS games can
+%be seen  as a simplification  of one such real-life  environments, with
+%simpler dynamics in a finite and smaller world, although still complex
+%enough to  study some  of the key  interesting problems  like decision
+%making under  uncertainty or  real-time adversarial  planning. Finding
+%efficient techniques for tackling these problems on RTS games can thus
+%benefit other  AI disciplines and  application domains, and  also have
+%concrete and direct applications in the ever growing industry of video
+%games.
 
 % Some other arguments for the motivation: 
 % 1. It's fun 
@@ -116,7 +114,7 @@ games.
 
 \section{Real-Time Strategy Games}\label{sec:rts}
 
-Real-Time Strategy is a sub-genre of strategy games where players need
+{\em Real-Time Strategy} (RTS) is a sub-genre of strategy games where players need
 to  build an  economy (gathering  resources and  building a  base) and
 military power (training units  and researching technologies) in order
 to defeat  their opponents  (destroying their army  and base).  From a
@@ -124,13 +122,13 @@ theoretical point of view, the  main differences between RTS games and
 traditional board games such as Chess are:
 
 \begin{itemize}
-\item  RTS games are  {\em simultaneous  move} games,  where more  than one
+\item  RTS games are  {\em simultaneous  move} games,  where more than one
   player  can issue  actions  at the  same  time. 
 \item Action in RTS games are {\em durative}, i.e.  actions are not instantaneous, but
   take some amount of time to complete.
-\item RTS games  are ``real-time'', which actually means  is that each
+\item RTS games  are ``real-time'', which actually means is that each
   player  has  a  very  small  amount  of  time  to  decide  the  next
-  move. Compared to  Chess, where players may have  several minutes to
+  move, and that, in contrast to {\em turn-based} games, the game keeps advancing even if a player does not execute any actions. Compared to  Chess, where players may have several minutes to
   decide the next action, in StarCraft, a popular RTS game, the game executes at 24 frames
   per second, which means that players  can act as fast as every 42ms,
   before the game state changes.
@@ -246,7 +244,7 @@ size  of smaller  games,  such  as Chess  or  Go).  For example,  just
 considering the location of each  unit (with $128 \times 128$ possible
 positions per  unit), and  400 units,  gives us  an initial  number of
 $16384^{400} \approx 10^{1685}$. If we add the other factors playing a
-role in the game, we obtain even larger numbers (see \ref{ontanon2013survey} for a more in-depth description of the complexity of StarCraft).
+role in the game, such as resources, hit-points, energy, research status, cool-down timers, etc., we obtain even larger numbers (see \cite{ontanon2013survey} for a more in-depth description of the complexity of StarCraft).
 
 % Another way to measure the complexity of the game is by looking at the
 % branching factor,  $b$, and the  depth of  the game, $d$,  as proposed
@@ -326,28 +324,17 @@ role in the game, we obtain even larger numbers (see \ref{ontanon2013survey} for
 %abilities), thus for StarCraft b would be around 30^{60}. Strictly
 %speaking, for a StarCraft game, d = 24  game_seconds (24 game frames
 %per second), with a game duration of 25 minutes, this gives d =
-%36,000, thus b^d Å 30^{60^{36000}} .
+%36,000, thus b^d Å% 30^{60^{36000}} .
+%I
 
-
-\subsection{Challenges in RTS Game AI}\label{subsec:challenges}
+\section{Challenges in RTS Game AI}\label{subsec:challenges}
 
 Early research  in AI  for RTS  games \cite{Buro03rts}  identified the
-following six challenges:
-\begin{itemize}
-\item Resource management
-\item Decision making under uncertainty
-\item Spatial and temporal reasoning
-\item Collaboration (between multiple AIs)
-\item Opponent modeling and learning
-\item Adversarial real-time planning
-\end{itemize}
-
-While there  has been  a significant  work in  many, others  have been
+following six challenges: Resource management, Decision making under uncertainty, Spatial and temporal reasoning, Collaboration (between multiple AIs), Opponent modeling and learning, and Adversarial real-time planning. While there  has been  a significant  work in  many, others  have been
 untouched (e.g. collaboration). Moreover, recent research in this area
 has identified several additional research  challenges, such as how to
 exploit the massive amounts  of existing domain knowledge (strategies,
-build-orders,  replays,  and  so   on).  Below,  we  describe  current
-challenges in RTS Game AI, grouped in six main different areas.
+build-orders,  replays,  and  so   on). Thus, the challenges in RTS game AI can be grouped in six main different areas, described below.
 
 %\begin{itemize}
 %\item Task Decomposition (or ``Architecture'')
@@ -383,7 +370,7 @@ problems by either sampling, or  hierarchical decomposition do not yet
 exist.
 
 \subsubsection{Learning}
-Given  the  difficulties  in  playing  RTS  games  by  directly  using
+Given  the  difficulties  in  playing  by  directly  using
 adversarial  planning techniques,  many  research  groups have  turned
 attention to  learning techniques. We  can distinguish three  types of
 learning problems in RTS games:
@@ -458,7 +445,7 @@ Spatial reasoning is  related to each aspect  of terrain exploitation.
 It  is  involved   in  tasks  such  as  building   placement  or  base
 expansion.  In the  former,  the player  needs  to carefully  consider
 building  positioning into  its  own  bases to  both  protect them  by
-creating  a wall  against invasions  and to  avoid bad  configurations
+creating  defenses or walls  against invasions  and to  avoid bad  configurations
 where large units could be stuck. In base expansion, the player has to
 choose good available locations to build a new base, regarding its own
 position and  opponent's bases. Finally,  spatial reasoning is  key to
@@ -475,10 +462,10 @@ are lead into a bottleneck.
 % http://www.supercheats.com/pc/walkthroughs/starcraftbroodwar-walkthrough01.txt,
 % there is also a chance to hit in even grounds (like
 % 98%). But since we cannot see the original code all of these numbers are approximations. In any case we can keep explaining the concept without numbers ;)]
-Another example of spatial reasoning in StarCraft is that it is always
-an advantage to  have own units on  high ground while the  enemy is on
-low ground,  since units on  low ground have  no vision onto  the high
-ground. %, and firing from low ground have a chance to hit units on high ground.
+%Another example of spatial reasoning in StarCraft is that it is always
+%an advantage to  have own units on  high ground while the  enemy is on
+%low ground,  since units on  low ground have  no vision onto  the high
+%ground. %, and firing from low ground have a chance to hit units on high ground.
 %MP: took out last half sentence as it seems to be rather confusing.
 
 Analogously,  temporal  reasoning  is  key in  tactical  or  strategic
@@ -497,21 +484,16 @@ evaluation  functions  to be  used  by  alpha-beta search  algorithms,
 extensive opening books, or end-game tables. In the case of RTS games,
 it  is still  unclear how  the  significantly large  amount of  domain
 knowledge  (in the  forms or  strategy guides,  replays, etc.)  can be
-exploited by  bots. Most  work in  this area has  focused on  two main
-directions: on the one hand, researchers  are finding ways in which to
-hard-code existing  strategies into  bots, so that  bots only  need to
+exploited. Most  work in  this area has  focused on  two main
+directions: (1) hard-coding existing strategies into bots (so that  bots only  need to
 decide  which strategies  to deploy,  instead of  having to  solve the
-complete  problem  of  deciding  which  actions  to  execute  by  each
-individual unit at each time step.  One the other hand, large datasets
-of  replays have  been created  \cite{WeberCig09,synnaeve2012dataset},
-from  where   strategies,  trends   or  plans   have  been   tried  to
-learn.  However,  StarCraft  games  are  quite  complex,  and  how  to
-automatically learn from such datasets is still an open problem.
+complete  planning problem), and (2) mining large datasets
+of  replays \cite{WeberCig09,synnaeve2012dataset} to automatically extract
+ strategies,  trends   or  plans. % However,  StarCraft  games  are  quite  complex,  and  how  to
+%automatically learn from such datasets is still an open problem.
 
 \subsubsection{Task Decomposition}
-For all the  previous reasons, most existing approaches  to play games
-as StarCraft  work by decomposing the  problem of playing an  RTS game
-into   a    collection   of    smaller   problems,   to    be   solved
+Most existing approaches  to play RTS games work by decomposing the  problem into   a    collection   of    smaller   problems to    be   solved
 independently. Specifically, a common subdivision is:
 \begin{itemize}
 \item {\em  Strategy}: corresponds  to the high-level  decision making
@@ -561,26 +543,15 @@ typically talks about two tasks:
   the larger army.
 \end{itemize}
 
-The reader can find a good  presentation of task decomposition for AIs
-playing  RTS   in~\cite{weber2011acs}.  Although  the   previous  task
-decomposition  is  common, a  significant  challenge  is on  designing
-architectures so that  the individual AI techniques  that address each
-of  those  tasks  can   communicate  and  effectively  work  together,
-resolving conflicts, or prioritizing resources between them.% Section
-%\ref{sec:bot}  provides an  overview of  the task  decompositions that
-%state-of-the-art bots use.  
-Moreover, we would like to  point out that
-the task decomposition  above is not the only  possible approach. Some
-systems, such  as IMAI  \cite{miles2007co}, divide gameplay  into much
-smaller  tasks, which  are then  assigned resources  depending on  the
-expected benefits of achieving each task.
+The reader can find a good  presentation of task decomposition RTS game AI in~\cite{weber2011acs}.  Although  the   previous  task decomposition  is  common, other task decompositions have been explored (see \cite{ontanon2013survey} for an overview of the task decomposition used by several StarCraft bots).
+
 
 
 \section{Existing work on RTS Game AI}\label{sec:review}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.9\columnwidth]{figures/levels_abstraction.pdf}
+    \includegraphics[width=0.7\columnwidth]{figures/levels_abstraction.pdf}
     \caption{RTS  AI  levels  of abstraction  and  theirs  properties:
       uncertainty  (coming  from  partial  observation  and  from  not
       knowing the  intentions of  the opponent)  is higher  for higher
@@ -612,35 +583,37 @@ condition  reactive  control.  Moreover,  information  gathered  while
 performing reactive control, can  cause reconsideration of the tactics
 being employed; which could trigger further strategic reasoning.
 
-Following this idea, we consider  strategy to be everything related to
-the  technology trees,  build-order\footnote{The {\em  build-order} is
-  the specific sequence in which  buildings of different types will be
-  constructed at  the beginning of  a game, and  completely determines
-  the   long-term  strategy   of  a   player.},  upgrades,   and  army
-composition. It  is the most  deliberative level, as a  player selects
-and performs  a strategy  with future stances  (aggressive, defensive,
-economy, technology)  and tactics in  mind. We consider tactics  to be
-everything related to confrontations between groups of units. Tactical
-reasoning involves both spatial  (exploiting the terrain) and temporal
-(army  movements)  reasoning, constrained  on  the  possible types  of
-attacks   by  the   army   composition  of   the   player  and   their
-opponent. Finally, reactive control  describes how the player controls
-individual units to  maximize their efficiency in  real-time. The main
-difference  between  tactics and  reactive  control  is that  tactical
-reasoning  typically involves  some sort  of planning  ahead for  some
-short spans  of time,  whereas reactive  control involves  no planning
-ahead whatsoever.
+The remainder of this section presents work toward addressing the previous six open RTS game AI problems, grouped as work focused toward strategy, tactics, or reactive control, as well as a final section dedicated to holistic approaches that attempt to deal with all three levels at once.
+
+%Following this idea, we consider  strategy to be everything related to
+%the  technology trees,  build-order\footnote{The {\em  build-order} is
+%  the specific sequence in which  buildings of different types will be
+%  constructed at  the beginning of  a game, and  completely determines
+%  the   long-term  strategy   of  a   player.},  upgrades,   and  army
+%composition. It  is the most  deliberative level, as a  player selects
+%and performs  a strategy  with future stances  (aggressive, defensive,
+%economy, technology)  and tactics in  mind. We consider tactics  to be
+%everything related to confrontations between groups of units. Tactical
+%reasoning involves both spatial  (exploiting the terrain) and temporal
+%(army  movements)  reasoning, constrained  on  the  possible types  of
+%attacks   by  the   army   composition  of   the   player  and   their
+%opponent. Finally, reactive control  describes how the player controls
+%individual units to  maximize their efficiency in  real-time. The main
+%difference  between  tactics and  reactive  control  is that  tactical
+%reasoning  typically involves  some sort  of planning  ahead for  some
+%short spans  of time,  whereas reactive  control involves  no planning
+%ahead whatsoever.
 
 % Example:
-For example,  after starting a  game, a player  might decide to  use a
-{\em rushing}  strategy (which involves  quickly building an  army and
-sending it  to attack as  early as possible  in the game);  then, when
-performing the attack use a {\em surrounding} tactic, where the player
-tries to surround the enemy  cutting potential escape routes; finally,
-while executing the surrounding tactic, the player might decide to use
-reactive control  techniques that command individual  units to perform
-repeated {\em attack  and flee} movements, to  maximize the efficiency
-of each of the units being used in the attack.
+%For example,  after starting a  game, a player  might decide to  use a
+%{\em rushing}  strategy (which involves  quickly building an  army and
+%sending it  to attack as  early as possible  in the game);  then, when
+%performing the attack use a {\em surrounding} tactic, where the player
+%tries to surround the enemy  cutting potential escape routes; finally,
+%while executing the surrounding tactic, the player might decide to use
+%reactive control  techniques that command individual  units to perform
+%repeated {\em attack  and flee} movements, to  maximize the efficiency
+%of each of the units being used in the attack.
 
 % {\color{blue}  perhaps  TODO  ``how  it's  done  in  the  industry''
 % regrouping  the  first   paragraph  of  each  of   the  following  3
@@ -659,10 +632,9 @@ of each of the units being used in the attack.
 % or C4.5, depends on the problem we will use one or another.
 
 % INTRO:
-Strategic  decision  making in  real-time  domains  is still  an  open
-problem. In the context of RTS  games is has been addressed using many
-AI techniques, like  hard-coded approaches, planning-based approaches,
-or  machine   learning-based  approaches.  We  cover   each  of  these
+In the context of RTS  games, high-level strategic reasoning has been addressed using many
+AI techniques, like  hard-coded approaches, planning,
+or  machine   learning.  We  cover   each  of  these
 approaches in turn.
 
 % HARD-CODED:
@@ -792,18 +764,20 @@ in unforeseen situations.
 \subsection{Tactics}
 
 % INTRO:
-Tactical reasoning involves reasoning about the different abilities of
-the units in a group and about the environment (terrain) and positions
-of the different  groups of units in order to  gain military advantage
-in battles. For  example, it would be a very  bad tactical decision to
-send  fast, invisible  or flying  units (typically  expensive) in  the
-first line  of fire against slower  heavier units, since they  will be
-wiped out fast.  We will divide the work on  tactical reasoning in two
-parts: terrain analysis and decision making.
+%Tactical reasoning involves reasoning about the different abilities of
+%the units in a group and about the environment (terrain) and positions
+%of the different  groups of units in order to  gain military advantage
+%in battles. For  example, it would be a very  bad tactical decision to
+%send  fast, invisible  or flying  units (typically  expensive) in  the
+%first line  of fire against slower  heavier units, since they  will be
+%wiped out fast.  
+We will divide the work on mid-range tactical reasoning in RTS games in two
+large groups: spatial reasoning and decision making (that has been addressed both using machine learning and game tree search).
 
 % TERRAIN ANALYSIS:
-\subsubsection{Terrain analysis}
-In order  to help making  decisions, terrain analysis supplies  the AI
+\subsubsection{Spatial Reasoning}
+The most common form of spatial reasoning in the literature of RTS games is terrain analysis.
+Terrain analysis supplies  the AI
 with structured information  about the map.  This  analysis is usually
 performed off-line,  in order to  save CPU  time during the  game. For
 example, Pottinger \cite{Pottinger00} described the \emph{BANG} engine
@@ -822,9 +796,9 @@ BWTA\footnote{\url{http://code.google.com/p/bwta/}}  library, used  by
 most state of the art StarCraft bots.
 % Isla 2006 Game AI Programming Wisdom 3. Charles River Media. chapter Probabilistic Target Tracking and Search Using Occupancy Maps, 379â€“388. ? 
 
-% WALLING
-\subsubsection{Walling}
-Walling is the act of  intentionally placing buildings at the entrance
+%% WALLING
+%\subsubsection{Walling}
+Another form of spatial reasoning that has been studied in RTS games is {\em walling}. Walling is the act of  intentionally placing buildings at the entrance
 of your  base to block  the path and  to prevent the  opponent's units
 from getting inside. This technique is used by human StarCraft players
 to   survive  early   aggression   and  earn   time   to  train   more
@@ -874,21 +848,23 @@ complexity. Uriarte and Onta\~{n}\'{o}n \cite{uriarte2014high,uriarte2014game} e
 
 % (Santi: I commented this one, since it's mentioned above) On influence maps, \cite{teamCompositionRTS} studied team composition and maneuvering by learning a self-organizing map, while \cite{HagelbackJ08} presented a multiagent potential field based bot.  
 
-% SCOUTING:
-\subsubsection{Scouting}
-Additionally,  scouting  is  equally important  in  tactical  decision
-making as in strategic decision making. However, as mentioned earlier,
-very little work has been done in this respect, being that of Weber et
-al. \cite{WeberAIIDE11}  the only exception. All  previous approaches,
-including all game tree search ones, assume complete information.
+%% SCOUTING:
+%\subsubsection{Scouting}
+%Additionally,  scouting  is  equally important  in  tactical  decision
+%making as in strategic decision making. However, as mentioned earlier,
+%very little work has been done in this respect, being that of Weber et
+%al. \cite{WeberAIIDE11}  the only exception. All  previous approaches,
+%including all game tree search ones, assume complete information.
 
 
 \subsection{Reactive Control}
 
-Reactive control %, also called micro-management in RTS games,
-aims at maximizing the  effectiveness of units, including simultaneous
-control  of   units  of   different  types   in  complex   battles  on
-heterogeneous terrain.
+Reactive control has been addressed mainly via the application of potential fields or by using machine learning to learn good control policies. We also include work on path-finding as part of reactive control.
+
+%Reactive control %, also called micro-management in RTS games,
+%aims at maximizing the  effectiveness of units, including simultaneous
+%control  of   units  of   different  types   in  complex   battles  on
+%heterogeneous terrain.
 
 % POTENTIAL FIELDS:
 \subsubsection{Potential  fields}
@@ -1014,9 +990,12 @@ tactical  decisions)  integration  through  the  addition  of  another
 sensory input corresponding to the goal's objective.
 
 
-%\section{Conclusions}
-%
-%This paper has summarized the set of open problem in RTS game AI, and summarized existing work toward addressing those problems. 
+\section{Conclusions}
+
+This entry has defined real-time strategy (RTS) games from an AI point of view, and summarized the set of open problems in RTS game AI. After that, we have summarized existing work toward addressing those problems.
+
+RTS games can be seen as a simulation of real complex dynamic environments, in a finite and smaller world, but still complex enough to study a series of key interesting problems. Finding efficient techniques for tackling these problems on RTS games can thus benefit other  AI disciplines and  application domains, and  also have concrete and direct applications in the ever growing industry of video games.
+
 
 
 \bibliographystyle{splncs}
