@@ -65,10 +65,10 @@
 
 \section{Introduction}\label{sec:intro}
 The  field of  Real-Time Strategy  (RTS) game  Artificial Intelligence
-(AI) has advanced significantly in the past few year, partially thanks to competitions like the ``ORTS
+(AI) has advanced significantly in the past few years, partially thanks to competitions as the ``ORTS
 RTS  Game AI  Competition''  (held  from 2006  to  2009), the  ``AIIDE
 StarCraft AI Competition'' (held since  2010), and the ``CIG StarCraft
-RTS AI Competition'' (held since  2011). Based on the work work presented in \cite{ontanon2013survey}, here we first define RTS games, and then list here the open problems in creating AI for RTS games, and the approaches that have been proposed to address these problems.
+RTS AI Competition'' (held since  2011). Based on the work work presented in \cite{ontanon2013survey}, here we first define RTS games, then list the open problems in creating AI for RTS games, and finally point to the approaches that have been proposed to address these problems.
 
 %Complex  dynamic  environments,  where neither  perfect  nor  complete
 %information  about the  current state  or  about the  dynamics of  the
@@ -413,7 +413,8 @@ and players  cannot observe the  whole game  map (like in  Chess), but
 need to scout in order to see what the opponent is doing. This type of
 uncertainty   can  be   lowered  by   good  scouting,   and  knowledge
 representation  (to  infer  what  is  possible  given  what  has  been
-seen). Second,  there is also  uncertainty arising from the  fact that
+seen). However, scouting also means deliberately reducing economic progress in order to obtain information.
+Second,  there is also  uncertainty arising from the  fact that
 the games  are adversarial,  and a player  cannot predict  the actions
 that the opponent(s)  will execute. For this type  of uncertainty, the
 AI, as the human  player, can only build a sensible  model of what the
@@ -567,11 +568,11 @@ aforementioned problems  together. Therefore,  it is hard  to classify
 existing  work  on  RTS  AI   as  addressing  the  different  problems
 above. For that reason, %in order to classify existing work on RTS AI,
 we will divide  it according to three levels  of abstraction: strategy
-(which loosely corresponds to ``macro''), tactics and reactive control
+(which loosely corresponds to ``macro''), tactics, and reactive control
 (which loosely corresponds to ``micro'').
 
-Figure~\ref{fig:levels-abstraction}   graphically    illustrates   how
-strategy, tactics and reactive control are three points in a continuum
+Figure~\ref{fig:levels-abstraction}   illustrates   how
+strategy, tactics, and reactive control are three points in a continuum
 scale where  strategy corresponds  to decisions making  processes that
 affect long spans of time (several  minutes in the case of StarCraft),
 reactive control corresponds  to low-level second-by-second decisions,
@@ -675,7 +676,7 @@ literature.  For example  Onta\~{n}\'{o}n  et al.  \cite{CBR_Planning}
 explored the use of real-time  case-based planning (CBP) in the domain
 of  Wargus (a  Warcraft  II clone).  In their  work,  they used  human
 demonstration to learn  plans, which are then composed  at run-time in
-order  to   form  full-fledges  strategies   to  play  the   game.  In
+order  to   form  full-fledged  strategies   to  play  the   game.  In
 \cite{PlanRetrieval} they improve over  their previous CBP approach by
 using situation assessment for improving the quality and speed of plan
 retrieval.  Hierarchical Task-Network  (HTN)  planning  has also  been
@@ -888,7 +889,7 @@ reinforcement learning \cite{Liu_2008},  or self-organizing-maps (SOM)
 \cite{teamCompositionRTS}. We would like to note that potential fields
 are a reactive control technique, and as such, they do not perform any
 form of  lookahead. As  a consequence, these  techniques are  prone to
-make units stuck in local maxima.
+make units stuck in local optima.
 
 
 % Machine learning:
