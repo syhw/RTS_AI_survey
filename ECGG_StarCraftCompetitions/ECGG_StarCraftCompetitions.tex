@@ -217,6 +217,8 @@ The following subsections summarize the results of all the StarCraft AI competit
 
 \subsection{AIIDE}\label{sec:AIIDE}
 
+\subsubsection{AIIDE 2010}
+
 Started in 2010, the AIIDE StarCraft AI Competition\footnote{\url{http://www.StarCraftAICompetition.com}} is the most
 well known and longest running StarCraft AI Competition in the world. Each year,
 AI bots are submitted by competitors to do battle within the retail version of
@@ -273,6 +275,8 @@ with a standard defensive Terran opening strategy that transitioned into ``mech'
 \end{tabular}
 \end{table}
 
+\subsubsection{AIIDE 2011}
+
 In 2011 the University of Alberta hosted the competition, with organization by Michael Buro and
 David Churchill\footnote{\url{https://skatgame.net/mburo/sc2011/}}. Due to a lack of entrants in tournament categories 1-3 in the 2010 competition, it was
 decided that only the full game category would be played in the 2011 competition. Another important
@@ -321,22 +325,14 @@ AIUR also chose  Protoss, with a strategy that was in between Skynet
 and UAlbertaBot in terms of  attack timings.  At that time, AIUR chose
 one  mood among  five (leading  to slightly  different  strategies and
 tactics) at the  beginning of a game and kept it  until the end. These
-five moods were:
-\begin{itemize}
-\item  Rush:  where  the  bot  tries  early  attacks,  and  have  good
+five moods were: 1. Rush: the bot tries early attacks, and have good
   probabilities to send the two or three first Zealots (basic contact attack ground unit) to harass the
-  opponent.
-\item Aggressive: where  we have less chance to  perform harasses with
+  opponent. 2. Aggressive: it has less chance to perform harasses with
   the first Zealots, and the first attack is usually a bit delayed
-  with regard to the Rush mood.
-\item Macro: where the AI do not try any early attacks and focus a bit
-  more on its economy before attacking.
-\item Defense: where the AI  ``turtles'' and wait to have a consequent
-  army before running an attack.
-\item  Fast expand:  where the  first building  constructed it  a base
-  expansion, for a very economical-oriented game.
-\end{itemize}
-Notice that  build orders are not  fully hard-coded since  they can be
+  with regard to the Rush mood. 3. Macro: the AI do not try any early attacks and focus a bit
+  more on its economy before attacking. 4. Defense: AIUR  ``turtles'' and wait to have a consequent
+  army before running an attack. 5. Fast expand:  the  first building  constructed it  a base
+  expansion, for a very economical-oriented game. Notice that build orders are not fully hard-coded since they can be
 altered by AIUR's Spend Manager.
 
 Of  note  in  these  results  was that  a  rock-paper-scissors  effect
@@ -349,11 +345,11 @@ realized that their  2010 strategy was quite easily  defeated by early
 game rushing strategies,  and so they submitted a  Terran bot instead,
 called Undermind, which finished in 7th.
 
-After the competition was over, a man vs. machine match was held between the winner (Skynet) and an
-ex-professional StarCraft player named Oriol Vinyals. Oriol was a competitor in the 2001 World Cyber
-Games StarCraft competition, and though he had been out of practice for a few years was still quite a
-good player. The match was arranged to see how well StarCraft AI bots had progressed and to see if
-they could actually beat a decent human opponent. 
+% After the competition was over, a man vs. machine match was held between the winner (Skynet) and an
+% ex-professional StarCraft player named Oriol Vinyals. Oriol was a competitor in the 2001 World Cyber
+% Games StarCraft competition, and though he had been out of practice for a few years was still quite a
+% good player. The match was arranged to see how well StarCraft AI bots had progressed and to see if
+% they could actually beat a decent human opponent. 
 
 \begin{figure}[t!]
     \centering
@@ -364,21 +360,23 @@ they could actually beat a decent human opponent.
 
 
 
-For the best-of-three match, Oriol chose his races randomly and ended up beating Skynet in a 2-0. 
-In the first match, Oriol played Zerg vs. Skynet's Protoss on Python, a four player map. Oriol chose
-to start with a fast expansion strategy and transition into two base mutalisk production. Skynet chose
-to rush with a few early zealots, which was luckily the best possible choice given Oriol's strategy.
-Skynet's initial attack destroyed Oriol's early defenses, and nearly won the game in the first few
-minutes, however it then proceeded to send zealots to attack one at a time rather than group up its
-units before moving in, which allowed Oriol to catch up. Once Oriol produced his mutalisks, Skynet did
-not produce sufficient air defenses and Oriol quickly destroyed Skynet's base. In the second game,
-Oril played Terran, again on Python. After holding off early Dragoon pressure from Skynet, Oriol
-moved out with a few marines, medics and tanks. Skynet tried to defend with its army of Dragoons,
-however due to poor unit targeting decisions it started to attack useless medics after the marines
-had died, rather than the tanks. Oriol overcame the Dragoon army and was victorious. Later analysis
-of the match concluded that Skynet, while dominant over the other bots, was unable to properly
-adapt and transition into a mid-game strategy in game one once its early pressure failed, and in game
-two made a key blunder in unit targeting which cost it the game. Humans were still in command.
+% For the best-of-three match, Oriol chose his races randomly and ended up beating Skynet in a 2-0. 
+% In the first match, Oriol played Zerg vs. Skynet's Protoss on Python, a four player map. Oriol chose
+% to start with a fast expansion strategy and transition into two base mutalisk production. Skynet chose
+% to rush with a few early zealots, which was luckily the best possible choice given Oriol's strategy.
+% Skynet's initial attack destroyed Oriol's early defenses, and nearly won the game in the first few
+% minutes, however it then proceeded to send zealots to attack one at a time rather than group up its
+% units before moving in, which allowed Oriol to catch up. Once Oriol produced his mutalisks, Skynet did
+% not produce sufficient air defenses and Oriol quickly destroyed Skynet's base. In the second game,
+% Oril played Terran, again on Python. After holding off early Dragoon pressure from Skynet, Oriol
+% moved out with a few marines, medics and tanks. Skynet tried to defend with its army of Dragoons,
+% however due to poor unit targeting decisions it started to attack useless medics after the marines
+% had died, rather than the tanks. Oriol overcame the Dragoon army and was victorious. Later analysis
+% of the match concluded that Skynet, while dominant over the other bots, was unable to properly
+% adapt and transition into a mid-game strategy in game one once its early pressure failed, and in game
+% two made a key blunder in unit targeting which cost it the game. Humans were still in command.
+
+\subsubsection{AIIDE 2012}
 
 \begin{table}[!t]
 \caption{Results of the five best bots of the AIIDE 2012 competition}
@@ -423,32 +421,82 @@ converged to their  final values. One of the main  reasons for this is
 due to  the bots  learning which strategies  to use as  the tournament
 progressed.
 
+\subsubsection{AIIDE 2013}
+
+\begin{table}[!t]
+\caption{Results of the five best bots of the AIIDE 2013 competition}
+\label{tab:aiide2013}
+\centering
+\begin{tabular}{|c|l|r|}
+\hline
+{\bfseries Position} & {\bfseries Bot} & {\bfseries Win \%} \\
+\hline
+1 & UAlbertaBot & 84.49\% \\
+2 & Skynet & 66.26\% \\
+3 & AIUR & 58.51\% \\
+4 & Ximp & 56.57\% \\
+5 & ICEStarCraft & 48.53\% \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[t!]
+    \centering
+    \includegraphics[width=\columnwidth]{figures/aiide2013}
+    \caption{Evolution of the win percentage of each bot participating in the AIIDE 2013 competition}
+    \label{fig:aiide2013}
+\end{figure}
+
+{\color{blue} AIIDE 2013: Skynet and AIUR learning, BBQ opponent strategy
+  learning,  UAB  branch-and-bound  for   build  order  during  games,
+  SparCraft for combat simulations}
+
+\subsubsection{AIIDE 2014}
 
 
-The 2012 man vs. machine match again used the winner of the competition (Skynet), who played against
-Mike Lange, also known as Bakuryu. At the time of the match, Bakuryu was an A- ranked Zerg player on ICCup,
-and known as one of the best non-Korean Zerg players in the world. Bakuryu was considered much
-stronger than Oriol at the time that the match was played, and the results showed that this was true.
-In the first game of the best-of-three, Bakuryu made Skynet look quite silly by running around inside
-Skynet's base with a small number of zerglings while Skynet's zealots and half of its worked chased
-then in vain. After killing off several probes and buying enough time to set up his expansion, he
-cleaned up Skynet's army with a flying army of mutalisks. In the second game, Bakuryu contained Skynet
-inside its base with a group of zerglings positioned within Skynet's expansion. Skynet then constructed
-several Dark Templar and along with some Dragoons and Zealots attacked into Bakuryu's expansion which
-was heavily defended, and was crushed almost instantly, allowing Bakuryu's zergling force to finish
-off the Protoss base. 
+\begin{table}[!t]
+\caption{Results of the five best bots of the AIIDE 2014 competition}
+\label{tab:aiide2014}
+\centering
+\begin{tabular}{|c|l|r|}
+\hline
+{\bfseries Position} & {\bfseries Bot} & {\bfseries Win \%} \\
+\hline
+1 & ICEBot & 85.86\% \\
+2 & Ximp & 84.64\% \\
+3 & LetaBot & 82.09\% \\
+4 & AIUR & 70.94\% \\
+5 & Skynet & 68.74\% \\
+\hline
+\end{tabular}
+\end{table}
 
-In this match it was shown that the true weakness of state of the art StarCraft AI systems was that
-humans are very adept at recognizing scripted behaviors and exploiting them to the fullest. A human
-player in Skynet's position in the first game would have realized he was being taken advantage of and
-adapted his strategy accordingly, however the inability to put the local context (Bakuryu kiting his
-units around his base) into the larger context of the game (that this would delay Skynet until
-reinforcements arrived) and then the lack of strategy change to fix the situation led to an easy
-victory for the human. These problems remain as some of the main challenges in RTS AI today: to both recognize
-the strategy and intent of an opponent's actions, and how to effectively adapt your own strategy to 
-overcome them.
+{\color{blue} AIIDE 2014: ???}
 
-All results, videos, and replays from the AIIDE StarCraft AI Competition can be found in \url{http://www.StarCraftAICompetition.com}.
+% The 2012 man vs. machine match again used the winner of the competition (Skynet), who played against
+% Mike Lange, also known as Bakuryu. At the time of the match, Bakuryu was an A- ranked Zerg player on ICCup,
+% and known as one of the best non-Korean Zerg players in the world. Bakuryu was considered much
+% stronger than Oriol at the time that the match was played, and the results showed that this was true.
+% In the first game of the best-of-three, Bakuryu made Skynet look quite silly by running around inside
+% Skynet's base with a small number of zerglings while Skynet's zealots and half of its worked chased
+% then in vain. After killing off several probes and buying enough time to set up his expansion, he
+% cleaned up Skynet's army with a flying army of mutalisks. In the second game, Bakuryu contained Skynet
+% inside its base with a group of zerglings positioned within Skynet's expansion. Skynet then constructed
+% several Dark Templar and along with some Dragoons and Zealots attacked into Bakuryu's expansion which
+% was heavily defended, and was crushed almost instantly, allowing Bakuryu's zergling force to finish
+% off the Protoss base. 
+
+% In this match it was shown that the true weakness of state of the art StarCraft AI systems was that
+% humans are very adept at recognizing scripted behaviors and exploiting them to the fullest. A human
+% player in Skynet's position in the first game would have realized he was being taken advantage of and
+% adapted his strategy accordingly, however the inability to put the local context (Bakuryu kiting his
+% units around his base) into the larger context of the game (that this would delay Skynet until
+% reinforcements arrived) and then the lack of strategy change to fix the situation led to an easy
+% victory for the human. These problems remain as some of the main challenges in RTS AI today: to both recognize
+% the strategy and intent of an opponent's actions, and how to effectively adapt your own strategy to 
+% overcome them.
+
+% All results, videos, and replays from the AIIDE StarCraft AI Competition can be found in \url{http://www.StarCraftAICompetition.com}.
 % \footnote{\url{http://www.StarCraftAICompetition.com}}.
 
 \begin{table*}[!t]
@@ -494,6 +542,8 @@ Intelligence in Games conference (CIG 2010) suffered from technical problems.
 These mainly stemmed from the desire to use evolved, largely untested
 maps which proved to look interesting but made the submitted bots and the Brood War Terrain Analyzer (BWTA) provided with the BWAPI interface crash
 so frequently that it would have been unjustifiable to announce a winner.
+
+\subsubsection{CIG 2011}
 
 At CIG 2011, the tournament was therefore run with a (secret) selection
 of maps used in league play, which can be regarded as the most important
@@ -618,6 +668,7 @@ almost equally strong, and the two other bots as clearly inferior.
 The competition setup, documentation and results can be found
 in\footnote{\url{http://ls11-www.cs.tu-dortmund.de/rts-competition/StarCraft-cig2011}}.
 
+\subsubsection{CIG 2012}
 
 For CIG 2012, the AIIDE tournament software was employed,
 leading to a total of $4050$ games played in $90$ rounds
@@ -662,19 +713,19 @@ here\footnote{\url{http://ls11-www.cs.tu-dortmund.de/rts-competition/StarCraft-c
 \end{tabular}
 \end{table}
 
-\begin{figure*}[tb]
-    \centering
-    \includegraphics[width=\textwidth]{figures/botLadder1.pdf}
-    \caption{Bot's Elo Rating from February 1, 2012 to June 20, 2012}
-    \label{fig:botLadder1}
-\end{figure*}
+% \begin{figure*}[tb]
+%     \centering
+%     \includegraphics[width=\textwidth]{figures/botLadder1.pdf}
+%     \caption{Bot's Elo Rating from February 1, 2012 to June 20, 2012}
+%     \label{fig:botLadder1}
+% \end{figure*}
 
-\begin{figure*}[tb]
-    \centering
-    \includegraphics[width=\textwidth]{figures/botLadder2.pdf}
-    \caption{Bot's Elo Rating from September 1, 2012 to January 10, 2013}
-    \label{fig:botLadder2}
-\end{figure*}
+% \begin{figure*}[tb]
+%     \centering
+%     \includegraphics[width=\textwidth]{figures/botLadder2.pdf}
+%     \caption{Bot's Elo Rating from September 1, 2012 to January 10, 2013}
+%     \label{fig:botLadder2}
+% \end{figure*}
 
 The overall results are displayed in table~\ref{tab:cig2012},
 and the win rate evolution over time in figure~\ref{fig:cig2012-results}.
@@ -722,65 +773,68 @@ the current bots are not very good at adapting their strategy to the
 one of their opponent during a game, or at least (via the read/write
 procedure of game information) within a series of games.
 
+\subsubsection{CIG 2013}
+
+\subsubsection{CIG 2014}
 
 
-\subsection{StarCraft Bot Ladder}\label{sec:ladder}
+% \subsection{StarCraft Bot Ladder}\label{sec:ladder}
 
-The StarCraft Bot Ladder is a website\footnote{\url{http://bots-stats.krasi0.com}} where bot versus bot matches are automatized, and are running all the time. This ladder is a great resource for creating data sets (all the game replays are available) and statistics. For bot ranking, the ladder uses an Elo rating system suitable for calculating the \emph{relative skill level} of a bot in two-player games. In the Elo system each player has a numerical rating that gets incremented or decremented some points after each game. The amount of points depends on the difference in the ratings of the players. A player will gain more points by beating a higher-rated player than by beating a lower-rated player. This kind of rating system is widely used in games like chess. This bot ladder compiles different versions of bots from the main worldwide competitions (like AIIDE, CIG or SSCAI\footnote{\url{http://sscaitournament.com}}), even some independent or ``under construction'' bots. Therefore, it is a very good resource to test the performance of new bots against the current state of the art in StarCraft bots before participating in the official competitions.
+% The StarCraft Bot Ladder is a website\footnote{\url{http://bots-stats.krasi0.com}} where bot versus bot matches are automatized, and are running all the time. This ladder is a great resource for creating data sets (all the game replays are available) and statistics. For bot ranking, the ladder uses an Elo rating system suitable for calculating the \emph{relative skill level} of a bot in two-player games. In the Elo system each player has a numerical rating that gets incremented or decremented some points after each game. The amount of points depends on the difference in the ratings of the players. A player will gain more points by beating a higher-rated player than by beating a lower-rated player. This kind of rating system is widely used in games like chess. This bot ladder compiles different versions of bots from the main worldwide competitions (like AIIDE, CIG or SSCAI\footnote{\url{http://sscaitournament.com}}), even some independent or ``under construction'' bots. Therefore, it is a very good resource to test the performance of new bots against the current state of the art in StarCraft bots before participating in the official competitions.
 
-Figure \ref{fig:botLadder1} shows the Elo rating of the bots in the ladder during the first half year of 2012. The ranking is practically equal than the AIIDE 2011 competition, showing the lack of adaptability of the current bots. We can notice these more extremely in Figure \ref{fig:botLadder2} for the second half year of 2012. During this period new bots were introduced in the ladder. We can observe how the first version of KillerBot made a huge impact on Skynet ranking and finally, the second version of KillerBot quickly became the best bot for more than one month (again we can see how the rest of the bots aren't able to adapt and the ranking doesn't change so much). And finally, in January, the Ximp bot appears with a new strategy that overcomes the rest of the bots. Both KillerBot and Ximp use hard-coded strategies without any kind of adaptation capabilities. However, they implement strategies that no other bot has a counter for, and thus manage to win a very large percentage of games. This points out, once again, that one of the major open challenges in RTS game AI is how achieving adaptive strategies, that can recognize the opponent's intentions, and select an adequate response.
+% Figure \ref{fig:botLadder1} shows the Elo rating of the bots in the ladder during the first half year of 2012. The ranking is practically equal than the AIIDE 2011 competition, showing the lack of adaptability of the current bots. We can notice these more extremely in Figure \ref{fig:botLadder2} for the second half year of 2012. During this period new bots were introduced in the ladder. We can observe how the first version of KillerBot made a huge impact on Skynet ranking and finally, the second version of KillerBot quickly became the best bot for more than one month (again we can see how the rest of the bots aren't able to adapt and the ranking doesn't change so much). And finally, in January, the Ximp bot appears with a new strategy that overcomes the rest of the bots. Both KillerBot and Ximp use hard-coded strategies without any kind of adaptation capabilities. However, they implement strategies that no other bot has a counter for, and thus manage to win a very large percentage of games. This points out, once again, that one of the major open challenges in RTS game AI is how achieving adaptive strategies, that can recognize the opponent's intentions, and select an adequate response.
 
 
-\subsection{Adaptation Analysis}
+% \subsection{Adaptation Analysis}
 
-One of the major conclusions from the results of the StarCraft competitions is the lack of adaptation of bots.  Some switch between different build-orders, but do not fully adapt their strategy. No bot is capable of observing the opponent and autonomously synthesize a good plan from scratch to counter the opponent strategy. In this section we analyzed this claim quantitatively using the tools of \cite{SynnaeveOpeningCig11}. We analyzed the replays from the 2011 and 2012 AIIDE competitions (shown in Figures \ref{fig:aiide2011-botopenings} and \ref{fig:aiide2012-botopenings} respectively). We analyzed the way bots choose their openings depending on which other bot they are playing against. Given that there is no dominant strategy in StarCraft, and that it is necessary to see what the opponent is doing in order to determine the best opening, we would expect bots to change their openings depending on which other bot they are playing (since each bot uses a different strategy, or set of strategies). Using clustering, we identified the most common openings in all the replays from the 2011 and 2012 competitions (each one shown with a different color in the figures). No data is shown for the ItayUnvermind bot, since its opening did not match significantly with any of the ones used in our study (extracted from humans pro-gamers).
+% One of the major conclusions from the results of the StarCraft competitions is the lack of adaptation of bots.  Some switch between different build-orders, but do not fully adapt their strategy. No bot is capable of observing the opponent and autonomously synthesize a good plan from scratch to counter the opponent strategy. In this section we analyzed this claim quantitatively using the tools of \cite{SynnaeveOpeningCig11}. We analyzed the replays from the 2011 and 2012 AIIDE competitions (shown in Figures \ref{fig:aiide2011-botopenings} and \ref{fig:aiide2012-botopenings} respectively). We analyzed the way bots choose their openings depending on which other bot they are playing against. Given that there is no dominant strategy in StarCraft, and that it is necessary to see what the opponent is doing in order to determine the best opening, we would expect bots to change their openings depending on which other bot they are playing (since each bot uses a different strategy, or set of strategies). Using clustering, we identified the most common openings in all the replays from the 2011 and 2012 competitions (each one shown with a different color in the figures). No data is shown for the ItayUnvermind bot, since its opening did not match significantly with any of the ones used in our study (extracted from humans pro-gamers).
 
-\begin{figure*}[tb]
-    \centering
-    \includegraphics[width=\textwidth]{figures/botopenings2011.png}
-    \caption{Distribution of different openings performed by the different bots participating in the AIIDE 2011 competition. For each bot match-up, the colors show the proportion of times that the column bot used a particular opening against the row bot.}
-    \label{fig:aiide2011-botopenings}
-\end{figure*}
+% \begin{figure*}[tb]
+%     \centering
+%     \includegraphics[width=\textwidth]{figures/botopenings2011.png}
+%     \caption{Distribution of different openings performed by the different bots participating in the AIIDE 2011 competition. For each bot match-up, the colors show the proportion of times that the column bot used a particular opening against the row bot.}
+%     \label{fig:aiide2011-botopenings}
+% \end{figure*}
 
-\begin{figure*}[tb]
-    \centering
-    \includegraphics[width=\textwidth]{figures/botopenings2012.png}
-    \caption{Distribution of different openings performed by the different bots participating in the AIIDE 2012 competition. For each bot match-up, the colors show the proportion of times that the column bot used a particular opening against the row bot.}
-    \label{fig:aiide2012-botopenings}
-\end{figure*}
+% \begin{figure*}[tb]
+%     \centering
+%     \includegraphics[width=\textwidth]{figures/botopenings2012.png}
+%     \caption{Distribution of different openings performed by the different bots participating in the AIIDE 2012 competition. For each bot match-up, the colors show the proportion of times that the column bot used a particular opening against the row bot.}
+%     \label{fig:aiide2012-botopenings}
+% \end{figure*}
 
-Specifically, we identified the following openings (for a better comprehension of strategies, buildings or units of StarCraft, we refer the reader to Teamliquid's wiki\footnote{\url{http://wiki.teamliquid.net/starcraft/Category:Strategies}}):
-\begin{itemize}
-  \item Protoss openings:
-  \begin{itemize}
-    \item \emph{two\_gates}: Build two \emph{Gateways} and keep training \emph{Zealots} (basic contact attack ground unit), this is the quickest way to apply pressure.
-    \item \emph{fast\_dt}: Produce \emph{Dark Templars} (technologically advanced stealth ground unit) as soon as possible, sacrificing early game power for a technological advance, hard-countered by detectors technology.
-    \item \emph{templar}: Train \emph{High Templars} (technologically advanced zone attack unit) as fast as possible, same as above, less deadly but is less easily countered.
-    \item \emph{speedzeal}: Train \emph{Zealots} and research attack and speed upgrades as soon as possible, some early game power transitioning into late game tech.
-    \item \emph{corsair}: Produce \emph{Corsairs} (air-air flying unit) as soon as possible and then transition into training \emph{Dark Templars} (safe from Zerg's flying detectors thanks to \emph{Corsairs}), \emph{Reavers} (ground artillery unit) or \emph{Dragoons}. Weak early game.
-    \item \emph{nony}: Build three \emph{Gateways} and massive training of \emph{Dragoons}. Slower than \emph{two\_gates} but still some early game (ranged) power.
-    \item \emph{reaver\_drop}: Train \emph{Reavers} as soon as possible to be able to do drops (air transport of artillery units).
-  \end{itemize}
-  \item Terran openings:
-  \begin{itemize}
-    \item \emph{bio}: Produce a large army of \emph{Marines} (basic ranged ground unit) and \emph{Medics} (can heal biological units). Quickest way to apply pressure.
-    \item \emph{rax\_fe}: Take the closest ``natural expansion'' as soon as possible. This provides a big economic boost in the mid game by sacrificing some early game power.
-    \item \emph{two\_facto}: Build two \emph{Factories} and keep producing \emph{Tanks} (ground artillery unit). Vulnerable while building up to it and then very powerful on ground.
-    \item \emph{vultures}: Produce mainly \emph{Vultures} (fast ground ranged unit, excels against small units) and research mines. Quicker to reach (technologically) and build than tanks, can transition into tanks.
-    \item \emph{air}: Produce \emph{Wraiths} (ranged flying units) as soon as possible for an air attack. Vulnerable to anti-air openings or quick rushes.
-    \item \emph{drop}: Train \emph{Dropships} (flying transports) as soon as possible to be able to do (mostly tanks or marines) drops, leveraging efficient tactics.
-  \end{itemize}
-  \item Zerg openings:
-  \begin{itemize}
-    \item \emph{speedlings}: Train \emph{Zerlings} (basic cheap, fast, ground contact attack unit) and research speed upgrade as soon as possible. Quickest way to apply pressure.
-    \item \emph{fast\_mutas}: Produce mainly \emph{Mutalisks} (ranged flying units). Vulnerable in the early game while gathering gas and researching the technology.
-    \item \emph{mutas}: Expand two times for a stronger economy before massive training of \emph{Mutalisks}. Slower but more powerful build-up than above.
-    \item \emph{lurkers}: Train \emph{Lurkers} (ground, stealth artillery unit) as soon as possible to benefit from their (advanced technology) zone attack and cloak ability. 
-    \item \emph{hydras}: Massive production of \emph{Hydralisks} (ground ranged unit). Much quicker to reach technologically than \emph{Lurkers} and can transition into them.
-  \end{itemize}
-\end{itemize}
+% Specifically, we identified the following openings (for a better comprehension of strategies, buildings or units of StarCraft, we refer the reader to Teamliquid's wiki\footnote{\url{http://wiki.teamliquid.net/starcraft/Category:Strategies}}):
+% \begin{itemize}
+%   \item Protoss openings:
+%   \begin{itemize}
+%     \item \emph{two\_gates}: Build two \emph{Gateways} and keep training \emph{Zealots} (basic contact attack ground unit), this is the quickest way to apply pressure.
+%     \item \emph{fast\_dt}: Produce \emph{Dark Templars} (technologically advanced stealth ground unit) as soon as possible, sacrificing early game power for a technological advance, hard-countered by detectors technology.
+%     \item \emph{templar}: Train \emph{High Templars} (technologically advanced zone attack unit) as fast as possible, same as above, less deadly but is less easily countered.
+%     \item \emph{speedzeal}: Train \emph{Zealots} and research attack and speed upgrades as soon as possible, some early game power transitioning into late game tech.
+%     \item \emph{corsair}: Produce \emph{Corsairs} (air-air flying unit) as soon as possible and then transition into training \emph{Dark Templars} (safe from Zerg's flying detectors thanks to \emph{Corsairs}), \emph{Reavers} (ground artillery unit) or \emph{Dragoons}. Weak early game.
+%     \item \emph{nony}: Build three \emph{Gateways} and massive training of \emph{Dragoons}. Slower than \emph{two\_gates} but still some early game (ranged) power.
+%     \item \emph{reaver\_drop}: Train \emph{Reavers} as soon as possible to be able to do drops (air transport of artillery units).
+%   \end{itemize}
+%   \item Terran openings:
+%   \begin{itemize}
+%     \item \emph{bio}: Produce a large army of \emph{Marines} (basic ranged ground unit) and \emph{Medics} (can heal biological units). Quickest way to apply pressure.
+%     \item \emph{rax\_fe}: Take the closest ``natural expansion'' as soon as possible. This provides a big economic boost in the mid game by sacrificing some early game power.
+%     \item \emph{two\_facto}: Build two \emph{Factories} and keep producing \emph{Tanks} (ground artillery unit). Vulnerable while building up to it and then very powerful on ground.
+%     \item \emph{vultures}: Produce mainly \emph{Vultures} (fast ground ranged unit, excels against small units) and research mines. Quicker to reach (technologically) and build than tanks, can transition into tanks.
+%     \item \emph{air}: Produce \emph{Wraiths} (ranged flying units) as soon as possible for an air attack. Vulnerable to anti-air openings or quick rushes.
+%     \item \emph{drop}: Train \emph{Dropships} (flying transports) as soon as possible to be able to do (mostly tanks or marines) drops, leveraging efficient tactics.
+%   \end{itemize}
+%   \item Zerg openings:
+%   \begin{itemize}
+%     \item \emph{speedlings}: Train \emph{Zerlings} (basic cheap, fast, ground contact attack unit) and research speed upgrade as soon as possible. Quickest way to apply pressure.
+%     \item \emph{fast\_mutas}: Produce mainly \emph{Mutalisks} (ranged flying units). Vulnerable in the early game while gathering gas and researching the technology.
+%     \item \emph{mutas}: Expand two times for a stronger economy before massive training of \emph{Mutalisks}. Slower but more powerful build-up than above.
+%     \item \emph{lurkers}: Train \emph{Lurkers} (ground, stealth artillery unit) as soon as possible to benefit from their (advanced technology) zone attack and cloak ability. 
+%     \item \emph{hydras}: Massive production of \emph{Hydralisks} (ground ranged unit). Much quicker to reach technologically than \emph{Lurkers} and can transition into them.
+%   \end{itemize}
+% \end{itemize}
 
-As the figures show, the top three ranked bots in the competition (Skynet, Aiur and UalbertaBot) do not change their strategy at all depending on their opponent. For example, the Skynet bot (both in 2011 and 2012), always uses the same opening (\emph{two\_gates}), except when playing a Terran opponent, when it uses \emph{nony}. This reflects the trend that the performance of bots is still more dependent on carefully handcrafted and non-adaptive behaviors, than on on-line decision making procedures. This is so, since most of the problems that need to be solved in order to implement such procedures are still open.
+% As the figures show, the top three ranked bots in the competition (Skynet, Aiur and UalbertaBot) do not change their strategy at all depending on their opponent. For example, the Skynet bot (both in 2011 and 2012), always uses the same opening (\emph{two\_gates}), except when playing a Terran opponent, when it uses \emph{nony}. This reflects the trend that the performance of bots is still more dependent on carefully handcrafted and non-adaptive behaviors, than on on-line decision making procedures. This is so, since most of the problems that need to be solved in order to implement such procedures are still open.
 
 
 % {\color{blue} to-do}
