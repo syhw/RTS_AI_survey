@@ -365,7 +365,7 @@ build-orders,  replays,  and  so   on). Thus, the challenges in RTS game AI can 
 %\item Spatial reasoning (``tactics'')
 %\end{itemize}
 
-\subsubsection{Planning}
+\subsubsection*{Planning}
 As mentioned above, the  size of the state space in  RTS games is much
 larger  than  that  of  traditional  board  games  such  as  Chess  or
 Go. Additionally,  the number  of actions  that can  be executed  at a
@@ -380,7 +380,7 @@ the  opponent.  Techniques  that  can  address  these  large  planning
 problems by either sampling, or  hierarchical decomposition do not yet
 exist.
 
-\subsubsection{Learning}
+\subsubsection*{Learning}
 Given  the  difficulties  in  playing  by  directly  using
 adversarial  planning techniques,  many  research  groups have  turned
 attention to  learning techniques. We  can distinguish three  types of
@@ -416,7 +416,7 @@ learning problems in RTS games:
 %%%   retreat).
 %%% \end{itemize}
 
-\subsubsection{Uncertainty}
+\subsubsection*{Uncertainty}
 Adversarial planning under  uncertainty in domains of the  size of RTS
 games is  still an unsolved  challenge.  In  RTS games, there  are two
 main kinds  of uncertainty. First,  the game is  partially observable,
@@ -450,7 +450,7 @@ opponent is likely to do.
 % information about  B or  C is  hidden, only  intention allows  for a
 % choice.
 
-\subsubsection{Spatial and Temporal Reasoning}
+\subsubsection*{Spatial and Temporal Reasoning}
 % TODO just a paragraph on exposing why there are temporal and spatial
 % reasoning in RTS AI.
 Spatial reasoning is  related to each aspect  of terrain exploitation.
@@ -489,7 +489,7 @@ account  that the  effects of  these  actions are  not immediate,  but
 longer term.
 
 
-\subsubsection{Domain Knowledge Exploitation}
+\subsubsection*{Domain Knowledge Exploitation}
 In traditional board  games such as Chess,  researchers have exploited
 the  large  amounts  of  existing  domain  knowledge  to  create  good
 evaluation  functions  to be  used  by  alpha-beta search  algorithms,
@@ -504,7 +504,7 @@ of  replays \cite{WeberCig09,synnaeve2012dataset} to automatically extract
  strategies,  trends   or  plans. % However,  StarCraft  games  are  quite  complex,  and  how  to
 %automatically learn from such datasets is still an open problem.
 
-\subsubsection{Task Decomposition}
+\subsubsection*{Task Decomposition}
 Most existing approaches  to play RTS games work by decomposing the  problem into   a    collection   of    smaller   problems to    be   solved
 independently. Specifically, a common subdivision is:
 \begin{itemize}
@@ -557,14 +557,10 @@ typically talks about two tasks:
 
 The reader can find a good  presentation of task decomposition RTS game AI in~\cite{weber2011acs}.  Although  the   previous  task decomposition  is  common, other task decompositions have been explored (see \cite{ontanon2013survey} for an overview of the task decomposition used by several StarCraft bots).
 
-
-
-\section*{Existing work on RTS Game AI}\label{sec:review}
-
 \begin{figure}
     \centering
 %    \includegraphics[width=0.7\columnwidth]{figures/levels_abstraction.pdf}
-    \includegraphics[width=0.7\columnwidth]{figures/categories}
+    \includegraphics[width=0.7\columnwidth]{categories}
     \caption{RTS  AI  levels  of abstraction  and  typical sub-problems associated with them:
       %uncertainty  (coming  from  partial  observation  and  from  not knowing the  intentions of  the opponent)  is higher  for higher abstraction  levels.  
       Timings correspond  to  an
@@ -573,6 +569,8 @@ The reader can find a good  presentation of task decomposition RTS game AI in~\c
       }
     \label{fig:levels-abstraction}
 \end{figure}
+
+\section*{Existing work on RTS Game AI}\label{sec:review}
 
 Systems that  play RTS  games need  to address most,  if not  all, the
 aforementioned problems  together. Therefore,  it is hard  to classify
@@ -632,7 +630,7 @@ The remainder of this section presents work toward addressing the previous six o
 % sections?  }
 
 
-\subsection{Strategy}
+\subsection*{Strategy}
 % Every AI needs to observe the world  in order to analyze it and take
 % decisions. In  RTS games this  task isn't  trivial since we  have to
 % deal with  imperfect information.   The most common  decision making
@@ -650,7 +648,7 @@ or  machine   learning.  We  cover   each  of  these
 approaches in turn.
 
 % HARD-CODED:
-\subsubsection{Hard-coded  approaches}
+\subsubsection*{Hard-coded  approaches}
 They have  been extensively  used in commercial  RTS games.   The most
 common      ones     use      finite     state      machines     (FSM)
 \cite{FSM_AIGameProgWisdom2003}  in   order  to  let  the   AI  author
@@ -681,7 +679,7 @@ adaptive opponents.
 
 
 % PLANNING:
-\subsubsection{Planning}
+\subsubsection*{Planning}
 Approaches using  planning techniques have  also been explored  in the
 literature.  For example  Onta\~{n}\'{o}n  et al.  \cite{CBR_Planning}
 explored the use of real-time  case-based planning (CBP) in the domain
@@ -704,7 +702,7 @@ economic build-orders,  taking into account timing  constraints of the
 different actions.
 
 % MACHINE LEARNING:
-\subsubsection{Machine Learning}
+\subsubsection*{Machine Learning}
 Concerning  machine   learning-based  approaches,  Weber   and  Mateas
 \cite{WeberCig09}  proposed   a  data  mining  approach   to  strategy
 prediction  and performed  supervised  learning  on labeled  StarCraft
@@ -726,7 +724,7 @@ tasks  were  explored  by  Young  and Hawes  in  their  QUORUM  system
 priorities.
 
 % CBR:
-\subsubsection{Case-Based Reasoning}
+\subsubsection*{Case-Based Reasoning}
 Also falling  into the machine-learning category,  a significant group
 of    researchers   has    explored    case-based   reasoning    (CBR)
 \cite{Aamodt94CBR}  approaches  for  strategic  decision  making.  For
@@ -746,7 +744,7 @@ opponent's army composition, and they pointed out on the importance of
 proper scouting for better results.
 
 % SCOUTING:
-\subsubsection{Scouting}
+\subsubsection*{Scouting}
 One  final consideration  concerning strategy  is that  RTS games  are
 typically  partially observable.  Games like  StarCraft implement  the
 ``fog-of-war'' idea, which basically means  that a player can only see
@@ -773,7 +771,7 @@ through     reactive     planning     and     goal-driven     autonomy
 in unforeseen situations.
 
 
-\subsection{Tactics}
+\subsection*{Tactics}
 
 % INTRO:
 %Tactical reasoning involves reasoning about the different abilities of
@@ -787,7 +785,7 @@ We will divide the work on mid-range tactical reasoning in RTS games in two
 large groups: spatial reasoning and decision making (that has been addressed both using machine learning and game tree search).
 
 % TERRAIN ANALYSIS:
-\subsubsection{Spatial Reasoning}
+\subsubsection*{Spatial Reasoning}
 The most common form of spatial reasoning in the literature of RTS games is terrain analysis.
 Terrain analysis supplies  the AI
 with structured information  about the map.  This  analysis is usually
@@ -818,7 +816,7 @@ units.  \v{C}ertick\'{y} addressed  this constraint  satisfaction problem
 using Answer Set Programming (ASP) \cite{certicky2013wallin}. Richoux et al. \cite{richoux2014walling} presented an alternative approach based on constraint programming and local search, designed to be run-time.
 
 % MACHINE LEARNING:
-\subsubsection{Machine Learning}
+\subsubsection*{Machine Learning}
 Concerning tactical  decision making,  many different  approaches have
 been explored  such as machine  learning or game tree  search.  Hladky
 and  Bulitko \cite{Hladky2008}  benchmarked hidden  semi-Markov models
@@ -846,7 +844,7 @@ decision in the game involving spatial reasoning by combining a set of
 basic influence maps.
 
 % GAME TREE SEARCH:
-\subsubsection{Game  tree search}
+\subsubsection*{Game  tree search}
 These  techniques  have  also  been  explored  for  tactical  decision
 making. Churchill and Buro \cite{churchill2012fast} presented the ABCD
 algorithm  (Alpha-Beta  Considering  Durations), a  game  tree  search
@@ -869,7 +867,7 @@ complexity. Uriarte and Onta\~{n}\'{o}n \cite{uriarte2014high,uriarte2014game} e
 %including all game tree search ones, assume complete information.
 
 
-\subsection{Reactive Control}
+\subsection*{Reactive Control}
 
 Reactive control has been addressed mainly via the application of potential fields or by using machine learning to learn good control policies. We also include work on path-finding as part of reactive control.
 
@@ -879,7 +877,7 @@ Reactive control has been addressed mainly via the application of potential fiel
 %heterogeneous terrain.
 
 % POTENTIAL FIELDS:
-\subsubsection{Potential  fields}
+\subsubsection*{Potential  fields}
 Potential  fields and  influence maps  have  been found  to be  useful
 techniques for reactive decision making. Some uses of potential fields
 in RTS  games are: avoiding obstacles  (navigation), avoiding opponent
@@ -904,7 +902,7 @@ make units stuck in local optima.
 
 
 % Machine learning:
-\subsubsection{Machine Learning}
+\subsubsection*{Machine Learning}
 There has been a significant amount  of work on using machine learning
 techniques for the problem of  reactive control. Bayesian modeling has
 been applied  to inverse  fusion of  the sensory  inputs of  the units
@@ -949,7 +947,7 @@ explored human-like  attention models (with units  grouping and vision
 of a unique screen location) for reactive control.
 
 % Pathfinding:
-\subsubsection{Pathfinding}
+\subsubsection*{Pathfinding}
 Finally,  although  pathfinding  does  not  fall  under  our  previous
 definition of reactive  control, we include it in  this section, since
 it is typically  performed as a low-level service, not  part of either
@@ -973,7 +971,7 @@ Commander 2, flocking-like behaviors  are inspired of continuum crowds
 (grid-based)   pathfinding    was   recently   done    by   Sturtevant
 \cite{sturtevant2012benchmarks}.
 
-\subsection{Holistic Approaches}
+\subsection*{Holistic Approaches}
 
 Finally, holistic approaches  to address  RTS AI attempt  to address  the whole
 problem using a  single unified method. To the best  of our knowledge,
