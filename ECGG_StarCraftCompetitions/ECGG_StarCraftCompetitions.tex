@@ -116,7 +116,7 @@ Different bots use different combinations of these two tools. Looking back at Fi
   information to the blackboard that the rest of modules follow (thus,
   making use of abstraction).
 \item
-  UAlbertaBot\footnote{\url{http://code.google.com/p/ualbertabot/}}:
+  UAlbertaBot\footnote{\url{http://github.com/davechurchill/ualbertabot/}}:
   also  uses abstraction  in  {\em combat} like  the previous  two
   bots. But it  also uses it in {\em economy}: as  can be seen, the
   production manager sends commands to the building manager, who is in
@@ -266,7 +266,7 @@ with a standard defensive Terran opening strategy that transitioned into ``mech'
 \centering
 \begin{tabular}{|c|l|}
 \hline
-{\bfseries Position} & {\bfseries Bot}\\
+{\bfseries Rank} & {\bfseries Bot}\\
 \hline
 1 & Overmind \\
 2 & Krasi0 \\
@@ -281,12 +281,12 @@ In 2011 the University of Alberta hosted the competition, with organization by M
 David Churchill\footnote{\url{https://skatgame.net/mburo/sc2011/}}. Due to a lack of entrants in tournament categories 1-3 in the 2010 competition, it was
 decided that only the full game category would be played in the 2011 competition. Another important
 change in the 2011 competition was the introduction of automated tournament-managing software running
-StarCraft games simultaneously on 20 computers, allowing a total of 1170 games to be played in far less
-time than the 108 games of the 2010 competition. This increase in games played also allowed the tournament
+StarCraft games simultaneously on 20 computers, allowing a total of 1170 games to be played in the five days that the tournament ran. 
+This increase in games played also allowed the tournament
 to switch to a round-robin format, eliminating the ``luck'' factor of the pairings inherent in bracket
 style tournaments. The bot that achieved the highest win percentage over the course of the competition would
-be determined the winner. Also, the competition became open-source, in an effort not
-only to prevent possible cheating, but to promote healthy competition in future tournaments by giving
+be determined the winner. Also, the competition became open-source, in an effort 
+to prevent possible cheating and to promote healthy competition in future tournaments by giving
 newcomers and easier entry point by basing their design off of previous bots.
 
 In the  end, Skynet  won the competition  with its solid  Protoss play
@@ -302,9 +302,9 @@ which came in 2nd.
 \caption{Results of the five best bots of the AIIDE 2011 competition}
 \label{tab:aiide2011}
 \centering
-\begin{tabular}{|c|l|r|}
+\begin{tabular}{|c|c|c|}
 \hline
-{\bfseries Position} & {\bfseries Bot} & {\bfseries Win \%} \\
+{\bfseries Rank} & {\bfseries Bot} & {\bfseries Win \%} \\
 \hline
 1 & Skynet & 88.9\% \\
 2 & UAlbertaBot & 79.4\% \\
@@ -382,9 +382,9 @@ called Undermind, which finished in 7th.
 \caption{Results of the five best bots of the AIIDE 2012 competition}
 \label{tab:aiide2012}
 \centering
-\begin{tabular}{|c|l|r|}
+\begin{tabular}{|c|c|c|}
 \hline
-{\bfseries Position} & {\bfseries Bot} & {\bfseries Win \%} \\
+{\bfseries Rank} & {\bfseries Bot} & {\bfseries Win \%} \\
 \hline
 1 & Skynet & 84.4\% \\
 2 & AIUR & 72.2\% \\
@@ -396,7 +396,7 @@ called Undermind, which finished in 7th.
 \end{table}
 
 The University of Alberta also hosted the 2012 competition, with the major difference from the 2011
-competition being the addition of persistent storage. Bots could now write information to disk during a
+competition being the addition of file reading and writing for learning. Bots could now write information to disk during a
 match, and then read the information during other matches, allowing them to adjust strategies based
 on previous results. 6 of the 10 entrants used this feature to aid in strategy selection, including the
 top 4 finishers. More improvements to the tournament environment also meant that a total of 4240 games
@@ -423,16 +423,18 @@ progressed.
 
 \subsubsection{AIIDE 2013}
 
+A total of 8 bots competed in the 2013 AIIDE competition with many of the same names from the 2012 competition, and some key updates were made to existing bots for 2013 which shook up the results from the previous years. UAlbertaBot took 1st place with a dominant 84.49\% win rate, with Skynet in 2nd with 72.77\%. The major addition to UAlbertaBot was a combat simulation package called SparCraft. UAlbertaBot was re-engineered so that it now always attacked from the first combat unit created, using the SparCraft system to simulate whether or not the bot could a fight against known enemy units, retreating automatically if it thought it could not. This addition, combined with some additional bug fixes led to the victory. Skynet and Aiur both implemented strategy learning in 2013, which is evident from \ref{fig:aiide2013} in which both Skynet and Aiur's win percentage over time climb dramatically from the first few rounds of the tournament to the later rounds. Ximp unfortunately crashed all games on the Fortress map and lost 10\% of its games for free as a result, which meant it could have possibly came in 2nd place if not for all those crashes. 
+
 \begin{table}[!t]
 \caption{Results of the five best bots of the AIIDE 2013 competition}
 \label{tab:aiide2013}
 \centering
-\begin{tabular}{|c|l|r|}
+\begin{tabular}{|c|c|c|}
 \hline
-{\bfseries Position} & {\bfseries Bot} & {\bfseries Win \%} \\
+{\bfseries Rank} & {\bfseries Bot} & {\bfseries Win \%} \\
 \hline
 1 & UAlbertaBot & 84.49\% \\
-2 & Skynet & 66.26\% \\
+2 & Skynet & 72.77\% \\
 3 & AIUR & 58.51\% \\
 4 & Ximp & 56.57\% \\
 5 & ICEStarCraft & 48.53\% \\
@@ -447,20 +449,19 @@ progressed.
     \label{fig:aiide2013}
 \end{figure}
 
-{\color{blue} AIIDE 2013: Skynet and AIUR learning, BBQ opponent strategy
-  learning,  UAB  branch-and-bound  for   build  order  during  games,
-  SparCraft for combat simulations}
-
 \subsubsection{AIIDE 2014}
 
+The 2014 AIIDE competition saw 18 total entrants, over double the number from the 2013 competition. This dramatic increase in numbers was partially because of a large advertising effort by competition organizers, combined with the inclusion of all the 2013 competition entrants (if they had not re-submitted new versions). UAlbertaBot and Skynet who finished 1st and 2nd the year before were not updated in 2014 and so their previous versions were re-submitted. Along with the larger registration numbers came a lot of new Terran bots, a welcome change from the Protoss-dominated fields of previous years. The tournament managing software also underwent some major updates in 2014, allowing for faster game scheduling and the easy pausing and resuming of tournaments, resulting in 10251 total games being played, which was almost double the amount of 5579 from the previous year.
+
+The results of the 2014 competition were dramatically different from previous years. Since 2011 the top 3 bots in the AIIDE competition had been some permutation of Skynet, UAlbertaBot, and Aiur, and in 2014 the top 3 finishers were all completely different. In first place was IceBot with a win rate of 85.85\%, which had a complete overhaul in terms of strategy and tactics from the previous year. IceBot had several strategies which it could implement, most starting with an early bunker defense and transitioning into attacking once a set of heuristics conditions had been met. IceBot's source code was originally based on Aiur's modular design, and changed to play the Terran race. In a close 2nd place finish was Ximp - which had fixed the crashes and logic errors which had plagued it the year before. Ximp implemented a solid forge-first fast expansion strategy which transitioned into late-game carrier play. By building a large amount of early photon cannons in its expansion, Ximp was easily able to stop most of the early rushing bots, and then holding them off until its carriers cleaned up in the late game. 3rd place was taken by LetaBot, a new Terran bot whose source code was written on top of the 2012 version of UAlbertaBot and changed to play the Terran race. LetaBot implemented a number of strategies including a 'cheesy' but strong bunker rush strategy which killed many bots very quickly, as well as a Wraith (mid-game flying unit) strategy. 
 
 \begin{table}[!t]
 \caption{Results of the five best bots of the AIIDE 2014 competition}
 \label{tab:aiide2014}
 \centering
-\begin{tabular}{|c|l|r|}
+\begin{tabular}{|c|c|c|}
 \hline
-{\bfseries Position} & {\bfseries Bot} & {\bfseries Win \%} \\
+{\bfseries Rank} & {\bfseries Bot} & {\bfseries Win \%} \\
 \hline
 1 & ICEBot & 85.86\% \\
 2 & Ximp & 84.64\% \\
@@ -471,7 +472,28 @@ progressed.
 \end{tabular}
 \end{table}
 
-{\color{blue} AIIDE 2014: ???}
+\subsubsection{AIIDE 2015}
+
+The 2015 AIIDE competition was the largest competition to date with 23 total bots competing. The competition environment was also changed so that the tournament was now run on virtual machines instea dof physical machines. Doing this enabled the tournament to run for a full two weeks instead of the normal one week, resulting in a total of 20788 games being played - 90 full round robins between each bot pairing. 2015 saw the most even distribution of race selection ever in a Starcraft AI competition, with 5 new Zerg submissions along with 7 Protoss bots and 9 Terran bots. The first ever Random race entry was also submitted as UAlbertaBot had been updated to play all three of the available races. When playing Random race, Starcraft randomly assigns one of Protoss, Terran, or Zerg after the game has started, with your opponent not knowing which race you are until they have scouted you on the map. This provides a significant advantage as the enemy's initial build order must now have a period of uncertainty during which is has to guess what race it is playing against.
+
+The results of the 2015 competition were extremely close, with 1st / 2nd place as well as 3rd / 4th place being separated by less than 1\% win rate. 1st place was won by Tscmoo, a new Zerg bot which played nearly a dozen different strategies, learning which one to choose over time via the file I/O system. In a close second place was ZZZKbot, which implement a 4-pool Zergling rush strategy every game. Despite the relatively simple strategy, most bots did not have proper defense capabilities and lost in very short games. In 3rd place was Overkill, another Zerg bot which had several different strategies including Mutalisks and Hydralisks, which learned over time as well. In a close 4th place was UAlbertaBot, which played Random and implemented three main rushing strategies - one for each race. An interesting result from this tournament was that despite UAlbertaBot coming 4th place, it finished with a winning rate greater than 50\% vs each other bot. Aiur came in 5th place and was a clear demonstration of how learning over time can dramatically improve results in a tournament, going from 63\% win rate early in the competition to a final win rate of over 73\%.
+
+\begin{table}[!t]
+\caption{Results of the five best bots of the AIIDE 2015 competition}
+\label{tab:aiide2014}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+{\bfseries Rank} & {\bfseries Bot} & {\bfseries Win \%} \\
+\hline
+1 & Tscmoo & 88.52\% \\
+2 & ZZZKBot & 87.84\% \\
+3 & Overkill & 80.69\% \\
+4 & UAlbertaBot & 80.20\% \\
+5 & Aiur & 73.02\% \\
+\hline
+\end{tabular}
+\end{table}
 
 % The 2012 man vs. machine match again used the winner of the competition (Skynet), who played against
 % Mike Lange, also known as Bakuryu. At the time of the match, Bakuryu was an A- ranked Zerg player on ICCup,
@@ -507,10 +529,10 @@ with BTHAI of which 6:4 were won)}
 \label{tab:cig-first-round}
 \centering
 % bracket A
-\begin{tabular}{|c|c|c|l|r|}
+\begin{tabular}{|c|c|c|c|c|}
 \hline
 \multicolumn{5}{|c|}{Bracket A} \\ \hline
-{\bfseries Position} & {\bfseries Crashes} & {\bfseries Games} & {\bfseries Bot} & {\bfseries Win \%} \\
+{\bfseries Rank} & {\bfseries Crashes} & {\bfseries Games} & {\bfseries Bot} & {\bfseries Win \%} \\
 \hline
 A1 & 0 &   40 &  UAlbertaBot & 82.5\% \\
 A2 & 1 &     40 &  Skynet   &  77.5\% \\
@@ -520,10 +542,10 @@ A5 & 0 &   40 &  LSAI   &  10.0\%\\
 \hline
 \end{tabular}
 % bracket B
-\begin{tabular}{|c|c|c|l|r|}
+\begin{tabular}{|c|c|c|c|c|}
 \hline
 \multicolumn{5}{|c|}{Bracket B} \\ \hline
-{\bfseries Position} & {\bfseries Crashes} & {\bfseries Games} & {\bfseries Bot} & {\bfseries Win \%} \\
+{\bfseries Rank} & {\bfseries Crashes} & {\bfseries Games} & {\bfseries Bot} & {\bfseries Win \%} \\
 \hline
 B1 & 12 &  40 &  Xelnaga &   62.5\%\\
 B2 & 3 &   40 &  BroodwarBotQ  &  57.5\%\\
@@ -540,7 +562,7 @@ B5 & 0 &   40 &  EvoBot   &  30.0\%\\
 An initial attempt to run a StarCraft tournament at the Computational
 Intelligence in Games conference (CIG 2010) suffered from technical problems.
 These mainly stemmed from the desire to use evolved, largely untested
-maps which proved to look interesting but made the submitted bots and the Brood War Terrain Analyzer (BWTA) provided with the BWAPI interface crash
+maps which initially looked interesting but made the submitted bots and the Brood War Terrain Analyzer (BWTA) provided with the BWAPI interface crash
 so frequently that it would have been unjustifiable to announce a winner.
 
 \subsubsection{CIG 2011}
@@ -637,9 +659,9 @@ points as indicated on the end game screen.
 \caption{Results of the CIG 2011 competition}
 \label{tab:cig-final-round}
 \centering
-\begin{tabular}{|c|c|c|l|r|}
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-{\bfseries Position} & {\bfseries Crashes} & {\bfseries Games} & {\bfseries Bot} & {\bfseries Win \%} \\
+{\bfseries Rank} & {\bfseries Crashes} & {\bfseries Games} & {\bfseries Bot} & {\bfseries Win \%} \\
 \hline
 1 & 0 &  30 &  Skynet       &  86.7\%\\
 2 & 0 &  30 &  UAlbertaBot  &  73.3\%\\
@@ -700,9 +722,9 @@ here\footnote{\url{http://ls11-www.cs.tu-dortmund.de/rts-competition/StarCraft-c
 \caption{Results of the CIG 2012 competition.}
 \label{tab:cig2012}
 \centering
-\begin{tabular}{|c|l|r|}
+\begin{tabular}{|c|c|c|}
 \hline
-{\bfseries Position} & {\bfseries Bot} & {\bfseries Win \%} \\
+{\bfseries Rank} & {\bfseries Bot} & {\bfseries Win \%} \\
 \hline
 1 & Skynet & 78.3\% \\
 2 & UAlbertaBot & 65.2\% \\
