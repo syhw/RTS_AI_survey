@@ -213,7 +213,9 @@ This section reviews the results of the recent international competitions on AI 
 (BWAPI)\footnote{\url{http://code.google.com/p/bwapi/}}, which 
 enables replacing the human player interface with C++ code.
 %A consequence of this indirect way of integrating new bots is that every machine can only run one custom bot, requiring two computers for a 2-player game.
-The following subsections summarize the results of all the StarCraft AI competitions held at the AIIDE (Artificial Intelligence for Interactive Digital Entertainment) and CIG (Computational Intelligence in Games) conferences during the past years. Additionally we analyze the statistics from the StarCraft Bot Ladder, where the best bots play against each other continuously over time. 
+The following subsections summarize the results of all the StarCraft AI competitions held at the AIIDE (Artificial Intelligence for Interactive Digital Entertainment) and CIG (Computational Intelligence in Games) conferences during the past years. Since 2011, the CIG and AIIDE competitions have typically been held in August / September in each year, as the conferences are scheduled quite close to each other. As a consequence of this, many of the same bots get entered into both competitions.
+
+Additionally we analyze the statistics from the StarCraft Bot Ladder, where the best bots play against each other continuously over time. 
 
 \subsection{AIIDE}\label{sec:AIIDE}
 
@@ -797,8 +799,65 @@ procedure of game information) within a series of games.
 
 \subsubsection{CIG 2013}
 
-\subsubsection{CIG 2014}
+Mike will fill this out?
 
+\begin{table}[t]
+\caption{Results of the CIG 2013 competition.}
+\label{tab:cig2013}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+{\bfseries Rank} & {\bfseries Bot} & {\bfseries Win \%} \\
+\hline
+1 & Skynet & 91.1\% \\
+2 & UAlbertaBot & 67.4\% \\
+3 & AIUR & 54.9\% \\
+4 & Xelnaga & 53.6\% \\
+5 & Adjutant & 42.4\% \\ 
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{CIG 2014}
+The CIG 2014 competition was organized by Kyung-Joong Kim, Ho-Chul Cho, and In-Seok Oh of Sejong University. For 2014, the CIG competition used a total of 20 different maps which were unknown to the competitors before the competition started, which was by far the most maps ever used in a Starcraft AI competition and presented a challenge to many of the bots who entered. A total of 4680 games were played which meant that each bot played each other bot 60 times, or 3 times per map. The CIG 2014 competition was held just a few weeks before the AIIDE 2014 competition and so many of the entrants to the competition were identical, and the results definitely showed this. The top 4 bots were all the same as the 2014 AIIDE competition with IceBot coming 1st, Ximp in 2nd, LetaBot in 3rd and Aiur in 4th place. For descriptions of these bots please refer to the AIIDE 2014 competition description as none of the top-finishing bots had any significant changes made.
+
+\begin{table}[t]
+\caption{Results of the CIG 2014 competition.}
+\label{tab:cig2014}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+{\bfseries Rank} & {\bfseries Bot} & {\bfseries Win \%} \\
+\hline
+1 & IceBot & 83.1\% \\
+2 & Ximp & 78.1\% \\
+3 & LetaBot & 68.5\% \\
+4 & Aiur & 66.1\% \\
+5 & UAlbertaBot & 60.0\% \\ 
+\hline
+\end{tabular}
+\end{table}
+
+
+\subsubsection{CIG 2015}
+There were some significant rule changes to the CIG 2015 competition, which was once organized by mebers from Sejong University. The most significant rule change was that entrants no longer had to be open source, in an attempt to attract more competitors who may not want to open source their bots. The second rule change was that a single competitor could submit multiple entries to the competition - which caused some controversy among registrants since this introduces the possibility of collusion between entries. Thankfully no such collusion was detected during the competition. The 2015 competition was also not run quite as long as previous competitions with only 2730 games being played in total, or 30 between each bot pairing, 6 between each bot on each of the 5 chosen maps. There were several new Zerg entries to the CIG 2015 competition which ended up finishing in the top three positions, with results very similar to those of the AIIDE 2015 competition. ZZZBot took 1st place, tscmoo-Z (a Zerg bot written by tscmoo) came 2nd, and Overkill came 3rd. For descriptions of these bots and their strategies used please refer to the AIIDE 2015 competition section as the strategies remained largely unchanged between the CIG and AIIDE competitions. 
+
+\begin{table}[t]
+\caption{Results of the CIG 2015 competition.}
+\label{tab:cig2015}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+{\bfseries Rank} & {\bfseries Bot} & {\bfseries Win \%} \\
+\hline
+1 & ZZZBot & 81.03\% \\
+2 & tscmoo-Z & 73.59\% \\
+3 & Overkill & 62.05\% \\
+4 & LetaBot & 61.54\% \\
+5 & Ximp & 60.26\% \\ 
+\hline
+\end{tabular}
+\end{table}
 
 % \subsection{StarCraft Bot Ladder}\label{sec:ladder}
 
