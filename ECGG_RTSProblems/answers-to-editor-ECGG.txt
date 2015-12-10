@@ -1,0 +1,148 @@
+AU1:
+- Affiliation changes (note that LaTeX commands have been used for the umlauts):
+Family Name   Preuss
+Given Name    Mike
+Division/Department     	Information Systems and Statistics
+Organization/University     Westf{\"a}lische Wilhelms-Universit{\"a}t M{\"u}nster
+Street        Leonardo-Campus 3
+City          M{\"u}nster
+Country       Germany
+Email         mike.preuss@uni-muenster.de
+
+
+AU2:
+- Ok
+
+AU3:
+- Indeed, this reference is wrong, the correct one is:
+@inproceedings{richoux2014walling,
+  author={Richoux, Florian and Uriarte, Alberto and Ontan{\'o}n, Santiago},
+  title={Walling in strategy games via constraint optimization},
+  booktitle={Artificial Intelligence and Interactive Digital Entertainment Conference (AIIDE 2014)},
+  year={2014}
+}
+
+AU4:
+- Indeed, these references are wrong, the correct reference at this point is:
+@inproceedings{uriarte14a,
+  author    = {Uriarte, Alberto and Onta\~{n}\'{o}n, Santiago},
+  title     = {Game-Tree Search over High-Level Game States in {RTS} Games},
+  booktitle = {Artificial Intelligence and Interactive Digital Entertainment Conference (AIIDE 2014)},
+  publisher = {AAAI Press},
+  year      = {2014}
+}
+
+AU5:
+- Please cross reference to the following chapters:
+  - Computer Go by Kazuki Yoshizoe and Martin Mueller
+  - Monte Carlo Tree Search by Mark H.M. Winands
+  - StarCraft Bots and Competitions
+
+AU6:
+Please provide conference, symposium and workshop location for 
+- Aha et al. (2005): Chicago, USA
+- Buro (2003): Acapulco, Mexico
+- Certicky and Certicky (2013): Baku, Azerbaijan
+- Chung and Buro (2005): Colchester, UK
+- Churchill and Buro (2011): Palo Alto, USA
+- Churchill et al. (2012a): Palo Alto, USA
+- Danielsiek et al. (2008): Perth, Australia
+- Demyen and Buro (2006): Boston, USA
+- Dereszynski et al. (2011): Palo Alto, USA
+- Hagelback (2012): Granada, Spain
+- Hagelback and Johansson (2008): Perth, Australia
+- Hladky and Bulitko (2008): Perth, Australia
+- Hoang et al. (2005): Marina del Rey, USA
+- Hsieh and Sun (2008): Hong Kong
+- Jaidee et al. (2011): Greenwich, UK
+- Jaidee et al. 2012): Palo Alto, USA
+- Kabanza et al. (2010): Atlanta, USA
+- Koenig and Likhachev (2002): Edmonton, Canada
+- Madeira et al. (2006): Marina del Rey, USA
+- Marthi et al. (2005): Edinburgh, UK
+- Mishra et al. (2008): Trier, Germany
+- Molineaux et al. (2008): Coconut Grove, USA
+- Ontanon (2013): Boston, USA
+- Othman et al. (2012): Granada, Spain
+- Pottinger (2000): San Francisco, USA
+- Schadd et al. (2007): Bologna, Italy
+- Sharma et al. (2007): Hyderabad, India
+- Smith et al. (2010): Copenhagen, Denmark
+- Synnaeve and Bessieere (2012a): Seoul, South Korea
+- Synnaeve and Bessieere (2012b): Granada, Spain
+- Uriarte and Ontanon (2012): Palo Alto, USA
+- Weber and Mateas (2009): Milan, Italy
+- Weber et al. (2010a): Palo Alto, USA
+- Weber et al. (2010b): Copenhagen, Denmark
+- Wender and Watson (2012): Granada, Spain
+- Wintermute et al. (2007): Palo Alto, USA
+
+AU7:
+Please provide publisher location for:
+- Cadena and Garrido (2011):
+	- publisher: Springer (LNAI 7094)
+	- location: Puebla, Mexico
+- Sutton and Barto (1998):
+	- publisher: MIT PRess
+	- location: Cambridge, MA, USA
+
+AU8:
+Please update the reference for:
+- Certicky (2013): 
+@article{DBLP:journals/corr/Certicky13,
+  author    = {Michal Certick{\'{y}}},
+  title     = {Implementing a Wall-In Building Placement in StarCraft with Declarative Programming},
+  journal   = {CoRR},
+  volume    = {abs/1306.4460},
+  year      = {2013},
+  url       = {http://arxiv.org/abs/1306.4460},
+  timestamp = {Tue, 22 Jul 2014 17:04:09 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/Certicky13},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+- Churchill et al. (2012b):
+@inproceedings{churchill2012fast,
+  title={Fast Heuristic Search for RTS Game Combat Scenarios.},
+  author={Churchill, David and Saffidine, Abdallah and Buro, Michael},
+  booktitle={Artificial Intelligence and Interactive Digital Entertainment Conference (AIIDE 2012},
+  year={2012}
+}
+
+- Liu and Li (2008):
+@inproceedings{liu2008regional,
+  title={Regional cooperative multi-agent q-learning based on potential field},
+  author={Liu, Liang and Li, Longshu},
+  booktitle={Natural Computation, 2008. ICNC'08. Fourth International Conference on},
+  volume={6},
+  pages={535--539},
+  year={2008},
+  organization={IEEE}
+}
+
+- Young and Hawes (2012):
+@inproceedings{young2012evolutionary,
+  title={Evolutionary Learning of Goal Priorities in a Real-Time Strategy Game.},
+  author={Young, Jay and Hawes, Nick},
+  booktitle={Artificial Intelligence and Interactive Digital Entertainment Conference (AIIDE 2012)},
+  year={2012}
+}
+
+AU9:
+Please provide volume number for:
+- Hagelback and Johansson (2009): volume 2009
+- Perkins (2010): the correct citation is:
+@article{perkins2010terrain,
+  title={Terrain Analysis in Real-Time Strategy Games: An Integrated Approach to Choke Point Detection and Region Decomposition.},
+  author={Perkins, Luke},
+  journal={Artificial Intelligence and Interactive Digital Entertainment Conference (AIIDE 2010)},
+  volume={10},
+  pages={168--173},
+  year={2010}
+}
+
+AU10:
+Please provide publisher name and location for:
+- Houlette and Fu (2003): 
+	- Publisher: Charles River Media
+	- Location: Hingham, MA, USA
