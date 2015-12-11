@@ -43,8 +43,8 @@
 	Computing Science Department of the University of Alberta, Edmonton, Canada. \\
 	\email{cdavid@cs.ualberta.ca}
 \and
-	Department of Computer Science of Technische Universit{\"a}t Dortmund, Germany.
-	\email{mike.preuss@cs.tu-dortmund.de}
+	Information Systems and Statistics, Westf. Wilhelmsuniversit{\"a}t M{\"u}nster, Germany.
+	\email{mike.preuss@uni-muenster.de}
 \and
 	Nantes Atlantic Computer Science Laboratory (LINA) of the Universit{\'e} de Nantes, France. \\
 	\email{florian.richoux@univ-nantes.fr}
@@ -797,9 +797,38 @@ the current bots are not very good at adapting their strategy to the
 one of their opponent during a game, or at least (via the read/write
 procedure of game information) within a series of games.
 
-\subsubsection{CIG 2013}
+\subsubsection{CIG 2013} The CIG 2013 competition was once again
+organized by Mike Preuss (TU Dortmund) and Tobias Mahlmann (ITU Copenhagen),
+adding Antonio Mora Garc{\'i}a from the Universidad de Granada as
+third team member. Whereas the rules and even the participants
+to this competition were almost identical to the AIIDE 2013
+competition setup, several technical changes were made in comparison
+to 2012\footnote{\url{http://ls11-www.cs.tu-dortmund.de/rts-competition/StarCraft-cig2013}}.
+A new competition software was implemented by Tobias but
+not completely finished in time, so that the read/write function
+that enables learning between games had to be disabled again. 
+This is probably the most important difference to the AIIDE competition,
+however, as the result provided in table~\ref{tab:cig2013} shows, the effect is
+limited. Due to the late availability of the competition software,
+only 32 rounds of random robin were played, making 896 games
+altogether, and 224 games by each of the 8 submitted bots. 
 
-Mike will fill this out?
+As the map set has also been changed to the 10 standard
+maps used by the AIIDE competition (without letting the competitors
+know about this in advance as usual for the CIG competitions), 
+the competitions were otherwise very similar. We presume that 
+disabling the learning was a disadvantage for the UAlbertaBot who
+won the AIIDE competition and was only runner-up to the Skynet bot
+here. The 3rd place went to AIUR as in 2012, followed by 
+Xelnaga and Adjutant. A direct comparison to the results of
+CIG 2012 (table~\ref{tab:cig2012}) shows that bot evolution 
+between these two competitions was obviously limited. It also
+shows that some bots as the UAlbertaBot make good use of 
+online learning, whereas others, as Skynet, do not profit from
+it that much.
+
+
+
 
 \begin{table}[t]
 \caption{Results of the CIG 2013 competition.}
