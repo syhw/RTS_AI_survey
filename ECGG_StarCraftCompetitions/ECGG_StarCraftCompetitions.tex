@@ -68,11 +68,11 @@
 
 \section{State of the Art Bots for StarCraft}\label{sec:bot}
 
-Thanks to the recent organization of international game AI competitions focused around the popular StarCraft game (see Section \ref{sec:competition}), several groups have been working on integrating many of the techniques described in the previous section into complete ``bots'', capable of playing complete StarCraft games. In this section we will overview some of the currently available top bots.
+Thanks to the recent organization of international game AI competitions focused around the popular StarCraft game, several groups have been working on integrating many of the techniques developed for RTS game AI into complete ``bots'', capable of playing complete StarCraft games. In this chapter we will overview some of the currently available top bots, and their results of recent competitions.
 
 %\subsection{RTS Bot Architectures}\label{sec:integration}
 
-Playing an RTS game involves dealing with all the problems described above. A few approaches, like CAT \cite{LTW}, Darmok \cite{OntanonMSR10} or ALisp \cite{Marthi05} try to deal with the problem in a monolithic manner, by using a single AI technique. However, none of those systems aims at achieving near human performance. In order to achieve human-level performance, RTS AI designers use a lot of domain knowledge in order to divide the task of playing the game into a collection of sub-problems, which can be dealt-with using individual AI techniques.
+Playing an RTS game involves dealing with a wide variety of problems, ranging from miro-management problems such as unit control, to macro-management problems such as resource allocation. A few approaches, like CAT \cite{LTW}, Darmok \cite{OntanonMSR10} or ALisp \cite{Marthi05} try to deal with the problem in a monolithic manner, by using a single AI technique. However, none of those systems aims at achieving near human performance. In order to achieve human-level performance, RTS AI designers use a lot of domain knowledge in order to divide the task of playing the game into a collection of sub-problems, which can be dealt-with using individual AI techniques.
 
 \begin{figure}[h!]
   \begin{adjustbox}{addcode={\begin{minipage}{\width}}{\caption{%
@@ -144,7 +144,7 @@ Different bots use different combinations of these two tools. Looking back at Fi
   to  use,  and  the  tactical  decision  module  divides  it  into  a
   collection  of {\em  abstract  actions}, that  are  executed by  the
   lower-level modules.
-\item  AIUR\footnote{\url{http://code.google.com/p/aiurproject/}}:  is
+\item  AIUR\footnote{\url{https://github.com/AIUR-group/AIUR}}:  is
   mainly divide-and-conquer oriented,
   with a  slight abstraction on  {\em economy} due to a  SpendManager deciding
   how  to  spend  and  share  resources  among  Base,  Production  and
@@ -157,7 +157,7 @@ Different bots use different combinations of these two tools. Looking back at Fi
   control of units when it is time to attack, following a timing given
   by the  current mood. This bot  does not manage however  any kind of
   reactive controls so far.
-\item  BTHAI\footnote{\url{http://code.google.com/p/bthai/}}:  uses  a
+\item  BTHAI\footnote{\url{https://github.com/jhagelback/opprimobot}}:  uses  a
   two-tier  abstraction hierarchy,  where a  collection  of high-level
   modules command a collection of lower-level agents in charge of each
   of  the units.  At  the high-level,  BTHAI uses  divide-and-conquer,
@@ -205,9 +205,9 @@ pick  a mood among  six (cheese,  rush, aggressive,  defensive, macro,
 fast  expand), which  will  influence the  build  order, strategy  and
 tactics. % All of  them  scripted so  far,  but build  orders can  been modified but  the Spend Manager, following  available resources.  This mood can change during the game, regarding the opponent behavior.
 
-In conclusion, we can see that there are two basic tools that can be used in an integration architecture: abstraction and divide-and-conquer, which are widely used by the existing StarCraft bots. For space reasons, we do not include an exhaustive comparison of the architectures of all the participating bots. Some other bots have been documented by their authors, such as SCAIL \cite{YoungSCAIL} or QUORUM \cite{young2012evolutionary}.
+In conclusion, we can see that there are two basic tools that can be used in an integration architecture: abstraction and divide-and-conquer, which are widely used by the existing StarCraft bots. For space reasons, we do not include an exhaustive comparison of the architectures of all the participating bots. Some more bots than the ones described here have been documented by their authors, such as SCAIL \cite{YoungSCAIL} or QUORUM \cite{young2012evolutionary}.
 %This section has focused on discussing the architecture of existing StarCraft bots. 
-Let us now focus on their performance.
+Let us now focus on their performance in recent competitions.
 
 %\subsection{Individual AI Techniques}\label{sec:techniques}
 
@@ -218,7 +218,7 @@ Let us now focus on their performance.
 This section reviews the results of three recent international competitions on AI for StarCraft. These competitions
 %, typically co-located with scientific conferences, 
 have been possible thanks to the existence of the Brood War Application Programming Interface 
-(BWAPI)\footnote{\url{http://code.google.com/p/bwapi/}}, which 
+(BWAPI)\footnote{\url{https://github.com/bwapi/bwapi}}, which 
 enables replacing the human player interface with C++ code.
 %A consequence of this indirect way of integrating new bots is that every machine can only run one custom bot, requiring two computers for a 2-player game.
 The following subsections summarize the results of StarCraft AI competitions co-located with two scientific conferences -- AIIDE (Artificial Intelligence for Interactive Digital Entertainment) and CIG (Computational Intelligence in Games) -- and one stand\-alone competition called SSCAIT (Student StarCraft AI Tournament), during the past years. Since 2011, the CIG and AIIDE competitions have typically been held in August / September in each year, as the conferences are scheduled quite close to each other, and SSCAIT have been held in December / January. As a consequence of this, AIIDE and CIG competitions share a big portion of the entrants.
@@ -228,7 +228,7 @@ The following subsections summarize the results of StarCraft AI competitions co-
 
 \subsection{AIIDE}\label{sec:AIIDE}
 
-\subsubsection{AIIDE 2010}
+\subsubsection{AIIDE 2010.}
 
 Started in 2010, the AIIDE StarCraft AI Competition\footnote{\url{http://www.StarCraftAICompetition.com}} is the most
 well known and longest running StarCraft AI Competition in the world. Each year,
@@ -286,7 +286,7 @@ with a standard defensive Terran opening strategy that transitioned into ``mech'
 \end{tabular}
 \end{table}
 
-\subsubsection{AIIDE 2011}
+\subsubsection{AIIDE 2011.}
 
 In 2011 the University of Alberta hosted the competition, with organization by Michael Buro and
 David Churchill\footnote{\url{https://skatgame.net/mburo/sc2011/}}. Due to a lack of entrants in tournament categories 1-3 in the 2010 competition, it was
@@ -387,7 +387,7 @@ called Undermind, which finished in 7th.
 % adapt and transition into a mid-game strategy in game one once its early pressure failed, and in game
 % two made a key blunder in unit targeting which cost it the game. Humans were still in command.
 
-\subsubsection{AIIDE 2012}
+\subsubsection{AIIDE 2012.}
 
 \begin{table}[!t]
 \caption{Results of the five best bots of the AIIDE 2012 competition}
@@ -432,7 +432,7 @@ converged to their  final values. One of the main  reasons for this is
 due to  the bots  learning which strategies  to use as  the tournament
 progressed.
 
-\subsubsection{AIIDE 2013}
+\subsubsection{AIIDE 2013.}
 
 A total of 8 bots competed in the 2013 AIIDE competition with many of the same names from the 2012 competition, and some key updates were made to existing bots for 2013 which shook up the results from the previous years. UAlbertaBot took 1st place with a dominant 84.49\% win rate, with Skynet in 2nd with 72.77\%. The major addition to UAlbertaBot was a combat simulation package called SparCraft. UAlbertaBot was re-engineered so that it now always attacked from the first combat unit created, using the SparCraft system to simulate whether or not the bot could a fight against known enemy units, retreating automatically if it thought it could not. This addition, combined with some additional bug fixes led to the victory. Skynet and Aiur both implemented strategy learning in 2013, which is evident from \ref{fig:aiide2013} in which both Skynet and Aiur's win percentage over time climb dramatically from the first few rounds of the tournament to the later rounds. Ximp unfortunately crashed all games on the Fortress map and lost 10\% of its games for free as a result, which meant it could have possibly came in 2nd place if not for all those crashes. 
 
@@ -460,7 +460,7 @@ A total of 8 bots competed in the 2013 AIIDE competition with many of the same n
     \label{fig:aiide2013}
 \end{figure}
 
-\subsubsection{AIIDE 2014}
+\subsubsection{AIIDE 2014.}
 
 The 2014 AIIDE competition saw 18 total entrants, over double the number from the 2013 competition. This dramatic increase in numbers was partially because of a large advertising effort by competition organizers, combined with the inclusion of all the 2013 competition entrants (if they had not re-submitted new versions). UAlbertaBot and Skynet who finished 1st and 2nd the year before were not updated in 2014 and so their previous versions were re-submitted. Along with the larger registration numbers came a lot of new Terran bots, a welcome change from the Protoss-dominated fields of previous years. The tournament managing software also underwent some major updates in 2014, allowing for faster game scheduling and the easy pausing and resuming of tournaments, resulting in 10251 total games being played, which was almost double the amount of 5579 from the previous year.
 
@@ -483,9 +483,9 @@ The results of the 2014 competition were dramatically different from previous ye
 \end{tabular}
 \end{table}
 
-\subsubsection{AIIDE 2015}
+\subsubsection{AIIDE 2015.}
 
-The 2015 AIIDE competition was the largest competition to date with 23 total bots competing. The competition environment was also changed so that the tournament was now run on virtual machines instea dof physical machines. Doing this enabled the tournament to run for a full two weeks instead of the normal one week, resulting in a total of 20788 games being played - 90 full round robins between each bot pairing. 2015 saw the most even distribution of race selection ever in a Starcraft AI competition, with 5 new Zerg submissions along with 7 Protoss bots and 9 Terran bots. The first ever Random race entry was also submitted as UAlbertaBot had been updated to play all three of the available races. When playing Random race, Starcraft randomly assigns one of Protoss, Terran, or Zerg after the game has started, with your opponent not knowing which race you are until they have scouted you on the map. This provides a significant advantage as the enemy's initial build order must now have a period of uncertainty during which is has to guess what race it is playing against.
+The 2015 AIIDE competition was the largest competition to date with 23 total bots competing. The competition environment was also changed so that the tournament was now run on virtual machines instead of physical machines. Doing this enabled the tournament to run for a full two weeks instead of the normal one week, resulting in a total of 20788 games being played - 90 full round robins between each bot pairing. 2015 saw the most even distribution of race selection ever in a Starcraft AI competition, with 5 new Zerg submissions along with 7 Protoss bots and 9 Terran bots. The first ever Random race entry was also submitted as UAlbertaBot had been updated to play all three of the available races. When playing Random race, Starcraft randomly assigns one of Protoss, Terran, or Zerg after the game has started, with your opponent not knowing which race you are until they have scouted you on the map. This provides a significant advantage as the enemy's initial build order must now have a period of uncertainty during which is has to guess what race it is playing against.
 
 The results of the 2015 competition were extremely close, with 1st / 2nd place as well as 3rd / 4th place being separated by less than 1\% win rate. 1st place was won by Tscmoo, a new Zerg bot which played nearly a dozen different strategies, learning which one to choose over time via the file I/O system. In a close second place was ZZZKbot, which implement a 4-pool Zergling rush strategy every game. Despite the relatively simple strategy, most bots did not have proper defense capabilities and lost in very short games. In 3rd place was Overkill, another Zerg bot which had several different strategies including Mutalisks and Hydralisks, which learned over time as well. In a close 4th place was UAlbertaBot, which played Random and implemented three main rushing strategies - one for each race. An interesting result from this tournament was that despite UAlbertaBot coming 4th place, it finished with a winning rate greater than 50\% vs each other bot. Aiur came in 5th place and was a clear demonstration of how learning over time can dramatically improve results in a tournament, going from 63\% win rate early in the competition to a final win rate of over 73\%.
 
@@ -576,7 +576,7 @@ These mainly stemmed from the desire to use evolved, largely untested
 maps which initially looked interesting but made the submitted bots and the Brood War Terrain Analyzer (BWTA) provided with the BWAPI interface crash
 so frequently that it would have been unjustifiable to announce a winner.
 
-\subsubsection{CIG 2011}
+\subsubsection{CIG 2011.}
 
 At CIG 2011, the tournament was therefore run with a (secret) selection
 of maps used in league play, which can be regarded as the most important
@@ -701,7 +701,7 @@ almost equally strong, and the two other bots as clearly inferior.
 The competition setup, documentation and results can be found
 in\footnote{\url{http://ls11-www.cs.tu-dortmund.de/rts-competition/StarCraft-cig2011}}.
 
-\subsubsection{CIG 2012}
+\subsubsection{CIG 2012.}
 
 For CIG 2012, the AIIDE tournament software was employed,
 leading to a total of $4050$ games played in $90$ rounds
@@ -806,7 +806,7 @@ the current bots are not very good at adapting their strategy to the
 one of their opponent during a game, or at least (via the read/write
 procedure of game information) within a series of games.
 
-\subsubsection{CIG 2013} The CIG 2013 competition was once again
+\subsubsection{CIG 2013.} The CIG 2013 competition was once again
 organized by Mike Preuss (TU Dortmund) and Tobias Mahlmann (ITU Copenhagen),
 adding Antonio Mora Garc{\'i}a from the Universidad de Granada as
 third team member. Whereas the rules and even the participants
@@ -856,7 +856,7 @@ it that much.
 \end{tabular}
 \end{table}
 
-\subsubsection{CIG 2014}
+\subsubsection{CIG 2014.}
 The CIG 2014 competition was organized by Kyung-Joong Kim, Ho-Chul Cho, and In-Seok Oh of Sejong University. For 2014, the CIG competition used a total of 20 different maps which were unknown to the competitors before the competition started, which was by far the most maps ever used in a Starcraft AI competition and presented a challenge to many of the bots who entered. A total of 4680 games were played which meant that each bot played each other bot 60 times, or 3 times per map. The CIG 2014 competition was held just a few weeks before the AIIDE 2014 competition and so many of the entrants to the competition were identical, and the results definitely showed this. The top 4 bots were all the same as the 2014 AIIDE competition with IceBot coming 1st, Ximp in 2nd, LetaBot in 3rd and Aiur in 4th place. For descriptions of these bots please refer to the AIIDE 2014 competition description as none of the top-finishing bots had any significant changes made.
 
 \begin{table}[t]
@@ -877,7 +877,7 @@ The CIG 2014 competition was organized by Kyung-Joong Kim, Ho-Chul Cho, and In-S
 \end{table}
 
 
-\subsubsection{CIG 2015}
+\subsubsection{CIG 2015.}
 There were some significant rule changes to the CIG 2015 competition, which was once organized by mebers from Sejong University. The most significant rule change was that entrants no longer had to be open source, in an attempt to attract more competitors who may not want to open source their bots. The second rule change was that a single competitor could submit multiple entries to the competition - which caused some controversy among registrants since this introduces the possibility of collusion between entries. Thankfully no such collusion was detected during the competition. The 2015 competition was also not run quite as long as previous competitions with only 2730 games being played in total, or 30 between each bot pairing, 6 between each bot on each of the 5 chosen maps. There were several new Zerg entries to the CIG 2015 competition which ended up finishing in the top three positions, with results very similar to those of the AIIDE 2015 competition. ZZZBot took 1st place, tscmoo-Z (a Zerg bot written by tscmoo) came 2nd, and Overkill came 3rd. For descriptions of these bots and their strategies used please refer to the AIIDE 2015 competition section as the strategies remained largely unchanged between the CIG and AIIDE competitions. 
 
 \begin{table}[t]
@@ -906,20 +906,20 @@ There are three fundamental differences between SSCAIT and the remaining two con
   \item All the games are publicly {\em streamed live} 24 hours a day. The stream uses a custom observer script \cite{mattsson2015automatic} designed specifically to improve the viewer experience and creates a continuous feedback loop for the participants who can watch their bots play against the others.
 \end{enumerate}
 
-\subsubsection{SSCAIT 2011}
+\subsubsection{SSCAIT 2011.}
 Taking place in winter of 2011, the first SSCAIT tournament was organized by Michal \v{C}ertick\'{y} as part of the {\em ``Introduction to Artificial Intelligence''} course at the Department of Applied Informatics, Comenius University in Bratislava, Slovakia. It was inspired by the media coverage of AIIDE StarCraft AI competition held in 2010, but over the following years it diverged from AIIDE competition's format significantly.
 
-The first year of SSCAIT hosted 50 participants, all of whom were students of Comenius University at the time. The participants were allowed to select any race and use all the units and technologies in complete 1 vs. 1 games of StarCraft. Vast majority of the bots were implemented to execute hard-coded strategies and behaviour. Participants were divided into 10 groups of 5 people, and 16 of them advanced into a double elimination bracket. Final match of the elimination bracket was won by R. Danielis with a 2-1 score against M. Piovar\v{c}i (both playing as Zerg).
+The first year of SSCAIT hosted 50 participants, all of whom were students of Comenius University at the time. The participants were allowed to select any race and use all the units and technologies in complete 1 vs. 1 games of StarCraft. Vast majority of the bots were implemented to execute hard-coded strategies and behavior. Participants were divided into 10 groups of 5 people, and 16 of them advanced into a double elimination bracket. Final match of the elimination bracket was won by R. Danielis with a 2-1 score against M. Piovar\v{c}i (both playing as Zerg).
 
 2011 was the only year when the games were not streamed live. However, the replays were published in real time and the games from the elimination bracket were recorded and uploaded to YouTube.
 
-\subsubsection{SSCAIT 2012-2015}
+\subsubsection{SSCAIT 2012-2015.}
 In 2012, the SSCAIT became a truly international competition with 52 participants from numerous universities including 
 UC Berkeley (USA), University of Alberta (CAN), Washington State University (USA), University of Nantes (FRA), University of Grenoble (FRA), New University of Lisbon (POT), Gdansk University of Technology (POL), Ritsumeikan University (JAP), University of Bielefeld (GER), Sofia University (BUL), Comenius University (SVK), University of \v{Z}ilina (SVK) and Technical University in Ko\v{s}ice (SVK), as well as a number of non-student participants. 
 
 The format of SSCAIT changed significantly in 2012. The tournament was divided into two phases:
 
-\textbf{{Sandbox phase}} is played non-stop during first 11 months of the year. All the games are streamed via a video streaming service, such as Twitch.tv or Hitbox.tv. The stream is meant to attract new entrants and to help current participants improve their bots before the second phase begins. The participants can watch their bots play against randomly selected other bots. They are allowed to upload new versions of the bots via a web interface at any time during this phase. The  sandbox phase has no winners. However, the bots may use this long phase to collect useful data about their opponent's behaviour. 
+\textbf{{Sandbox phase}} is played non-stop during first 11 months of the year. All the games are streamed via a video streaming service, such as Twitch.tv or Hitbox.tv. The stream is meant to attract new entrants and to help current participants improve their bots before the second phase begins. The participants can watch their bots play against randomly selected other bots. They are allowed to upload new versions of the bots via a web interface at any time during this phase. The  sandbox phase has no winners. However, the bots may use this long phase to collect useful data about their opponent's behavior. 
 
 \textbf{{Competitive phase}} is played for up to three weeks (depending on the number of participants) at the end of the year. New bot versions cannot be uploaded during this phase and the matches are not scheduled randomly any more. This phase has two divisions with different rules:
 	\begin{itemize}
@@ -947,7 +947,7 @@ The results of SSCAIT seasons 2012-2015 follow:
     \begin{enumerate}
   	  \item LetaBot
   	  \item W.O.P.R.
-  	  \item UAlbertaBot, with the same win rate as W.O.P.R., but with a loss in a mutual game
+  	  \item UAlbertaBot, with the same win rate as W.O.P.R., but with a loss in a mutual game.
   	\end{enumerate}
   Mixed division winner of the elimination bracket of 8 bots: LetaBot, after defeating Ximp.
   \item {\bf 2015:} At the time of writing this, the SSCAIT 2015 is still in a sandbox phase. 45 bots have registered for the competitive phase so far, including two bots playing as ``Random'' race. The season will be concluded by an elimination bracket featuring 16 bots in 2015.
@@ -957,6 +957,14 @@ The results of SSCAIT seasons 2012-2015 follow:
 From a technical perspective, the tournament was run manually in 2011 and by a collection of custom automated scripts in 2012. Since the second half of 2013, SSCAIT has been using the automated tournament managing software developed at University of Alberta, which was modified to suit the needs of SSCAIT format and technical environment. In contrast to AIIDE and CIG competitions, there is only one game running in SSCAIT at any given time, so that each game can be streamed live (approximately 150 games are played every day). The live stream makes use of a custom made observer script by Mattsson et al. \cite{mattsson2015automatic} which implements a smooth, prioritized camera movement during the game and a third-party libraries that allow the game to be displayed in high definition screen resolution. 
 
 Thanks to the tournament managing software, the game rules and I/O procedures have been synchronized with AIIDE and CIG competitions, so the participants are able to submit the same version of their bot to all three of them. In addition to bots written in C++, SSCAIT supports bots using Java interfaces to BWAPI: BWMirror and JNIBWAPI. 
+
+
+\section{Conclusions}
+
+Competitions have historically been an important drive in artificial intelligence, with challenge tasks such as {\em Chess}, {\em Go}, autonomous vehicle driving, among others having resulted in many algorithmic and theoretical breakthroughs. For that reason, we believe RTS AI competitions are playing and will continue to play an important role in the field by both motivating new research and also being an incentive to attract new students and researchers to work on some of the key open challenges of RTS AI.
+
+This chapter has provided a summary of the results of the most three most important StarCraft AI competitions, organized during the past six years, as well as a summary of the architectures used by some of the bots that regularly participate in these competitions. Moreover, as evidenced by the poor results that the top bots in these competitions achieve when playing against good human players, a significant amount of open questions remain about how to design AI systems that can handle real-time adversarial domains such as StarCraft. Hopefully, these competitions can play an important role in motivating research programs that can ultimately answer these questions.
+
 
 
 % \subsection{StarCraft Bot Ladder}\label{sec:ladder}
