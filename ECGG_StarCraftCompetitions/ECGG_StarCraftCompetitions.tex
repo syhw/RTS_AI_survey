@@ -36,7 +36,8 @@
 		Florian~Richoux\inst{3} \and
 		Gabriel~Synnaeve\inst{4} \and
 		Alberto~Uriarte\inst{5} \and
-		Santiago~Onta\~{n}\'{o}n\inst{5}
+		Santiago~Onta\~{n}\'{o}n\inst{5} \and
+		Michal~\v{C}ertick\'{y}\inst{6}
 		}
 
 \institute{
@@ -54,6 +55,11 @@
 \and
 	Computer Science Department at Drexel University, Philadelphia, PA, USA. \\
 	\email{\{santi,albertouri\}@cs.drexel.edu}
+\and
+	Agent Technology Center at Czech Technical University in Prague,
+	Czech Republic.
+	\\
+	\email{certicky@agents.fel.cvut.cz}
 }
 
 \begin{document}
@@ -209,13 +215,16 @@ Let us now focus on their performance.
 
 \section{Recent StarCraft AI Competitions}\label{sec:competition}
 
-This section reviews the results of the recent international competitions on AI for StarCraft. These competitions, typically co-located with scientific conferences, have been possible thanks to the existence of the Brood War Application Programming Interface 
+This section reviews the results of three recent international competitions on AI for StarCraft. These competitions
+%, typically co-located with scientific conferences, 
+have been possible thanks to the existence of the Brood War Application Programming Interface 
 (BWAPI)\footnote{\url{http://code.google.com/p/bwapi/}}, which 
 enables replacing the human player interface with C++ code.
 %A consequence of this indirect way of integrating new bots is that every machine can only run one custom bot, requiring two computers for a 2-player game.
-The following subsections summarize the results of all the StarCraft AI competitions held at the AIIDE (Artificial Intelligence for Interactive Digital Entertainment) and CIG (Computational Intelligence in Games) conferences during the past years. Since 2011, the CIG and AIIDE competitions have typically been held in August / September in each year, as the conferences are scheduled quite close to each other. As a consequence of this, many of the same bots get entered into both competitions.
+The following subsections summarize the results of StarCraft AI competitions co-located with two scientific conferences -- AIIDE (Artificial Intelligence for Interactive Digital Entertainment) and CIG (Computational Intelligence in Games) -- and one stand\-alone competition called SSCAIT (Student StarCraft AI Tournament), during the past years. Since 2011, the CIG and AIIDE competitions have typically been held in August / September in each year, as the conferences are scheduled quite close to each other, and SSCAIT have been held in December / January. As a consequence of this, AIIDE and CIG competitions share a big portion of the entrants.
 
-Additionally we analyze the statistics from the StarCraft Bot Ladder, where the best bots play against each other continuously over time. 
+% the section with the Ladder seems to be commented out, so this sentence should be as well
+%Additionally we analyze the statistics from the StarCraft Bot Ladder, where the best bots play against each other continuously over time. 
 
 \subsection{AIIDE}\label{sec:AIIDE}
 
@@ -887,6 +896,68 @@ There were some significant rule changes to the CIG 2015 competition, which was 
 \hline
 \end{tabular}
 \end{table}
+
+\subsection{SSCAIT}\label{sec:SSCAIT}
+Student StarCraft AI Tournament\footnote{\url{http://sscaitournament.com/}} (SSCAIT) started in 2011 at Comenius University in Bratislava, Slovakia and immediately became the competition with the highest numbers of participants.
+There are three fundamental differences between SSCAIT and the remaining two conferences:
+\begin{enumerate}
+  \item SSCAIT is an online-only event. Unlike AIIDE or CIG, it is not co-located with a scientific conference or any other real-world event.
+  \item There are two phases of SSCAIT each year: a {\em competitive} phase, lasting for up to three weeks and a {\em sandbox} phase which runs for approximately eleven months each year. In other words, SSCAIT is live at all times with only a few short interruptions.
+  \item All the games are publicly {\em streamed live} 24 hours a day. The stream uses a custom observer script \cite{mattsson2015automatic} designed specifically to improve the viewer experience and creates a continuous feedback loop for the participants who can watch their bots play against the others.
+\end{enumerate}
+
+\subsubsection{SSCAIT 2011}
+Taking place in winter of 2011, the first SSCAIT tournament was organized by Michal \v{C}ertick\'{y} as part of the {\em ``Introduction to Artificial Intelligence''} course at the Department of Applied Informatics, Comenius University in Bratislava, Slovakia. It was inspired by the media coverage of AIIDE StarCraft AI competition held in 2010, but over the following years it diverged from AIIDE competition's format significantly.
+
+The first year of SSCAIT hosted 50 participants, all of whom were students of Comenius University at the time. The participants were allowed to select any race and use all the units and technologies in complete 1 vs. 1 games of StarCraft. Vast majority of the bots were implemented to execute hard-coded strategies and behaviour. Participants were divided into 10 groups of 5 people, and 16 of them advanced into a double elimination bracket. Final match of the elimination bracket was won by R. Danielis with a 2-1 score against M. Piovar\v{c}i (both playing as Zerg).
+
+2011 was the only year when the games were not streamed live. However, the replays were published in real time and the games from the elimination bracket were recorded and uploaded to YouTube.
+
+\subsubsection{SSCAIT 2012-2015}
+In 2012, the SSCAIT became a truly international competition with 52 participants from numerous universities including 
+UC Berkeley (USA), University of Alberta (CAN), Washington State University (USA), University of Nantes (FRA), University of Grenoble (FRA), New University of Lisbon (POT), Gdansk University of Technology (POL), Ritsumeikan University (JAP), University of Bielefeld (GER), Sofia University (BUL), Comenius University (SVK), University of \v{Z}ilina (SVK) and Technical University in Ko\v{s}ice (SVK), as well as a number of non-student participants. 
+
+The format of SSCAIT changed significantly in 2012. The tournament was divided into two phases:
+
+\textbf{{Sandbox phase}} is played non-stop during first 11 months of the year. All the games are streamed via a video streaming service, such as Twitch.tv or Hitbox.tv. The stream is meant to attract new entrants and to help current participants improve their bots before the second phase begins. The participants can watch their bots play against randomly selected other bots. They are allowed to upload new versions of the bots via a web interface at any time during this phase. The  sandbox phase has no winners. However, the bots may use this long phase to collect useful data about their opponent's behaviour. 
+
+\textbf{{Competitive phase}} is played for up to three weeks (depending on the number of participants) at the end of the year. New bot versions cannot be uploaded during this phase and the matches are not scheduled randomly any more. This phase has two divisions with different rules:
+	\begin{itemize}
+      \item {\em Student division:} Only the bots created by a single participant, who is currently a student, are considered ``student'' bots. Other bots are tagged as ``mixed-division'' bots. Each student bot plays a single game against every other bot and collects points for the wins. Three student participants with the highest score are considered winners and receive  certificates of achievement (and in years 2012 and 2013 also financial prizes collected via crowdfunding campaigns). Ties are broken using the results of the mutual game and (if necessary) additional games are scheduled. The student division was created so that the students stand a chance of winning the certificates in the presence of more experienced, non-student participants and team-created entries.
+      \item {\em Mixed division:} Eight or sixteen bots with the highest win rate among all the participants (including student and non-student entries) are selected for the additional ``mixed division" elimination bracket. This part of the tournament is typically recorded with a commentary and uploaded to YouTube, concluding each SSCAIT season since 2012. 
+    \end{itemize}
+
+The results of SSCAIT seasons 2012-2015 follow:
+\begin{itemize}
+  \item {\bf 2012:} 52 participants. Student division winners: 
+  	\begin{enumerate}
+  	  \item Matej Isten\'{i}k's bot
+  	  \item Marcin Bartnicki's bot
+  	  \item UAlbertaBot
+  	\end{enumerate}
+  Mixed division winner of the elimination bracket of 8 bots: ICEBot, after defeating Marcin Bartnicki's bot. 
+  \item {\bf 2013:} 50 participants. Student division winner after 1190 round-robin games: 
+    \begin{enumerate}
+  	  \item Ximp
+  	  \item W.O.P.R.
+  	  \item UAlbertaBot
+  	\end{enumerate}
+  Mixed division winner of the elimination bracket of 8 bots: Krasi0, after defeating ICEBot.
+  \item {\bf 2014:} 42 participants. Student division winner after 861 round-robin games: 
+    \begin{enumerate}
+  	  \item LetaBot
+  	  \item W.O.P.R.
+  	  \item UAlbertaBot, with the same win rate as W.O.P.R., but with a loss in a mutual game
+  	\end{enumerate}
+  Mixed division winner of the elimination bracket of 8 bots: LetaBot, after defeating Ximp.
+  \item {\bf 2015:} At the time of writing this, the SSCAIT 2015 is still in a sandbox phase. 45 bots have registered for the competitive phase so far, including two bots playing as ``Random'' race. The season will be concluded by an elimination bracket featuring 16 bots in 2015.
+\end{itemize}
+
+
+From a technical perspective, the tournament was run manually in 2011 and by a collection of custom automated scripts in 2012. Since the second half of 2013, SSCAIT has been using the automated tournament managing software developed at University of Alberta, which was modified to suit the needs of SSCAIT format and technical environment. In contrast to AIIDE and CIG competitions, there is only one game running in SSCAIT at any given time, so that each game can be streamed live (approximately 150 games are played every day). The live stream makes use of a custom made observer script by Mattsson et al. \cite{mattsson2015automatic} which implements a smooth, prioritized camera movement during the game and a third-party libraries that allow the game to be displayed in high definition screen resolution. 
+
+Thanks to the tournament managing software, the game rules and I/O procedures have been synchronized with AIIDE and CIG competitions, so the participants are able to submit the same version of their bot to all three of them. In addition to bots written in C++, SSCAIT supports bots using Java interfaces to BWAPI: BWMirror and JNIBWAPI. 
+
 
 % \subsection{StarCraft Bot Ladder}\label{sec:ladder}
 
